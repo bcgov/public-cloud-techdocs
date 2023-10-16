@@ -18,7 +18,7 @@ audience: Who will be reading the documentation? example 1, example 2, example 3
 
 
 author: Writers involved in the creation of the document 
-j
+
 Editor: Content Strategist / Content Reviewer 
 
 

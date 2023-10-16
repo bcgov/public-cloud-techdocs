@@ -1,0 +1,7 @@
+site_name: BC Government Public Cloud Technical Documentation
+docs_dir: docs
+# nav:
+# - General:
+#   - Some Menu Item: docs/design-system/about-the-design-system.md
+plugins:
+- techdocs-core
