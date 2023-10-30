@@ -1,52 +1,37 @@
 ---
 # Page title in sentence case, used to generate <title> tag
-title: Deploy an app
+title: Deploy an application 
 
 # Slug is used to generate the page path in the URL. Please use lowercase and separate words with -. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at /landing-page/.
-slug: deploy-an-app
+slug: deploy-an-application
 
 # A brief, precise description of what a reader will find on the page. Used to generate the <meta name="description"> tag.
 # How to write a good meta description: https://developers.google.com/search/docs/appearance/snippet
-description: Deploy an app to the BC Government AWS Landing Zone
+description: Deploy an app to the B.C. Government AWS Landing Zone
 
 # Used to generate the <meta property="keywords"> tag. Could be used in the future to group related content.
 keywords: [aws, terraform, github, oidc, s3, dynamodb, terraform, github actions, ci/cd, best practices]
 
 # This is a more in depth description that isn't used on the rendered page. We can go into more details about why a page needs to exist here, compared to the "description" field which should be for the end-user's benefit.
-page_purpose: This page explains how to deploy an app to the BC Government AWS Landing Zone.
+page_purpose: This page explains how to deploy an app to the B.C. Government AWS Landing Zone.
 
 # Typically, a developer or a technical lead. Not used on the rendered page.
-audience: developer
+audience: developer, aws developers, public cloud 
 
 # Whoever wrote the original draft
-author: Abibat
+author: Abibat Adesina
 
 # The subject matter expert of the page. They are responsible for the factual accuracy of the content.
-content_owner: Pilar Solares Velasco
+content_owner: Abibat Adesina
 
 # A positive integer used to determine the sort order of the page within a navigation menu category. If left blank, the page will be sorted alphabetically at the end of the sorted list within a menu.
 sort_order: 1
 ---
 
-# Deploy an App to the BC Government AWS Landing Zone
+# Deploy an application in the  B.C. Government AWS Landing Zone
+Last updated: **October 30, 2023**
 
-## On This Page
-
-- [On This Page](#on-this-page)
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [AWS Accounts in your Project Set](#aws-accounts-in-your-project-set)
-- [Defining your Infrastructure using Terraform](#defining-your-infrastructure-using-terraform)
-- [Configuring GitHub Action OIDC Authentication to AWS](#configuring-github-action-oidc-authentication-to-aws)
-- [Using S3 and DynamoDB for Terraform State](#using-s3-and-dynamodb-for-terraform-state)
-- [Writing GitHub Action Workflows](#writing-github-action-workflows)
-- [Exposing your Application to the Internet](#exposing-your-application-to-the-internet)
-- [Tips \& Best Practices](#tips--best-practices)
-- [Sample Applications](#sample-applications)
-
-## Introduction
-
-The BC Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
+The B.C. Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
 This guide explains how to:
 
@@ -57,6 +42,18 @@ This guide explains how to:
 - Build CI/CD pipelines using GitHub Actions
 - Follow tips and best practices for the SEA
 
+## On this page
+* [**Prerequisites**](#prerequisites)
+* [**AWS accounts in your project set**](#aws-accounts-in-your-project-set)
+* [**Defining your infrastructure using Terraform**](#defining-your-infrastructure-using-terraform)
+* [**Configuring GitHub Action OIDC Authentication to AWS**](#configuring-github-action-oidc-authentication-to-aws)
+* [**Using S3 and DynamoDB for Terraform State**](#using-s3-and-dynamodb-for-terraform-state)
+* [**Writing GitHub action workflows**](#writing-github-action-workflows)
+* [**Exposing your application to the internet**](#exposing-your-application-to-the-internet)
+* [**Tips and best practices**](#tips-and-best-practices)
+* [**Sample applications**](#sample-applications)
+
+---
 ## Prerequisites
 
 To follow this guide, you need:
@@ -64,15 +61,16 @@ To follow this guide, you need:
 - Access to a SEA project set with dev, test, prod, and tools accounts
 - The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
 - A GitHub account with permissions to create repositories and workflows
-- Basic knowledge of Terraform, GitHub Actions, AWS CLI
+- Basic knowledge of Terraform, GitHub Actions, AWS CLI  
+<!-- Can you add links to the resources above: Terraform, github actions, aws cli ?  -->
 
-## AWS Accounts in your Project Set
+## AWS Accounts in your project set
 
-The BC Government SEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
+The B.C. Government SEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
 
-- The dev account is for developers to experiment and test features.
-- The test account mirrors production and is used for quality assurance testing.
-- The prod account is the live environment accessed by end users.
+- The dev account is for developers to experiment and test features
+- The test account mirrors production and is used for quality assurance testing
+- The prod account is the live environment accessed by end users
 
 A tools account contains shared resources like CI/CD pipelines, container registries, and automation tools.
 
@@ -128,13 +126,13 @@ For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](ht
 
 Here's a quick summary on how to set it up:
 
-1. The GitHub Identity Provider has already been configured in the AWS accounts in your project set.
+1. The GitHub Identity Provider has already been configured in the AWS accounts in your project set
 2. In your AWS account:
    - Create an IAM role for GitHub Actions
    - Create a trust policy on the role with the GitHub Identity Provider
    - Attach a policy that allows access to the AWS resources that you need
 3. In GitHub workflows, configure AWS credentials with the IAM role ARN that you created.
-   - See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example.
+   - See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example
 
 This allows GitHub Actions to assume the IAM role and access your AWS accounts.
 
@@ -212,24 +210,26 @@ jobs:
           aws cloudfront create-invalidation --distribution-id my-website-s3-origin --paths "/*"
 ```
 
-## Exposing your Application to the Internet
+## Exposing your application to the internet
 
 For more complex applications, AWS API Gateway is the preferred method for exposing your application to the internet. It provides a scalable and managed service for creating, deploying, and managing APIs. If you have VPC resources, you can use API Gateway with VPC Link to connect the API Gateway to VPC resources like internal load balancers. This allows you to securely expose your application to the internet while leveraging the benefits of your VPC infrastructure.
 
 Examples of using API Gateway with VPC Link can be found in the the [sample applications](#sample-applications).
 
-## Tips & Best Practices
+## Tips and best practices
 
 - Follow Hashicorp's [Terraform best practices guide](https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices)
-- Review GitHub Actions [security hardening](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) guide
+- Review GitHub Actions [security hardening guide](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) 
 - Use Terraform modules to reuse and share infrastructure definitions
 - Perform security scans, penetration testing for production infrastructure
 - Monitor costs, set budgets, alarms in AWS to avoid unexpected spend
 
-## Sample Applications
+## Sample applications
 
 The Public Cloud team has created sample applications to demonstrate various application architectures. These sample applications are available on GitHub:
 
 - [AWS Serverless](https://github.com/bcgov/startup-sample-project-aws-serverless-OIDC)
 - [AWS Containers](https://github.com/bcgov/startup-sample-project-aws-containers)
 - [AWS Virtual Machines](https://github.com/bcgov/startup-sample-project-aws-virtual-machines)
+
+<!-- Do you need to add any related pages section at the end of this document? If not feel free to delete comment. -->

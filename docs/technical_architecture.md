@@ -28,7 +28,8 @@ content_owner: Bob
 sort_order: 1
 ---
 
-# Page title in sentence case
+# Page title 
+Last updated: **Month Day, Year**
 
 This is introductory text that should go before your table of contents for best search result quality. It might replace your `description` frontmatter field in search results if Google decides it's better.
 
@@ -36,7 +37,8 @@ This is introductory text that should go before your table of contents for best 
 
 - [First content heading in sentence case](#first-h2-content-heading-in-sentence-case)
 - [Second content heading](#second-h2-content-heading)
-- [Related links](#related-links)
+- [Related pages](#related-pages)
+---
 
 ## First H2 content heading in sentence case
 
@@ -50,6 +52,6 @@ H3 and lower headings don't necessarily need to appear in your "On this page" ta
 
 This is paragraph text that appears under the second heading.
 
-## Related links
+## Related pages
 
 - [Example.org](https://example.org)
