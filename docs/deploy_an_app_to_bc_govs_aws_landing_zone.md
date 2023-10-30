@@ -29,6 +29,7 @@ sort_order: 1
 ---
 
 # Deploy an application in the  B.C. Government AWS Landing Zone
+
 Last updated: **October 30, 2023**
 
 The B.C. Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
@@ -43,17 +44,20 @@ This guide explains how to:
 - Follow tips and best practices for the SEA
 
 ## On this page
-* [**Prerequisites**](#prerequisites)
-* [**AWS accounts in your project set**](#aws-accounts-in-your-project-set)
-* [**Defining your infrastructure using Terraform**](#defining-your-infrastructure-using-terraform)
-* [**Configuring GitHub Action OIDC Authentication to AWS**](#configuring-github-action-oidc-authentication-to-aws)
-* [**Using S3 and DynamoDB for Terraform State**](#using-s3-and-dynamodb-for-terraform-state)
-* [**Writing GitHub action workflows**](#writing-github-action-workflows)
-* [**Exposing your application to the internet**](#exposing-your-application-to-the-internet)
-* [**Tips and best practices**](#tips-and-best-practices)
-* [**Sample applications**](#sample-applications)
+
+- [On this page](#on-this-page)
+- [Prerequisites](#prerequisites)
+- [AWS Accounts in your project set](#aws-accounts-in-your-project-set)
+- [Defining your Infrastructure using Terraform](#defining-your-infrastructure-using-terraform)
+- [Configuring GitHub Action OIDC Authentication to AWS](#configuring-github-action-oidc-authentication-to-aws)
+- [Using S3 and DynamoDB for Terraform State](#using-s3-and-dynamodb-for-terraform-state)
+- [Writing GitHub Action Workflows](#writing-github-action-workflows)
+- [Exposing your application to the internet](#exposing-your-application-to-the-internet)
+- [Tips and best practices](#tips-and-best-practices)
+- [Sample applications](#sample-applications)
 
 ---
+
 ## Prerequisites
 
 To follow this guide, you need:
@@ -61,8 +65,7 @@ To follow this guide, you need:
 - Access to a SEA project set with dev, test, prod, and tools accounts
 - The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
 - A GitHub account with permissions to create repositories and workflows
-- Basic knowledge of Terraform, GitHub Actions, AWS CLI  
-<!-- Can you add links to the resources above: Terraform, github actions, aws cli ?  -->
+- Basic knowledge of [Terraform](https://www.terraform.io/), [GitHub Actions](https://docs.github.com/en/actions), and the [AWS CLI](https://aws.amazon.com/cli/)
 
 ## AWS Accounts in your project set
 
@@ -219,7 +222,7 @@ Examples of using API Gateway with VPC Link can be found in the the [sample appl
 ## Tips and best practices
 
 - Follow Hashicorp's [Terraform best practices guide](https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices)
-- Review GitHub Actions [security hardening guide](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) 
+- Review GitHub Actions [security hardening guide](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)
 - Use Terraform modules to reuse and share infrastructure definitions
 - Perform security scans, penetration testing for production infrastructure
 - Monitor costs, set budgets, alarms in AWS to avoid unexpected spend
@@ -231,5 +234,3 @@ The Public Cloud team has created sample applications to demonstrate various app
 - [AWS Serverless](https://github.com/bcgov/startup-sample-project-aws-serverless-OIDC)
 - [AWS Containers](https://github.com/bcgov/startup-sample-project-aws-containers)
 - [AWS Virtual Machines](https://github.com/bcgov/startup-sample-project-aws-virtual-machines)
-
-<!-- Do you need to add any related pages section at the end of this document? If not feel free to delete comment. -->
