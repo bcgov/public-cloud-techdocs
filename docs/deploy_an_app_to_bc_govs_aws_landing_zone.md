@@ -1,136 +1,235 @@
 ---
-title: How to Deploy an App in the BC Government SEA
+# Page title in sentence case, used to generate <title> tag
+title: Deploy an application 
 
+# Slug is used to generate the page path in the URL. Please use lowercase and separate words with -. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at /landing-page/.
+slug: deploy-an-application
 
-slug: How-to-Deploy-an-App-in-the-BC-Government-SEA
+# A brief, precise description of what a reader will find on the page. Used to generate the <meta name="description"> tag.
+# How to write a good meta description: https://developers.google.com/search/docs/appearance/snippet
+description: Deploy an app to the B.C. Government AWS Landing Zone
 
+# Used to generate the <meta property="keywords"> tag. Could be used in the future to group related content.
+keywords: [aws, terraform, github, oidc, s3, dynamodb, terraform, github actions, ci/cd, best practices]
 
-Description: Brief explanation of what will a reader find in this particular doc
+# This is a more in depth description that isn't used on the rendered page. We can go into more details about why a page needs to exist here, compared to the "description" field which should be for the end-user's benefit.
+page_purpose: This page explains how to deploy an app to the B.C. Government AWS Landing Zone.
 
+# Typically, a developer or a technical lead. Not used on the rendered page.
+audience: developer, aws developers, public cloud 
 
-keywords: example 1, example 2, example 3
+# Whoever wrote the original draft
+author: Abibat Adesina
 
+# The subject matter expert of the page. They are responsible for the factual accuracy of the content.
+content_owner: Abibat Adesina
 
-page_purpose: Why are you writing this documentation?
-
-
-audience: Who will be reading the documentation? example 1, example 2, example 3 
-
-
-author: Writers involved in the creation of the document 
-
-Editor: Content Strategist / Content Reviewer 
-
-
-content_owner: Name of Subject matter expert
-
-
-sort_order: What is order it should be displayed on the menu? 1 or 2 or 3 or etc.
+# A positive integer used to determine the sort order of the page within a navigation menu category. If left blank, the page will be sorted alphabetically at the end of the sorted list within a menu.
+sort_order: 1
 ---
 
-# Main title
-Last updated: **Month, Day, Year**
-{{Write a small paragraph about the content of the document. Introduce to your readers what the page will be about. This should only be a 5-6 paragraph description.}}
+# Deploy an application in the  B.C. Government AWS Landing Zone
+Last updated: **October 30, 2023**
 
-<!-- 
-## On this page 
-* [**Introduction**](#this-is-an-example)
-* [**Prerequisites**](#this-is-another-example)
-* [**Configuring GitHub Action OIDC Authentication to AWS**](#)
-* [****](#)
-* [**Related Pages**](#related-pages)
- -->
+The B.C. Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
+This guide explains how to:
 
-## 1. Introduction
-Brief overview of the BC Government AWS SEA environment.
-The AWS Accelerator is a tool designed to help deploy and operate secure multi-account, multi-region AWS environments on an ongoing basis. The power of the solution is the configuration file that drives the architecture deployed by the tool. This enables extensive flexibility and for the completely automated deployment of a customized architecture within AWS without changing a single line of code.
-Deploys an opinionated and prescriptive architecture designed to help meet the security and operational requirements of many governments around the world (initial focus was the Government of Canada).​The Cloud Pathfinder team has added additional automation, and functionality to meet the needs of the Government of BC
-Explanation of the project-set concept: dev, test, prod, and tools AWS accounts.
-Purpose of the technical documentation.
-This technical documentation is to basically give insight to allow the technical team 
-## 2. Prerequisites
-List of prerequisites for deploying the app, such as AWS accounts, permissions, and tools.
-Deployment into AWS infrastructure includes having AWS account, Github and the required AWS IAM permissions 
+- Understand the AWS accounts in your project set
+- Use Terraform to define your infrastructure as code
+- Configure OIDC authentication for your GitHub Actions
+- Manage Terraform state with S3 and DynamoDB
+- Build CI/CD pipelines using GitHub Actions
+- Follow tips and best practices for the SEA
 
-## 3. Defining your Infrastructure using Terraform
-What is Terraform
-Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. 
-Sample app(AWS CloudFront and S3)
+## On this page
+* [**Prerequisites**](#prerequisites)
+* [**AWS accounts in your project set**](#aws-accounts-in-your-project-set)
+* [**Defining your infrastructure using Terraform**](#defining-your-infrastructure-using-terraform)
+* [**Configuring GitHub Action OIDC Authentication to AWS**](#configuring-github-action-oidc-authentication-to-aws)
+* [**Using S3 and DynamoDB for Terraform State**](#using-s3-and-dynamodb-for-terraform-state)
+* [**Writing GitHub action workflows**](#writing-github-action-workflows)
+* [**Exposing your application to the internet**](#exposing-your-application-to-the-internet)
+* [**Tips and best practices**](#tips-and-best-practices)
+* [**Sample applications**](#sample-applications)
 
+---
+## Prerequisites
 
-## 4. Configuring GitHub Action OIDC Authentication to AWS
-Explanation of using OpenID Connect (OIDC) for GitHub Action authentication to AWS.
-Open ID Connect (OIDC) is a set of protocols that simplifies the authorization process between
-two entities that trust each other. When configuring in AWS to use OIDC the first requirement is to have the OIDC component available. When creating the project set for the different ministry teams, the Cloud Pathfinder Team (CPF) adds the OIDC component to the list of components available in AWS to the ministry teams so it is ready for use. The ministry teams are responsible to configure their AWS and GitHub environments to use OIDC.
-Step-by-step guide on setting up OIDC authentication.
-How to configure AWS credentials in a GitHub Action.
-Validation and testing of the authentication setup.
+To follow this guide, you need:
 
-## 5. Using S3 and DynamoDB for Terraform State
-Introduction to Terraform state management.
-Explanation of using Amazon S3 and DynamoDB for storing Terraform state files.
+- Access to a SEA project set with dev, test, prod, and tools accounts
+- The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
+- A GitHub account with permissions to create repositories and workflows
+- Basic knowledge of Terraform, GitHub Actions, AWS CLI  
+<!-- Can you add links to the resources above: Terraform, github actions, aws cli ?  -->
 
-Using Amazon S3 and DynamoDB for storing Terraform state files is a best practice approach to managing and maintaining the state of your infrastructure as code deployments. Terraform is a tool for provisioning and managing cloud infrastructure resources, and its state files keep track of the current state of the resources it manages.
+## AWS Accounts in your project set
 
-Amazon S3 (Simple Storage Service) is a scalable and durable object storage service, while Amazon DynamoDB is a fully managed NoSQL database service. Combining these two services with Terraform helps ensure the reliability, security, and collaboration of your infrastructure deployments. Here's how it works:
-S3 for Storing State Files:
-When Terraform runs, it generates a state file that reflects the current state of your infrastructure. This state file is crucial because it helps Terraform understand what resources are already deployed, what changes need to be made, and what resources need to be created, modified or destroyed.
-DynamoDB for Locking:
-When Terraform runs, it reads the current state file to determine the existing resources. During this process, it also locks the state to prevent concurrent modifications by multiple users. This is important to avoid conflicting changes and potential resource corruption
+The B.C. Government SEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
 
-Walkthrough of setting up S3 bucket and DynamoDB table for Terraform state storage.
-How to configure Terraform to use the S3 and DynamoDB backend.
+- The dev account is for developers to experiment and test features
+- The test account mirrors production and is used for quality assurance testing
+- The prod account is the live environment accessed by end users
 
-## 6. Writing GitHub Action Workflows
-Overview of GitHub Actions and their importance in the deployment process.
-GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
-https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
-Explanation of the provided workflows in the sample app repository.
-Detailed breakdown of each workflow's purpose and steps.
-Workflow for deploying to a development environment.
-Workflow for testing the application.
-Workflow for deploying to production environment.
-Instructions for modifying or creating new workflows based on requirements.
-Step-by-step guide on deploying the sample app to the BC Government SEA.
-Instructions for configuring environment-specific variables and settings.
-How to trigger the deployment using GitHub Actions.
-Monitoring and troubleshooting deployment issues.
-## 8. Tips & Best Practices
-Some of these could be links to external documentation
-How to run a Terraform Plan from your local development environment
-Tips and best practices for managing resources in the BC Government SEA environment.
-Recommendations for maintaining security and compliance standards.
-Guidelines for updating and scaling the deployed application.
+A tools account contains shared resources like CI/CD pipelines, container registries, and automation tools.
 
-## 8. Sample Applications
-Links to the three sample apps
+## Defining your Infrastructure using Terraform
 
-## This is another example of a section
+Terraform lets you define cloud resources in configuration files. This infrastructure as code approach helps manage resources consistently and repeatedly.
 
-{{Content goes here}}
+For example, to deploy a static website to AWS S3 and CloudFront:
 
-## Related Pages 
+```hcl
+  # S3 bucket to host the website
+  resource "aws_s3_bucket" "website" {
+    bucket = "my-website-bucket"
+  }
+  
+  # CloudFront distribution to cache and distribute the website 
+  resource "aws_cloudfront_distribution" "website_dist" {
+    origin {
+      domain_name = aws_s3_bucket.website.bucket_regional_domain_name
+      origin_id   = "my-website-s3-origin"
 
-[Text](link) 
+      s3_origin_config {
+        origin_access_identity = aws_cloudfront_origin_access_identity.website_access_identity.cloudfront_access_identity_path
+      }
+    }
+    
+    enabled             = true
+    default_root_object = "index.html"
+    
+    # ...other CloudFront settings  
+    
+    # Add origin access identity
+    restrictions {
+      geo_restriction {
+        restriction_type = "none"
+      }
+    }
+  }
 
+  # CloudFront origin access identity
+  resource "aws_cloudfront_origin_access_identity" "website_access_identity" {
+    comment = "CloudFront origin access identity for my website"
+  }
+```
 
+With this approach, you can version your infrastructure, collaborate with others, and repeatedly deploy your app.
 
-Tips for writing technical documentation: 
+## Configuring GitHub Action OIDC Authentication to AWS
 
-Focus on the subject and introduce the reader to dive deeper. Plain language is encouraged even for a technical audience. This plain language and checklist is something worth checking out as it can save you time when writing, the steps are simple and it’s worth having it handy if you need further help.
+To allow GitHub Actions to securely access AWS accounts, use OpenID Connect (OIDC) authentication.
 
-Examples and use cases, provide real-world examples and use cases related to the topic if available. 
+For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services).
 
-Diagrams and visual aids. Don’t know how to explain something? Have a picture? Diagram? Video that can explain it better? - have free reign to do it. If you are recording a video, make sure they are no longer than 5 minutes. 
+Here's a quick summary on how to set it up:
 
-Related pages can be a section to include other documentation that can help a visitor dive deeper or connect with another supplemental subject.
+1. The GitHub Identity Provider has already been configured in the AWS accounts in your project set
+2. In your AWS account:
+   - Create an IAM role for GitHub Actions
+   - Create a trust policy on the role with the GitHub Identity Provider
+   - Attach a policy that allows access to the AWS resources that you need
+3. In GitHub workflows, configure AWS credentials with the IAM role ARN that you created.
+   - See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example
 
-Don’t get caught up in the styling of the document, this can be worked at the end and can be done by the UX Content strategist. It is encouraged to check spelling and peer review (min 2 people) with team members before any documentation is live.   
+This allows GitHub Actions to assume the IAM role and access your AWS accounts.
 
-Current & old content
-https://digital.gov.bc.ca/cloud/public/onboard/#project
+## Using S3 and DynamoDB for Terraform State
 
+To collaborate on Terraform state:
 
+1. Create an S3 bucket to store state files
+2. Enable versioning on the S3 bucket
+3. Create a DynamoDB table for state locking and consistency
+4. Configure Terraform to use the S3/DynamoDB backend:
 
-https://github.com/bcgov/startup-sample-project-aws-containers
+```hcl
+terraform {
+    backend "s3" {
+      # configuration details go here
+      # or can be generated dynamically
+    }
+}
+```
+
+By leaving the backend configuration details undefined they can be generated dynamically by the GitHub Action workflow. This allows the same workflow and Terraform configuration to be used for multiple environments.
+
+See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example.
+
+## Writing GitHub Action Workflows
+
+Use GitHub Actions to build CI/CD pipelines for automated deployments. For example:
+
+```yaml
+name: Deploy to dev
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write   # This is required for OIDC
+  contents: read    # This is required for actions/checkout
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ca-central-1
+          role-to-assume: arn:aws:iam::<dev-aws-account-id>:role/my-github-actions-role # This is the IAM role created for GitHub Actions
+          session-name: my-github-actions-session # This is the session name for the assumed role that will show up in CloudTrail logs
+      
+      - name: Generate backend config
+        run: |
+          cat <<EOF > backend.hcl
+          bucket         = "dev-terraform-state-bucket"
+          key            = "dev/my-app/terraform.tfstate"
+          region         = "ca-central-1" 
+          dynamodb_table = "terraform-lock-table"
+          EOF
+      
+      - name: Init Terraform
+        run: |
+          terraform init -backend-config=backend.hcl
+      
+      - name: Apply Terraform
+        run: |
+          terraform apply -auto-approve
+      
+      - name: Deploy to dev
+        run: |
+          aws s3 sync --delete index.html s3://my-website-bucket
+          aws cloudfront create-invalidation --distribution-id my-website-s3-origin --paths "/*"
+```
+
+## Exposing your application to the internet
+
+For more complex applications, AWS API Gateway is the preferred method for exposing your application to the internet. It provides a scalable and managed service for creating, deploying, and managing APIs. If you have VPC resources, you can use API Gateway with VPC Link to connect the API Gateway to VPC resources like internal load balancers. This allows you to securely expose your application to the internet while leveraging the benefits of your VPC infrastructure.
+
+Examples of using API Gateway with VPC Link can be found in the the [sample applications](#sample-applications).
+
+## Tips and best practices
+
+- Follow Hashicorp's [Terraform best practices guide](https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices)
+- Review GitHub Actions [security hardening guide](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions) 
+- Use Terraform modules to reuse and share infrastructure definitions
+- Perform security scans, penetration testing for production infrastructure
+- Monitor costs, set budgets, alarms in AWS to avoid unexpected spend
+
+## Sample applications
+
+The Public Cloud team has created sample applications to demonstrate various application architectures. These sample applications are available on GitHub:
+
+- [AWS Serverless](https://github.com/bcgov/startup-sample-project-aws-serverless-OIDC)
+- [AWS Containers](https://github.com/bcgov/startup-sample-project-aws-containers)
+- [AWS Virtual Machines](https://github.com/bcgov/startup-sample-project-aws-virtual-machines)
+
+<!-- Do you need to add any related pages section at the end of this document? If not feel free to delete comment. -->
