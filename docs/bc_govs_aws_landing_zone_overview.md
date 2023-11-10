@@ -1,6 +1,8 @@
 # B.C. Government AWS Landing Zone Overview
 
-An overview of the B.C. Government AWS Landing Zone, who it is for, how to get access, it's benefits, components, and features.
+Last updated: **November 10, 2023**
+
+An overview of the B.C. Government AWS Landing Zone, who it is for, how to get access, its benefits, components, and features.
 
 ## On this page
 

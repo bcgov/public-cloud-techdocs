@@ -1,33 +1,3 @@
----
-# Page title in sentence case, used to generate <title> tag
-title: Deploy an application 
-
-# Slug is used to generate the page path in the URL. Please use lowercase and separate words with -. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at /landing-page/.
-slug: deploy-an-application
-
-# A brief, precise description of what a reader will find on the page. Used to generate the <meta name="description"> tag.
-# How to write a good meta description: https://developers.google.com/search/docs/appearance/snippet
-description: Deploy an app to the B.C. Government AWS Landing Zone
-
-# Used to generate the <meta property="keywords"> tag. Could be used in the future to group related content.
-keywords: [aws, terraform, github, oidc, s3, dynamodb, terraform, github actions, ci/cd, best practices]
-
-# This is a more in depth description that isn't used on the rendered page. We can go into more details about why a page needs to exist here, compared to the "description" field which should be for the end-user's benefit.
-page_purpose: This page explains how to deploy an app to the B.C. Government AWS Landing Zone.
-
-# Typically, a developer or a technical lead. Not used on the rendered page.
-audience: developer, aws developers, public cloud 
-
-# Whoever wrote the original draft
-author: Abibat Adesina
-
-# The subject matter expert of the page. They are responsible for the factual accuracy of the content.
-content_owner: Abibat Adesina
-
-# A positive integer used to determine the sort order of the page within a navigation menu category. If left blank, the page will be sorted alphabetically at the end of the sorted list within a menu.
-sort_order: 1
----
-
 # Deploy an application in the  B.C. Government AWS Landing Zone
 
 Last updated: **October 30, 2023**
