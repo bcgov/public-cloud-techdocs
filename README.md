@@ -12,3 +12,6 @@ Please see [Writing guide for Platform Services technical documentation](https:/
 
 Start your new document from the new [Markdown document template](/new-markdown-document-template.md).
 
+# Deploy Locally
+
+In the root of the repostory run `npx @techdocs/cli serve`
