@@ -152,11 +152,13 @@ Each workload account, corresponding to different stages of the software develop
 
 For BC Government Ministry teams working in the AWS Public Cloud, it's crucial to understand the high-level overview of the logging components integrated into the ASEA. These components include CloudWatch, CloudTrail, and a centralized Log Archive, each playing a vital role in maintaining a secure and compliant cloud environment.
 
-#### CloudWatch
+#### CloudWatch Logs
 
-- **What is it**: AWS CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers. It provides data and actionable insights to monitor applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health.
-- **Log Groups are Immutable**: In the ASEA architecture, all CloudWatch Log groups are configured to be sent using Amazon Kinesis to S3 for centralized immutable log retention. This setup ensures the integrity and security of log data.
-- **Retention**: The CloudWatch log group retention period should be set to a medium retention period, such as 2 years, to enable easy online access and facilitate operational monitoring and troubleshooting.
+- **What is CloudWatch Logs**: CloudWatch Logs, a part of AWS CloudWatch, focuses on log management. It enables collection, monitoring, and analysis of log data from AWS resources and applications. Ideal for DevOps, developers, and IT managers, it provides essential capabilities for real-time log monitoring and operational troubleshooting.
+  
+- **Immutability of Log Groups**: In the ASEA architecture, CloudWatch Logs groups are rendered immutable due to Service Control Policies (SCPs). This immutability is crucial for maintaining the integrity and security of log data, ensuring logs are preserved in their original state for security audits and compliance purposes.
+
+- **Retention Policy**: The retention period for CloudWatch Logs groups is automatically set to 30 days. This duration is optimal for regular monitoring and immediate operational analysis. For long-term retention and audit purposes, logs are sent to a centralized log archive using Amazon Kinesis, where they are retained for 2 years. This two-tiered approach to log retention ensures that operational needs are met while also maintaining compliance with data retention policies.
 
 #### CloudTrail
 
