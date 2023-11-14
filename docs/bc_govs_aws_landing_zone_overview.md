@@ -17,6 +17,7 @@ An overview of the B.C. Government AWS Landing Zone, who it is for, how to get a
   - [Networking](#networking)
   - [Logging](#logging)
   - [IAM Users (service accounts)](#iam-users-service-accounts)
+  - [Understanding ASEA-Protected Resources in Your AWS Accounts](#understanding-asea-protected-resources-in-your-aws-accounts)
   - [Next steps](#next-steps)
 - [Related pages](#related-pages)
 
@@ -208,6 +209,29 @@ The IAM User Management and Key Rotation solution, an integral part of the BC Go
    - Implement identity-based policies to restrict access based on the source IP, enhancing security.
 
 This solution facilitates efficient IAM user management and enhances security by ensuring proper key rotation and management of permissions, aligning with best practices for secure AWS operations.
+
+### Understanding ASEA-Protected Resources in Your AWS Accounts
+
+#### Overview
+
+Within your AWS environment managed by the AWS Secure Environment Accelerator (ASEA), you'll encounter a range of resources created and maintained by ASEA. These resources are critical for the security, compliance, and efficiency of your cloud operations. It's important for Ministry teams to recognize these resources and understand their purpose.
+
+By recognizing and respecting the role of these ASEA-managed resources, Ministry teams can effectively navigate and utilize their AWS environment within the boundaries of established best practices and governance policies.
+
+#### ASEA-Protected Resources
+
+- **Identifying ASEA Resources**: Resources created by ASEA are typically identifiable through specific naming conventions and tags. They often start with the prefix `PBMM`, or carry tags such as `AcceleratorName: PBMM` or `Accelerator: PBMM`.
+- **Nature of Resources**: These resources could range from network configurations, security groups, and IAM roles, to monitoring tools and logging services. They are integral to maintaining the operational standards set by ASEA.
+
+#### Protection and Restrictions
+
+- **Protected by SCPs**: These resources are safeguarded by Service Control Policies (SCPs). This layer of protection ensures that the resources remain intact and are not altered, preventing any unintended security or compliance breaches.
+- **Impact on Ministry Teams**: As a result of these protections, Ministry teams will generally have limited, read-only access to these ASEA-managed resources. Modification or removal is restricted to maintain the integrity of the cloud environment.
+
+#### Role of ASEA-Managed Resources
+
+- **Security and Compliance**: These resources are pivotal in ensuring that your AWS environment adheres to the high standards of security and compliance required by the BC Government.
+- **Operational Efficiency**: By standardizing and automating key aspects of cloud management, these resources help in maintaining operational efficiency and consistency across different Ministry teams.
 
 ### Next steps
 
