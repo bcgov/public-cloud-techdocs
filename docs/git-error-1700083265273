@@ -1,0 +1,7 @@
+> git pull --tags origin aws-lz-overview
+From https://github.com/bcgov/public-cloud-techdocs
+ * branch            aws-lz-overview -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	docs/iam-user-service.md
+Please commit your changes or stash them before you merge.
+Aborting

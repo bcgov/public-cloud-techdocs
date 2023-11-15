@@ -1,8 +1,7 @@
-# Deploy an application in the  B.C. Government AWS Landing Zone
+# Deploy an application to the  B.C. Government AWS Landing Zone
+Last updated: **November 15, 2023**
 
-Last updated: **October 30, 2023**
-
-The B.C. Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
+The B.C. Government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
 This guide explains how to:
 
@@ -11,20 +10,7 @@ This guide explains how to:
 - Configure OIDC authentication for your GitHub Actions
 - Manage Terraform state with S3 and DynamoDB
 - Build CI/CD pipelines using GitHub Actions
-- Follow tips and best practices for the SEA
-
-## On this page
-
-- [On this page](#on-this-page)
-- [Prerequisites](#prerequisites)
-- [AWS Accounts in your project set](#aws-accounts-in-your-project-set)
-- [Defining your Infrastructure using Terraform](#defining-your-infrastructure-using-terraform)
-- [Configuring GitHub Action OIDC Authentication to AWS](#configuring-github-action-oidc-authentication-to-aws)
-- [Using S3 and DynamoDB for Terraform State](#using-s3-and-dynamodb-for-terraform-state)
-- [Writing GitHub Action Workflows](#writing-github-action-workflows)
-- [Exposing your application to the internet](#exposing-your-application-to-the-internet)
-- [Tips and best practices](#tips-and-best-practices)
-- [Sample applications](#sample-applications)
+- Follow tips and best practices for the ASEA
 
 ---
 
