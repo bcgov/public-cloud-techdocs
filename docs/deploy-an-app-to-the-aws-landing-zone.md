@@ -18,14 +18,14 @@ This guide explains how to:
 
 To follow this guide, you need:
 
-- Access to a SEA project set with dev, test, prod, and tools accounts
+- Access to a ASEA project set with dev, test, prod, and tools accounts
 - The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
 - A GitHub account with permissions to create repositories and workflows
 - Basic knowledge of [Terraform](https://www.terraform.io/), [GitHub Actions](https://docs.github.com/en/actions), and the [AWS CLI](https://aws.amazon.com/cli/)
 
 ## AWS Accounts in your project set
 
-The B.C. Government SEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
+The B.C. Government ASEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
 
 - The dev account is for developers to experiment and test features
 - The test account mirrors production and is used for quality assurance testing
