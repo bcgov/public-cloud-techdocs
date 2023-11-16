@@ -1,4 +1,5 @@
 # IAM User management service
+
 Last updated: **November 15, 2023**
 
 This solution employs AWS services such as DynamoDB, Lambda, and IAM for automated IAM user management and secure access key rotation. The necessary services are deployed into project sets within the ECF automation layers upon creation.
@@ -18,21 +19,23 @@ To create an IAM user:
     ![create-user](/images/iam-user-service/create-user.png)
 
     A Lambda function will trigger to create the IAM user, generate an access key, and store it in the SSM Parameter Store. This function also runs hourly to rotate keys as needed and ensure DynamoDB table entries align with actual IAM account users, removing any discrepancies.
-      
+
       ![iam-user](/images/iam-user-service/iam-users.png)
 
-### IAM username constraints:
+### IAM username constraints
+
 When creating an AWS IAM user, the constraints for naming are as follows:
 
-  - **Length**: The name must be between 1 and 64 characters long.
-  - **Characters**: The name can include only the following characters:
-    - Uppercase and lowercase letters (A–Z and a–z)
-    - Numbers (0–9)
-    - Plus (+), equal (=), comma (,), period (.), at (@), underscore (_), and hyphen (-) characters
+- **Length**: The name must be between 1 and 64 characters long.
+- **Characters**: The name can include only the following characters:
+  - Uppercase and lowercase letters (A–Z and a–z)
+  - Numbers (0–9)
+  - Plus (+), equal (=), comma (,), period (.), at (@), underscore (_), and hyphen (-) characters
 
 These constraints ensure that usernames are compatible with AWS naming conventions and can be used across various AWS services without issues. It's important to adhere to these guidelines to avoid errors during user creation and when assigning permissions or attaching policies to the user.
 
-## How does key-rotation work 
+## How does key-rotation work
+
 The Lambda function manages key rotation by monitoring the age of the keys. When the current key is older than 2 days, it's marked as pending_deletion key and a new current key is created. Once the pending_deletion key reaches 4 days old, it is deleted and replaced with a new current_key.
 
  The lambda function also updates the keys in the parameter store automatically.
@@ -116,4 +119,6 @@ Example policy that allows s3 actions only to a specific ip range:
 }
 ```
 
-<!-- Related pages need to be added here  -->
+## Related Pages
+
+- [B.C. Government AWS Landing Zone overview](/docs/bc-gov-aws-landing-zone-overview.md)

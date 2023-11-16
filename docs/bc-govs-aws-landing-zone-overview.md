@@ -1,4 +1,5 @@
 # B.C. Government AWS Landing Zone overview
+
 Last updated: **November 15, 2023**
 
 An overview of the B.C. Government AWS Landing Zone, who it is for, how to get access, its benefits, components, and features.
@@ -6,6 +7,7 @@ An overview of the B.C. Government AWS Landing Zone, who it is for, how to get a
 ---
 
 ## Benefits of building apps in the AWS Public Cloud
+
 Ministry teams in the B.C. government who want to build applications in the AWS Public Cloud can rely on the AWS Secure Environment Accelerator (ASEA). It offers a strong, secure, and efficient framework designed specifically to meet the distinct needs and compliance requirements of government entities. This ensures that applications are developed within a secure and well-governed cloud environment.
 
 From this perspective, the ASEA offers several significant benefits:
@@ -25,12 +27,15 @@ From this perspective, the ASEA offers several significant benefits:
 For B.C. government ministry teams developing applications in the AWS Public Cloud, the ASEA provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
 ## How to get access
+
 Explore a [comprehensive guide](https://digital.gov.bc.ca/cloud/services/public/onboard) for onboarding your team to the public cloud.
 
 ## Components and features
+
 In this section, we'll provide a high level overview of the components and features of the B.C. Government AWS Landing Zone.
 
 ### Product Registry
+
 The Product Registry service is a comprehensive solution designed to streamline the process of requesting and creating AWS Project Sets for B.C. government ministry teams. Each Project Set comprises four distinct AWS accounts: Development (dev), Testing (test), Production (prod), and Tools. This service plays a crucial role, not just in setting up the necessary AWS infrastructure, but also in managing various aspects of a product's lifecycle in the cloud.
 
 ### Key Features of the Product Registry Service
@@ -54,6 +59,7 @@ The Product Registry service is a comprehensive solution designed to streamline 
 The Product Registry service represents a significant step forward in managing cloud resources effectively, offering a centralized, automated, and controlled approach to handle various aspects of AWS account management, from initial setup to continuous budgeting and access control. This service is particularly helpful for ministry teams needing to manage many cloud-based products, providing a streamlined and secure solution for AWS cloud management.
 
 ### Project Set
+
 A project set consists of four distinct AWS accounts for development (dev), testing (test), production (prod), and tools (tools) environments. This isolates and protects each stage of the deployment lifecycle.
 
 - The dev account is for developers to experiment and test features
@@ -68,14 +74,14 @@ The AWS Secure Environment Accelerator (ASEA) provides a security framework for 
 #### Preventative controls
 
 - **Service Control Policies (SCPs)**
-   - SCPs act as guardrails to protect the architecture and prevent critical guardrails from being turned off
-   - They can deny specific or entire categories of API operations at an AWS account, organizational unit (OU), or organization level
-   - SCPs ensure workloads are deployed only in prescribed regions (ca-central-1) and restrict access to specific AWS services as necessary
+  - SCPs act as guardrails to protect the architecture and prevent critical guardrails from being turned off
+  - They can deny specific or entire categories of API operations at an AWS account, organizational unit (OU), or organization level
+  - SCPs ensure workloads are deployed only in prescribed regions (ca-central-1) and restrict access to specific AWS services as necessary
 
 - **AWS Config**
-   - AWS Config is crucial for keeping an eye on and evaluating AWS resource configurations
-   - It makes sure that the resources follow the specified policies and standards
-   - AWS Config works seamlessly with various other AWS services, giving a complete picture of the AWS environment and helping maintain the desired configuration
+  - AWS Config is crucial for keeping an eye on and evaluating AWS resource configurations
+  - It makes sure that the resources follow the specified policies and standards
+  - AWS Config works seamlessly with various other AWS services, giving a complete picture of the AWS environment and helping maintain the desired configuration
 
 #### Detective controls
 
@@ -102,6 +108,7 @@ The ASEA security framework ensures that ministry teams can develop and deploy a
 <!-- - TODO: Link to the security guardrails page -->
 
 ### Networking
+
 For B.C. government ministry teams developing applications in the AWS Public Cloud, understanding the high-level overview of the networking components of the AWS Secure Environment Accelerator (ASEA) is essential. These components are designed to ensure secure, efficient, and compliant networking within AWS environments.
 
 #### High-Level Overview of Networking Components
