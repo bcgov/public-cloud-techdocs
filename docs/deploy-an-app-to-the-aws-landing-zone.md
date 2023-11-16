@@ -1,38 +1,8 @@
----
-# Page title in sentence case, used to generate <title> tag
-title: Deploy an application 
+# Deploy an application to the  B.C. Government AWS Landing Zone
 
-# Slug is used to generate the page path in the URL. Please use lowercase and separate words with -. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at /landing-page/.
-slug: deploy-an-application
+Last updated: **November 15, 2023**
 
-# A brief, precise description of what a reader will find on the page. Used to generate the <meta name="description"> tag.
-# How to write a good meta description: https://developers.google.com/search/docs/appearance/snippet
-description: Deploy an app to the B.C. Government AWS Landing Zone
-
-# Used to generate the <meta property="keywords"> tag. Could be used in the future to group related content.
-keywords: [aws, terraform, github, oidc, s3, dynamodb, terraform, github actions, ci/cd, best practices]
-
-# This is a more in depth description that isn't used on the rendered page. We can go into more details about why a page needs to exist here, compared to the "description" field which should be for the end-user's benefit.
-page_purpose: This page explains how to deploy an app to the B.C. Government AWS Landing Zone.
-
-# Typically, a developer or a technical lead. Not used on the rendered page.
-audience: developer, aws developers, public cloud 
-
-# Whoever wrote the original draft
-author: Abibat Adesina
-
-# The subject matter expert of the page. They are responsible for the factual accuracy of the content.
-content_owner: Abibat Adesina
-
-# A positive integer used to determine the sort order of the page within a navigation menu category. If left blank, the page will be sorted alphabetically at the end of the sorted list within a menu.
-sort_order: 1
----
-
-# Deploy an application in the  B.C. Government AWS Landing Zone
-
-Last updated: **October 30, 2023**
-
-The B.C. Government AWS Secure Environment Accelerator (SEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
+The B.C. Government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
 This guide explains how to:
 
@@ -41,20 +11,7 @@ This guide explains how to:
 - Configure OIDC authentication for your GitHub Actions
 - Manage Terraform state with S3 and DynamoDB
 - Build CI/CD pipelines using GitHub Actions
-- Follow tips and best practices for the SEA
-
-## On this page
-
-- [On this page](#on-this-page)
-- [Prerequisites](#prerequisites)
-- [AWS Accounts in your project set](#aws-accounts-in-your-project-set)
-- [Defining your Infrastructure using Terraform](#defining-your-infrastructure-using-terraform)
-- [Configuring GitHub Action OIDC Authentication to AWS](#configuring-github-action-oidc-authentication-to-aws)
-- [Using S3 and DynamoDB for Terraform State](#using-s3-and-dynamodb-for-terraform-state)
-- [Writing GitHub Action Workflows](#writing-github-action-workflows)
-- [Exposing your application to the internet](#exposing-your-application-to-the-internet)
-- [Tips and best practices](#tips-and-best-practices)
-- [Sample applications](#sample-applications)
+- Follow tips and best practices for the ASEA
 
 ---
 
@@ -62,14 +19,14 @@ This guide explains how to:
 
 To follow this guide, you need:
 
-- Access to a SEA project set with dev, test, prod, and tools accounts
+- Access to a ASEA project set with dev, test, prod, and tools accounts
 - The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
 - A GitHub account with permissions to create repositories and workflows
 - Basic knowledge of [Terraform](https://www.terraform.io/), [GitHub Actions](https://docs.github.com/en/actions), and the [AWS CLI](https://aws.amazon.com/cli/)
 
 ## AWS Accounts in your project set
 
-The B.C. Government SEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
+The B.C. Government ASEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
 
 - The dev account is for developers to experiment and test features
 - The test account mirrors production and is used for quality assurance testing
