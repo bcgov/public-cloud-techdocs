@@ -2,29 +2,33 @@
 
 ## Get started
 
-Start here for the first steps on working in our AWS SEA environment.
+Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
 
-* [What is the BC Government's AWS SEA?](bc-govs-aws-landing-zone-overview.md)
-* [Provision a new project in AWS](provision-a-project-set.md)
-* [User access](provision-a-project-set.md)
+* [B.C. Government AWS Landing Zone overview](bc-govs-aws-landing-zone-overview.md)
+* [Provision a project set in AWS](provision-a-project-set.md)
+* [Account access](provision-a-project-set.md#account-access)
 
 ## Build, deploy and maintain apps
 
-Best practices on the platform.
+Best practices on the platform:
 
-* [Build and deploy application](deploy-an-app-to-bc-govs-aws-landing-zone.md)
+* [Deploy an application to the  B.C. Government AWS Landing Zone](deploy-an-app-to-bc-govs-aws-landing-zone.md)
+
 <!--
+Make sure to keep the page titles with the exact name of pages throughout the documentation
+
+E.g "Deploy an application to the  B.C. Government AWS Landing Zone" cannot be called Build and deploy an application" as well.  This helps avoid any confusion to the user and our naming  through our public tech docs
+
 * Maintain an application (coming soon) 
 * Retire an application (coming soon) 
 -->
 
 ## Training and learning
 
-Relevant technical information about the components that make up the AWS Secure Environment Accelerator (SEA).
+Relevant technical information about the components that make up the AWS Secure Environment Accelerator (ASEA).
 
-### Learn about the AWS Secure Environment Accelerator (SEA)
+### Learn about the AWS Secure Environment Accelerator (ASEA)
 
-* [AWS SEA overview](bc-govs-aws-landing-zone-overview.md)
 <!-- * [Technical architecture](technical-architecture.md) -->
 <!-- * [Networking](networking.md) -->
 
@@ -32,7 +36,8 @@ Relevant technical information about the components that make up the AWS Secure 
 
 Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud PaaS. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
 
-[Log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
+If you already have access, you can
+[log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
 ### Platform community MeetUps
 
@@ -42,7 +47,7 @@ Every six weeks, we host a platform community MeetUp where we talk about changes
 
 ### Reusable code and services
 
-We have several [sample applications](deploy-an-app-to-bc-govs-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the SEA, and give your team a launchpad to begin development in AWS.
+We have several [sample applications](deploy-an-app-to-bc-govs-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the ASEA, and give your team a launchpad to begin development in AWS.
 
 ### External training
 
