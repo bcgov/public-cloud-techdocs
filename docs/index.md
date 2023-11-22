@@ -27,8 +27,7 @@ E.g "Deploy an application to the  B.C. Government AWS Landing Zone" cannot be c
 
 Relevant technical information about the components that make up the AWS Secure Environment Accelerator (ASEA).
 
-### Learn about the AWS Secure Environment Accelerator (ASEA)
-
+<!-- ### Learn about the AWS Secure Environment Accelerator (ASEA) -->
 <!-- * [Technical architecture](technical-architecture.md) -->
 <!-- * [Networking](networking.md) -->
 

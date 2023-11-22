@@ -15,74 +15,75 @@ To do that you must meet the prerequisites for provisioning a project set outlin
 
 1. Login to the [BC Gov Product Registry](https://registry.developer.gov.bc.ca/login)
 
-Take into consideration that you will need: 
+  Take into consideration that you will need: 
 
-* A descriptive product name (no acronyms)
-* Contact details and IDIR accounts for the Product Owner and up to 2 Technical Leads
-* For B.C. Gov's Landing Zone in AWS an estimate for the product's projected monthly spend on cloud services [Refer to the AWS Cost Calculator](https://calculator.aws/#/) and an AWS Account Code (Refer to Memorandum of Understanding (MoU)).
+  - A descriptive product name (no acronyms)
+  - Contact details and IDIR accounts for the Product Owner and up to 2 Technical Leads
+  - For B.C. Gov's Landing Zone in AWS an estimate for the product's projected monthly spend on cloud services [Refer to the AWS Cost Calculator](https://calculator.aws/#/) and an AWS Account Code (Refer to Memorandum of Understanding (MoU)).
 
-For **new product teams** requesting space in the AWS Landing Zone complete the following 2 steps before submitting the provisioning request:
+  For **new product teams** requesting space in the AWS Landing Zone complete the following 2 steps before submitting the provisioning request:
 
-1. Sign a Memorandum of Understanding (MoU) with OCIO. Request an MoU template from cloud.pathfinder@gov.bc.ca
-2.  Book an onboarding session with the Cloud Pathfinder Team at cloud.pathfinder@gov.bc.ca
+  - Sign a Memorandum of Understanding (MoU) with OCIO. Request an MoU template from cloud.pathfinder@gov.bc.ca
+  - Book an onboarding session with the Cloud Pathfinder Team at cloud.pathfinder@gov.bc.ca
 
 
 2. Navigate to the top menu called **Public Cloud Products**
 
-    ![public-cloud](images/provision-a-project-set/public-cloud.png)
+  ![public-cloud](images/provision-a-project-set/public-cloud.png)
 
 3. On the top right side of the screen click on the button **Create +** to create a project set
 
-    ![create](images/provision-a-project-set/create.png)
+  ![create](images/provision-a-project-set/create.png)
 
 4. Enter the **name** and **description** of your project
 
- - Project names should be descriptive, avoid the use acronyms.
+  - Project names should be descriptive, avoid the use acronyms.
 
-    ![description](images/provision-a-project-set/description.png)
+  ![description](images/provision-a-project-set/description.png)
 
    
 
 5. Enter your **ministry** and desired **service provider**
 
-    ![ministry-provider](images/provision-a-project-set/ministry-provider.png)
+  ![ministry-provider](images/provision-a-project-set/ministry-provider.png)
 
 6. Enter the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) **details** per each required field.
 
-<!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
+    <!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
 
- * The Product Owner and Technical Lead(s) will be granted access to the 4 AWS accounts in the [Project Set](deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) via the Administrator role 
- * The Administrator role is attached to the AWS managed policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) which provides unrestricted access into AWS accounts. However, because we are operating under the ASEA's [guardrails](bc-govs-aws-landing-zone-overview.md#security-guardrails) the administrator role is restricted within those bounds in all accounts in the AWS ASEA. A long as the user with an administrator role is not breaching those guardrails, they will be unrestricted within the account.
+  - The Product Owner and Technical Lead(s) will be granted access to the 4 AWS accounts in the [Project Set](deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) via the Admin role 
+  - The Admin role is attached to the AWS managed policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) which provides unrestricted access into AWS accounts. However, because we are operating under the ASEA's [guardrails](bc-govs-aws-landing-zone-overview.md#security-guardrails) the Admin role is restricted within those bounds in all accounts in the ASEA. As long as the user with an Admin role is not breaching the guardrails, they will be unrestricted within the account.
 
-    ![po-tech-lead](images/provision-a-project-set/po-tech-leads.png)
+  ![po-tech-lead](images/provision-a-project-set/po-tech-leads.png)
 
     
 6. Enter your **billing number**
 
-   This number should be reflected on the team's signed MoU, and is related to the expense authority funding the project.
+  This number should be reflected on the team's signed MoU, and is related to the expense authority funding the project.
 
-    ![billing](images/provision-a-project-set/billing.png)
+  ![billing](images/provision-a-project-set/billing.png)
 
  
 
 7. Enter your **estimated budgets** for the **four AWS accounts**
-* Budgets are a tool for the team to receive email billing alerts so it's important that they are accurate, however they can be updated later. 
-* You will receive a budget alert when your monthly spend has reached 50%, 80%, and 100% of your estimated monthly budget. This tool is intended to allow ministry teams to quickly react and control cost surges within the accounts. 
-* For help estimating your budget please see the [costs and billing](https://digital.gov.bc.ca/cloud/services/public/intro/#costs) section of our introductory documentation.
+  - Budgets are a tool for the team to receive email billing alerts so it's important that they are accurate, however they can be updated later. 
+  - You will receive a budget alert when your monthly spend has reached 50%, 80%, and 100% of your estimated monthly budget. This tool is intended to allow ministry teams to quickly react and control cost surges within the accounts. 
+  - For help estimating your budget please see the [costs and billing](https://digital.gov.bc.ca/cloud/services/public/intro/#costs) section of our introductory documentation.
 
-    ![budget](images/provision-a-project-set/budget.png)
+  ![budget](images/provision-a-project-set/budget.png)
 
 
 
 ## Account access
 <!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
-Once the AWS accounts have been provisioned, the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have admin access into the accounts.
+Once the AWS accounts have been provisioned, the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
 
 For other team members access, please have the Product Owner email: cloud.pathfinder@gov.bc.ca with the following information:
-  - Team members full name
-  - Role that the user should be granted (admin, developer, viewer, billing viewer, security auditor)
-    - Note that the developer role has the same AWS owned policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) as the administrator role, however they won't be granted access to the Production AWS Account.
-  - License plate of the project set, e.g. "a1b2c3"
+
+- Team members full name
+- Role that the user should be granted (Admin, Developer, Viewer, Billing Viewer, Security Auditor)
+  - Note that the Developer role has the same AWS owned policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) as the Admin role, however they won't be granted access to the Production AWS Account.
+- License plate of the project set, e.g. "a1b2c3"
 
 ---
 
