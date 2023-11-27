@@ -16,7 +16,7 @@ Best practices on the platform:
 * [Deploy an application to the  B.C. Government AWS Landing Zone](deploy-an-app-to-bc-govs-aws-landing-zone.md)
 
 <!--
-Make sure to keep the page titles with threquirementse exact name of pages throughout the documentation
+Make sure to keep the page titles with the exact name of pages throughout the documentation
 
 E.g "Deploy an application to the  B.C. Government AWS Landing Zone" cannot be called Build and deploy an application" as well.  This helps avoid any confusion to the user and our naming  through our public tech docs
 
