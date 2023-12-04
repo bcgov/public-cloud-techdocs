@@ -1,17 +1,18 @@
 # Networking
+Last updated: **November 16, 2023**
 
 ## Introduction
 
 - Objectives of the document
 - Importance of networking in cloud development and operations
 
-## Network Architecture
+## Network architecture
 
 - High-level overview of the ASEA network architecture
 - network architecture diagram is available in sharepoint
 - link to the AESA network architecture docs (We use the GWLB architecture with third-party firewalls)
 
-## Gateway Load Balancers and CheckPoint Firewalls
+## Gateway load balancers and CheckPoint firewalls
 
 - Architecture and deployment of Gateway Load Balancers in the Perimeter Account
 - Integration of CheckPoint Firewalls with Gateway Load Balancers
@@ -19,7 +20,7 @@
   - This means that SSH egress traffic is blocked which can cause issues with accessing git repositories and other services that use SSH.
     - To access git repositories, use HTTPS instead of SSH
 
-## Transit Gateway
+## Transit gateway
 
 - Role of Transit Gateway in ASEA LZ networking
 - Configuration details: attachment to VPCs, route tables, and transit gateway policies
@@ -45,14 +46,14 @@
     - Same IP pool for all workloads in the same VPC/subnet
     - This are security measures to prevent workloads from communicating with each other across accounts
 
-### Security Groups and Network ACLs
+### Security groups and network ACLs
 
 - Difference between Security Groups and NACLs in AWS
 - Role of NACLs in providing an additional layer of security at the subnet level
 - ASEA created and managed Security Groups and NACLs in each workload VPC
 - Best practices for configuring Security Groups in workload VPCs
 
-### Exposing Services to the Internet
+### Exposing services to the internet
 
 - Detailed walkthrough of using AWS API Gateway and VPC Link for internet-facing services
 - Guidance on when to use API Gateway vs. ALBs based on application requirements
@@ -60,7 +61,7 @@
   - ALB is used for legacy applications that cannot be migrated to API Gateway
     - Reach out to the Public Cloud team for assistance with this
 
-## Serverless Resources
+## Serverless resources
 
 - Serverless resources can be configured to run in a VPC or not
 - When running in a VPC, the serverless resource is assigned an ENI, which consumes an IP address from the subnet's IP pool
