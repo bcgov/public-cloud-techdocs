@@ -1,6 +1,6 @@
 # Requirements for building your application
 
-Last updated: **November 27, 2023**
+Last updated: **December 18, 2023**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 
