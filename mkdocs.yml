@@ -7,5 +7,6 @@ nav:
 - Design, Build and Deploy an Application:
   - Deploy an app to BC Gov's AWS Landing Zone: deploy-an-app-to-the-aws-landing-zone
   - AWS IAM User service:  iam-user-service.md
+  - Requirements for building your application: requirements-for-building-your-application.md
 plugins:
 - techdocs-core
