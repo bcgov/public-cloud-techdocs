@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "public-cloud-techdocs"
+  title: "Public cloud development guide"
   description: "A guide to using Public Cloud in the Government of the Province of British Columbia"
   annotations:
     github.com/project-slug: bcgov/public-cloud-techdocs
