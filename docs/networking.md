@@ -101,7 +101,7 @@ In summary, Workload VPCs are organized by environments (Dev, Test, Prod, Tools)
 - Configuration details like CIDR blocks, each VPC has a /16 CIDR block -->
 
 ### Subnets
-All subnets within Workload VPCs, including Web, App, and Data, are private, sharing the same IP pool to prevent inter-workload communication across accounts. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
+All subnets within Workload VPCs, including Web, App, and Data, are private. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
 - **Differentiation between Public and Private Subnets:**
   - All subnets in a Workload VPC are designated as private. There is no distinction between public and private subnets within the Workload VPCs.
 
