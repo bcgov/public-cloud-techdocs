@@ -175,7 +175,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
 - **Best Practices for Configuring Security Groups in Workload VPCs:**
   <!-- Refine this section -->
   - Security Groups are recommended as the primary data-plane isolation mechanism.
-  - Ingress rules often set to 'allow all' mode (0.0.0.0/0) for ease of operations, with emphasis on consistently allow-listing required ingress traffic.
+  - Only open the necessary ports, IP ranges/addresses and grant the minimum required permissions to each security group to minimize exposure to vulnerabilities.
   - Sample security groups provided as a balance between security, ease of operations, and frictionless development, with the expectation that customers will refine them based on their specific security needs.
 
 
