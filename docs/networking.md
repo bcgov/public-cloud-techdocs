@@ -83,10 +83,10 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
     - This allows for a large address space within each VPC, accommodating various subnets and future scaling needs.
 
   - **In the BC Gov ASEA:**
-    - Dev VPC: 10.12.0.0/16
-    - Test VPC: 10.13.0.0/16
-    - Prod VPC: 10.14.0.0/16
-    - Tools: 10.41.0.0/16
+    - Dev VPC: /16
+    - Test VPC: /16
+    - Prod VPC: /16
+    - Tools: /16
 
   - **Purpose of CIDR Blocks:**
     - CIDR blocks define the IP address range for each VPC, ensuring unique and non-overlapping address spaces.
@@ -127,10 +127,6 @@ All subnets within Workload VPCs, including Web, App, and Data, are private, sha
   - **Shared Subnets Between Workloads:**
     - Subnets are shared among all workloads within the same VPC.
     - All workloads in the same VPC/subnet share the same IP address pool.
-      
-  - **Security Measures:**
-    - Shared subnets utilize the same IP pool to prevent workloads from communicating with each other across accounts.
-    - This design enhances security by isolating workloads within the same VPC, minimizing cross-workload communication.
 
 
 
