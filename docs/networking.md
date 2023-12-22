@@ -101,7 +101,7 @@ In summary, Workload VPCs are organized by environments (Dev, Test, Prod, Tools)
 - Configuration details like CIDR blocks, each VPC has a /16 CIDR block -->
 
 ### Subnets
-All subnets within Workload VPCs, including Web, App, and Data, are private, sharing the same IP pool to prevent inter-workload communication across accounts. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
+All subnets within Workload VPCs, including Web, App, and Data, are private. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
 - **Differentiation between Public and Private Subnets:**
   - All subnets in a Workload VPC are designated as private. There is no distinction between public and private subnets within the Workload VPCs.
 
@@ -110,7 +110,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private, sha
 
 - **Use Cases for Each Type of Subnet:**
   - **Web Subnet:**
-    - Hosts front-end or client-facing infrastructure.
+    - Hosts front-end or client-facing infrastructure such as internal ALBs.
 
   - **App Subnet:**
     - Hosts application-tier code, such as EC2 instances and containers.
@@ -171,7 +171,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
 - **Best Practices for Configuring Security Groups in Workload VPCs:**
   <!-- Refine this section -->
   - Security Groups are recommended as the primary data-plane isolation mechanism.
-  - Ingress rules often set to 'allow all' mode (0.0.0.0/0) for ease of operations, with emphasis on consistently allow-listing required ingress traffic.
+  - Only open the necessary ports, IP ranges/addresses and grant the minimum required permissions to each security group to minimize exposure to vulnerabilities.
   - Sample security groups provided as a balance between security, ease of operations, and frictionless development, with the expectation that customers will refine them based on their specific security needs.
 
 
