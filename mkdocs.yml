@@ -7,7 +7,7 @@ nav:
   - Provision a project set in AWS: provision-a-project-set.md
 - Design, Build and Deploy an Application:
   - Deploy an app to BC Gov's AWS Landing Zone: deploy-an-app-to-the-aws-landing-zone
-  - AWS IAM User service:  iam-user-service.md
   - Networking:  networking.md
+  - AWS IAM User service:  iam-user-service.md
 plugins:
 - techdocs-core
