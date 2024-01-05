@@ -157,7 +157,7 @@ For general instructions on how to cerate an API gateway and safely expose it to
     
 - **Managed Service:** API Gateway is a fully managed service, reducing operational overhead and allowing you to focus on building and improving your APIs.
 
-**When to use ALBs:**
+**When to use ALBs**
 While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please reach out to the [Cloud Pathfinder Team](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact) for integration support.
 
 ## Serverless resources
