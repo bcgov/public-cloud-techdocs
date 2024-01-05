@@ -17,7 +17,7 @@ This streamlined approach eliminates the need for duplicating resources across m
 
 
 
-The reason for the separation between the Shared Networking and Perimeter accounts is to facilitate networking and security "separation of duties". In summary, the ASEA's networking architecture ensures centralized, organized and secure communication through Transit Gateway routing, separated Perimeter VPC security, and Shared Network resource management as shown below in BC Gov ASEA's complete networking diagram:
+The distinction between the Shared Networking and Perimeter accounts is driven by the need for "separation of duties" in networking and security. In essence, ASEA's networking architecture guarantees centralized, well-organized, and secure communication. This is achieved through Transit Gateway routing, distinct security measures for the Perimeter VPC, and efficient resource management in the Shared Network account, as depicted in the B.C. Government ASEA's networking diagram below:
 
 ![networking-architecture](images/networking/network-architecture.png)
 
