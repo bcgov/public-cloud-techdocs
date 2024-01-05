@@ -92,7 +92,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
   - **Web subnet**
     - Hosts front-end or client-facing infrastructure such as internal ALBs.
 
-  - **App Subnet:**
+  - **App subnet**
     - Hosts application-tier code, such as EC2 instances and containers.
 
   - **Data Subnet:**
