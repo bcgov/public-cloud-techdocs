@@ -9,7 +9,13 @@ This document breaks down the centralized networking of the AWS Secure Environme
 The ASEA network revolves around a Transit Gateway, efficiently directing traffic flow between the internet and AWS services across different AWS Accounts on the platform. The networking structure is divided into two separate accounts:
 
 - The **Perimeter Account** is home to our Checkpoint Firewalls, responsible for monitoring and controlling the flow of traffic in and out of the platform
-- The Shared Network Account houses the Transit Gateway and acts as a central hub. this account houses all of the Virtual Private Clouds (VPCs) (except for the Perimeter VPC in the Perimeter account) and most other networking resources. These are made available via AWS Resource Access Manager (RAM) to the appropriate accounts based on their OU in the organization. Security Groups are then put in place restrict traffic between resources deployed in the VPCs. All this eliminates the need to create duplicate resources in multiple accounts, reducing the operational overhead of managing those resources in every single account.
+- The **Shared Network Account** serves as a central hub, hosting the Transit Gateway and coordinating various networking resources. It accommodates all Virtual Private Clouds (VPCs), excluding the Perimeter VPC in the Perimeter account, along with most other networking resources.
+
+These resources are accessible through AWS Resource Access Manager (RAM), which allocates them to the respective accounts based on their organizational unit (OU). To control traffic between resources deployed in the VPCs, Security Groups are implemented.
+
+This streamlined approach eliminates the need for duplicating resources across multiple accounts reducing the operational burden associated with managing resources in each individual account.
+
+
 
 The reason for the separation between the Shared Networking and Perimeter accounts is to facilitate networking and security "separation of duties". In summary, the ASEA's networking architecture ensures centralized, organized and secure communication through Transit Gateway routing, separated Perimeter VPC security, and Shared Network resource management as shown below in BC Gov ASEA's complete networking diagram:
 
