@@ -112,7 +112,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
 Security Groups and Network Access Control Lists (NACLs) play distinct roles in ensuring the security of Workload VPCs, with Security Groups acting as instance-level firewalls and NACLs providing an additional layer of defense at the subnet level
 
 - **Difference between security groups and NACLs**
-  - **Security Groups:**
+  - **Security groups**
     - Instance-level stateful firewalls controlling inbound and outbound traffic.
     - Rule-based and allow-list focused, supporting ingress/egress based on protocols and sources/destinations.
 
