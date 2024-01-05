@@ -6,7 +6,7 @@ This document breaks down the centralized networking of the AWS Secure Environme
 
 ## Network architecture
 
-The ASEA network centers around a Transit Gateway, efficiently directing traffic between the internet, and AWS services in various different AWS Accounts on the platform. Networking is broken up into two separate accounts: 
+The ASEA network revolves around a Transit Gateway, efficiently directing traffic flow between the internet and AWS services across different AWS Accounts on the platform. The networking structure is divided into two separate accounts:
 
 - The Perimeter Account houses our Checkpoint Firewalls which monitor and restrict traffic in and out of the platform. 
 - The Shared Network Account houses the Transit Gateway and acts as a central hub. this account houses all of the Virtual Private Clouds (VPCs) (except for the Perimeter VPC in the Perimeter account) and most other networking resources. These are made available via AWS Resource Access Manager (RAM) to the appropriate accounts based on their OU in the organization. Security Groups are then put in place restrict traffic between resources deployed in the VPCs. All this eliminates the need to create duplicate resources in multiple accounts, reducing the operational overhead of managing those resources in every single account.
