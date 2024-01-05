@@ -53,7 +53,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
   - Workload-specific VPCs are logically segmented based on different environments (Dev, Test, Prod, and Tools).
   - Each environment is isolated to cater to specific stages in the software development lifecycle. The Tools account is specific to resources utilized across the other three environments within a project set (e.g. an ECR).
 
-- **Sharing Mechanism via AWS RAM and Its Benefits:**
+- **Sharing mechanism via AWS RAM and its benefits**
   - **AWS Resource Access Manager (RAM):**
     - RAM is used to share AWS resources across different accounts from the Shared Networking account.
     - Workload VPCs in different organizational units (OUs) share common resources via RAM.
