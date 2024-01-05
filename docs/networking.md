@@ -89,7 +89,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
   - Subnets in each Workload VPC are categorized into Web, App, and Data.
 
 - **Use cases for each type of subnet**
-  - **Web Subnet:**
+  - **Web subnet**
     - Hosts front-end or client-facing infrastructure such as internal ALBs.
 
   - **App Subnet:**
