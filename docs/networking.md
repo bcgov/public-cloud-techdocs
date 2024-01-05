@@ -85,7 +85,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
 - **Differentiation between Public and Private Subnets:**
   - All subnets in a Workload VPC are designated as private. There is no distinction between public and private subnets within the Workload VPCs.
 
-- **Types of Subnets Created:**
+- **Types of subnets created**
   - Subnets in each Workload VPC are categorized into Web, App, and Data.
 
 - **Use Cases for Each Type of Subnet:**
