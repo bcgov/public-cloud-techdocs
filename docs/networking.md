@@ -164,7 +164,7 @@ While API Gateway is recommended for modern applications, there is still a use c
 
 Serverless resources within the AWS Secure Environment Accelerator (ASEA) possess the flexibility to operate within or outside a VPC. When deployed within a VPC, these resources are assigned an Elastic Network Interface (ENI), utilizing an IP address from the corresponding subnet's IP pool. Access to VPC resources, including critical databases such as RDS, is exclusive to serverless resources configured **within** the VPC, ensuring a controlled and secure networking environment.
 
-## Appendices
+## Related pages
 - [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/)
 - [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/images/perimeter-NFW-GWLB.png)
 
