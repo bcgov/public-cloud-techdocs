@@ -29,7 +29,11 @@ For further reading beyond this document please visit the [AESA network architec
 
 ## Gateway load balancers and CheckPoint firewalls
 
-In the Perimeter account we use a [Gateway Load Balancer (GWLB)](https://aws.amazon.com/elasticloadbalancing/gateway-load-balancer/) to distribute traffic load between our firewall instances. These run on EC2, in a highly available pair. We use Checkpoint Firewalls from the AWS Marketplace, alongside the Checkpoint Firewall Manager where we use Checkpoint's Smart Console to set up traffic rules. Only HTTP/HTTPS traffic is allowed through the firewalls, all other traffic is blocked. This includes SSH egress traffic which can cause issues with accessing git repositories and other services that use SSH. To access git repositories, use HTTPS instead of SSH. If non HTTP/HTTPS traffic is required for your application please reach out to the [Cloud Pathfinder team](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact) via email.
+In the Perimeter account, we employ a [Gateway Load Balancer (GWLB)](https://aws.amazon.com/elasticloadbalancing/gateway-load-balancer/) to evenly distribute traffic load among our firewall instances. These instances, operating in a highly available pair, utilize Checkpoint Firewalls obtained from the AWS Marketplace. The Checkpoint Firewall Manager, coupled with Checkpoint's Smart Console, is instrumental in configuring traffic rules.
+
+Our firewall setup strictly permits only HTTP/HTTPS traffic, with all other forms of traffic being blocked. This includes SSH egress traffic, which might affect accessing git repositories and other services relying on SSH. For git repository access, we recommend using HTTPS instead of SSH. 
+
+If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by contacting them by email at Cloud.Pathfinder@gov.bc.ca 
 
 ## Transit gateway
 
