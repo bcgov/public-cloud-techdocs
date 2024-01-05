@@ -98,7 +98,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
   - **Data Subnet:**
     - Hosts data-tier code, including RDS instances and ElastiCache instances.
 
-- **Configuration of Subnets in Each Workload VPC:**
+- **Configuration of Subnets in Each Workload VPC**
   - **CIDR Blocks:**
     - Web Subnet: /20
     - App Subnet: /19
