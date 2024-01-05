@@ -147,7 +147,7 @@ Generally, in the ASEA we recommend one of two methods of exposing services to t
 
 Making strategic choices between AWS API Gateway and ALBs is essential for optimizing cloud architecture. API Gateway is the preferred option for internet exposure, catering to modern applications using RESTful APIs and serverless computing. ALBs are should only be used for supporting legacy applications, and require integration support from the Public Cloud team.
 
-**Create an API in API Gateway:**
+**Create an API in API Gateway**
 For general instructions on how to cerate an API gateway and safely expose it to the internet please see this [AWS documentation on HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html). For ASEA specific examples deployed using Terraform via GitHub Actions please see our [serverless, or container based sample applications](./deploy-an-app-to-the-aws-landing-zone.md#sample-applications). Creating resources via Terraform/ automation is always preferred.
 
 **Benefits of Using API Gateway and VPC Link:**
