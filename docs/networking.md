@@ -95,7 +95,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
   - **App subnet**
     - Hosts application-tier code, such as EC2 instances and containers.
 
-  - **Data Subnet:**
+  - **Data subnet**
     - Hosts data-tier code, including RDS instances and ElastiCache instances.
 
 - **Configuration of Subnets in Each Workload VPC**
