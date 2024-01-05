@@ -49,7 +49,7 @@ The Transit Gateway plays a central role as a key component in managing connecti
 
 Workload VPCs are strategically structured for Development (Dev), Testing (Test), Production (Prod), and Tools (Tools) environments, each assigned a /16 CIDR block. These VPCs all exist in the Shared Network account and leverage AWS Resource Access Manager (RAM) for efficient resource sharing, streamlining operations and enabling centralized management across organizational units.
 
-- **Structure and Purpose of Workload-Specific VPCs:**
+- **Structure and purpose of workload-specific VPCs**
   - Workload-specific VPCs are logically segmented based on different environments (Dev, Test, Prod, and Tools).
   - Each environment is isolated to cater to specific stages in the software development lifecycle. The Tools account is specific to resources utilized across the other three environments within a project set (e.g. an ECR).
 
