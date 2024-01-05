@@ -153,7 +153,7 @@ For general instructions on how to cerate an API gateway and safely expose it to
 **Benefits of using API Gateway and VPC Link**
 - **Security and isolation** API Gateway and VPC Link provide a secure and isolated connection between your internet-facing API and backend services within a VPC. AWS WAF can also be used alongside your API gateway. 
     
-- **Scalability:** API Gateway scales automatically to handle varying levels of traffic, ensuring the availability of your internet-facing services.
+- **Scalability** API Gateway scales automatically to handle varying levels of traffic, ensuring the availability of your internet-facing services.
     
 - **Managed Service:** API Gateway is a fully managed service, reducing operational overhead and allowing you to focus on building and improving your APIs.
 
