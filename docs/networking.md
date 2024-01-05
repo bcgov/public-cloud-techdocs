@@ -39,7 +39,7 @@ If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate t
 
 The Transit Gateway plays a central role as a key component in managing connectivity between different environments. It serves crucial functions within the ASEA architecture:
 
-- **Centralized Routing Hub:** The Transit Gateway acts as a centralized hub for routing traffic. It facilitates communication between various environments, such as on-premises networks, the internet, and different VPCs within the platform. It utilizes route tables, and TGW policies to determine specific, allowed traffic within the platform.
+- **Centralized routing hub** The Transit Gateway acts as a centralized hub for routing traffic. It facilitates communication between various environments, such as on-premises networks, the internet, and different VPCs within the platform. It utilizes route tables, and TGW policies to determine specific, allowed traffic within the platform
 
 - **Routing Permitted Flows:** It routes permitted flows, directing traffic between different zones based on defined policies. All VPCs are connected to the TGW and all traffic in and out of them must go through it. Note that there is a specific route via the Perimeter VPC that connects workload accounts to any connected on-premises networks without going to the internet.
 
