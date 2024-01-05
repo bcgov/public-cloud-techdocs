@@ -25,7 +25,7 @@ Another useful diagram provided by AWS shows how all workload VPCs exist in the 
 
 ![shared-vpc](images/networking/shared-vpc.png)
 
-For further reading beyond this document please visit the [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/). Note that we use the [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/diagrams/#14-additional-perimeter-patterns) with third-party firewalls.
+For further reading beyond this document please visit the [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/). We use the [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/diagrams/#14-additional-perimeter-patterns) with third-party firewalls.
 
 ## Gateway load balancers and CheckPoint firewalls
 
