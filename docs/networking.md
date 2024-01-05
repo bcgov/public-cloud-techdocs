@@ -37,7 +37,7 @@ If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate t
 
 ## Transit gateway
 
-the Transit Gateway plays a central role as a key component for managing connectivity between different environments. The Transit Gateway serves several crucial functions within the ASEA architecture:
+The Transit Gateway plays a central role as a key component in managing connectivity between different environments. It serves crucial functions within the ASEA architecture:
 
 - **Centralized Routing Hub:** The Transit Gateway acts as a centralized hub for routing traffic. It facilitates communication between various environments, such as on-premises networks, the internet, and different VPCs within the platform. It utilizes route tables, and TGW policies to determine specific, allowed traffic within the platform.
 
