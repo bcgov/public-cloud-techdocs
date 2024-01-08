@@ -42,7 +42,7 @@ To deploy your application:
 * Only grant access to your AWS accounts for those who actually need it
 
 ## Local deployment
-To run local deployments using an Infrastructure as Code (IaC) tool like Terraform on your machine, you'll need the following:
+To run local deployments using an Infrastructure as Code (IaC) tool like Terraform on your machine, you'll need the following install on your machine; Terraform and AWS CLI. See how to install [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) You also need AWS credential, which could be obtain from our AWS login page, see below image
 
 <!-- User question, to develop this subject more: 
 
@@ -52,10 +52,7 @@ Where do I obtain Terraform?
 
 How do I obtain aws credentials?  -->
 
-* An AWS account with the necessary permissions
-* Terraform
-* AWS CLI
-* AWS credentials
+
  ![aws-credential-cli](images/requirements-for-building-your-application/aws-credential-cli.png)
 
 ## Next steps
