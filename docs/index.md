@@ -12,6 +12,7 @@ Start here for the first steps on working in our AWS Secure Environment Accelera
 
 Best practices on the platform:
 
+* [Requirements for building your application](requirements-for-building-your-application.md)
 * [Deploy an application to the  B.C. Government AWS Landing Zone](deploy-an-app-to-bc-govs-aws-landing-zone.md)
 
 <!--
