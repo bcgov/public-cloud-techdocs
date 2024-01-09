@@ -1,6 +1,6 @@
-# Requirements for building your application 
+# Requirements for building your application in AWS
 
-Last updated: **December 18, 2023**
+Last updated: **January 9, 2024**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 
@@ -42,16 +42,20 @@ To deploy your application:
 * Only grant access to your AWS accounts for those who actually need it
 
 ## Local deployment
-To run local deployments using an Infrastructure as Code (IaC) tool like Terraform on your machine, you'll need the following install on your machine; Terraform and AWS CLI. See how to install [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) You also need AWS credential, which could be obtain from our AWS login page, see below image
+To run local deployments using an Infrastructure as Code (IaC) tool like Terraform on your machine, you'll need the following install on your machine; Terraform and AWS CLI. 
 
-<!-- User question, to develop this subject more: 
+* How to install [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
+* How to install  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
 
-What are the necessary permissions for my AWS account? 
+* Obtain an AWS credential by visiting our AWS login page following the steps below and as shown in the image below:
 
-Where do I obtain Terraform?
+<!-- Please for accessibility purposes describe each step to take such as AWS login page URL and steps to arrive to click on the button credential 
 
-How do I obtain aws credentials?  -->
+1. Login to [AWS login page](URL) 
+2. Go to ......
+3. Click..... 
 
+  -->
 
  ![aws-credential-cli](images/requirements-for-building-your-application/aws-credential-cli.png)
 
