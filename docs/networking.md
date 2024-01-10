@@ -135,7 +135,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
     - ASEA encourages review and tailoring based on specific security requirements. -->
 
 - **Best practices for configuring security groups in workload VPCs:**
-  - Security Groups are recommended as the primary data-plane isolation mechanism.
+  - Security groups are recommended as the primary data-plane isolation mechanism.
   - Sample security groups provided as a balance between security, ease of operations, and frictionless development, with the expectation that customers will refine them based on their specific security needs.
   - Only open the necessary ports, IP ranges/addresses and grant the minimum required permissions to each security group to minimize exposure to vulnerabilities.
 
