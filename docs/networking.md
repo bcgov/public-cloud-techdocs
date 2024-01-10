@@ -64,7 +64,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
     - Simplifies resource management, making it easier to share and control access to centralized components like Transit Gateways.
 
 - **Configuration details (CIDR Blocks):**
-  - **CIDR Blocks:**
+  - **CIDR Blocks**
     - Each Workload VPC has a /16 CIDR block. Because all accounts in a specific OU share the same VPC that means that all teams in the ASEA share the same IP pools in the specific environments. For example if we have 20 [project sets](deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) in the ASEA that's 20 Dev accounts all existing in the same Dev VPC and sharing the same /16 CIDR block.
 
   - **In the BC Gov ASEA:**
