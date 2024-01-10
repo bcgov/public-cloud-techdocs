@@ -75,7 +75,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
 
   - **Purpose of CIDR Blocks**
     - CIDR blocks define the IP address range for each VPC, ensuring unique and non-overlapping address spaces
-    - Enables proper addressing and routing.
+    - Enables proper addressing and routing
 
 
 In summary, Workload VPCs are organized by environments (Dev, Test, Prod, Tools), share resources through AWS RAM for centralized management via Shared Networking account, and each VPC is configured with a /16 CIDR block to define its IP address range. This structure and configuration support the secure and scalable hosting of applications across different stages of development and testing in the ASEA.
