@@ -2,10 +2,12 @@ site_name: BC Government Public Cloud Technical Documentation
 docs_dir: docs
 nav:
 - Get Started:
+  - Get Started: index.md
   - B.C. Government AWS Landing Zone overview: bc-govs-aws-landing-zone-overview.md
   - Provision a project set in AWS: provision-a-project-set.md
 - Design, Build and Deploy an Application:
   - Deploy an app to BC Gov's AWS Landing Zone: deploy-an-app-to-the-aws-landing-zone
+  - Networking:  networking.md
   - AWS IAM User service:  iam-user-service.md
 plugins:
 - techdocs-core
