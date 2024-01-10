@@ -116,7 +116,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
     - Instance-level stateful firewalls controlling inbound and outbound traffic.
     - Rule-based and allow-list focused, supporting ingress/egress based on protocols and sources/destinations.
 
-  - **NACLs:**
+  - **NACLs**
     - Stateless constructs operating at the subnet level.
     - Provide an additional layer of security, defining rules for inbound and outbound traffic at the subnet level.
 
