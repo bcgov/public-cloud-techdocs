@@ -126,7 +126,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
 
 <!-- TODO: add specific information about actual Security Groups and NACLs deployed in workload accounts in the ASEA -->
 <!-- - **ASEA Created and Managed Security Groups and NACLs in Each Workload VPC:**
-  - **Security Groups:**
+  - **Security groups**
     - Configured as instance-level firewalls, recommended as the primary data-plane isolation mechanism.
     - Emphasize stateful rules, focusing on allow-listing required ingress traffic.
 
