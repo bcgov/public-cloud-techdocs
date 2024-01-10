@@ -82,7 +82,7 @@ In summary, Workload VPCs are organized by environments (Dev, Test, Prod, Tools)
 
 ### Subnets
 All subnets within Workload VPCs, including Web, App, and Data, are private. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
-- **Differentiation between Public and Private Subnets:**
+- **Differentiation between Public and Private Subnets**
   - All subnets in a Workload VPC are designated as private. There is no distinction between public and private subnets within the Workload VPCs.
 
 - **Types of subnets created**
