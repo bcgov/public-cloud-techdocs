@@ -120,7 +120,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
     - Stateless constructs operating at the subnet level.
     - Provide an additional layer of security, defining rules for inbound and outbound traffic at the subnet level.
 
-- **Role of NACLs in Subnet Security:**
+- **Role of NACLs in Subnet Security**
   - NACLs in ASEA act as a defense-in-depth measure at the subnet level.
   - They are used sparingly, particularly in Data subnets, to enforce segmentation, allowing only necessary inbound traffic from App subnets within the same VPC.
 
