@@ -74,7 +74,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
     - Tools VPC: /16
 
   - **Purpose of CIDR Blocks**
-    - CIDR blocks define the IP address range for each VPC, ensuring unique and non-overlapping address spaces.
+    - CIDR blocks define the IP address range for each VPC, ensuring unique and non-overlapping address spaces
     - Enables proper addressing and routing.
 
 
