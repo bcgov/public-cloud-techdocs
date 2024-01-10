@@ -2,7 +2,7 @@
 Last updated: **January 5, 2023**
 
 ## Introduction
-This document breaks down the centralized networking of the AWS Secure Environment Accelerator (ASEA), and best practices for networking on the platform. It aims to make the ASEA's networking easy to grasp, helping anyone working on the platform (and within the guardrails of the BC Gov ASEA) understand how our networking is set up. Good networking is like the backbone of cloud technology. It connects everything, keeps things safe, and helps things run smoothly. Understanding it is crucial for making the most of cloud tools.
+This document simplifies the centralized networking of the AWS Secure Environment Accelerator (ASEA) and provides best practices for networking on the platform. Our goal is to make ASEA's networking easy to understand for anyone working on the platform within the guardrails of the BC Gov ASEA. Networking plays a crucial role as the backbone of cloud technology, connecting everything, ensuring safety, and facilitating smooth operations. Understanding it is essential for maximizing the benefits of cloud tools.
 
 ## Network architecture
 
