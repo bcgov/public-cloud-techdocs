@@ -130,7 +130,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
     - Configured as instance-level firewalls, recommended as the primary data-plane isolation mechanism.
     - Emphasize stateful rules, focusing on allow-listing required ingress traffic.
 
-  - **NACLs:**
+  - **NACLs**
     - Used sparingly as a defense-in-depth measure, particularly in Data subnets, to enforce segmentation.
     - ASEA encourages review and tailoring based on specific security requirements. -->
 
