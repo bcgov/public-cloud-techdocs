@@ -1,6 +1,6 @@
 # Requirements for building your application in AWS
 
-Last updated: **January 9, 2024**
+Last updated: **January 12, 2023**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 
@@ -42,22 +42,64 @@ To deploy your application:
 * Only grant access to your AWS accounts for those who actually need it
 
 ## Local deployment
-To run local deployments using an Infrastructure as Code (IaC) tool like Terraform on your machine, you'll need the following install on your machine; Terraform and AWS CLI. 
+To facilitate local deployments into AWS, from your machine. The process involves using Terraform as an Infrastructure as Code (IaC) tool, AWS CLI and Visual Studio Code (VSCode) as an Integrated Development Environment (IDE). Install Terraform by following the guide [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and set up VSCode using instructions available [here](https://code.visualstudio.com/docs/setup/setup-overview). After all the tools have been installed, here is how you could provision S3 bucket in AWS using Terraform: 
 
-* How to install [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
-* How to install  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+Save this code in a file with a ".tf" extension, for example, main.tf.
 
-* Obtain an AWS credential by visiting our AWS login page following the steps below and as shown in the image below:
+```
+ # Define provider
+provider "aws" {
+  region = "ca-central-1"  # Change this to your desired AWS region
+}
 
-<!-- Please for accessibility purposes describe each step to take such as AWS login page URL and steps to arrive to click on the button credential 
+# Create an S3 bucket
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "your-unique-bucket-name"  # Replace with a globally unique bucket name
+  acl    = "private"
 
-1. Login to [AWS login page](URL) 
-2. Go to ......
-3. Click..... 
+  tags = {
+    Name        = "ExampleBucket"
+    Environment = "Development"
+  }
+}
+```
+
+To apply this configuration, follow these steps:
+
+1. Open a terminal in the directory where you saved your Terraform script.
+
+Ensure you have AWS credentials, obtainable by visiting the AWS login page and clicking on the `Click for Credentials` button for the desired authorization role as shown in the image below. ![aws-credential-cli](images/requirements-for-building-your-application/aws-credential-cli.png)
+
+2. Copy the credential 
+
+![aws-credential-cli](images/requirements-for-building-your-application/click-credential.png)
+
+3. Paste the copied credential
+
+![aws-credential-cli](images/requirements-for-building-your-application/terminal.png)
 
   -->
 
- ![aws-credential-cli](images/requirements-for-building-your-application/aws-credential-cli.png)
+4. Initialize your Terraform configuration:
+```
+terraform init
+```
+
+5. Create an execution plan:
+```
+terraform plan
+```
+6. Apply the changes to create the S3 bucket:
+```
+terraform apply
+
+```
+7. Confirm by typing yes when prompted.
+
+This script creates an S3 bucket with the specified configuration. Adjust parameters as needed for your specific use case.
+
+For deploying to AWS using Terraform, a comprehensive tutorial can be accessed here https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build 
+This combined approach of Terraform AWS CLI and VSCode streamlines the deployment process, promoting ease of use and efficiency in AWS infrastructure management.
 
 ## Next steps
 
