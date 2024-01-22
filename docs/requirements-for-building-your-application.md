@@ -1,6 +1,6 @@
 # Requirements for building your application in AWS
 
-Last updated: **January 12, 2023**
+Last updated: **January 22, 2023**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 
@@ -42,7 +42,13 @@ To deploy your application:
 * Only grant access to your AWS accounts for those who actually need it
 
 ## Local deployment
-To facilitate local deployments into AWS, from your machine. The process involves using Terraform as an Infrastructure as Code (IaC) tool, AWS CLI and Visual Studio Code (VSCode) as an Integrated Development Environment (IDE). Install Terraform by following the guide [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and set up VSCode using instructions available [here](https://code.visualstudio.com/docs/setup/setup-overview). After all the tools have been installed, here is how you could provision S3 bucket in AWS using Terraform: 
+To facilitate local deployments into AWS, from your machine. The process involves using Terraform as an Infrastructure as Code (IaC) tool, AWS CLI and Visual Studio Code (VSCode) as an Integrated Development Environment (IDE). 
+
+* Install Terraform by following the [official Terraform guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli),
+* Understand and install  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* Set up [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+
+After all the tools have been installed, you can provision S3 bucket in AWS using Terraform: 
 
 Save this code in a file with a ".tf" extension, for example, main.tf.
 
@@ -78,7 +84,6 @@ Ensure you have AWS credentials, obtainable by visiting the AWS login page and c
 
 ![aws-credential-cli](images/requirements-for-building-your-application/terminal.png)
 
-  -->
 
 4. Initialize your Terraform configuration:
 ```
@@ -98,7 +103,7 @@ terraform apply
 
 This script creates an S3 bucket with the specified configuration. Adjust parameters as needed for your specific use case.
 
-For deploying to AWS using Terraform, a comprehensive tutorial can be accessed here https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build 
+For deploying to AWS using Terraform, [find this  comprehensive tutorial](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build ). 
 This combined approach of Terraform AWS CLI and VSCode streamlines the deployment process, promoting ease of use and efficiency in AWS infrastructure management.
 
 ## Next steps
