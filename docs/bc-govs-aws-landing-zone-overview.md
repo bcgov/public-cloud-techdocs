@@ -10,7 +10,7 @@ An overview of the B.C. Government OCIO's Landing Zone in AWS, who it is for, ho
 
 Ministry teams in the B.C. government who want to build applications in the AWS Public Cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed  to meet the needs and compliance requirements of the BC government. This ensures that applications are developed within a secure and well-governed cloud environment.
 
-From this perspective, theOCIO's landing zone offers several significant benefits:
+From this perspective, the OCIO's landing zone offers several significant benefits:
 
 1. **Enhanced security compliance**: It aligns with high-standard security frameworks like NIST 800-53 and the CCCS Medium Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders
 
