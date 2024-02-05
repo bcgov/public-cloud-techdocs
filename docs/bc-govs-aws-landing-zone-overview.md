@@ -133,7 +133,7 @@ For applications that require exposure to the internet, services like AWS API Ga
 
 - **Application Load Balancers (ALBs)**
 
-The Perimeter account includes ALBs for production and Dev/Test workloads. These ALBs facilitate the distribution of incoming application traffic across multiple targets, such as EC2 instances. The use of AWS Web Application Firewall (WAF) on both front-end and back-end ALBs enhances security, controlling traffic and protecting against common web exploits. This is not recommend for most applications unless there is a specific need to use ALBs.
+The Perimeter account includes ALBs for production and Dev/Test workloads. These ALBs facilitate the distribution of incoming application traffic across multiple targets, such as EC2 instances. The use of AWS Web Application Firewall (WAF) on both front-end and back-end ALBs enhances security, controlling traffic and protecting against common web exploits. This is not recommended for most applications unless there is a specific need to use ALBs.
 
 <!-- - TODO: Link to the networking page -->
 
