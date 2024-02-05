@@ -1,30 +1,30 @@
-# B.C. Government AWS Landing Zone overview
+# B.C. Government (OCIO) Landing Zone in AWS overview
 
-Last updated: **November 15, 2023**
+Last updated: **February 5, 2024**
 
-An overview of the B.C. Government AWS Landing Zone, who it is for, how to get access, its benefits, components, and features.
+An overview of the B.C. Government OCIO's Landing Zone in AWS, who it is for, how to get access, its benefits, components, and features.
 
 ---
 
 ## Benefits of building apps in the AWS Public Cloud
 
-Ministry teams in the B.C. government who want to build applications in the AWS Public Cloud can rely on the AWS Secure Environment Accelerator (ASEA). It offers a strong, secure, and efficient framework designed specifically to meet the distinct needs and compliance requirements of government entities. This ensures that applications are developed within a secure and well-governed cloud environment.
+Ministry teams in the B.C. government who want to build applications in the AWS Public Cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed  to meet the needs and compliance requirements of the BC government. This ensures that applications are developed within a secure and well-governed cloud environment.
 
-From this perspective, the ASEA offers several significant benefits:
+From this perspective, theOCIO's landing zone offers several significant benefits:
 
-1. **Enhanced security compliance**: ASEA aligns with high-standard security frameworks like NIST 800-53 and the CCCS Medium Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders
+1. **Enhanced security compliance**: It aligns with high-standard security frameworks like NIST 800-53 and the CCCS Medium Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders
 
-2. **Streamlined development process**: ASEA helps ministry teams concentrate on developing applications instead of managing foundational infrastructure by automating various aspects of the cloud environment setup. This boosts the speed of government application development
+2. **Streamlined development process**: It helps ministry teams concentrate on developing applications instead of managing foundational infrastructure by automating various aspects of the cloud environment setup. This boosts the speed of government application development
 
-3. **Customizable and scalable architecture**: ASEA gives you the freedom to customize the cloud architecture for your project, supporting a variety of applications. Whether you're working on small projects or large, complex applications, ASEA adapts to meet your needs
+3. **Customizable and scalable architecture**: It gives you the freedom to customize the cloud architecture for your project, supporting a variety of applications. Whether you're working on small projects or large, complex applications, it adapts to meet your needs
 
-4. **Operational consistency and governance**: By using ASEA, all ministry teams adopt a uniform approach to cloud infrastructure, ensuring consistency. This uniformity is vital for upholding operational standards and governance, which are crucial for government operations
+4. **Operational consistency and governance**: By using OCIO's landing zone, all ministry teams adopt a uniform approach to cloud infrastructure, ensuring consistency. This uniformity is vital for upholding operational standards and governance, which are crucial for government operations
 
 5. **Long-term management and evolution**: This tool not only helps deploy applications initially but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs
 
-6. **Leveraging AWS capabilities**: When ministry teams build on AWS, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
+6. **Leveraging cutting-egde capabilities in public cloud**: When ministry teams build in public cloud, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
 
-For B.C. government ministry teams developing applications in the AWS Public Cloud, the ASEA provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
+For B.C. government ministry teams developing applications in the AWS Public Cloud, the OCIOlanding zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
 ## How to get access
 
@@ -32,7 +32,7 @@ Explore a [comprehensive guide](https://digital.gov.bc.ca/cloud/services/public/
 
 ## Components and features
 
-In this section, we'll provide a high level overview of the components and features of the B.C. Government AWS Landing Zone.
+In this section, we'll provide a high level overview of the components and features of the OCIO's Landing Zone in AWS.
 
 ### Product Registry
 
@@ -69,7 +69,7 @@ A project set consists of four distinct AWS accounts for development (dev), test
 
 ### Security guardrails
 
-The AWS Secure Environment Accelerator (ASEA) provides a security framework for B.C. government ministry teams developing applications in the AWS Public Cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
+The AWS Secure Environment Accelerator (ASEA) product provides a security framework for B.C. government ministry teams developing applications in the AWS Public Cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
 
 #### Preventative controls
 
@@ -109,7 +109,7 @@ The ASEA security framework ensures that ministry teams can develop and deploy a
 
 ### Networking
 
-For B.C. government ministry teams developing applications in the AWS Public Cloud, understanding the high-level overview of the networking components of the AWS Secure Environment Accelerator (ASEA) is essential. These components are designed to ensure secure, efficient, and compliant networking within AWS environments.
+For B.C. government ministry teams developing applications in the OCIO's landing zone, understanding the high-level overview of the networking components of the AWS Secure Environment Accelerator (ASEA) is essential. These components are designed to ensure secure, efficient, and compliant networking within AWS environments.
 
 #### High-Level Overview of Networking Components
 
@@ -133,13 +133,13 @@ For applications that require exposure to the internet, services like AWS API Ga
 
 - **Application Load Balancers (ALBs)**
 
-The Perimeter account includes ALBs for production and Dev/Test workloads. These ALBs facilitate the distribution of incoming application traffic across multiple targets, such as EC2 instances. The use of AWS Web Application Firewall (WAF) on both front-end and back-end ALBs enhances security, controlling traffic and protecting against common web exploits. This is not recommend for most applications unless there is a specific need to use ALBs.
+The Perimeter account includes ALBs for production and Dev/Test workloads. These ALBs facilitate the distribution of incoming application traffic across multiple targets, such as EC2 instances. The use of AWS Web Application Firewall (WAF) on both front-end and back-end ALBs enhances security, controlling traffic and protecting against common web exploits. This is not recommended for most applications unless there is a specific need to use ALBs.
 
 <!-- - TODO: Link to the networking page -->
 
 ### Logging
 
-For B.C. government ministry teams working in the AWS Public Cloud, it's crucial to understand the high-level overview of the logging components integrated into the ASEA. These components include CloudWatch, CloudTrail, and a centralized Log Archive, each playing a vital role in maintaining a secure and compliant cloud environment.
+For B.C. government ministry teams working in the OCIO's landing zone, it's crucial to understand the high-level overview of the logging components integrated into the ASEA. These components include CloudWatch, CloudTrail, and a centralized Log Archive, each playing a vital role in maintaining a secure and compliant cloud environment.
 
 #### CloudWatch Logs
 
