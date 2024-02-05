@@ -2,7 +2,7 @@
 
 Last updated: **February 5, 2024**
 
-An overview of the B.C. Government OCIO's Landing Zone in AWS, who it is for, how to get access, its benefits, components, and features.
+An overview of the B.C. Government OCIO's Landing Zone in AWS, how to get access, its benefits, components, and features.
 
 ---
 
@@ -16,11 +16,11 @@ Ministry teams in the B.C. government who want to build applications in the Publ
 
 3. **Customizable and scalable architecture**: It gives you the freedom to customize the cloud architecture for your project, supporting a variety of applications. Whether you're working on small projects or large, complex applications, it adapts to meet your needs
 
-4. **Operational consistency and governance**: By using OCIO's landing zone, all ministry teams adopt a uniform approach to cloud infrastructure, ensuring consistency. This uniformity is vital for upholding operational standards and governance, which are crucial for government operations
+4. **Operational consistency and governance**: By using OCIO's landing zone, you adopt a uniform approach to cloud infrastructure, ensuring consistency. This uniformity is vital for upholding operational standards and governance.
 
 5. **Long-term management and evolution**: This tool not only helps deploy applications initially but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs
 
-6. **Leveraging cutting-egde capabilities in public cloud**: When ministry teams build in public cloud, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
+6. **Leveraging cutting-egde capabilities in public cloud**: When you build in public cloud, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
 
 For B.C. government ministry teams developing applications in the AWS Public Cloud, the OCIO landing zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
@@ -54,7 +54,7 @@ The Product Registry service is a comprehensive solution designed to streamline 
    - Manages user access to the AWS accounts, ensuring that only authorized personnel have access to the respective development, testing, production, and tooling environments
    - Improves security and governance by regulating access based on roles and responsibilities
 
-The Product Registry service represents a significant step forward in managing cloud resources effectively, offering a centralized, automated, and controlled approach to handle various aspects of AWS account management, from initial setup to continuous budgeting and access control. This service is particularly helpful for ministry teams needing to manage many cloud-based products, providing a streamlined and secure solution for AWS cloud management.
+The Product Registry service represents a significant step forward in managing cloud resources effectively, offering a centralized, automated, and controlled approach to handle various aspects of AWS account management, from initial setup to continuous budgeting and access control. This service is particularly helpful for teams needing to manage many cloud-based products, providing a streamlined and secure solution for AWS cloud management.
 
 ### Project Set
 
@@ -101,7 +101,7 @@ The AWS Secure Environment Accelerator (ASEA) product provides a security framew
    - In addition to its role in preventative controls, AWS Config also plays a part in detective controls
    - It supports the detection of non-compliant resources and configurations, contributing to overall security monitoring
 
-The ASEA security framework ensures that ministry teams can develop and deploy applications in a secure, compliant, and controlled AWS environment, enabling them to focus on delivering innovative and effective digital services.
+The ASEA security framework ensures that you can develop and deploy applications in a secure, compliant, and controlled AWS environment, enabling them to focus on delivering innovative and effective digital services.
 
 <!-- - TODO: Link to the security guardrails page -->
 
