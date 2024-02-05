@@ -1,6 +1,6 @@
 # B.C. Government (OCIO) Landing Zone in AWS overview
 
-Last updated: **November 15, 2023**
+Last updated: **February 5, 2024**
 
 An overview of the B.C. Government OCIO's Landing Zone in AWS, who it is for, how to get access, its benefits, components, and features.
 
