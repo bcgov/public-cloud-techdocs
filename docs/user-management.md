@@ -23,7 +23,7 @@ One of the key updates is the introduction of a comprehensive user management fe
 - Users must have a valid IDIR to be added to these roles.
 - Only product owners or technical leads can view and manage users in the website.
 
-### Role-Based Access
+### Role-based access
 
 Assigning users to these roles grants them specific permissions to AWS accounts associated with those roles. Here's a breakdown of the roles and their corresponding AWS policies:
 
