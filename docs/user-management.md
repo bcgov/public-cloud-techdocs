@@ -75,7 +75,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 - Once a user is added to a role, they can access the product (AWS accounts) from the [Public Cloud Landing Zone.](https://login.nimbus.cloud.gov.bc.ca/) If users have multiple roles, they can choose any of those roles when logging in to the account.
 ![Landing Zone](images/user-management/landing_zone.png)
 
-## AWS Managed Policies Overview
+## AWS managed policies overview
 - AWS managed policies are predefined policies that provide permissions for many common use cases. These policies are maintained by AWS and provide a set of permissions that align with common job functions in the AWS environment. By using AWS managed policies, you can ensure that the permissions are set up correctly and updated by AWS as necessary.
     - AdministratorAccess: Provides full access to AWS services and resources.
     - ReadOnlyAccess: Provides read-only access to AWS services and resources.
