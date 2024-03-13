@@ -42,7 +42,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 - **Policy**: `arn:aws:iam::aws:policy/ReadOnlyAccess`
 - Viewers have read-only access to the AWS accounts.
 
-#### Security Auditors
+#### Security auditors
 
 - **Policy**: `arn:aws:iam::aws:policy/SecurityAudit`
 - Security Auditors have access to security configuration and logs to perform audit tasks.
