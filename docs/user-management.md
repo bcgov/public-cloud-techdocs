@@ -47,7 +47,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 - **Policy**: `arn:aws:iam::aws:policy/SecurityAudit`
 - Security auditors have access to security configuration and logs to perform audit tasks.
 
-#### Billing Viewers
+#### Billing viewers
 
 - **Custom Policy**: Provides access to AWS Budgets and Cost Explorer.
   
