@@ -5,7 +5,7 @@ Welcome to the BC Gov's Product Registry documentation. This guide provides deta
 
 ## New user interface 
 
-The BC Developer Registry has undergone significant UI improvements to provide a more intuitive and user-friendly experience. You can now easily navigate through the website, access different sections, and manage your projects and users more efficiently.
+The BC Gov's Product Registry has undergone significant UI improvements to provide a more intuitive and user-friendly experience. You can now easily navigate through the website, access different sections, and manage your projects and users more efficiently.
 
 ## User Management Feature
 
