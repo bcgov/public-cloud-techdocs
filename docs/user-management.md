@@ -1,7 +1,7 @@
 # BC Gov's Product Registry - User management documentation
 Last updated: **March 12, 2024**
 
-Welcome to the BC Developer Registry documentation. This guide provides detailed information about the new user interface changes and the enhanced user management feature available at [BC Gov's Product Registry](https://registry.developer.gov.bc.ca/). With the latest update, users can now manage AWS permissions directly from the website, enhancing the overall user experience and streamlining project management.
+Welcome to the BC Gov's Product Registry documentation. This guide provides detailed information about the new user interface changes and the enhanced user management feature available at [BC Gov's Product Registry](https://registry.developer.gov.bc.ca/). With the latest update, users can now manage AWS permissions directly from the website, enhancing the overall user experience and streamlining project management.
 
 ## New User Interface
 
