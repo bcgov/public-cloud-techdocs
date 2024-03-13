@@ -78,7 +78,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 ## AWS managed policies overview
 - AWS managed policies are predefined policies that provide permissions for many common use cases. These policies are maintained by AWS and provide a set of permissions that align with common job functions in the AWS environment. By using AWS managed policies, you can ensure that the permissions are set up correctly and updated by AWS as necessary.
 
-    - AdministratorAccess: Provides full access to AWS services and resources.
+    - AdministratorAccess: Provides full access to AWS services and resources
     - ReadOnlyAccess: Provides read-only access to AWS services and resources.
     - SecurityAudit: Provides permissions to view configuration data for security auditing
 
