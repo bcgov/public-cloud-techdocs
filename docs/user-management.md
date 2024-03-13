@@ -12,7 +12,7 @@ The BC Gov's Product Registry has undergone significant UI improvements to provi
 One of the key updates is the introduction of a comprehensive user management feature. This feature allows product owners and technical leads to manage AWS permissions for users associated with their product. Users can be assigned to one or more of the following roles:
 
 1. **Viewers**
-2. **Billing Viewers**
+2. **Billing viewers**
 3. **Developers**
 4. **Admins**
 5. **Security Auditors**
