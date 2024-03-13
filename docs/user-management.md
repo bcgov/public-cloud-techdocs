@@ -49,7 +49,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 
 #### Billing viewers
 
-- **Custom Policy**: Provides access to AWS Budgets and Cost Explorer.
+- **Custom policy**: Provides access to AWS budgets and cost explorer.
   
 ```json
 {
