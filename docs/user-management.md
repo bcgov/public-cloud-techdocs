@@ -15,7 +15,7 @@ One of the key updates is the introduction of a comprehensive user management fe
 2. **Billing viewers**
 3. **Developers**
 4. **Admins**
-5. **Security Auditors**
+5. **Security auditors**
 
 ![Registry Roles](images/user-management/registry_roles.png)
 ### Prerequisites
