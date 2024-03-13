@@ -35,7 +35,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 #### Developers
 
 - **Policy**: `arn:aws:iam::aws:policy/AdministratorAccess`
-- Developers have admin access to dev, test, and tools accounts. To gain admin access to the prod account, they must have the Admin role.
+- Developers have admin access to dev, test, and tools accounts. To gain admin access to the prod account, they must have the admin role.
 
 #### Viewers
 
