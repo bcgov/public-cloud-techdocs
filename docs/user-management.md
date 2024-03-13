@@ -80,7 +80,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 
     - AdministratorAccess: Provides full access to AWS services and resources.
     - ReadOnlyAccess: Provides read-only access to AWS services and resources.
-    - SecurityAudit: Provides permissions to view configuration data for security auditing.
+    - SecurityAudit: Provides permissions to view configuration data for security auditing
 
 # Conclusion
 - The new user management feature in the BC Gov's Product Registry enhances the ability of product owners and technical leads to manage AWS permissions efficiently. By understanding the roles and their associated policies, you can ensure that users have the appropriate access to your AWS resources.
