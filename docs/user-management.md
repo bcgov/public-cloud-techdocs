@@ -17,7 +17,7 @@ One of the key updates is the introduction of a comprehensive user management fe
 4. **Admins**
 5. **Security auditors**
 
-![New role management feature in the product registry](images/user-management/registry_roles.png)
+![AWS landing zone product registry screen preview of the dashboard to manage users showing different users with different access options](images/user-management/registry_roles.png)
 ### Prerequisites
 
 - Users must have a valid IDIR to be added to these roles.
@@ -73,7 +73,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 
 ## Accessing the Public Cloud AWS Landing Zone
 - Once a user is added to a role, they can access the product (AWS accounts) from the [Public Cloud Landing Zone.](https://login.nimbus.cloud.gov.bc.ca/) If users have multiple roles, they can choose any of those roles when logging in to the account.
-![AWS SEA account login portal](images/user-management/landing_zone.png)
+![AWS landing zone screen preview of the dashboard showing access to choose different types to login based on user credentials](images/user-management/landing_zone.png)
 
 ## AWS managed policies overview
 - AWS managed policies are predefined policies that provide permissions for many common use cases. These policies are maintained by AWS and provide a set of permissions that align with common job functions in the AWS environment. By using AWS managed policies, you can ensure that the permissions are set up correctly and updated by AWS as necessary.
