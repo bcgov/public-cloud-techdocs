@@ -1,5 +1,7 @@
 site_name: BC Government Public Cloud Technical Documentation
 docs_dir: docs
+repo_url: https://github.com/bcgov/public-cloud-techdocs
+edit_uri: edit/main/docs/
 nav:
 - Get Started:
   - Get Started: index.md
