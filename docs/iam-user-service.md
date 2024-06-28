@@ -121,4 +121,4 @@ Example policy that allows s3 actions only to a specific ip range:
 
 ## Related pages
 
-- [B.C. Government AWS Landing Zone overview](/docs/bc-gov-aws-landing-zone-overview.md)
+- [B.C. Government AWS Landing Zone overview](bc-gov-aws-landing-zone-overview.md)
