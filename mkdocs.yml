@@ -14,5 +14,7 @@ nav:
   - Networking:  networking.md
   - AWS IAM User service:  iam-user-service.md
   - AWS Cost Management Dashboard:  aws-billing-and-cost-management-dashboard-via-quicksight.md
+- FAQs:
+  - AWS Calgary region: calgary-region-in-aws-secure-environment-accelerator.md
 plugins:
 - techdocs-core
