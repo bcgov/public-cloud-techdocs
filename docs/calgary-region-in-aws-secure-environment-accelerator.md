@@ -1,30 +1,30 @@
 # Calgary region in AWS Secure Environment Accelerator (SEA)
 
-Last updated: **August 9, 2024**
+Last updated: **August 25, 2024**
 
 ## Overview
 
-The Calgary region (ca-west) is a new addition to AWS's global infrastructure, enhancing cloud capabilities within Canada. This document aims to provide an update on the integration of the Calgary region within our AWS Landing Zone managed through the Secure Environment Accelerator (SEA).
+The Calgary region (ca-west) is a new addition to AWS's global infrastructure, enhancing cloud capabilities within Canada. This document aims to provide an update about the integration of the Calgary region within our AWS Landing Zone managed through the Secure Environment Accelerator (SEA).
 
 ### Current status
 
-The Calgary region (ca-west) is a recently introduced AWS region in Canada. By default, new regions, including Calgary, are not enabled in our AWS environment and must be manually activated before deploying resources.
+The Calgary region (ca-west) is a new AWS region in Canada. By default, new regions, including Calgary, are disabled in our AWS environment and must be activated manually before deploying resources.
 
-The AWS SEA development team is actively working on integrating the Calgary region into the accelerator code base. Enabling Calgary requires changes and the deployment of new core infrastructure within the region.
+The AWS SEA development team is integrating the Calgary region into the accelerator code base. This requires changes and deploying new core infrastructure in the region.
 
-As of now, not all AWS services required for the Secure Environment Accelerator are available in the Calgary region, and AWS is gradually rolling out these services. While AWS has launched the Calgary region, it is not yet ready for full integration into the SEA.
+Currently, not all AWS services needed for the Secure Environment Accelerator are available in the Calgary region. AWS is gradually rolling out these services. Although AWS has launched the Calgary region, it is not yet ready for full integration into the SEA.
 
 ## Deploying workloads in the Calgary region
 
 ### Present capability
 
-As of now, the Calgary region is not enabled in the SEA, meaning workloads cannot be deployed in this region through our current setup.
+Currently, the Calgary region is not enabled in the SEA, so workloads cannot be deployed there through our setup.
 
 ## Service availability in the Calgary region
 
 ### Progressive rollout
 
-AWS is gradually introducing services in the Calgary region. Currently, not all AWS services are available, but the list is continually expanding.
+AWS is gradually introducing services in the Calgary region. Not all services are available yet, but the list is growing.
 
 ### Monitoring service availability
 
