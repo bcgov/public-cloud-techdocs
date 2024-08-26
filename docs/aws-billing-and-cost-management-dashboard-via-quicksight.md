@@ -10,7 +10,7 @@ Through our deployment of these advanced dashboards, we transform raw data into 
 
 Explore our comprehensive documentation to discover how to access and leverage these dashboards effectively, enabling you to manage your AWS environment strategically and sustainably.
 
-Make sure to read the Role-based access section below before [logging into the AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs).
+Make sure to read the role-based access section below before [logging into the AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs).
 
 ## Project set structure
 
