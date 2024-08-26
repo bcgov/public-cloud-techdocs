@@ -20,7 +20,7 @@ To create an IAM user:
 
     A Lambda function will trigger to create the IAM user, generate an access key, and store it in the SSM Parameter Store. This function also runs hourly to rotate keys as needed and ensure DynamoDB table entries align with actual IAM account users, removing any discrepancies.
 
-      ![iam-user](images/iam-user-service/iam-users.png)
+    ![iam-user](images/iam-user-service/iam-users.png)
 
 ### IAM username constraints
 

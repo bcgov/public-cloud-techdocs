@@ -1,14 +1,16 @@
 # AWS billing and cost management dashboards
-Last updated: **March 28, 2024**
+Last updated: **August 26, 2024**
 
 
-Learn more about  managing your AWS spending and resources with our **AWS billing and cost management dashboards**, featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
+Learn more about  managing your AWS spending and resources with our [AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs), featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
 
 Powered by Amazon QuickSight, these tools meticulously analyze your AWS expenditure and resource utilization. They aim to equip you with the insights necessary to make well-informed, data-backed decisions, ultimately helping you streamline your cloud operations and optimize cost efficiency.
 
 Through our deployment of these advanced dashboards, we transform raw data into actionable insights, offering a granular view of your AWS costs and usage patterns.
 
 Explore our comprehensive documentation to discover how to access and leverage these dashboards effectively, enabling you to manage your AWS environment strategically and sustainably.
+
+Make sure to read the role-based access section below before [logging into the AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs).
 
 ## Project set structure
 
