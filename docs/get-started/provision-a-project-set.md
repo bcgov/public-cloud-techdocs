@@ -1,7 +1,7 @@
 # Provision a new AWS project set
 Last updated: **November 21, 2023**
 
-On the Public Cloud platform, different teams organize their work on isolated [project sets](deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set). Before working on the platform, the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) of the respective team must submit a project set provisioning request for your team on the B.C. Government Public Cloud.
+On the Public Cloud platform, different teams organize their work on isolated [project sets](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set). Before working on the platform, the [Product Owner](get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) of the respective team must submit a project set provisioning request for your team on the B.C. Government Public Cloud.
 
 ---
 
@@ -47,12 +47,12 @@ To do that you must meet the prerequisites for provisioning a project set outlin
 
   ![ministry-provider](images/provision-a-project-set/ministry-provider.png)
 
-6. Enter the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) **details** per each required field.
+6. Enter the [Product Owner](get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) **details** per each required field.
 
     <!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
 
-  - The Product Owner and Technical Lead(s) will be granted access to the 4 AWS accounts in the [Project Set](deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) via the Admin role 
-  - The Admin role is attached to the AWS managed policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) which provides unrestricted access into AWS accounts. However, because we are operating under the ASEA's [guardrails](bc-govs-aws-landing-zone-overview.md#security-guardrails) the Admin role is restricted within those bounds in all accounts in the ASEA. As long as the user with an Admin role is not breaching the guardrails, they will be unrestricted within the account.
+  - The Product Owner and Technical Lead(s) will be granted access to the 4 AWS accounts in the [Project Set](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) via the Admin role 
+  - The Admin role is attached to the AWS managed policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) which provides unrestricted access into AWS accounts. However, because we are operating under the ASEA's [guardrails](get-started/bc-govs-aws-landing-zone-overview.md#security-guardrails) the Admin role is restricted within those bounds in all accounts in the ASEA. As long as the user with an Admin role is not breaching the guardrails, they will be unrestricted within the account.
 
   ![po-tech-lead](images/provision-a-project-set/po-tech-leads.png)
 
@@ -76,7 +76,7 @@ To do that you must meet the prerequisites for provisioning a project set outlin
 
 ## Account access
 <!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
-Once the AWS accounts have been provisioned, the [Product Owner](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
+Once the AWS accounts have been provisioned, the [Product Owner](get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
 
 For other team members access, please have the Product Owner email: cloud.pathfinder@gov.bc.ca with the following information:
 
@@ -90,5 +90,5 @@ For other team members access, please have the Product Owner email: cloud.pathfi
 ## Related pages
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
 - [OnBoarding Guide for BC Gov AWS ASEA](https://digital.gov.bc.ca/cloud/services/public/onboard/)
-- [B.C. Government AWS Landing Zone overview](bc-govs-aws-landing-zone-overview.md)
-- [Deploy an application to the  B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
+- [B.C. Government AWS Landing Zone overview](get-started/bc-govs-aws-landing-zone-overview.md)
+- [Deploy an application to the  B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
