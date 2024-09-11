@@ -164,7 +164,7 @@ This logging architecture ensures that ministry teams can effectively monitor, a
 
 The IAM User Management and Key Rotation solution, an integral part of the B.C. Government AWS Landing Zone, offers a secure and automated method for managing IAM users and their access keys. This solution is needed for scenarios where access to AWS services is required from outside the AWS environment, such as from on-premises systems.
 
-For detailed user documentation, see the [IAM User Management Service](iam-user-service.md) page.
+For detailed user documentation, see the [IAM User Management Service](design-build-and-deploy-an-application/iam-user-service.md) page.
 
 #### Summary of Features
 
@@ -223,11 +223,11 @@ By recognizing and respecting the role of these ASEA-managed resources, ministry
 
 ## Next steps
 
-- [Deploy an application to the B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
+- [Deploy an application to the B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
 
 ## Related pages
 
 - [Public cloud services](https://digital.gov.bc.ca/cloud/services/public)
 - [Public cloud hosting 101](https://digital.gov.bc.ca/cloud/services/public/intro/)
-- [Deploy an application to the B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
-- [IAM User Management Service](iam-user-service.md)
+- [Deploy an application to the B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+- [IAM User Management Service](design-build-and-deploy-an-application/iam-user-service.md)

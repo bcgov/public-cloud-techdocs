@@ -4,16 +4,17 @@
 
 Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
 
-* [B.C. Government AWS Landing Zone overview](bc-govs-aws-landing-zone-overview.md)
-* [Provision a project set in AWS](provision-a-project-set.md)
-* [Account access](provision-a-project-set.md#account-access)
+* [B.C. Government AWS Landing Zone overview](get-started/bc-govs-aws-landing-zone-overview.md)
+* [Provision a project set in AWS](get-started/provision-a-project-set.md)
+* [Account access](get-started/provision-a-project-set.md#account-access)
 
 ## Build, deploy and maintain apps
 
 Best practices on the platform:
 
-* [Requirements for building your application](requirements-for-building-your-application.md)
-* [Deploy an application to the  B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
+* [Requirements for building your application](design-build-and-deploy-an-application/requirements-for-building-your-application.md)
+* [Deploy an application to the  B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+* [Networking](design-build-and-deploy-an-application/networking.md)
 
 <!--
 Make sure to keep the page titles with the exact name of pages throughout the documentation
@@ -24,13 +25,19 @@ E.g "Deploy an application to the  B.C. Government AWS Landing Zone" cannot be c
 * Retire an application (coming soon) 
 -->
 
-## Training and learning
+## Understand your AWS billing
 
-Relevant technical information about the components that make up the AWS Secure Environment Accelerator (ASEA).
+Use the Cost Management Dashboard to get an overview of your spend in AWS:
+
+* [AWS billing and cost management dashboards](understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md)
+
+<!-- ## Training and learning
+
+Relevant technical information about the components that make up the AWS Secure Environment Accelerator (ASEA). -->
 
 <!-- ### Learn about the AWS Secure Environment Accelerator (ASEA) -->
 <!-- * [Technical architecture](technical-architecture.md) -->
-<!-- * [Networking](networking.md) -->
+<!-- * [Networking](design-build-and-deploy-an-application/networking.md) -->
 
 ### Rocket.Chat
 
@@ -47,7 +54,7 @@ Every six weeks, we host a platform community MeetUp where we talk about changes
 
 ### Reusable code and services
 
-We have several [sample applications](deploy-an-app-to-bc-govs-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the ASEA, and give your team a launchpad to begin development in AWS.
+We have several [sample applications](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the ASEA, and give your team a launchpad to begin development in AWS.
 
 ### External training
 
