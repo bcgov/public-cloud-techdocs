@@ -5,17 +5,17 @@ edit_uri: edit/main/docs/
 nav:
 - Get started:
   - Get started: index.md
-  - B.C. Government AWS Landing Zone overview: bc-govs-aws-landing-zone-overview.md
-  - Provision a project set in AWS: provision-a-project-set.md
+  - B.C. Government AWS Landing Zone overview: get-started/bc-govs-aws-landing-zone-overview.md
+  - Provision a project set in AWS: get-started/provision-a-project-set.md
 - Design, build and deploy an application:
-  - Requirements for building your application: requirements-for-building-your-application.md
-  - User management: user-management.md
-  - Deploy an app to BC Gov's AWS Landing Zone: deploy-an-app-to-the-aws-landing-zone.md
-  - Networking:  networking.md
-  - AWS IAM User service:  iam-user-service.md
+  - Requirements for building your application: design-build-and-deploy-an-application/requirements-for-building-your-application.md
+  - User management: design-build-and-deploy-an-application/user-management.md
+  - Deploy an app to BC Gov's AWS Landing Zone: design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
+  - Networking:  design-build-and-deploy-an-application/networking.md
+  - AWS IAM User service:  design-build-and-deploy-an-application/iam-user-service.md
 - Understand your AWS billing:
-  - AWS Cost Management Dashboard:  aws-billing-and-cost-management-dashboard-via-quicksight.md
+  - AWS Cost Management Dashboard:  understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md
 - Upcoming features:
-  - AWS Calgary region: calgary-region-in-aws-secure-environment-accelerator.md
+  - AWS Calgary region: upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
 plugins:
 - techdocs-core
