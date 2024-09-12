@@ -12,15 +12,15 @@ To create an IAM user:
 
 1. Insert a new item into the DynamoDB table `BCGOV_IAM_USER_TABLE`
 
-    ![table](images/iam-user-service/table.png)
+    ![table](../images/iam-user-service/table.png)
 
 2. Set the `UserName` attribute to the desired IAM username
 
-    ![create-user](images/iam-user-service/create-user.png)
+    ![create-user](../images/iam-user-service/create-user.png)
 
     A Lambda function will trigger to create the IAM user, generate an access key, and store it in the SSM Parameter Store. This function also runs hourly to rotate keys as needed and ensure DynamoDB table entries align with actual IAM account users, removing any discrepancies.
 
-    ![iam-user](images/iam-user-service/iam-users.png)
+    ![iam-user](../images/iam-user-service/iam-users.png)
 
 ### IAM username constraints
 
@@ -59,7 +59,7 @@ The Lambda function manages key rotation by monitoring the age of the keys. When
 }
 ```
 
-![parameter](images/iam-user-service/parameter.png)
+![parameter](../images/iam-user-service/parameter.png)
 
 ## Setup automation to retrieve and use keys
 
@@ -121,4 +121,4 @@ Example policy that allows s3 actions only to a specific ip range:
 
 ## Related pages
 
-- [B.C. Government AWS Landing Zone overview](bc-gov-aws-landing-zone-overview.md)
+- [B.C. Government AWS Landing Zone overview](../get-started/bc-govs-aws-landing-zone-overview.md)
