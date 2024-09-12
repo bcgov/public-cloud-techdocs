@@ -19,11 +19,11 @@ This streamlined approach eliminates the need for duplicating resources across m
 
 The distinction between the Shared Networking and Perimeter accounts is driven by the need for "separation of duties" in networking and security. In essence, ASEA's networking architecture guarantees centralized, well-organized, and secure communication. This is achieved through Transit Gateway routing, distinct security measures for the Perimeter VPC, and efficient resource management in the Shared Network account, as depicted in the B.C. Government ASEA's networking diagram below:
 
-![networking-architecture](images/networking/network-architecture.png)
+![networking-architecture](../images/networking/network-architecture.png)
 
 Another useful diagram provided by AWS shows how all workload VPCs exist in the Shared Networking account and utilized in every workload account based on the OU that they reside in.
 
-![shared-vpc](images/networking/shared-vpc.png)
+![shared-vpc](../images/networking/shared-vpc.png)
 
 For further reading beyond this document please visit the [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/). We use the [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/diagrams/#14-additional-perimeter-patterns) with third-party firewalls.
 
@@ -65,7 +65,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
 
 - **Configuration details (CIDR Blocks)**
   - **CIDR Blocks**
-    - Each Workload VPC has a /16 CIDR block. Because all accounts in a specific OU share the same VPC that means that all teams in the ASEA share the same IP pools in the specific environments. For example if we have 20 [project sets](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) in the ASEA that's 20 Dev accounts all existing in the same Dev VPC and sharing the same /16 CIDR block.
+    - Each Workload VPC has a /16 CIDR block. Because all accounts in a specific OU share the same VPC that means that all teams in the ASEA share the same IP pools in the specific environments. For example if we have 20 [project sets](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) in the ASEA that's 20 Dev accounts all existing in the same Dev VPC and sharing the same /16 CIDR block.
 
   - **In the BC Gov ASEA:**
     - Dev VPC: /16
@@ -148,7 +148,7 @@ Generally, in the ASEA we recommend one of two methods of exposing services to t
 Making strategic choices between AWS API Gateway and ALBs is essential for optimizing cloud architecture. API Gateway is the preferred option for internet exposure, catering to modern applications using RESTful APIs and serverless computing. ALBs are should only be used for supporting legacy applications, and require integration support from the Public Cloud team.
 
 **Create an API in API Gateway**
-For general instructions on how to cerate an API gateway and safely expose it to the internet please see this [AWS documentation on HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html). For ASEA specific examples deployed using Terraform via GitHub Actions please see our [serverless, or container based sample applications](./design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications). Creating resources via Terraform/ automation is always preferred.
+For general instructions on how to cerate an API gateway and safely expose it to the internet please see this [AWS documentation on HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html). For ASEA specific examples deployed using Terraform via GitHub Actions please see our [serverless, or container based sample applications](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications). Creating resources via Terraform/ automation is always preferred.
 
 **Benefits of using API Gateway and VPC Link**
 - **Security and isolation** API Gateway and VPC Link provide a secure and isolated connection between your internet-facing API and backend services within a VPC. AWS WAF can also be used alongside your API gateway. 
@@ -168,5 +168,5 @@ Serverless resources within the AWS Secure Environment Accelerator (ASEA) posses
 
 ## Related pages
 - [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/)
-- [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/images/perimeter-NFW-GWLB.png)
+- [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/../images/perimeter-NFW-GWLB.png)
 
