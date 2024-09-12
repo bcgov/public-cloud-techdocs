@@ -168,5 +168,5 @@ Serverless resources within the AWS Secure Environment Accelerator (ASEA) posses
 
 ## Related pages
 - [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/)
-- [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/../images/perimeter-NFW-GWLB.png)
+- [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/images/perimeter-NFW-GWLB.png)
 
