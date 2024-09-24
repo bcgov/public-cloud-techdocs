@@ -2,7 +2,7 @@
 
 ## Overview
 
-This documentation provides information for using public cloud services within the BC Government. It covers both **Amazon Web Services (AWS)** and **Microsoft Azure** platforms, offering resources for provisioning project sets, designing, building, and deploying applications in these environments. Whether you're new to cloud computing or an experienced developer, you'll find valuable information to help you navigate the BC Government's public cloud infrastructure.
+This documentation provides information for using public cloud services within the BC Government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), designing, building, and deploying applications in these environments. Whether you're new to cloud computing or an experienced developer, you'll find valuable information to help you navigate the BC Government's public cloud infrastructure.
 
 ## Provision a project set
 
