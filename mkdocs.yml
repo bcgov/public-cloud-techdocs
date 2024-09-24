@@ -4,11 +4,11 @@ repo_url: https://github.com/bcgov/public-cloud-techdocs
 edit_uri: edit/main/docs/
 nav:
   - Get started:
-      - Get started: index.md
+      - Oerview: index.md
       - Provision a project set in AWS or Azure: get-started/provision-a-project-set.md
   - AWS:
       - Get started:
-          - Get started: aws/index.md
+          - Overview: aws/index.md
           - B.C. Government AWS Landing Zone overview: aws/get-started/bc-govs-aws-landing-zone-overview.md
       - Design, build and deploy an application:
           - Requirements for building your application: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
@@ -22,7 +22,7 @@ nav:
           - AWS Calgary region: aws/upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
   - Azure:
       - Get started:
-          - Get started: azure/index.md
+          - Overview: azure/index.md
           - B.C. Government Azure Landing Zone overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
       - Design, build and deploy an application:
           - Deploy an app to BC Gov's Azure Landing Zone: azure/design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md
