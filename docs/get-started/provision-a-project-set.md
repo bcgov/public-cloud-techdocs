@@ -78,7 +78,7 @@ Other team members can be added to the project set by the Product Owner or Techn
 
 ### Azure
 
-Once the Azure subscriptions have been provisioned, the [Product Owner](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have Admin access into the subscriptions.
+Once the Azure subscriptions have been provisioned, the [Product Owner](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have a restricted Owner role on the subscriptions.
 
 Other team members can be added to the project set by the Product Owner or Technical Lead(s) directly in the [Azure Portal](https://portal.azure.com/). For more information on how to do this, see [Azure User Management](../azure/user-management.md).
 
