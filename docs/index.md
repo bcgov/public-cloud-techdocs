@@ -46,6 +46,3 @@ Every six weeks, we host a platform community MeetUp where we talk about changes
 ### External training
 
 See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
-
-<!-- ## Get support on the platform
-* [Troubleshooting and support](troubleshooting-and-support.md) -->
