@@ -1,19 +1,19 @@
-# Welcome to the Public Cloud AzureTechnical Documentation
+# Welcome to the Public Cloud Azure Technical Documentation
 
 ## Get started
 
 Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
 
 * [B.C. Government Azure Landing Zone overview](get-started/bc-govs-azure-landing-zone-overview.md)
-* [Provision a project set in Azure](get-started/provision-a-project-set.md)
-* [Account access](get-started/provision-a-project-set.md#account-access)
+* [Provision a project set](../get-started/provision-a-project-set.md)
+* [User management in Azure](design-build-and-deploy-an-application/user-management.md)
 
 ## Build, deploy and maintain apps
 
 Best practices on the platform:
 
 * [Requirements for building your application](design-build-and-deploy-an-application/requirements-for-building-your-application.md)
-* [Deploy an application to the  B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+* [Deploy an application to the B.C. Government Azure Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md)
 * [Networking](design-build-and-deploy-an-application/networking.md)
 
 <!--
