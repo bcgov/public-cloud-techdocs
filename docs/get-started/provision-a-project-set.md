@@ -1,6 +1,6 @@
-# Provision a new AWS project set
+# Provision a new AWS or Azure project set
 
-Last updated: **November 21, 2023**
+Last updated: **September 24, 2024**
 
 On the Public Cloud platform, different teams organize their work on isolated [project sets](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set). Before working on the platform, the [Product Owner](../get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) of the respective team must submit a project set provisioning request for your team on the B.C. Government Public Cloud.
 
@@ -21,8 +21,8 @@ To do that you must meet the prerequisites for provisioning a project set outlin
 - A descriptive product name (no acronyms)
 - Contact details and IDIR accounts for the Product Owner and up to 2 Technical Leads
 - For B.C. Gov's Landing Zone in AWS an estimate for the product's projected monthly spend on cloud services [Refer to the AWS Cost Calculator](https://calculator.aws/#/) and an AWS Account Code (Refer to Memorandum of Understanding (MoU)).
-
-  For **new product teams** requesting space in the AWS Landing Zone complete the following 2 steps before submitting the provisioning request:
+- For B.C. Gov's Landing Zone in Azure an estimate for the product's projected monthly spend on cloud services [Refer to the Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/) and an Azure Subscription ID (Refer to Memorandum of Understanding (MoU)).
+  For **new product teams** requesting space in a public cloud landing zone complete the following 2 steps before submitting the provisioning request:
 
 - Sign a Memorandum of Understanding (MoU) with OCIO. Request an MoU template from <cloud.pathfinder@gov.bc.ca>
 - Book an onboarding session with the Cloud Pathfinder Team at <cloud.pathfinder@gov.bc.ca>
@@ -68,17 +68,19 @@ To do that you must meet the prerequisites for provisioning a project set outlin
 
   ![budget](../images/provision-a-project-set/budget.png)
 
-## Account access
-<!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
-<!-- TODO: update this with Azure details -->
+## Accessing your project set
+
+### AWS
+
 Once the AWS accounts have been provisioned, the [Product Owner](../get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
 
-For other team members access, please have the Product Owner email: <cloud.pathfinder@gov.bc.ca> with the following information:
+Other team members can be added to the project set by the Product Owner or Technical Lead(s) via the [AWS User Management](../aws/user-management.md) feature in the Product Registry.
 
-- Team members full name
-- Role that the user should be granted (Admin, Developer, Viewer, Billing Viewer, Security Auditor)
-  - Note that the Developer role has the same AWS owned policy [AdministratorAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AdministratorAccess.html) as the Admin role, however they won't be granted access to the Production AWS Account.
-- License plate of the project set, e.g. "a1b2c3"
+### Azure
+
+Once the Azure subscriptions have been provisioned, the [Product Owner](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have Admin access into the subscriptions.
+
+Other team members can be added to the project set by the Product Owner or Technical Lead(s) directly in the [Azure Portal](https://portal.azure.com/). For more information on how to do this, see [Azure User Management](../azure/user-management.md).
 
 ---
 
@@ -86,5 +88,5 @@ For other team members access, please have the Product Owner email: <cloud.pathf
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
 - [OnBoarding Guide for BC Gov AWS ASEA](https://digital.gov.bc.ca/cloud/services/public/onboard/)
-- [B.C. Government AWS Landing Zone overview](../get-started/bc-govs-aws-landing-zone-overview.md)
-- [Deploy an application to the  B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+- [B.C. Government AWS Landing Zone overview](../aws/get-started/bc-govs-aws-landing-zone-overview.md)
+- [B.C. Government Azure Landing Zone overview](../azure/get-started/bc-govs-azure-landing-zone-overview.md)
