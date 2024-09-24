@@ -12,7 +12,7 @@ For more information, see [Provision a project set in AWS or Azure](get-started/
 
 ## Amazon Web Services (AWS)
 
-AWS offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications. These services help organizations move faster, lower IT costs, and scale.
+AWS offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
 - [BC Gov's AWS Landing Zone Overview](aws/get-started/bc-govs-aws-landing-zone-overview.md)
 - [Requirements for Building Your Application in AWS](aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md)
