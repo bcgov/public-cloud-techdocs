@@ -103,7 +103,7 @@ The AWS Secure Environment Accelerator (ASEA) product provides a security framew
 
 The ASEA security framework ensures that you can develop and deploy applications in a secure, compliant, and controlled AWS environment, enabling them to focus on delivering innovative and effective digital services.
 
-<!-- - TODO: Link to the security guardrails page -->
+For more information, see [AWS Security & Compliance Guardrails](../design-build-and-deploy-an-application/security-guardrails.md).
 
 ### Networking
 
