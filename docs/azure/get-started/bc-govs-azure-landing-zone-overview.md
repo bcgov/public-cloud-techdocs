@@ -138,11 +138,11 @@ For B.C. government ministry teams working in the OCIO's Landing Zone, it's cruc
 
 ## Next steps
 
-- [Deploy an application to the B.C. Government Azure Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-Azure-landing-zone.md)
+- [Deploy an application to the B.C. Government Azure Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md)
 
 ## Related pages
 
 - [Public cloud services](https://digital.gov.bc.ca/cloud/services/public)
 - [Public cloud hosting 101](https://digital.gov.bc.ca/cloud/services/public/intro/)
-- [Deploy an application to the B.C. Government Azure Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-Azure-landing-zone.md)
+- [Deploy an application to the B.C. Government Azure Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md)
 - [IAM User Management Service](../design-build-and-deploy-an-application/iam-user-service.md)
