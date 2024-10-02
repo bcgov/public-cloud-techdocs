@@ -25,10 +25,10 @@ nav:
           - Overview: azure/index.md
           - Azure Landing Zone Overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
       - Design, Build, and Deploy:
-          - Requirements for building your application: azure/design-build-and-deploy-an-application/requirements-for-building-your-application.md
-          - User management: azure/design-build-and-deploy-an-application/user-management.md
-          - Deploy an app to BC Gov's Azure Landing Zone: azure/design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md
-          - Networking: azure/design-build-and-deploy-an-application/networking.md
+          - Requirements: azure/design-build-deploy/requirements-for-building-your-application.md
+          - User Management: azure/design-build-deploy/user-management.md
+          - Deploy an app to BC Gov's Azure Landing Zone: azure/design-build-deploy/deploy-an-app-to-the-azure-landing-zone.md
+          - Networking: azure/design-build-deploy/networking.md
       - Best Practices:
           - Best Practices: azure/best-practices/best-practices.md
       - Upcoming Features:

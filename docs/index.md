@@ -25,10 +25,10 @@ AWS offers a broad set of global cloud-based products including compute, storage
 Azure is a comprehensive set of cloud services that developers and IT professionals use to build, deploy, and manage applications through Microsoft's global network of datacenters.
 
 - [Azure Landing Zone Overview](azure/get-started/bc-govs-azure-landing-zone-overview.md)
-- [Requirements for Building Your Application in Azure](azure/design-build-and-deploy-an-application/requirements-for-building-your-application.md)
-- [User Management in Azure](azure/design-build-and-deploy-an-application/user-management.md)
-- [Networking in Azure](azure/design-build-and-deploy-an-application/networking.md)
-- [Deploy an Application to the Azure Landing Zone](azure/design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md)
+- [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements-for-building-your-application.md)
+- [User Management in Azure](azure/design-build-deploy/user-management.md)
+- [Networking in Azure](azure/design-build-deploy/networking.md)
+- [Deploy an Application to the Azure Landing Zone](azure/design-build-deploy/deploy-an-app-to-the-azure-landing-zone.md)
 
 ### Rocket.Chat
 

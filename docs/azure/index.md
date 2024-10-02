@@ -4,9 +4,9 @@
 
 Start here for the first steps on working in our Azure Landing Zone (ALZ):
 
-* [B.C. Government Azure Landing Zone overview](get-started/bc-govs-azure-landing-zone-overview.md)
-* [Provision a project set](../get-started/provision-a-project-set.md)
-* [User management in Azure](design-build-and-deploy-an-application/user-management.md)
+* [Azure Landing Zone Overview](get-started/bc-govs-azure-landing-zone-overview.md)
+* [Provision a Project Set](../get-started/provision-a-project-set.md)
+* [User Management in Azure](design-build-and-deploy-an-application/user-management.md)
 
 ## Build, deploy and maintain apps
 
@@ -39,26 +39,20 @@ Relevant technical information about the components that make up the AWS Secure 
 <!-- * [Technical architecture](technical-architecture.md) -->
 <!-- * [Networking](design-build-and-deploy-an-application/networking.md) -->
 
-### Rocket.Chat
-
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Public Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
-
-If you already have access, you can
-[log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
-
-### Public Cloud Community Update 
-
-Every six weeks, we host a public cloud community update where we talk about changes to the platform.
-
-[Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
-
 ### Reusable code and services
+
+PENDING: We are working on providing reusable code and services to help you build your applications. Stay tuned for updates.
+
+* Container-based application: [Azure Startup Sample Application (Containers)](https://github.com/bcgov/azure-startup-sample-app-containers)
+* Serverless-based application: [Azure Startup Sample Application (Serverless)](https://github.com/bcgov-c/ecf-azure-startup-sample-app-serverless)
+
 <!--
 We have several [sample applications](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the ASEA, and give your team a launchpad to begin development in AWS.
 -->
+
 ### External training
-<!--
+
 * See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
--->
+
 <!-- ## Get support on the platform
 * [Troubleshooting and support](troubleshooting-and-support.md) -->
