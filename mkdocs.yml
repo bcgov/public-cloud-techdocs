@@ -5,12 +5,12 @@ edit_uri: edit/main/docs/
 nav:
   - Get started:
       - Overview: index.md
-      - Provision a project set in AWS or Azure: get-started/provision-a-project-set.md
+      - Provision a Project Set: get-started/provision-a-project-set.md
   - AWS:
       - Get started:
           - Overview: aws/index.md
-          - B.C. Government AWS Landing Zone overview: aws/get-started/bc-govs-aws-landing-zone-overview.md
-      - Design, build and deploy an application:
+          - AWS Landing Zone Overview: aws/get-started/bc-govs-aws-landing-zone-overview.md
+      - Design, Build, and Deploy:
           - Requirements for building your application: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
           - User management: aws/design-build-and-deploy-an-application/user-management.md
           - Deploy an app to BC Gov's AWS Landing Zone: aws/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
@@ -23,11 +23,15 @@ nav:
   - Azure:
       - Get started:
           - Overview: azure/index.md
-          - B.C. Government Azure Landing Zone overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
-      - Design, build and deploy an application:
+          - Azure Landing Zone Overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
+      - Design, Build, and Deploy:
           - Requirements for building your application: azure/design-build-and-deploy-an-application/requirements-for-building-your-application.md
           - User management: azure/design-build-and-deploy-an-application/user-management.md
           - Deploy an app to BC Gov's Azure Landing Zone: azure/design-build-and-deploy-an-application/deploy-an-app-to-the-azure-landing-zone.md
           - Networking: azure/design-build-and-deploy-an-application/networking.md
+      - Best Practices:
+          - Best Practices: azure/best-practices/best-practices.md
+      - Upcoming Features:
+          - Express Route: azure/upcoming-features/express-route.md
 plugins:
   - techdocs-core
