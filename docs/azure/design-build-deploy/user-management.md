@@ -1,6 +1,6 @@
 # User Management in the Azure Landing Zone
 
-Last updated: **October 2, 2024**
+Last updated: **October 3, 2024**
 
 This guide provides an overview of user management in the Azure Landing Zone, specifically tailored for Product Owners (POs) and Technical Leads (TLs) who have been granted a restricted Owner role on the Project Set Management Group. This role is inherited on the subscription within the Project Set.
 
@@ -15,9 +15,9 @@ As a Product Owner or Technical Lead with restricted Owner permissions, you have
    - Resource groups
    - Individual resources
 
-* Create custom roles
-* Create and manage [service principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
-* Create and manage [managed identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
+* Create [custom Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
+* Create and manage [Service Principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
+* Create and manage [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
 * Create and manage all resources within your subscription
 
 ## What You Can't Do

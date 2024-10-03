@@ -5,14 +5,15 @@ edit_uri: edit/main/docs/
 nav:
   - Get started:
       - Overview: index.md
+      - Why Use Public Cloud: get-started/why-use-public-cloud.md
       - Provision a Project Set: get-started/provision-a-project-set.md
   - AWS:
       - Get started:
           - Overview: aws/index.md
           - AWS Landing Zone Overview: aws/get-started/bc-govs-aws-landing-zone-overview.md
       - Design, Build, and Deploy:
-          - Requirements for building your application: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
-          - User management: aws/design-build-and-deploy-an-application/user-management.md
+          - Requirements: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
+          - User Management: aws/design-build-and-deploy-an-application/user-management.md
           - Deploy an app to BC Gov's AWS Landing Zone: aws/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
           - Networking: aws/design-build-and-deploy-an-application/networking.md
           - AWS IAM User service: aws/design-build-and-deploy-an-application/iam-user-service.md
@@ -25,13 +26,15 @@ nav:
           - Overview: azure/index.md
           - Azure Landing Zone Overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
       - Design, Build, and Deploy:
-          - Requirements: azure/design-build-deploy/requirements-for-building-your-application.md
+          - Requirements: azure/design-build-deploy/requirements.md
           - User Management: azure/design-build-deploy/user-management.md
-          - Deploy an app to BC Gov's Azure Landing Zone: azure/design-build-deploy/deploy-an-app-to-the-azure-landing-zone.md
+          - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
           - Networking: azure/design-build-deploy/networking.md
       - Best Practices:
-          - Best Practices: azure/best-practices/best-practices.md
+          - Be Mindful: azure/best-practices/be-mindful.md
+          - CI/CD: azure/best-practices/ci-cd.md
       - Upcoming Features:
-          - Express Route: azure/upcoming-features/express-route.md
+          - Domain Join: azure/upcoming-features/domain-join.md
+          - Express Route: azure/upcoming-features/express-route.md          
 plugins:
   - techdocs-core

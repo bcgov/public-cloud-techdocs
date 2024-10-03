@@ -28,7 +28,7 @@ Azure is a comprehensive set of cloud services that developers and IT profession
 - [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements-for-building-your-application.md)
 - [User Management in Azure](azure/design-build-deploy/user-management.md)
 - [Networking in Azure](azure/design-build-deploy/networking.md)
-- [Deploy an Application to the Azure Landing Zone](azure/design-build-deploy/deploy-an-app-to-the-azure-landing-zone.md)
+- [Deploy to the Azure Landing Zone](azure/design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
 ### Rocket.Chat
 

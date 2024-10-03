@@ -1,4 +1,6 @@
-# Best Practices
+# Be Mindful
+
+The following are some things to be aware of when working within the Azure Landing Zone.
 
 ## Virtual Network (VNet) Integration
 
@@ -19,6 +21,42 @@ Once your resource is deployed, a DNS `A-record` will be automatically created i
 However, since the endpoint is private-only, you will not be able to access the resource from outside the VNet. To access and work with these specific resources, you need to use either [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview) or [Azure Virtual Desktop (AVD)](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview) from within the VNet.
 
 In the future, once [Express Route](../upcoming-features/express-route.md) is available, you will also be able to access these resources from the on-premises network.
+
+## Using Terraform to Create Subnets
+
+If you are using Terraform to create your infrastructure, in particular the subnets within your assigned Virtual Network, please be aware of the following challenge.
+
+The Azure Landing Zones have an Azure Policy implemented that requires every subnet to have an associated Network Security Group (NSG) for security controls compliance. The issue is that Terraform does not support the creation of subnets with an associated NSG in a _single step_.
+
+Therefore, instead of using the `azurerm_subnet` resource to create subnets, you must use the `azapi_update_resource` resource from the [AzAPI Terraform Provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs). This resource allows you to create subnets with an associated NSG in a single step.
+
+**Example code:**
+
+```hcl
+resource "azapi_update_resource" "subnets" {
+  type = "Microsoft.Network/virtualNetworks/subnets@2023-04-01"
+
+  name      = "SubnetName"
+  parent_id = data.azurerm_virtual_network.vnet.id
+  # Note: Discovered the `locks` attribute for AzAPI from the following GitHub Issue: https://github.com/Azure/terraform-provider-azapi/issues/503
+  # A list of ARM resource IDs which are used to avoid create/modify/delete azapi resources at the same time.
+  locks = [
+    data.azurerm_virtual_network.vnet.id
+  ]
+
+  body = jsonencode({
+    properties = {
+      networkSecurityGroup = {
+        id = azurerm_network_security_group.id
+      }
+    }
+  })
+
+  response_export_values = ["*"]
+}
+```
+
+For further details about this limitation, please refer to the following GitHub Issue: [Example of using the Subnet Association resources with Azure Policy](https://github.com/hashicorp/terraform-provider-azurerm/issues/9022).
 
 ## AzAPI Terraform Provider (using `azapi_update_resource`)
 

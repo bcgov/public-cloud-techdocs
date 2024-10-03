@@ -1,10 +1,19 @@
 # Provision a new Project Set
 
-Last updated: **October 2, 2024**
+Last updated: **October 3, 2024**
 
-On the Public Cloud platform, different teams organize their work in isolated [Project Sets](#LINK). Before working in the cloud platform, the [Product Owner](#LINK) of the respective team must submit a Project Set provisioning request for your team, through the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login).
+On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login).
 
 ---
+
+## What is a Project Set?
+
+A project set consists of four distinct environments for development (`dev`), testing (`test`), production (`prod`), and tooling (`tools`). This isolates and protects each stage of the deployment lifecycle.
+
+- The **`dev`** account is for developers to experiment and test features
+- The **`test`** account mirrors production and is used for quality assurance testing
+- The **`prod`** account is the live environment accessed by end users
+- The **`tools`** account contains shared resources like CI/CD pipelines, container registries, and automation tools
 
 ## Prerequisites
 
@@ -14,7 +23,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
 ## Process to Request a Project Set
 
-1. Login to the [BC Gov Product Registry](https://registry.developer.gov.bc.ca/login)
+1. Login to the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login)
 
   You will need to provide the following information:
 
@@ -28,7 +37,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
   - Sign a Memorandum of Understanding (MoU) with the OCIO. Request an MoU template from <cloud.pathfinder@gov.bc.ca>.
-  - Book an onboarding session with the Cloud Pathfinder Team at <cloud.pathfinder@gov.bc.ca>.
+  - Book an onboarding session with the Cloud Pathfinder team at <cloud.pathfinder@gov.bc.ca>.
 
 2. Navigate to the top menu called **Public Cloud Products**.
 
@@ -48,11 +57,9 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
   ![ministry-provider](../images/provision-a-project-set/ministry-provider.png)
 
-6. Enter the [Product Owner](#LINK) and [Technical Lead(s)](#LINK) **details** per each required field.
+6. Enter the **Product Owner** and **Technical Lead(s)** details per each required field.
 
-    <!-- TODO: move some of this to a separate "RBAC", or "Login Application" document and link to it here -->
-
-  - The Product Owner and Technical Lead(s) will be granted access to the accounts/subscriptions in the [Project Set](#LINKt) via the Admin/Owner role.
+  - The Product Owner and Technical Lead(s) will be granted access to the accounts/subscriptions in the Project Set via the Admin/Owner role.
 
   ![po-tech-lead](../images/provision-a-project-set/po-tech-leads.png)
 
@@ -74,21 +81,21 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
 ### AWS
 
-Once the AWS accounts have been provisioned, the [Product Owner](../get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-aws-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
+Once the AWS accounts have been provisioned, the Product Owner and Technical Lead(s) will be able to see them all in the [Login Application](https://login.nimbus.cloud.gov.bc.ca/) and they will have Admin access into the accounts.
 
-Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) via the [AWS User Management](../aws/user-management.md) feature in the Product Registry.
+Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) via the [AWS User Management](../aws/design-build-and-deploy-an-application/user-management.md) feature in the Product Registry.
 
 ### Azure
 
-Once the Azure subscriptions have been provisioned, the [Product Owner](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) and [Technical Lead(s)](../get-started/bc-govs-azure-landing-zone-overview.md#key-features-of-the-product-registry-service) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have a restricted Owner role on the subscriptions.
+Once the Azure subscriptions have been provisioned, the Product Owner and Technical Lead(s) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have a restricted Owner role on the subscriptions.
 
-Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) directly in the [Azure Portal](https://portal.azure.com/). For more information on how to do this, see [Azure User Management](../azure/user-access-management/user-management.md).
+Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) directly in the [Azure Portal](https://portal.azure.com/). For more information on how to do this, see [Azure User Management](../azure/design-build-deploy/user-management.md).
 
 ---
 
 ## Related pages
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
-- [OnBoarding Guide for BC Gov AWS ASEA](https://digital.gov.bc.ca/cloud/services/public/onboard/)
-- [B.C. Government AWS Landing Zone Overview](../aws/get-started/bc-govs-aws-landing-zone-overview.md)
-- [B.C. Government Azure Landing Zone Overview](../azure/get-started/bc-govs-azure-landing-zone-overview.md)
+- [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/cloud/services/public/onboard/)
+- [AWS Landing Zone Overview](../aws/get-started/bc-govs-aws-landing-zone-overview.md)
+- [Azure Landing Zone Overview](../azure/get-started/bc-govs-azure-landing-zone-overview.md)

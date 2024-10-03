@@ -14,37 +14,25 @@ The following sections describe the requirements for building your application o
 
 ## Limitations of the Azure Landing Zone
 
-Take the following into consideration when building your application on the Azure Landing zone:
+Take the following into consideration when building your application in the Azure Landing zone:
 
 * There is no direct (private) connectivity to the B.C. Government network. Any application requiring access to data on this network must use a public endpoint.
+  * See [Upcoming Features: Express Route](../upcoming-features/express-route.md) for more information.
 
 * Only HTTPS applications that are compatible with public endpoints through [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) are supported.
 
 * The only supported regions are Canada Central (ie. `canadacentral`) and Canada East (ie. `canadacentral`).
 
 * Most networking is under the management of the Azure Landing Zone and is not subject to change.
-
-## Other requirements and best practices
-
-To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-azure-landing-zone.md#configuring-github-action-oidc-authentication-to-azure) is required.
-
-Self-hosted runners, on Azure, are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
-
-To deploy your application:
-
-* Use a CI/CD pipeline
-* Use Infrastructure-as-Code (IaC), such as [Terraform](https://www.terraform.io/)
-* Set up a monitoring solution for your application
-* Through the [Product Registry](https://registry.developer.gov.bc.ca/login), configure budgets to receive notifications when your quota is close to being exceeded
-* Only grant access to your Azure subscriptions to those who actually need it
+  * See [Networking within the Azure Landing Zone](networking.md) for more information.
 
 ## Next steps
 
-* [Deploy an application to the B.C. Government Azure Landing Zone](deploy-an-app-to-the-azure-landing-zone.md)
+* [Deploy to the Azure Landing Zone](deploy-to-the-azure-landing-zone.md)
 
 ## Related pages
 
 * [Provision a Project Set](../../get-started/provision-a-project-set.md)
 * [User Management in Azure](user-management.md)
-* [Configuring GitHub Action OIDC Authentication to Azure](deploy-an-app-to-the-azure-landing-zone.md#configuring-github-action-oidc-authentication-to-azure)
-* [Deploy an application to the B.C. Government Azure Landing Zone](deploy-an-app-to-the-azure-landing-zone.md)
+* [Configuring GitHub Action OIDC Authentication to Azure](deploy-to-the-azure-landing-zone.md#configuring-github-action-oidc-authentication-to-azure)
+* [Deploy to the Azure Landing Zone](deploy-to-the-azure-landing-zone.md)
