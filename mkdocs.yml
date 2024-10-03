@@ -33,6 +33,8 @@ nav:
       - Best Practices:
           - Be Mindful: azure/best-practices/be-mindful.md
           - CI/CD: azure/best-practices/ci-cd.md
+      - Understand your billing:
+          - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming Features:
           - Domain Join: azure/upcoming-features/domain-join.md
           - Express Route: azure/upcoming-features/express-route.md          

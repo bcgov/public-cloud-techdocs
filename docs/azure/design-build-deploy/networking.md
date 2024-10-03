@@ -34,3 +34,9 @@ Advanced features are implemented and configured including:
   * Target URL extraction and validation
 * Web categories
   * Allow or deny access to web site categories based on FQDN
+
+### Exposing Services to the Internet
+
+For more complex applications, an [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is the preferred method for exposing your application to the Internet. It provides a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
+
+To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your web applications from common exploits and vulnerabilities.
