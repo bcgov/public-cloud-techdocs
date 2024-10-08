@@ -42,7 +42,3 @@ If you already have access, you can
 Every six weeks, we host a platform community MeetUp where we talk about changes to the platform.
 
 [Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
-
-### External Training
-
-See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
