@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: "public-cloud-techdocs"
   title: "Public cloud development guide"
-  description: "Learn about building and deploying applications through B.C. government AWS landing zone"
+  description: "Learn about building and deploying applications through B.C. government AWS and Azure landing zones"
   annotations:
     github.com/project-slug: bcgov/public-cloud-techdocs
     backstage.io/techdocs-ref: dir:.
