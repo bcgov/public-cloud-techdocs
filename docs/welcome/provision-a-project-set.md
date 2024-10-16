@@ -21,7 +21,7 @@ New requests must be reviewed and approved by the Public Cloud platform team. Th
 
 To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/cloud/services/public/onboard/).
 
-## Process to Request a Project Set
+## Process to request a Project Set
 
 1. Login to the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login)
 

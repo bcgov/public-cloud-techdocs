@@ -3,47 +3,47 @@ docs_dir: docs
 repo_url: https://github.com/bcgov/public-cloud-techdocs
 edit_uri: edit/main/docs/
 nav:
-  - Get started:
+  - Welcome:
       - Overview: index.md
-      - Why Use Public Cloud: get-started/why-use-public-cloud.md
-      - Provision a Project Set: get-started/provision-a-project-set.md
-      - Training: get-started/training.md
-      - Support: get-started/support.md
+      - Why use the Public cloud: welcome/why-use-public-cloud.md
+      - Provision a Project Set: welcome/provision-a-project-set.md
+      - Training: welcome/training.md
+      - Support: welcome/support.md
   - AWS:
-      - Get started:
+      - Get started with AWS:
           - Overview: aws/index.md
-          - AWS Landing Zone Overview: aws/get-started/bc-govs-aws-landing-zone-overview.md
-      - Design, Build, and Deploy:
+          - AWS Landing Zone overview: aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
+      - Design, build, and deploy:
           - Requirements: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
           - User Management: aws/design-build-and-deploy-an-application/user-management.md
           - Deploy an app to BC Gov's AWS Landing Zone: aws/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
           - Networking: aws/design-build-and-deploy-an-application/networking.md
           - AWS IAM User service: aws/design-build-and-deploy-an-application/iam-user-service.md
-          - Sample Apps: aws/design-build-and-deploy-an-application/sample-apps.md
+          - Sample apps: aws/design-build-and-deploy-an-application/sample-apps.md
       - Understand your AWS billing:
-          - AWS Cost Management Dashboard: aws/understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md
+          - AWS Cost Management dashboard: aws/understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md
       - Upcoming features:
           - AWS Calgary region: aws/upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
       - Enterprise Support:
           - AWS Enterprise Support: aws/support/enterprise-support.md
   - Azure:
-      - Get started:
-          - Azure Landing Zone Overview: azure/get-started/bc-govs-azure-landing-zone-overview.md
-      - Design, Build, and Deploy:
+      - Get started with Azure:
+          - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md
+      - Design, build, and deploy:
           - Requirements: azure/design-build-deploy/requirements.md
-          - User Management: azure/design-build-deploy/user-management.md
+          - User management: azure/design-build-deploy/user-management.md
           - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
           - Networking: azure/design-build-deploy/networking.md
-          - Sample Apps: azure/design-build-deploy/sample-apps.md
-      - Best Practices:
-          - Be Mindful: azure/best-practices/be-mindful.md
+          - Sample apps: azure/design-build-deploy/sample-apps.md
+      - Best practices:
+          - Be mindful: azure/best-practices/be-mindful.md
           - CI/CD: azure/best-practices/ci-cd.md
       - Understand your billing:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
-      - Upcoming Features:
+      - Upcoming features:
           - Domain Join: azure/upcoming-features/domain-join.md
-          - Express Route: azure/upcoming-features/express-route.md          
-      - Enterprise Support:
+          - Express route: azure/upcoming-features/express-route.md          
+      - Enterprise support:
           - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
   - techdocs-core

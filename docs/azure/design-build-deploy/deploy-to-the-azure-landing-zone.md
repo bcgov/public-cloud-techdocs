@@ -4,7 +4,7 @@ Last updated: **September 24, 2024**
 
 There are multiple ways to deploy your application to the Azure Landing Zone. This document outlines a few examples at a high-level, but it is up to each team to determine the best approach for their application.
 
-## Azure Portal (UI)
+## Azure portal (UI)
 
 The Azure Portal is a web-based application that allows you to manage your Azure resources. You can deploy your application to the Azure Landing Zone using the Azure Portal by following these steps:
 

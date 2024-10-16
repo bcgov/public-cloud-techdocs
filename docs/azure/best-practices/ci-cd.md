@@ -1,4 +1,4 @@
-# CI/CD Best Practices
+# CI/CD Best practices
 
 ## GitHub Actions
 

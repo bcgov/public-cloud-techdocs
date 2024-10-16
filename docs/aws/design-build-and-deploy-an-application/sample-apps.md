@@ -1,6 +1,6 @@
-# AWS Sample Applications
+# AWS Sample applications
 
-Last updated: **October 8, 2024**
+Last updated: **October 16, 2024**
 
 We have several example applications to help you get started with building and deploying applications in the AWS Landing Zone.
 

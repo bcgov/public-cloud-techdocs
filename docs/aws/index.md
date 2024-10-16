@@ -1,6 +1,6 @@
 # Welcome to the Public Cloud AWS Technical Documentation
 
-## Get started
+## Get started with AWS
 
 Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
 

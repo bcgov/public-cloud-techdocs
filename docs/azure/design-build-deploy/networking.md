@@ -12,13 +12,13 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 
 For further guidance on creating subnets with associated NSGs, refer to the [Be Mindful](../best-practices/be-mindful.md#using-terraform-to-create-subnets) documentation.
 
-## Spoke-to-Spoke Connectivity
+## Spoke-to-Spoke connectivity
 
 If your team has multiple environments (ie. Dev, Test, Prod, Tools) within the same Project Set, you may require connectivity between the different environments. This is known as spoke-to-spoke connectivity.
 
 By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must submit a request to the Cloud Pathfinder team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
 
-## Internet Connectivity
+## Internet connectivity
 
 All outbound traffic from the Azure Landing Zone is routed through the central hub and the firewall. This ensures that all traffic is inspected and monitored for security compliance.
 
@@ -35,13 +35,13 @@ Advanced features are implemented and configured including:
 * Web categories
   * Allow or deny access to web site categories based on FQDN
 
-### Exposing Services to the Internet
+### Exposing services to the internet
 
 For more complex applications, an [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is the preferred method for exposing your application to the Internet. It provides a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your web applications from common exploits and vulnerabilities.
 
-## Resource Locks on Networking Components
+## Resource locks on networking components
 
 To maintain the integrity and stability of the networking infrastructure, resource locks are automatically applied to key networking components, including Virtual Networks (VNets). These locks prevent accidental deletion of critical resources.
 

@@ -1,4 +1,4 @@
-# B.C. Government OCIO Azure Landing Zone Overview
+# B.C. Government OCIO Azure Landing Zone overview
 
 Last updated: **October 3, 2024**
 
@@ -12,7 +12,7 @@ For B.C. Government ministry teams developing applications in the Azure Public C
 
 The [Microsoft Cloud Adoption Framework (CAF)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview), and [Well-Architected Framework (WAF)](https://learn.microsoft.com/en-us/azure/well-architected/what-is-well-architected-framework) ensures that you can develop and deploy applications in a secure, compliant, and controlled Azure environment, enabling you to focus on delivering innovative and effective digital services.
 
-The following diagram illustrates the Cloud Adoption Framework (CAF) and the various components that support the Landing Zones. For more information, please refer to the official Microsoft documentation on [What is an Azure Landing Zone?](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/).
+The following diagram illustrates the Cloud Adoption Framework (CAF) and the various components that support the Landing Zones. For more information, please refer to the official Microsoft documentation on [What is an Azure Landing Zone?](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 
 [![Microsoft Azure Landing Zone Architecture](../images/azure-landing-zone-architecture-diagram-hub-spoke.svg "Microsoft Azure Landing Zone Architecture")](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg#lightbox)
 
@@ -38,7 +38,7 @@ B.C. Government has implemented the hub-and-spoke module using the modern [Virtu
 
 For additional information, please refer to the [Networking within the Azure Landing Zone](../design-build-deploy/networking.md) documentation.
 
-### Monitoring / Logging
+### Monitoring and logging
 
 The Cloud Adoption Framework (CAF) implements the components necessary for centralized monitoring and logging, include: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [Azure Activity Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log-insights), [Azure Metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-platform-metrics), and a centralized [Log Analytics Workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview).
 

@@ -2,15 +2,15 @@
 
 Last updated: **October 8, 2024**
 
-## Support Options
+## Support options
 
 There are multiple ways to get support for the Public Cloud Platform, including:
 
-- [Jira Service Management (JSM)]()
+<!--- [Jira Service Management (JSM)]()-->
 - [Email the Public Cloud Platform team](mailto:cloud.pathfinder@gov.bc.ca)
 - [Rocket.Chat](https://chat.developer.gov.bc.ca/)
 
-## Cloud Vendor Support
+## Cloud vendor support
 
 Each cloud vendor provides support for their services. Here are the support options for each vendor:
 

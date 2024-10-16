@@ -1,13 +1,19 @@
-# Azure Enterprise Support
+# Microsoft Azure Enterprise Support
 
-Last updated: **October 8, 2024**
+Last updated: **October 16, 2024**
 
-Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan.
+Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan. There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
 
-> Note: There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
+Note: If you use a third-party vendor's landing zone in Azure, you can't use the B.C. government's Unified Enterprise support plan for applications hosted in the vendor's landing zone.  
+  
+Ministry teams working in the OCIO-managed landing zone in Azure can currently access the Unified Enterprise support services for free.  
 
-In the Azure portal, you can search for Help + support to access the Azure Support Center and open a support ticket.
+You can view the full list of services available to the ministries under the [Unified Enterprise support plan](https://www.microsoft.com/en-IN/unifiedsupport/details). 
 
-![Azure Support](../images/help-and-support.png "Azure Support")
+## How to receive support 
 
-There are additional ways to access support, as described on the [Create an Azure support request](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request) page.
+1. Log into Azure Portal with your IDIR. Only users with access to applications in the OCIO-managed landing zone can use the Unified Enterprise support plan. New users may take up to 7 business days to gain access. If you need to open a support case before access is enabled, contact the OCIO Public cloud team at cloud.pathfinder@gov.bc.ca
+
+2. Review step-by-step instructions on opening an [Azure support request](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request) 
+
+3. Learn [how to manage](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-manage-azure-support-request) Azure support requests 

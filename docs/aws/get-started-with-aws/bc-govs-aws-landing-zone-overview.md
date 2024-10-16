@@ -1,4 +1,4 @@
-# B.C. Government OCIO AWS Landing Zone  overview
+# B.C. Government OCIO AWS Landing Zone overview
 
 Last updated: **February 5, 2024**
 
@@ -32,11 +32,11 @@ Explore a [comprehensive guide](https://digital.gov.bc.ca/cloud/services/public/
 
 In this section, we'll provide a high level overview of the components and features of the OCIO's Landing Zone in AWS.
 
-### Product Registry
+### Platform Product Registry
 
-The Product Registry service is a comprehensive solution designed to streamline the process of requesting and creating AWS Project Sets for B.C. government ministry teams. Each Project Set comprises four distinct AWS accounts: Development (dev), Testing (test), Production (prod), and Tools. This service plays a crucial role, not just in setting up the necessary AWS infrastructure, but also in managing various aspects of a product's lifecycle in the cloud.
+The Platform Product Registry service is a comprehensive solution designed to streamline the process of requesting and creating AWS Project Sets for B.C. government ministry teams. Each Project Set comprises four distinct AWS accounts: Development (dev), Testing (test), Production (prod), and Tools. This service plays a crucial role, not just in setting up the necessary AWS infrastructure, but also in managing various aspects of a product's lifecycle in the cloud.
 
-### Key Features of the Product Registry Service
+### Key Features of the Platform Product Registry Service
 
 1. **AWS Project Set creation**
    - Helps create a set of four AWS accounts (Dev, Test, Prod, Tools) customized for different stages of the application development lifecycle

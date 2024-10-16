@@ -1,6 +1,6 @@
 # Welcome to the Public Cloud Azure Technical Documentation
 
-## Get started
+## Get started with Azure
 
 Start here for the first steps on working in our Azure Landing Zone (ALZ):
 

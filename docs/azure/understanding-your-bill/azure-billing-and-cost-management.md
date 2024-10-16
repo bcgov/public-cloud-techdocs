@@ -1,4 +1,4 @@
-# Azure Billing and Cost Management
+# Azure billing and cost management
 
 Last updated: **October 3, 2024**
 
