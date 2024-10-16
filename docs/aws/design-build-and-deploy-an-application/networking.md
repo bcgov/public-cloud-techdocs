@@ -1,7 +1,9 @@
 # Networking within the AWS Secure Environment Accelerator (ASEA)
+
 Last updated: **January 5, 2023**
 
 ## Introduction
+
 This document simplifies the centralized networking of the AWS Secure Environment Accelerator (ASEA) and provides best practices for networking on the platform. Our goal is to make ASEA's networking easy to understand for anyone working on the platform within the guardrails of the BC Gov ASEA. Networking plays a crucial role as the backbone of cloud technology, connecting everything, ensuring safety, and facilitating smooth operations. Understanding it is essential for maximizing the benefits of cloud tools.
 
 ## Network architecture
@@ -14,8 +16,6 @@ The ASEA network revolves around a Transit Gateway, efficiently directing traffi
 These resources are accessible through AWS Resource Access Manager (RAM), which allocates them to the respective accounts based on their organizational unit (OU). To control traffic between resources deployed in the VPCs, Security Groups are implemented.
 
 This streamlined approach eliminates the need for duplicating resources across multiple accounts reducing the operational burden associated with managing resources in each individual account.
-
-
 
 The distinction between the Shared Networking and Perimeter accounts is driven by the need for "separation of duties" in networking and security. In essence, ASEA's networking architecture guarantees centralized, well-organized, and secure communication. This is achieved through Transit Gateway routing, distinct security measures for the Perimeter VPC, and efficient resource management in the Shared Network account, as depicted in the B.C. Government ASEA's networking diagram below:
 
@@ -31,9 +31,9 @@ For further reading beyond this document please visit the [AESA network architec
 
 In the Perimeter account, we employ a [Gateway Load Balancer (GWLB)](https://aws.amazon.com/elasticloadbalancing/gateway-load-balancer/) to evenly distribute traffic load among our firewall instances. These instances, operating in a highly available pair, utilize Checkpoint Firewalls obtained from the AWS Marketplace. The Checkpoint Firewall Manager, coupled with Checkpoint's Smart Console, is instrumental in configuring traffic rules.
 
-Our firewall setup strictly permits only HTTP/HTTPS traffic, with all other forms of traffic being blocked. This includes SSH egress traffic, which might affect accessing git repositories and other services relying on SSH. For git repository access, we recommend using HTTPS instead of SSH. 
+Our firewall setup strictly permits only HTTP/HTTPS traffic, with all other forms of traffic being blocked. This includes SSH egress traffic, which might affect accessing git repositories and other services relying on SSH. For git repository access, we recommend using HTTPS instead of SSH.
 
-If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by contacting them by email at Cloud.Pathfinder@gov.bc.ca 
+If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by contacting them by email at <Cloud.Pathfinder@gov.bc.ca>
 
 ## Transit gateway
 
@@ -77,11 +77,12 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
     - CIDR blocks define the IP address range for each VPC, ensuring unique and non-overlapping address spaces
     - Enables proper addressing and routing
 
-
 In summary, Workload VPCs are organized by environments (Dev, Test, Prod, Tools), share resources through AWS RAM for centralized management via Shared Networking account, and each VPC is configured with a /16 CIDR block to define its IP address range. This structure and configuration support the secure and scalable hosting of applications across different stages of development and testing in the ASEA.
 
 ### Subnets
+
 All subnets within Workload VPCs, including Web, App, and Data, are private. This subnet configuration ensures a secure and organized environment, with each subnet tailored for distinct purposes within the ASEA infrastructure.
+
 - **Differentiation between Public and Private Subnets**
   - All subnets in a Workload VPC are designated as private. There is no distinction between public and private subnets within the Workload VPCs.
 
@@ -109,6 +110,7 @@ All subnets within Workload VPCs, including Web, App, and Data, are private. Thi
     - All workload accounts in the same VPC/subnet share the same IP address pool.
 
 ### Security groups and NACLs
+
 Security Groups and Network Access Control Lists (NACLs) play distinct roles in ensuring the security of Workload VPCs, with Security Groups acting as instance-level firewalls and NACLs providing an additional layer of defense at the subnet level
 
 - **Difference between security groups and NACLs**
@@ -142,6 +144,7 @@ Security Groups and Network Access Control Lists (NACLs) play distinct roles in 
 ### Exposing services to the internet
 
 Generally, in the ASEA we recommend one of two methods of exposing services to the internet:
+
 - API Gateway
 - Application Load Balancer (ALB)
 
@@ -151,22 +154,23 @@ Making strategic choices between AWS API Gateway and ALBs is essential for optim
 For general instructions on how to cerate an API gateway and safely expose it to the internet please see this [AWS documentation on HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html). For ASEA specific examples deployed using Terraform via GitHub Actions please see our [serverless, or container based sample applications](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications). Creating resources via Terraform/ automation is always preferred.
 
 **Benefits of using API Gateway and VPC Link**
-- **Security and isolation** API Gateway and VPC Link provide a secure and isolated connection between your internet-facing API and backend services within a VPC. AWS WAF can also be used alongside your API gateway. 
-    
-- **Scalability** 
+
+- **Security and isolation** API Gateway and VPC Link provide a secure and isolated connection between your internet-facing API and backend services within a VPC. AWS WAF can also be used alongside your API gateway.
+
+- **Scalability**
 API Gateway scales automatically to handle varying levels of traffic, ensuring the availability of your internet-facing services.
-    
-- **Managed service** 
+
+- **Managed service**
 API Gateway is a fully managed service, reducing operational overhead and allowing you to focus on building and improving your APIs.
 
 **When to use ALBs**
-While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please reach out to Cloud.Pathfinder@gov.bc.ca for integration support.
+While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please reach out to <Cloud.Pathfinder@gov.bc.ca> for integration support.
 
 ## Serverless resources
 
 Serverless resources within the AWS Secure Environment Accelerator (ASEA) possess the flexibility to operate within or outside a VPC. When deployed within a VPC, these resources are assigned an Elastic Network Interface (ENI), utilizing an IP address from the corresponding subnet's IP pool. Access to VPC resources, including critical databases such as RDS, is exclusive to serverless resources configured **within** the VPC, ensuring a controlled and secure networking environment.
 
 ## Related pages
+
 - [AESA network architecture docs](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/network/)
 - [GWLB architecture](https://aws-samples.github.io/aws-secure-environment-accelerator/latest/architectures/sensitive/images/perimeter-NFW-GWLB.png)
-

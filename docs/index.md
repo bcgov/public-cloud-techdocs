@@ -1,64 +1,44 @@
 # Welcome to the Public Cloud Technical Documentation
 
-## Get started
+## Overview
 
-Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
+This documentation provides information for using Public Cloud services within the B.C. Government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud computing or an experienced developer, you'll find valuable information to help you navigate the B.C. Government's public cloud infrastructure.
 
-* [B.C. Government AWS Landing Zone overview](get-started/bc-govs-aws-landing-zone-overview.md)
-* [Provision a project set in AWS](get-started/provision-a-project-set.md)
-* [Account access](get-started/provision-a-project-set.md#account-access)
+## Provision a Project Set
 
-## Build, deploy and maintain apps
+To get started in the Public Cloud you can provision a Project Set in AWS or Azure using the [BC Gov Product Registry](https://registry.developer.gov.bc.ca).
 
-Best practices on the platform:
+For more information, see [Provision a Project Set](get-started/provision-a-project-set.md).
 
-* [Requirements for building your application](design-build-and-deploy-an-application/requirements-for-building-your-application.md)
-* [Deploy an application to the  B.C. Government AWS Landing Zone](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
-* [Networking](design-build-and-deploy-an-application/networking.md)
+## Amazon Web Services (AWS)
 
-<!--
-Make sure to keep the page titles with the exact name of pages throughout the documentation
+AWS offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
-E.g "Deploy an application to the  B.C. Government AWS Landing Zone" cannot be called Build and deploy an application" as well.  This helps avoid any confusion to the user and our naming  through our public tech docs
+- [AWS Landing Zone Overview](aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
+- [Requirements for Building Your Application in AWS](aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md)
+- [User Management in AWS](aws/design-build-and-deploy-an-application/user-management.md)
+- [Networking in AWS](aws/design-build-and-deploy-an-application/networking.md)
+- [Deploy an Application to the AWS Landing Zone](aws/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
 
-* Maintain an application (coming soon) 
-* Retire an application (coming soon) 
--->
+## Microsoft Azure
 
-## Understand your AWS billing
+Azure is a comprehensive set of cloud services that developers and IT professionals use to build, deploy, and manage applications through Microsoft's global network of datacenters.
 
-Use the Cost Management Dashboard to get an overview of your spend in AWS:
-
-* [AWS billing and cost management dashboards](understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md)
-
-<!-- ## Training and learning
-
-Relevant technical information about the components that make up the AWS Secure Environment Accelerator (ASEA). -->
-
-<!-- ### Learn about the AWS Secure Environment Accelerator (ASEA) -->
-<!-- * [Technical architecture](technical-architecture.md) -->
-<!-- * [Networking](design-build-and-deploy-an-application/networking.md) -->
+- [Azure Landing Zone Overview](azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
+- [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements-for-building-your-application.md)
+- [User Management in Azure](azure/design-build-deploy/user-management.md)
+- [Networking in Azure](azure/design-build-deploy/networking.md)
+- [Deploy to the Azure Landing Zone](azure/design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
 ### Rocket.Chat
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud PaaS. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
+Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
 
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
-### Platform community MeetUps
+### Platform Community MeetUps
 
 Every six weeks, we host a platform community MeetUp where we talk about changes to the platform.
 
 [Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
-
-### Reusable code and services
-
-We have several [sample applications](design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications) which will deploy a simple application into your AWS Accounts utilizing different architectures. Use these to learn about best practices, how a GitHub Actions pipeline interacts with an AWS account in the ASEA, and give your team a launchpad to begin development in AWS.
-
-### External training
-
-See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
-
-<!-- ## Get support on the platform
-* [Troubleshooting and support](troubleshooting-and-support.md) -->

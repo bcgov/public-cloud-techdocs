@@ -1,9 +1,10 @@
 # BC Gov's Product Registry - User management documentation
+
 Last updated: **March 12, 2024**
 
 Welcome to the BC Gov's Product Registry documentation. This guide provides detailed information about the new user interface changes and the enhanced user management feature available at [BC Gov's Product Registry](https://registry.developer.gov.bc.ca/). With the latest update, users can now manage AWS permissions directly from the website, enhancing the overall user experience and streamlining project management.
 
-## New user interface 
+## New user interface
 
 The BC Gov's Product Registry has undergone significant UI improvements to provide a more intuitive and user-friendly experience. You can now easily navigate through the website, access different sections, and manage your projects and users more efficiently.
 
@@ -18,6 +19,7 @@ One of the key updates is the introduction of a comprehensive user management fe
 5. **Security auditors**
 
 ![AWS landing zone product registry screen preview of the dashboard to manage users showing different users with different access options](../images/user-management/registry_roles.png)
+
 ### Prerequisites
 
 - Users must have a valid IDIR to be added to these roles.
@@ -72,17 +74,19 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 ```
 
 ## Accessing the Public Cloud AWS Landing Zone
+
 - Once a user is added to a role, they can access the product (AWS accounts) from the [Public Cloud Landing Zone.](https://login.nimbus.cloud.gov.bc.ca/) If users have multiple roles, they can choose any of those roles when logging in to the account.
 ![AWS landing zone screen preview of the dashboard showing access to choose different types to login based on user credentials](../images/user-management/landing_zone.png)
 
 ## AWS managed policies overview
+
 - AWS managed policies are predefined policies that provide permissions for many common use cases. These policies are maintained by AWS and provide a set of permissions that align with common job functions in the AWS environment. By using AWS managed policies, you can ensure that the permissions are set up correctly and updated by AWS as necessary.
 
-    - AdministratorAccess: Provides full access to AWS services and resources
-    - ReadOnlyAccess: Provides read-only access to AWS services and resources
-    - SecurityAudit: Provides permissions to view configuration data for security auditing
+  - AdministratorAccess: Provides full access to AWS services and resources
+  - ReadOnlyAccess: Provides read-only access to AWS services and resources
+  - SecurityAudit: Provides permissions to view configuration data for security auditing
 
 # Conclusion
+
 - The new user management feature in the BC Gov's Product Registry enhances the ability of product owners and technical leads to manage AWS permissions efficiently. By understanding the roles and their associated policies, you can ensure that users have the appropriate access to your AWS resources.
 - For more information on AWS managed policies and best practices, visit the [AWS Identity and Access Management documentation.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html)
-
