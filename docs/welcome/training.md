@@ -24,6 +24,6 @@ Microsoft Azure offers a range of training resources to help you learn about the
 
 For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/cloud/services/public/get-support/#training) page.
 
-## Topic specific training
+### Topic specific training
 
 * [Become a Microsoft Defender for Cloud Ninja](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/become-a-microsoft-defender-for-cloud-ninja/1608761)
