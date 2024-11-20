@@ -24,6 +24,14 @@ However, since the endpoint is private-only, you will not be able to access the 
 
 In the future, once [Express Route](../upcoming-features/express-route.md) is available, you will also be able to access these resources from the on-premises network or through a VPN.
 
+## Custom DNS Zones
+
+In some scenarios, you may have a need to create a custom DNS Zone. Generally, this is not recommended, as the Azure Landing Zones are already configured with centralized custom Private DNS Zones for the Azure services. However, when working with third-party services (ie. Confluent Cloud), we might not have a Private DNS Zone for the specific service.
+
+If this is your scenario, please submit a [Public Cloud Support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3), so that the Cloud Pathfinder team can work with you to create and attach the custom DNS Zone to the central Private DNS Resolver.
+
+> Note: Attaching your custom Private DNS Zone to your Virtual Network (VNet) will not work, as all DNS queries are routed through the central Private DNS Resolver.
+
 ## Using Terraform to create Subnets
 
 If you are using Terraform to create your infrastructure, in particular the subnets within your assigned Virtual Network, please be aware of the following challenge.
@@ -90,3 +98,13 @@ If you encounter issues when trying to delete a resource you've created (such as
 5. **Best practice**: After completing your task, if the automation hasn't yet reapplied the lock, consider manually reapplying it to maintain security.
 
 Remember, these locks are in place for good reason. Always double-check that you're deleting the correct resources and understand the implications before removing any locks.
+
+## Azure Control-Plane vs Data-Plane access differences
+
+When working with Azure services, it's important to understand the differences between [control-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#control-plane) and [data-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#data-plane) access. The control plane is used to manage resources, while the data plane is used to interact with the resources themselves.
+
+Even though someone may have **Owner-level** permissions on a resource, they may not have the necessary permissions to interact with the **data plan**e. This is because the data plane permissions are separate from the control plane permissions.
+
+For example, some Azure services and solution patterns may require additional data-level permissions, such as [Storage Blob Data Reader](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader), [Search Index Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/ai-machine-learning#search-index-data-contributor), etc.
+
+For a list of built-in roles and their permissions, refer to the [Azure built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) documentation.

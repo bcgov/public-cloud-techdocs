@@ -48,6 +48,8 @@ Baseline metric, activity log, and log query alerts are available for landing zo
 
 While some default baselines have been implemented (primarily for regulatory compliance), each team is responsible for setting up [Alerts/Rules](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview) and [Action Groups](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups) based on their specific requirements.
 
+For additional information and guidance, please refer to the Microsoft [Advanced Alerting Strategies for Azure Monitoring](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/advanced-alerting-strategies-for-azure-monitoring/4268698) article.
+
 ## Next steps
 
 - [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
