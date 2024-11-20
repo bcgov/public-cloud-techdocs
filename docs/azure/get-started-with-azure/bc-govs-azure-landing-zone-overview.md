@@ -1,6 +1,6 @@
 # B.C. Government OCIO Azure Landing Zone overview
 
-Last updated: **October 3, 2024**
+Last updated: **November 20, 2024**
 
 An overview of the B.C. Government OCIO's Landing Zone in Azure, how to get access, its benefits, components, and features.
 
@@ -32,7 +32,7 @@ The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en
 
 The Cloud Adoption Framework (CAF) implements a hub-and-spoke network topology. The hub is the central point of connectivity to the on-premises network, and the spoke is the virtual network that connects to the hub. The hub-and-spoke model allows for the centralization of services and management, while providing isolation and segmentation for workloads.
 
-B.C. Government has implemented the hub-and-spoke module using the modern [Virtual WAN (vWAN)](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) architecture. Within this architecture, each Project Set is provisioned with a spoke Virtual Network (VNet) that connects to the Virtual Hub (vHub) Virtual Network (VNet).
+B.C. Government has implemented the hub-and-spoke module using the modern [Virtual WAN (vWAN)](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) architecture. Within this architecture, each Project Set is provisioned with a spoke Virtual Network (VNet) that connects to the Virtual Hub (vHub).
 
 [![Virtual WAN Network Topology](../images/virtual-wan-topology.png "Virtual WAN Network Topology")](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/media/virtual-wan-topology.png#lightbox)
 
@@ -42,11 +42,11 @@ For additional information, please refer to the [Networking within the Azure Lan
 
 The Cloud Adoption Framework (CAF) implements the components necessary for centralized monitoring and logging, include: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [Azure Activity Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log-insights), [Azure Metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-platform-metrics), and a centralized [Log Analytics Workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview).
 
-Baseline metric, activity log, and log query alerts are available for landing zone platform components and other selected landing zone components. They're based on Microsoft-recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response.
+Baseline metric, activity log, and log query alerts are available for landing zone platform components and other selected landing zone components. They're based on Microsoft recommended practices for proactive monitoring, such as setting up alerts, thresholds, and notifications for timely problem detection and response.
 
 [![Azure Monitor Baseline Alerts](../images/azure-monitor-baseline-alerts-policy-initiative-flow.svg "Azure Monitor Baseline Alerts")](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/media/azure-monitor-baseline-alerts-policy-initiative-flow.svg#lightbox)
 
-While some default baselines have been implemented (primarily for regulatory compliance), each team is responsible for setting up [Alerts / Rules](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview) and [Action Groups](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups) based on their specific requirements.
+While some default baselines have been implemented (primarily for regulatory compliance), each team is responsible for setting up [Alerts/Rules](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview) and [Action Groups](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups) based on their specific requirements.
 
 ## Next steps
 
