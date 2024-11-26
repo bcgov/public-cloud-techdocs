@@ -16,7 +16,7 @@ For further guidance on creating subnets with associated NSGs (specifically usin
 
 If your team has multiple environments (ie. Dev, Test, Prod, Tools) within the same Project Set, you may require connectivity between the different environments. This is known as spoke-to-spoke connectivity.
 
-By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Cloud PathFinder team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
+By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
 
 ## Internet connectivity
 

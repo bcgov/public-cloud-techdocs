@@ -2,7 +2,7 @@
 
 Last updated: **November 26, 2024**
 
-The following describes how to manage and govern your Azure environment. While the Cloud PathFinder team provides the initial guardrails and standards for the environment, **each ministry team is responsible** for managing their own resources and ensuring compliance with the standards.
+The following describes how to manage and govern your Azure environment. While the Public Cloud team provides the initial guardrails and standards for the environment, **each ministry team is responsible** for managing their own resources and ensuring compliance with the standards.
 
 ## Security
 

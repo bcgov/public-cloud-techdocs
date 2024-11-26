@@ -28,7 +28,7 @@ In the future, once [Express Route](../upcoming-features/express-route.md) is av
 
 In some scenarios, you may have a need to create a custom DNS Zone. Generally, this is not recommended, as the Azure Landing Zones are already configured with centralized custom Private DNS Zones for the Azure services. However, when working with third-party services (ie. Confluent Cloud), we might not have a Private DNS Zone for the specific service.
 
-If this is your scenario, please submit a [Public Cloud Support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3), so that the Cloud Pathfinder team can work with you to create and attach the custom DNS Zone to the central Private DNS Resolver.
+If this is your scenario, please submit a [Public Cloud Support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3), so that the Public Cloud team can work with you to create and attach the custom DNS Zone to the central Private DNS Resolver.
 
 > Note: Attaching your custom Private DNS Zone to your Virtual Network (VNet) will not work, as all DNS queries are routed through the central Private DNS Resolver.
 
@@ -93,7 +93,7 @@ If you encounter issues when trying to delete a resource you've created (such as
 
 3. **Perform your operation**: Once the lock is removed, you should be able to delete your resource as needed.
 
-4. **Be aware of automation**: Our automation systems will periodically reapply these locks to ensure ongoing protection. If you need the lock to remain off for an extended period, please contact the Cloud Pathfinder team.
+4. **Be aware of automation**: Our automation systems will periodically reapply these locks to ensure ongoing protection. If you need the lock to remain off for an extended period, please contact the Public Cloud team.
 
 5. **Best practice**: After completing your task, if the automation hasn't yet reapplied the lock, consider manually reapplying it to maintain security.
 
