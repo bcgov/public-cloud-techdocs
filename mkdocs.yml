@@ -39,6 +39,7 @@ nav:
           - Be mindful: azure/best-practices/be-mindful.md
           - CI/CD: azure/best-practices/ci-cd.md
           - Governance: azure/best-practices/governance.md
+          - Azure AI Services: azure/best-practices/azure-ai.md
       - Understand your billing:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming features:

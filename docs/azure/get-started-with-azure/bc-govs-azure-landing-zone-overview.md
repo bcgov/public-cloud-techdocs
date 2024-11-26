@@ -1,6 +1,6 @@
 # B.C. Government OCIO Azure Landing Zone overview
 
-Last updated: **November 20, 2024**
+Last updated: **November 26, 2024**
 
 An overview of the B.C. Government OCIO's Landing Zone in Azure, how to get access, its benefits, components, and features.
 
@@ -50,7 +50,9 @@ While Microsoft provides various "insights or solutions" for popular services (i
 
 We have leveraged the [Azure Monitor Baseline Alerts (AMBA)](https://azure.github.io/azure-monitor-baseline-alerts/welcome/) to provide a starting point "What should be monitored in Azure?" for the Landing Zones. This includes a set of alerts that are based on Microsoft recommended practices for proactive monitoring, such as setting up [alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview), [thresholds](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-dynamic-thresholds), and notifications for timely problem detection and response. Included in this, is a generic [Action Group](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups) and [Alert Processing Rule](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-processing-rules?tabs=portal) that can be used to send notifications to a variety of endpoints (email, SMS, etc.).
 
-While these baselines have been implemented (primarily for regulatory compliance), each team is responsible for configuring the Alerts, and Action Group settings based on their specific requirements.
+While these baselines have been implemented (primarily for regulatory compliance), each team is responsible for configuring the Alerts, and Action Group settings based on their specific requirements. You can also create custom [Azure Dashboards](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) to visualize and monitor your resources.
+
+[![Azure Monitor Dashboard](../images/azure-monitor-dashboard-example.png "Azure Monitor Dashboard")](https://learn.microsoft.com/en-us/azure/azure-monitor/media/visualizations/dashboard.png)
 
 For additional information and guidance, please refer to the Microsoft [Advanced Alerting Strategies for Azure Monitoring](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/advanced-alerting-strategies-for-azure-monitoring/4268698) article.
 
