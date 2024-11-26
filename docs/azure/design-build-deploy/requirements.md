@@ -1,6 +1,6 @@
 # Requirements for building your application in Azure
 
-Last updated: **October 2, 2024**
+Last updated: **November 20, 2024**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud Azure Landing Zone.
 
@@ -21,7 +21,7 @@ Take the following into consideration when building your application in the Azur
 
 * Only HTTPS applications that are compatible with public endpoints through [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) are supported.
 
-* The only supported regions are Canada Central (ie. `canadacentral`) and Canada East (ie. `canadacentral`).
+* The only supported regions are Canada Central (ie. `canadacentral`) and Canada East (ie. `canadaeast`).
 
 * Most networking is under the management of the Azure Landing Zone and is not subject to change.
   * See [Networking within the Azure Landing Zone](networking.md) for more information.

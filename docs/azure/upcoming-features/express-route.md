@@ -1,6 +1,6 @@
 # Express Route Connectivity to On-Premises
 
-Last updated: **October 2, 2024**
+Last updated: **November 20, 2024**
 
 ## Overview
 
@@ -12,4 +12,4 @@ Additionally, to adhere to data-in-transit security requirements, the Express Ro
 
 ### Current status
 
-Architecture and design for the Express Route connectivity to on-premises resources is in progress. We are working with the Hosting Team on the timing and execution of the implementation phase, which is tentatively scheduled for the end of the current calendar year.
+Architecture and design for the Express Route connectivity to on-premises resources is in progress. We are working with the Hosting Team on the timing and execution of the implementation phase, which is tentatively scheduled for the first quarter of 2025.

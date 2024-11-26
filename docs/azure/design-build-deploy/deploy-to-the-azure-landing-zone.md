@@ -1,6 +1,6 @@
 # Deploy to the Azure Landing Zone
 
-Last updated: **September 24, 2024**
+Last updated: **November 20, 2024**
 
 There are multiple ways to deploy your application to the Azure Landing Zone. This document outlines a few examples at a high-level, but it is up to each team to determine the best approach for their application.
 
@@ -29,13 +29,14 @@ The Azure CLI is a command-line tool that allows you to manage your Azure resour
 ```azurecli
 az login
 az account set --subscription "<your-Azure-subscription-ID>"
+az <AZURE RESOURCE TYPE> create ...
 ```
 
-**Note:** There are other command-line tools like [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/), that you can use to manage your Azure resources. You can choose the tool that you are most comfortable with.
+**Note:** There are other command-line tools like [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/), that you can use to create and manage your Azure resources. You can choose the tool that you are most comfortable with.
 
 ## GitHub Actions / Infrastructure-as-Code (IaC)
 
-GitHub Actions is a feature of GitHub that allows you to automate your workflow. Microsoft developed GitHub Actions for Azure and designed them be used with Azure. You can see all of the GitHub Actions for Azure in the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions).
+GitHub Actions is a feature of GitHub that allows you to automate your workflow. Microsoft developed **GitHub Actions for Azure** and designed them be used with Azure. You can see all of the GitHub Actions for Azure in the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions).
 
 ![GitHub Actions for Azure](../images/azure-github-actions-marketplace.png "GitHub Actions for Azure")
 
@@ -43,7 +44,7 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 
 ### Infrastructure-as-Code (IaC)
 
-There are multiple ways to deploy your application to the Azure Landing Zone using Infrastructure-as-Code (IaC). You can use tools like [Terraform](https://www.terraform.io/), [Azure Resource Manager (ARM) templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/), [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), [Ansible](https://learn.microsoft.com/en-us/azure/developer/ansible/overview), [Chef](https://learn.microsoft.com/en-us/azure/developer/chef/overview), or [Pulumi](https://devblogs.microsoft.com/devops/infrastructure-as-code-azure-python-wpulumi/) to define your infrastructure as code and deploy it to Azure.
+There are multiple ways to deploy your application to the Azure Landing Zone using Infrastructure-as-Code (IaC). You can use tools like [Terraform](https://www.terraform.io/), [Azure Resource Manager (ARM) templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/), [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), [Ansible](https://learn.microsoft.com/en-us/azure/developer/ansible/overview), [Chef](https://learn.microsoft.com/en-us/azure/developer/chef/overview), or [Pulumi](https://devblogs.microsoft.com/devops/infrastructure-as-code-azure-python-wpulumi/) to define your Infrastructure-as-Code and deploy it to Azure.
 
 While we don't have a specific example for each tool, we recommend that you choose the tool that you are most comfortable with and that best fits your needs.
 

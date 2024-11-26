@@ -1,6 +1,6 @@
 # User management in the Azure Landing Zone
 
-Last updated: **October 3, 2024**
+Last updated: **November 20, 2024**
 
 This guide provides an overview of user management in the Azure Landing Zone, specifically tailored for Product Owners (POs) and Technical Leads (TLs) who have been granted a restricted Owner role on the Project Set Management Group. This role is inherited on the subscription within the Project Set.
 
@@ -58,4 +58,4 @@ For more detailed instructions on specific tasks or advanced user management tec
 
 ## Note on Project Set license plates
 
-Your Subscriptions and Management Groups are prefixed with your unique Project Set license plate (ie. "abc123"). This prefix helps identify and organize resources specific to your project. When navigating the Azure portal or assigning roles, always look for resources and groups that start with your Project Set license plate.
+Your Management Groups and Subscriptions are prefixed with your unique Project Set license plate (ie. "abc123"). This prefix helps identify and organize resources specific to your project. When navigating the Azure portal or assigning roles, always look for resources and groups that start with your Project Set license plate.

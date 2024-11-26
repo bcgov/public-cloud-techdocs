@@ -37,8 +37,8 @@ Rocket.Chat will be your main communication channel for platform updates and sup
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
-### Platform Community MeetUps
+### Public Cloud Community Updates
 
-Every six weeks, we host a platform community MeetUp where we talk about changes to the platform.
+Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public Cloud Accelerator Service (also known as CloudPathFinder) and its community, and changes to the platform.
 
 [Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
