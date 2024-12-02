@@ -1,6 +1,6 @@
 # Networking within the Azure Landing Zone
 
-Last updated: **November 20, 2024**
+Last updated: **December 4, 2024**
 
 Within each Project Set deployed in the Azure Landing Zone, a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) is created to provide network isolation and security for the resources deployed within it. This VNet is the foundation for all network connectivity within the Azure Landing Zone.
 
