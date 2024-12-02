@@ -1,6 +1,6 @@
 # Microsoft Azure Enterprise Support
 
-Last updated: **November 20, 2024**
+Last updated: **December 2, 2024**
 
 Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan. There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
 
@@ -8,11 +8,11 @@ Once your Project Set has been provisioned, each Azure Subscription will be enro
 > 
 > Ministry teams working in the OCIO-managed landing zone in Azure can currently access the Unified Enterprise support services for free.  
 
-You can view the full list of services available to the ministries under the [Unified Enterprise support plan](https://www.microsoft.com/en-IN/unifiedsupport/details).
+You can view the full list of services available to the ministries under the [Unified Enterprise support plan](https://www.microsoft.com/en-IN/microsoft-unified/plan-details).
 
 ## How to receive support
 
-1. Log into Azure Portal with your IDIR. Only users with access to applications in the OCIO-managed landing zone can use the Unified Enterprise support plan. New users may take up to 7 business days to gain access. If you need to open a support case before access is enabled, contact the OCIO Public cloud team at cloud.pathfinder@gov.bc.ca
+1. Log into Azure Portal with your IDIR. Only users with access to applications in the OCIO-managed landing zone can use the Unified Enterprise support plan. New users may take up to 7 business days to gain access. If you need to open a support case before access is enabled, contact the OCIO Public cloud team at <cloud.pathfinder@gov.bc.ca>.
 
 2. Review step-by-step instructions on opening an [Azure support request](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request)
 

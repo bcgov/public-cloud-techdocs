@@ -1,6 +1,6 @@
 # Deploy an application to the  B.C. Government AWS Landing Zone
 
-Last updated: **November 15, 2023**
+Last updated: **December 2, 2024**
 
 The B.C. Government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
@@ -19,7 +19,7 @@ This guide explains how to:
 
 To follow this guide, you need:
 
-- Access to a ASEA project set with dev, test, prod, and tools accounts. See how to [provision a project set](get-started/provision-a-project-set.md).
+- Access to a ASEA project set with dev, test, prod, and tools accounts. See how to [provision a project set](../../welcome/provision-a-project-set.md).
 - The ability to create AWS resources like S3 buckets, DynamoDB tables, etc.
 - A GitHub account with permissions to create repositories and workflows
 - Basic knowledge of [Terraform](https://www.terraform.io/), [GitHub Actions](https://docs.github.com/en/actions), and the [AWS CLI](https://aws.amazon.com/cli/)
