@@ -1,16 +1,16 @@
 # Requirements for building your application in AWS
 
-Last updated: **January 22, 2023**
+Last updated: **December 2, 2024**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 
 ## Prerequisites
 
-1. Create a [provisioning request for a project set](../get-started/provision-a-project-set.md) for your team on the B.C. Government Public Cloud
+1. Create a [provisioning request for a project set](../../welcome/provision-a-project-set.md) for your team on the B.C. Government Public Cloud
 
 2. Once approved, your project set will be provisioned followed up by an email sent to the Product Owner and Technical Lead once the provisioning is complete
 
-3. Request access for the reset of the team by submitting a request to <cloud.pathfinder@gov.bc.ca>. Refer to the guidelines on what details to include in your request for [account access](../get-started/provision-a-project-set.md#account-access)
+3. Request access for the rest of the team by submitting a request to <cloud.pathfinder@gov.bc.ca>. Refer to the guidelines on what details to include in your request for [account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
 
 ## Limitations of the AWS Landing Zone
 
@@ -26,11 +26,11 @@ Take the following into consideration when building your application on the AWS 
 
 * Most networking is under the management of AWS Landing Zone and is not subject to change. Security groups are the exception to this rule
 
-* IAM Users and their access keys can only be generated  by the [IAM User management service](../design-build-and-deploy-an-application/iam-user-service.md), which is created and managed by the Public Cloud team
+* IAM Users and their access keys can only be generated  by the [IAM User management service](iam-user-service.md), which is created and managed by the Public Cloud team
 
 ## Other requirements and best practices
 
-To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws) is required.
+To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws) is required.
 
 To deploy your application:
 
@@ -52,8 +52,8 @@ After all the tools have been installed, you can provision S3 bucket in AWS usin
 
 Save this code in a file with a ".tf" extension, for example, main.tf.
 
-```
- # Define provider
+```terraform
+# Define provider
 provider "aws" {
   region = "ca-central-1"  # Change this to your desired AWS region
 }
@@ -112,7 +112,7 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 ## Next steps
 
-* [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+* [Deploy an application to the B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
 
 ## Related pages
 

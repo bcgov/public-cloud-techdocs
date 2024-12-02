@@ -1,6 +1,6 @@
 # Public Cloud Training
 
-Last updated: **November 20, 2024**
+Last updated: **December 2, 2024**
 
 ## AWS
 
@@ -19,7 +19,7 @@ Microsoft Azure offers a range of training resources to help you learn about the
 
 * [Microsoft Learn](https://learn.microsoft.com/en-us/training/)
 * [Microsoft Applied Skills](https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills)
-* [Microsoft Virtual Training Days](https://events.microsoft.com/en-us/mvtd)
+* [Microsoft Virtual Training Days](https://events.microsoft.com/en-us/mvtd?language=English)
 * [Enterprise Skills Initiative](https://esi.microsoft.com/)
 
 For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/cloud/services/public/get-support/#training) page.

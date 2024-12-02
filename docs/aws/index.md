@@ -4,9 +4,9 @@
 
 Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):
 
-* [B.C. Government AWS Landing Zone overview](get-started/bc-govs-aws-landing-zone-overview.md)
-* [Provision a project set in AWS](get-started/provision-a-project-set.md)
-* [Account access](get-started/provision-a-project-set.md#account-access)
+* [B.C. Government AWS Landing Zone overview](get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
+* [Provision a project set in AWS](../welcome/provision-a-project-set.md)
+* [Account access](../welcome/provision-a-project-set.md#accessing-your-project-set)
 
 ## Build, deploy and maintain apps
 
