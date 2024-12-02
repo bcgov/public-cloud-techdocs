@@ -1,4 +1,4 @@
-# Azure AI Services
+# Azure AI services
 
 Last updated: **December 2, 2024**
 
