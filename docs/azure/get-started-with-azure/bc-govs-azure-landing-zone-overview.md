@@ -1,6 +1,6 @@
 # B.C. Government OCIO Azure Landing Zone overview
 
-Last updated: **November 26, 2024**
+Last updated: **December 4, 2024**
 
 An overview of the B.C. Government OCIO's Landing Zone in Azure, how to get access, its benefits, components, and features.
 
