@@ -8,7 +8,7 @@ This documentation provides information for using Public Cloud services within t
 
 To get started in the Public Cloud you can provision a Project Set in AWS or Azure using the [BC Gov Product Registry](https://registry.developer.gov.bc.ca).
 
-For more information, see [Provision a Project Set](get-started/provision-a-project-set.md).
+For more information, see [Provision a Project Set](welcome/provision-a-project-set.md).
 
 ## Amazon Web Services (AWS)
 
@@ -25,7 +25,7 @@ AWS offers a broad set of global cloud-based products including compute, storage
 Azure is a comprehensive set of cloud services that developers and IT professionals use to build, deploy, and manage applications through Microsoft's global network of datacenters.
 
 - [Azure Landing Zone Overview](azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
-- [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements-for-building-your-application.md)
+- [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements.md)
 - [User Management in Azure](azure/design-build-deploy/user-management.md)
 - [Networking in Azure](azure/design-build-deploy/networking.md)
 - [Deploy to the Azure Landing Zone](azure/design-build-deploy/deploy-to-the-azure-landing-zone.md)
