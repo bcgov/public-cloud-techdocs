@@ -1,5 +1,7 @@
 # CI/CD Best practices
 
+Last updated: **November 20, 2024**
+
 ## GitHub Actions
 
 If you are using GitHub Actions for your CI/CD pipeline, consider the following best practices:
@@ -8,7 +10,7 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 
 * [Self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
 
-* If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](be-mindful.md#azapi-terraform-provider-using-azapi_update_resource)
+* If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
 
 ### Configuring GitHub Action OIDC Authentication to Azure
 
@@ -20,10 +22,13 @@ Here's a quick summary on how to set it up:
 
 1. The GitHub Identity Provider has already been configured in the Azure subscriptions in your Project Set
 2. In your Azure subscription:
+
   - Create an Entra ID application and a service principal
   - Add federated credentials for the Entra ID application
   - Create GitHub secrets for storing Azure configuration
+
 3. In your GitHub workflows:
+
   - Add permissions settings for the token
   - Use the [azure/login](https://github.com/Azure/login) action to exchange the OIDC token (JWT) for a cloud access token
 
