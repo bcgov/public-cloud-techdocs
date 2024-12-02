@@ -1,0 +1,31 @@
+name: TechDocs Pull Request Checks
+
+on:
+    pull_request:
+        paths:
+            - "mkdocs.yml"
+            - "docs/*"
+
+jobs:
+    techdocs_pr_job:
+        runs-on: ubuntu-latest
+
+        name: Build and Check TechDocs
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+                    with:
+				        fetch-depth: 0
+
+            -   name: Build TechDocs
+                uses: bcgov/devhub-techdocs-publish@stable
+                id: build_only
+                with:
+                    strict_validation: 'true'
+                    publish: 'false'
+                    production: 'false'
+                    bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
+                    s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}
+                    s3_secret_access_key: ${{ secrets.TECHDOCS_AWS_SECRET_ACCESS_KEY }}
+                    s3_region: ${{ secrets.TECHDOCS_AWS_REGION }}
+                    s3_endpoint: ${{ secrets.TECHDOCS_AWS_ENDPOINT }}
