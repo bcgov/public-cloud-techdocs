@@ -14,7 +14,7 @@ The most common Azure AI Services that are used by the ministry teams are:
 - AI Search
 - Document Intelligence
 
-## Deploying Models
+## Deploying models
 
 When working with Azure AI services, due to security guardrails that have been put in place (to protect government data from the Internet), you may need to deploy a Virtual Machine within the Azure network to be able to successfully deploy models.
 
