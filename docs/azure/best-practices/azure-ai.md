@@ -16,7 +16,7 @@ The most common Azure AI Services that are used by the ministry teams are:
 
 ## Deploying models
 
-When working with Azure AI services, due to security guardrails that have been put in place (to protect government data from the Internet), you may need to deploy a Virtual Machine within the Azure network to be able to successfully deploy models.
+When using Azure AI services, you may need to deploy a Virtual Machine within the Azure network. This is because security guardrails protect government data from the Internet. To successfully deploy models, you can use an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network.
 
 The simplest method to do this, is to deploy an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network.
 
