@@ -1,6 +1,6 @@
 # Requirements for building your application in Azure
 
-Last updated: **November 20, 2024**
+Last updated: **December 4, 2024**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud Azure Landing Zone.
 
