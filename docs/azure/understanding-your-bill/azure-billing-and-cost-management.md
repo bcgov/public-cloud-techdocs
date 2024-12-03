@@ -53,7 +53,7 @@ Azure Cost Management lets you set [budgets](https://learn.microsoft.com/en-us/a
 
 ## Next steps
 
-* [Provision a Project Set](../../get-started/provision-a-project-set.md)
+* [Provision a Project Set](../../welcome/provision-a-project-set.md)
 * [User Management in Azure](../design-build-deploy/user-management.md)
 * [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
