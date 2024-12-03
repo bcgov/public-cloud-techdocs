@@ -13,4 +13,6 @@ Please see [Writing guide for Platform Services technical documentation](https:/
 Start your new document from the new [Markdown document template](/new-markdown-document-template.md).
 
 # Deploy locally
-To deploy locally run `npx @techdocs/cli serve`. A browser should open with an un-themed, but formatted version of the documentation. This closely resembles what will be visible on the end product.
+To deploy locally you need to have Node.js installed. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/). You will also need to have Docker installed. If you don't have it installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
+
+After you have Node.js and Docker installed, you can run the following commands to deploy the documentation locally: `npx @techdocs/cli serve`. A browser should open with an un-themed, but formatted version of the documentation. This closely resembles what will be visible on the end product.

@@ -117,6 +117,6 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 ## Related pages
 
 * [Provision a project set](../../welcome/provision-a-project-set.md)
-* [Account access](./../welcome/provision-a-project-set.md#accessing-your-project-set)
+* [Account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
 * [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws)
 * [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
