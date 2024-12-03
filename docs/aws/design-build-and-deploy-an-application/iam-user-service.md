@@ -1,6 +1,6 @@
 # IAM User management service
 
-Last updated: **November 21, 2023**
+Last updated: **December 2, 2024**
 
 This solution employs AWS services such as DynamoDB, Lambda, and IAM for automated IAM user management and secure access key rotation. The necessary services are deployed into project sets within the ECF automation layers upon creation.
 
@@ -121,4 +121,4 @@ Example policy that allows s3 actions only to a specific ip range:
 
 ## Related pages
 
-- [B.C. Government AWS Landing Zone overview](../get-started/bc-govs-aws-landing-zone-overview.md)
+- [B.C. Government AWS Landing Zone overview](../get-started-with-aws/bc-govs-aws-landing-zone-overview.md)

@@ -1,26 +1,26 @@
-name: Publish TechDocs to DEV
+name: TechDocs Pull Request Checks
 
 on:
     workflow_dispatch:
-    push:
-        branches: [ dev ]
-        paths:
-            - "mkdocs.yml"
-            - "docs/*"
+    pull_request:
 
 jobs:
-    test_techdocs_build_job:
+    techdocs_pr_job:
         runs-on: ubuntu-latest
 
-        name: A job to build and publish techdocs content
+        name: Build and Check TechDocs
         steps:
             -   name: Checkout
                 uses: actions/checkout@v4
+                with:
+                    fetch-depth: 0
+
             -   name: Build TechDocs
                 uses: bcgov/devhub-techdocs-publish@stable
-                id: build_and_publish
+                id: build_only
                 with:
-                    publish: 'true'
+                    strict_validation: 'true'
+                    publish: 'false'
                     production: 'false'
                     bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
                     s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}

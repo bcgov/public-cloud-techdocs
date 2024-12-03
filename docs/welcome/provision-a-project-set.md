@@ -1,6 +1,6 @@
 # Provision a new Project Set
 
-Last updated: **October 3, 2024**
+Last updated: **December 2, 2024**
 
 On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login).
 
@@ -97,5 +97,5 @@ Other team members can be added to the Project Set by the Product Owner or Techn
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
 - [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/cloud/services/public/onboard/)
-- [AWS Landing Zone Overview](../aws/get-started/bc-govs-aws-landing-zone-overview.md)
-- [Azure Landing Zone Overview](../azure/get-started/bc-govs-azure-landing-zone-overview.md)
+- [AWS Landing Zone Overview](../aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
+- [Azure Landing Zone Overview](../azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)

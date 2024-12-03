@@ -1,12 +1,12 @@
 # Requirements for building your application in Azure
 
-Last updated: **December 4, 2024**
+Last updated: **December 2, 2024**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud Azure Landing Zone.
 
 ## Prerequisites
 
-1. Create a [provisioning request for a Project Set](../../get-started/provision-a-project-set.md) for your team on the B.C. Government Public Cloud.
+1. Create a [provisioning request for a Project Set](../../welcome/provision-a-project-set.md) for your team on the B.C. Government Public Cloud.
 
 2. Once approved, your Project Set will be provisioned, followed up by an email sent to the Product Owner and Technical Lead(s) once the provisioning is complete.
 
@@ -32,7 +32,7 @@ Take the following into consideration when building your application in the Azur
 
 ## Related pages
 
-* [Provision a Project Set](../../get-started/provision-a-project-set.md)
+* [Provision a Project Set](../../welcome/provision-a-project-set.md)
 * [User Management in Azure](user-management.md)
 * [Configuring GitHub Action OIDC Authentication to Azure](../best-practices/ci-cd.md#configuring-github-action-oidc-authentication-to-azure)
 * [Deploy to the Azure Landing Zone](deploy-to-the-azure-landing-zone.md)

@@ -1,6 +1,6 @@
 # Azure billing and cost management
 
-Last updated: **November 20, 2024**
+Last updated: **December 2, 2024**
 
 ## Cost Reporting and Cost Recovery
 
@@ -14,7 +14,7 @@ You'll notice the following tags appearing on your resources:
 * `billing_group`
 * `ministry_name`
 
-These tags are inherited from the Subscription-level tags (which are created using the information you provide when [provisioning a new Project Set](https://developer.gov.bc.ca/docs/default/component/public-cloud-techdocs/welcome/provision-a-project-set/)).
+These tags are inherited from the Subscription-level tags (which are created using the information you provide when [provisioning a new Project Set](../../welcome/provision-a-project-set.md)).
 
 ## Manage your Azure spending
 
@@ -53,7 +53,7 @@ Azure Cost Management lets you set [budgets](https://learn.microsoft.com/en-us/a
 
 ## Next steps
 
-* [Provision a Project Set](../../get-started/provision-a-project-set.md)
+* [Provision a Project Set](../../welcome/provision-a-project-set.md)
 * [User Management in Azure](../design-build-deploy/user-management.md)
 * [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
