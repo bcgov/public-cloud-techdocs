@@ -36,7 +36,7 @@ az <AZURE RESOURCE TYPE> create ...
 
 ## GitHub Actions / Infrastructure-as-Code (IaC)
 
-GitHub Actions is a feature of GitHub that allows you to automate your workflow. Microsoft developed **GitHub Actions for Azure** and designed them be used with Azure. You can see all of the GitHub Actions for Azure in the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions).
+GitHub Actions is a feature of GitHub that allows you to automate your workflow. Microsoft developed **GitHub Actions for Azure** and designed them be used with Azure. You can see all of the GitHub Actions for Azure in the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions){:data-proofer-ignore}.
 
 ![GitHub Actions for Azure](../images/azure-github-actions-marketplace.png "GitHub Actions for Azure")
 
