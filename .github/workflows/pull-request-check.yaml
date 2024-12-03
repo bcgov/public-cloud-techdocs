@@ -3,9 +3,9 @@ name: TechDocs Pull Request Checks
 on:
     workflow_dispatch:
     pull_request:
-        paths:
-            - "mkdocs.yml"
-            - "docs/*"
+        # paths:
+        #     - "mkdocs.yml"
+        #     - "docs/*"
 
 jobs:
     techdocs_pr_job:
