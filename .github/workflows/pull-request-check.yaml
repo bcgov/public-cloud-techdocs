@@ -1,6 +1,7 @@
 name: TechDocs Pull Request Checks
 
 on:
+    workflow_dispatch:
     pull_request:
         paths:
             - "mkdocs.yml"
