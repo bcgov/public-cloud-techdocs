@@ -1,4 +1,4 @@
-name: Build Dev TechDocs with DevHub TechDocs Publish Action
+name: Publish TechDocs to DEV
 
 on:
     workflow_dispatch:
