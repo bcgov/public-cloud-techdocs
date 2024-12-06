@@ -15,4 +15,4 @@ Start your new document from the new [Markdown document template](/new-markdown-
 # Deploy locally
 To deploy locally you need to have Node.js installed. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/). You will also need to have Docker installed. If you don't have it installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
 
-After you have Node.js and Docker installed, you can run the following commands to deploy the documentation locally: `npx @techdocs/cli serve`. A browser should open with an un-themed, but formatted version of the documentation. This closely resembles what will be visible on the end product.
+After you have Node.js and Docker installed, you can follow these instructions to [preview content locally](https://github.com/bcgov/devhub-techdocs-publish/blob/main/docs/index.md#how-to-use-the-docker-image-to-preview-content-locally). A browser should open with an un-themed, but formatted version of the documentation. This closely resembles what will be visible on the end product.

@@ -1,1 +1,7 @@
 .DS_Store
+
+# generated stuff from local run
+patcher.py
+test_patcher.py
+site/
+tmp/
