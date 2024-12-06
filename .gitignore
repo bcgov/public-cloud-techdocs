@@ -1,1 +1,4 @@
 .DS_Store
+/site
+patcher.py
+test_patcher.py
