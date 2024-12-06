@@ -1,6 +1,6 @@
 # DNS for Domain Join
 
-Last updated: **October 3, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 

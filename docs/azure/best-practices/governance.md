@@ -1,6 +1,6 @@
 # Governance
 
-Last updated: **November 26, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 The following describes how to manage and govern your Azure environment. While the Public Cloud team provides the initial guardrails and standards for the environment, **each ministry team is responsible** for managing their own resources and ensuring compliance with the standards.
 

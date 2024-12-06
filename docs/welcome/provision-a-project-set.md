@@ -1,6 +1,6 @@
 # Provision a new Project Set
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login).
 

@@ -1,6 +1,6 @@
 # Express Route Connectivity to On-Premises
 
-Last updated: **November 20, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 

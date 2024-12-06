@@ -1,6 +1,6 @@
 # Deploy to the Azure Landing Zone
 
-Last updated: **November 20, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 There are multiple ways to deploy your application to the Azure Landing Zone. This document outlines a few examples at a high-level, but it is up to each team to determine the best approach for their application.
 

@@ -1,6 +1,6 @@
 # Requirements for building your application in AWS
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
 

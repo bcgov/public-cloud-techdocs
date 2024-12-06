@@ -1,6 +1,6 @@
 # IAM User management service
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 This solution employs AWS services such as DynamoDB, Lambda, and IAM for automated IAM user management and secure access key rotation. The necessary services are deployed into project sets within the ECF automation layers upon creation.
 

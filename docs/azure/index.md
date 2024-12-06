@@ -1,5 +1,7 @@
 # Welcome to the Public Cloud Azure Technical Documentation
 
+Last updated: **{{ git_revision_date_localized }}**
+
 ## Get started with Azure
 
 Start here for the first steps on working in our Azure Landing Zone (ALZ):

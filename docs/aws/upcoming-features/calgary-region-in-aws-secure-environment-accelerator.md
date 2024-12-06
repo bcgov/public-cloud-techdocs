@@ -1,6 +1,6 @@
 # Calgary region in AWS Secure Environment Accelerator (SEA)
 
-Last updated: **August 25, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 
