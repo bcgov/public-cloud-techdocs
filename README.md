@@ -16,3 +16,20 @@ Start your new document from the new [Markdown document template](/new-markdown-
 To deploy locally you need to have Node.js installed. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/). You will also need to have Docker installed. If you don't have it installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
 
 After you have Node.js and Docker installed, you can follow these instructions to [preview content locally](https://github.com/bcgov/devhub-techdocs-publish/blob/main/docs/index.md#how-to-use-the-docker-image-to-preview-content-locally). A browser should open with an un-themed, but formatted version of the documentation. This closely resembles what will be visible on the end product.
+
+## Windows Users
+If you are using Windows, the command provided in the instructions will not work. You have 2 options, either execute a modified command (listed below) from a PowerShell terminal, or execute the command from a Windows Subsystem for Linux (WSL) terminal.
+
+> NOTE: The site will not auto-launch in your browser. You will need to click on the link provided in the terminal output (ie. http://localhost:3000).
+
+**PowerShell Terminal Command:**
+```powershell
+docker run -it -p 3000:3000 ${PWD}:/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
+```
+
+**WSL Terminal Command:**
+```wls
+docker run -it -p 3000:3000 $(pwd):/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
+```
+
+> NOTE: If you are executing the command from a WSL terminal, you will need to have the repository cloned into your WSL environment.
