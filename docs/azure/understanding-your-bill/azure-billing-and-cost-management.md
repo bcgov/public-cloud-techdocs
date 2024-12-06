@@ -1,6 +1,6 @@
 # Azure billing and cost management
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Cost Reporting and Cost Recovery
 

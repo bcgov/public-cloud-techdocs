@@ -1,6 +1,6 @@
 # AWS Security and compliance guardrails
 
-Last updated: **October 16, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 As an AWS user, you must understand the restrictions and guidelines to ensure security and compliance. This document outlines the key points you need to know when using your AWS account.
 

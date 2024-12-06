@@ -1,6 +1,6 @@
 # Deploy an application to the  B.C. Government AWS Landing Zone
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 The B.C. Government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 

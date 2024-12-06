@@ -1,6 +1,6 @@
 # Azure AI services
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 Many of the ministry teams are using Azure AI services to build intelligent applications. Artificial Intelligence and Machine Learning are rapidly changing technologies. The following are some recommendations and guidance based on observations and experiences from the ministry teams.
 

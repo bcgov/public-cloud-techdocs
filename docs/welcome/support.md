@@ -1,6 +1,6 @@
 # Public Cloud Support
 
-Last updated: **November 26, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Support options
 

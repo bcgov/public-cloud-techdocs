@@ -1,6 +1,6 @@
 # Microsoft Azure Enterprise Support
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan. There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
 
