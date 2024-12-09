@@ -1,5 +1,7 @@
 # Welcome to the Public Cloud AWS Technical Documentation
 
+Last updated: **{{ git_revision_date_localized }}**
+
 ## Get started with AWS
 
 Start here for the first steps on working in our AWS Secure Environment Accelerator (ASEA):

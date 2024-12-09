@@ -1,6 +1,6 @@
 # AWS billing and cost management dashboards
-Last updated: **August 26, 2024**
 
+Last updated: **{{ git_revision_date_localized }}**
 
 Learn more about  managing your AWS spending and resources with our [AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs), featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
 

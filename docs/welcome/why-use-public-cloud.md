@@ -1,6 +1,6 @@
 # Why use the B.C. Government Landing Zones in Public Cloud?
 
-Last updated: **October 3, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Benefits of building apps in the Public Cloud
 

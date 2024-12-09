@@ -1,5 +1,7 @@
 # Welcome to the Public Cloud Technical Documentation
 
+Last updated: **{{ git_revision_date_localized }}**
+
 ## Overview
 
 This documentation provides information for using Public Cloud services within the B.C. Government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud computing or an experienced developer, you'll find valuable information to help you navigate the B.C. Government's public cloud infrastructure.

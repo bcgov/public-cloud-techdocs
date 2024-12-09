@@ -1,6 +1,6 @@
 # Be mindful
 
-Last updated: **November 20, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 The following are some things to be aware of when working within the Azure Landing Zone.
 

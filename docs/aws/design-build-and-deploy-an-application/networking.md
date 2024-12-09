@@ -1,6 +1,6 @@
 # Networking within the AWS Secure Environment Accelerator (ASEA)
 
-Last updated: **January 5, 2023**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## Introduction
 

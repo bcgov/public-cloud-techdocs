@@ -1,6 +1,6 @@
 # Public Cloud Training
 
-Last updated: **December 2, 2024**
+Last updated: **{{ git_revision_date_localized }}**
 
 ## AWS
 

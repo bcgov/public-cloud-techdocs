@@ -49,3 +49,4 @@ nav:
           - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
   - techdocs-core
+  - git-revision-date-localized 
