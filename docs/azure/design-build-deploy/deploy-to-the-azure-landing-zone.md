@@ -32,7 +32,8 @@ az account set --subscription "<your-Azure-subscription-ID>"
 az <AZURE RESOURCE TYPE> create ...
 ```
 
-**Note:** There are other command-line tools like [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/), that you can use to create and manage your Azure resources. You can choose the tool that you are most comfortable with.
+!!! note "Other Command-Line Tools"
+    There are other command-line tools like [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/), that you can use to create and manage your Azure resources. You can choose the tool that you are most comfortable with.
 
 ## GitHub Actions / Infrastructure-as-Code (IaC)
 
@@ -40,7 +41,8 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 
 ![GitHub Actions for Azure](../images/azure-github-actions-marketplace.png "GitHub Actions for Azure")
 
-**Note:** Be sure to review the [CI/CD Best Practices](../best-practices/ci-cd.md) before implementing GitHub Actions.
+!!! tip
+    Be sure to review the [CI/CD Best Practices](../best-practices/ci-cd.md) before implementing GitHub Actions.
 
 ### Infrastructure-as-Code (IaC)
 
@@ -48,4 +50,5 @@ There are multiple ways to deploy your application to the Azure Landing Zone usi
 
 While we don't have a specific example for each tool, we recommend that you choose the tool that you are most comfortable with and that best fits your needs.
 
-**Important:** If you are using Terraform to deploy your application to Azure, please take note of the following: [Using Terraform to Create Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets) and [AzAPI Terraform Provider (using azapi_update_resource)](../best-practices/be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
+!!! warning "Using Terraform for IaC"
+    If you are using Terraform to deploy your application to Azure, please take note of the following: [Using Terraform to Create Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets) and [AzAPI Terraform Provider (using azapi_update_resource)](../best-practices/be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).

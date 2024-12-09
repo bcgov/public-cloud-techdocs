@@ -20,7 +20,8 @@ When using Azure AI services, you may need to deploy a Virtual Machine within th
 
 The simplest method to do this, is to deploy an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network.
 
-> Note: The minimum Bastion SKU required is **Basic**, as the **Developer** tier is not currently available in the Canada regions.
+!!! question "Azure Bastion SKU"
+    The minimum Bastion SKU required is **Basic**, as the **Developer** tier is not currently available in the Canada regions.
 
 This does require a specific Subnet to be created within the VNet. The subnet name must be **AzureBastionSubnet**. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24). After adding this subnet to your virtual network, you can deploy Bastion.
 

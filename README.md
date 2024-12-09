@@ -12,6 +12,11 @@ Please see [Writing guide for Platform Services technical documentation](https:/
 
 Start your new document from the new [Markdown document template](/new-markdown-document-template.md).
 
+## Call-Outs
+To add call-outs to your markdown content, please refer to the following links for supported types and syntax:
+https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/content-syntax-guide/#admonitions
+https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
+
 # Deploy locally
 To deploy locally you need to have Node.js installed. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/). You will also need to have Docker installed. If you don't have it installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
 

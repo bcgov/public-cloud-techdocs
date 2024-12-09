@@ -22,9 +22,8 @@ Within the Azure portal, navigate to [Azure Policy](https://portal.azure.com/#vi
 
 Within the Azure portal, navigate to the [Cost Management - Cost Analysis](https://portal.azure.com/#blade/Microsoft_Azure_CostManagement/Menu/costanalysis) view. This service provides a centralized view of the costs of your Azure environments.
 
-> **IMPORTANT**
->
-> Please make sure that you select the appropriate **Scope** to view the costs of your environment.
-> ![Azure Cost Management - Scope](../images/azure-cost-management-scope.png "Azure Cost Management - Scope")
+!!! example "View Scope"
+    Please make sure that you select the appropriate **Scope** to view the costs of your environment.
+    ![Azure Cost Management - Scope](../images/azure-cost-management-scope.png "Azure Cost Management - Scope")
 
 For more detail about managing costs, see the **Understand your billing** > [Azure Cost Management](../understanding-your-bill/azure-billing-and-cost-management.md) section.

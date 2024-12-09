@@ -8,9 +8,10 @@ This VNet is connected with the central hub (vWAN), and receives default routes 
 
 There are no subnets that are pre-created within the VNet. Each team is responsible for creating their own subnets based on their requirements. Subnets should be created within the VNet to segment resources based on their function or security requirements.
 
-**IMPORTANT:** There are some security controls in place, that require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may cause some challenges when creating subnets. The simplest approach is to create a NSG first, and then create the subnet (with the NSG associated with it).
+!!! danger "Security Controls for Subnets"
+    There are some security controls in place, that require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may cause some challenges when creating subnets. The simplest approach is to create a NSG first, and then create the subnet (with the NSG associated with it).
 
-For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [Be Mindful](../best-practices/be-mindful.md#using-terraform-to-create-subnets) documentation.
+    For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [Be Mindful](../best-practices/be-mindful.md#using-terraform-to-create-subnets) documentation.
 
 ## Spoke-to-Spoke connectivity
 
