@@ -30,7 +30,8 @@ In some scenarios, you may have a need to create a custom DNS Zone. Generally, t
 
 If this is your scenario, please submit a [Public Cloud Support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3), so that the Public Cloud team can work with you to create and attach the custom DNS Zone to the central Private DNS Resolver.
 
-> Note: Attaching your custom Private DNS Zone to your Virtual Network (VNet) will not work, as all DNS queries are routed through the central Private DNS Resolver.
+!!! failure "Custom DNS Zones"
+    Attaching your custom Private DNS Zone to your Virtual Network (VNet) will not work, as all DNS queries are routed through the central Private DNS Resolver.
 
 ## Using Terraform to create Subnets
 
@@ -40,7 +41,8 @@ The Azure Landing Zones have an Azure Policy implemented that requires every sub
 
 Therefore, instead of using the `azurerm_subnet` resource to create subnets, you must use the `azapi_update_resource` resource from the [AzAPI Terraform Provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs). This resource allows you to create subnets with an associated NSG in a single step.
 
-> Note: You need to use the `azapi_update_resource` resource, because you are updating an existing Virtual Network (VNet) with a new subnet (and associated Network Security Group).
+!!! abstract "AzAPI Resource Provider"
+    You need to use the `azapi_update_resource` resource, because you are updating an existing Virtual Network (VNet) with a new subnet (and associated Network Security Group).
 
 **Example code:**
 
