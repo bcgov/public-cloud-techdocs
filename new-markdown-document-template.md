@@ -28,6 +28,48 @@ This is paragraph text that appears under the second heading.
 
 ---
 
+## Call-Outs
+
+To add call-outs to your markdown content, please refer to the following links for supported types and syntax:
+
+!!! note "Note"
+    This is a note
+
+!!! abstract "Abstract"
+    This is an abstract
+
+!!! info "Information"
+    This is information
+
+!!! tip "Tip"
+    This is a tip
+
+!!! success "Success"
+    This is a success
+
+!!! question "Question"
+    This is a question
+
+!!! warning "Warning"
+    This is a warning
+
+!!! failure "Failure"
+    This is a failure
+
+!!! danger "Danger"
+    This is danger
+
+!!! bug "Bug"
+    This is a bug
+
+!!! example "Example"
+    This is an example
+
+!!! quote "Quote"
+    This is a quote
+
+---
+
 <!-- Notice again --- separator to present related pages next  -->
 ## Related pages
 

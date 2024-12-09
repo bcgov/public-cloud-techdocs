@@ -4,9 +4,10 @@ Last updated: **{{ git_revision_date_localized }}**
 
 Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan. There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
 
-> **Note:** If you use a third-party vendor's landing zone in Azure, you can't use the B.C. government's Unified Enterprise support plan for applications hosted in the vendor's landing zone.  
-> 
-> Ministry teams working in the OCIO-managed landing zone in Azure can currently access the Unified Enterprise support services for free.  
+!!! info
+    If you use a third-party vendor's landing zone in Azure, you can't use the B.C. government's Unified Enterprise support plan for applications hosted in the vendor's landing zone.  
+
+    Ministry teams working in the OCIO-managed landing zone in Azure can currently access the Unified Enterprise support services for free. 
 
 You can view the full list of services available to the ministries under the [Unified Enterprise support plan](https://www.microsoft.com/en-IN/microsoft-unified/plan-details){:data-proofer-ignore}.
 
