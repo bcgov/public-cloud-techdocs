@@ -24,7 +24,7 @@ If you are using Windows, the command provided in the instructions will not work
 
 **PowerShell Terminal Command:**
 ```powershell
-docker run -it -p 3000:3000 ${PWD}:/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
+docker run -it -p 3000:3000 -v ${PWD}:/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
 ```
 
 **WSL Terminal Command:**
