@@ -13,7 +13,7 @@ nav:
       - Get started with AWS:
           - Overview: aws/index.md
           - AWS Landing Zone overview: aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
-          - Security guardrails: aws/get-started-with-aws/security-guardrails.md
+          - AWS Security and compliance guardrails: aws/get-started-with-aws/security-guardrails.md
       - Design, build, and deploy:
           - Requirements: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
           - User Management: aws/design-build-and-deploy-an-application/user-management.md
