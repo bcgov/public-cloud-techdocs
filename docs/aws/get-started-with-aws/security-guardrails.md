@@ -46,29 +46,29 @@ This means:
 ## Security and compliance
 
 1. Encryption:
-   - Encryption is mandatory for services like EBS volumes, RDS instances, and EFS file systems
-   - You can't disable encryption on resources that require it
+   * Encryption is mandatory for services like EBS volumes, RDS instances, and EFS file systems
+   * You can't disable encryption on resources that require it
 
    This means:
 
-   - When creating new S3 buckets, EBS volumes, or RDS instances, you must ensure they are encrypted. The system will enforce this, but be aware that you can't create unencrypted storage resources
+   * When creating new S3 buckets, EBS volumes, or RDS instances, you must ensure they are encrypted. The system will enforce this, but be aware that you can't create unencrypted storage resources
 
 2. Security services:
-   - You have limited ability to modify settings for services like GuardDuty, Security Hub, and Macie.
+   * You have limited ability to modify settings for services like GuardDuty, Security Hub, and Macie.
 
 3. Logging and monitoring:
-   - You can't modify or delete CloudWatch logs, alarms, and dashboards related to our managed infrastructure
-   - You can create your own CloudWatch alarms and dashboards, but you can't modify ones that are part of the protected infrastructure
+   * You can't modify or delete CloudWatch logs, alarms, and dashboards related to our managed infrastructure
+   * You can create your own CloudWatch alarms and dashboards, but you can't modify ones that are part of the protected infrastructure
 
 ## Account management
 
-- You can't perform high-level account actions such as leaving the AWS organization or closing the account
-- Creation of new IAM users and groups is restricted. A limited custom service is deployed in your accounts to create IAM users. See [IAM User Service](./iam-user-service.md) for more information
+* You can't perform high-level account actions such as leaving the AWS organization or closing the account
+* Creation of new IAM users and groups is restricted. A limited custom service is deployed in your accounts to create IAM users. See [IAM User Service](../design-build-and-deploy-an-application/iam-user-service.md) for more information
 
 Implications:
 
-- You can't create new IAM users or groups. If you need to onboard new team members or create new roles, you can do that using the [Product Registry](https://registry.developer.gov.bc.ca). See [BC Gov's Product Registry - User management documentation](./user-management.md) for more information
-- Be cautious when attaching policies that grant broad permissions. Use the least privilege principle when assigning permissions
+* You can't create new IAM users or groups. If you need to onboard new team members or create new roles, you can do that using the [Product Registry](https://registry.developer.gov.bc.ca). See [BC Gov's Product Registry - User management documentation](../design-build-and-deploy-an-application/user-management.md) for more information
+* Be cautious when attaching policies that grant broad permissions. Use the least privilege principle when assigning permissions
 
 ## Service restrictions
 
@@ -90,4 +90,4 @@ To provide a centralized view of costs across all accounts and projects, the Pub
 
 By following these guidelines, you help maintain the security and compliance of our AWS environment. If these limitations significantly impact your work, contact the Public Cloud team for guidance, workarounds, or to request exceptions for critical business needs.
 
-If you have any questions or need assistance, please contact the Public Cloud team at cloud.pathfinder@gov.bc.ca.
+If you have any questions or need assistance, please contact the Public Cloud team at <cloud.pathfinder@gov.bc.ca>.

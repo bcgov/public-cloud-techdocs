@@ -13,6 +13,7 @@ nav:
       - Get started with AWS:
           - Overview: aws/index.md
           - AWS Landing Zone overview: aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
+          - AWS Security and compliance guardrails: aws/get-started-with-aws/security-guardrails.md
       - Design, build, and deploy:
           - Requirements: aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md
           - User Management: aws/design-build-and-deploy-an-application/user-management.md
@@ -44,9 +45,9 @@ nav:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming features:
           - Domain Join: azure/upcoming-features/domain-join.md
-          - Express route: azure/upcoming-features/express-route.md          
+          - Express route: azure/upcoming-features/express-route.md
       - Enterprise support:
           - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
   - techdocs-core
-  - git-revision-date-localized 
+  - git-revision-date-localized
