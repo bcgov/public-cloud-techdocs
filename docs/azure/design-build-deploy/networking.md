@@ -13,6 +13,8 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 
     For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [Be Mindful](../best-practices/be-mindful.md#using-terraform-to-create-subnets) documentation.
 
+    Additionally, as part of implementing a **Zero Trust** security model, all subnets need to be created as [Private Subnets](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access#utilize-the-private-subnet-parameter-public-preview).
+
 ## Spoke-to-Spoke connectivity
 
 If your team has multiple environments (ie. Dev, Test, Prod, Tools) within the same Project Set, you may require connectivity between the different environments. This is known as spoke-to-spoke connectivity.

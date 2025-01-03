@@ -40,3 +40,7 @@ When working with Azure OpenAI, you may need to create a Private Endpoint to res
 It has been observed in several cases, where the DNS `A-Record` for the Azure OpenAI service is not being created properly in the Private DNS Zone. This can cause issues with the service not being able to resolve the endpoint.
 
 If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public Cloud Platform support team to investigate and resolve the issue.
+
+## Regulated Landing Zone Compliance
+
+If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
