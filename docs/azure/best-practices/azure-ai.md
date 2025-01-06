@@ -40,3 +40,15 @@ When working with Azure OpenAI, you may need to create a Private Endpoint to res
 It has been observed in several cases, where the DNS `A-Record` for the Azure OpenAI service is not being created properly in the Private DNS Zone. This can cause issues with the service not being able to resolve the endpoint.
 
 If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public Cloud Platform support team to investigate and resolve the issue.
+
+## Regulated Landing Zone compliance
+
+If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
+
+## Monitoring AI
+
+Microsoft has created an Azure Monitor Workbook that provides a centralized view of the AI services that are being used. This workbook provides insights into the usage, performance, and health of the AI services. It is recommended to use this workbook to monitor the AI services.
+
+![Azure Monitor OpenAI Insights Workbook](../images/azure-monitor-workbook-openai-insights.png "Azure Monitor OpenAI Insights Workbook")
+
+For more information, see [Azure OpenAI Insights: Monitoring AI with Confidence](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/azure-openai-insights-monitoring-ai-with-confidence/4026850).
