@@ -41,7 +41,7 @@ It has been observed in several cases, where the DNS `A-Record` for the Azure Op
 
 If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public Cloud Platform support team to investigate and resolve the issue.
 
-## Regulated Landing Zone Compliance
+## Regulated Landing Zone compliance
 
 If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
 
