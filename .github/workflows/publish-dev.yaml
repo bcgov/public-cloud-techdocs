@@ -6,7 +6,7 @@ on:
         branches: [ dev ]
         paths:
             - "mkdocs.yml"
-            - "docs/*"
+            - "docs/**"
 
 jobs:
     test_techdocs_build_job:
