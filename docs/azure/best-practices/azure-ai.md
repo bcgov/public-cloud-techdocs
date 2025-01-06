@@ -44,3 +44,11 @@ If you encounter this issue, please open a [support ticket](../../welcome/suppor
 ## Regulated Landing Zone Compliance
 
 If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
+
+## Monitoring AI
+
+Microsoft has created an Azure Monitor Workbook that provides a centralized view of the AI services that are being used. This workbook provides insights into the usage, performance, and health of the AI services. It is recommended to use this workbook to monitor the AI services.
+
+![Azure Monitor OpenAI Insights Workbook](../images/azure-monitor-workbook-openai-insights.png "Azure Monitor OpenAI Insights Workbook")
+
+For more information, see [Azure OpenAI Insights: Monitoring AI with Confidence](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/azure-openai-insights-monitoring-ai-with-confidence/4026850).
