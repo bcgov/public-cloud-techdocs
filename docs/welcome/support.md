@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-## Project Set License Plate
+## Project Set license plate
 
 When requesting support, please provide the 6-character alphanumeric Project Set **license plate**. This is a unique identifier for your Project Set that helps us provide support more efficiently.
 
