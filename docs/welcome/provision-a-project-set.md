@@ -25,7 +25,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
 1. Login to the [Product Registry](https://registry.developer.gov.bc.ca/login)
 
-  You will need to provide the following information:
+  You'll need to provide the following information:
 
   - A descriptive product name (no acronyms)
   - Contact details and IDIR accounts for the Product Owner and up to 2 Technical Leads
