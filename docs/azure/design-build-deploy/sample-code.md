@@ -6,8 +6,7 @@ We have a centralized repository ([Azure Landing Zone Samples](https://github.co
 
 ## Sample Applications
 <!-- TODO: Update these links once the sample app code is migrated to the new repo -->
-* Container-based application: [Azure Startup Sample Application (Containers)](https://github.com/bcgov/azure-startup-sample-app-containers)
-* Serverless-based application: [Azure Startup Sample Application (Serverless)](https://github.com/bcgov-c/ecf-azure-startup-sample-app-serverless)
+* Samples pending
 
 For additional guidance on application architecture, please refer to the [Microsoft Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/).
 
