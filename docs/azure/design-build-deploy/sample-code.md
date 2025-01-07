@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 We have a centralized repository ([Azure Landing Zone Samples](https://github.com/bcgov/azure-lz-samples)) of sample code that you can use to get started. This repository contains sample code for application patterns and tools for use in the OCIO Azure Landing Zone.
 
-## Sample Applications
+## Sample applications
 <!-- TODO: Update these links once the sample app code is migrated to the new repo -->
 * Samples pending
 
