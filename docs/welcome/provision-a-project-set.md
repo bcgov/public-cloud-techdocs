@@ -2,13 +2,13 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login).
+On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [Product Registry](https://registry.developer.gov.bc.ca/login).
 
 ---
 
 ## What is a Project Set?
 
-A project set consists of four distinct environments for development (`dev`), testing (`test`), production (`prod`), and tooling (`tools`). This isolates and protects each stage of the deployment lifecycle.
+A project set consists of up to four distinct environments for development (`dev`), testing (`test`), production (`prod`), and tooling (`tools`). This isolates and protects each stage of the deployment lifecycle.
 
 - The **`dev`** account is for developers to experiment and test features
 - The **`test`** account mirrors production and is used for quality assurance testing
@@ -21,18 +21,18 @@ New requests must be reviewed and approved by the Public Cloud platform team. Th
 
 To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/cloud/services/public/onboard/).
 
-## Process to request a Project Set
+## Request a Project Set
 
-1. Login to the [BC Platform Services Product Registry](https://registry.developer.gov.bc.ca/login)
+1. Login to the [Product Registry](https://registry.developer.gov.bc.ca/login)
 
-  You will need to provide the following information:
+  You'll need to provide the following information:
 
   - A descriptive product name (no acronyms)
   - Contact details and IDIR accounts for the Product Owner and up to 2 Technical Leads
   - An estimate for the product's projected monthly spend on cloud services
     - For estimating AWS monthly costs, please use the [AWS Cost Calculator](https://calculator.aws/#/)
     - For estimating Azure monthly costs, please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/)
-  - An AWS Account code, or Azure Subscription ID, for billing purposes. Refer to the Memorandum of Understanding (MoU) for more information.
+  - An Account code for billing purposes. Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/cloud/services/public/onboard/#mou) for more information
     
   For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
@@ -49,7 +49,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
 4. Enter the **name** and **description** of your project.
 
-  - Project names should be descriptive. Avoid the use acronyms.
+  - Project names should be descriptive. Avoid the use acronyms. This may be used in the future to identify your project in the platform.
 
   ![description](../images/provision-a-project-set/description.png)
 

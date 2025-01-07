@@ -14,8 +14,7 @@ Ministry teams in the B.C. government who want to build applications in the Publ
 
 4. **Operational consistency and governance**: By using OCIO's Landing Zone, you adopt a uniform approach to cloud infrastructure, ensuring consistency. This uniformity is vital for upholding operational standards and governance.
 
-  <!-- What tool? -->
-5. **Long-term management and evolution**: This tool not only helps deploy applications initially, but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs.
+5. **Long-term management and evolution**: This not only helps deploy applications initially, but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs.
 
 6. **Leveraging cutting-egde capabilities in public cloud**: When you build in the Public Cloud, you can tap into a wide range of services and capabilities, spanning from advanced analytics to Artificial Intelligence (AI) and Machine Learning (ML) tools. This integration has the potential to greatly boost the functionality and reach of government applications.
 
