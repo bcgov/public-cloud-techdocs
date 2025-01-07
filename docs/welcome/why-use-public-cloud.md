@@ -18,7 +18,7 @@ Ministry teams in the B.C. government who want to build applications in the Publ
 
 6. **Leveraging cutting-egde capabilities in public cloud**: When you build in the Public Cloud, you can tap into a wide range of services and capabilities, spanning from advanced analytics to Artificial Intelligence (AI) and Machine Learning (ML) tools. This integration has the potential to greatly boost the functionality and reach of government applications.
 
-For B.C. Government Ministry teams developing applications in the Public Cloud, the OCIO Landing Zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
+For B.C. Government ministry teams developing applications in the Public Cloud, the OCIO Landing Zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
 ## Next steps
 
