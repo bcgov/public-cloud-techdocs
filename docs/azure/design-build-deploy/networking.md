@@ -36,7 +36,7 @@ Advanced features are implemented and configured including:
   * Applied both on HTTP and HTTPS traffic
   * Target URL extraction and validation
 * Web categories
-  * Allow or deny access to web site categories based on FQDN
+  * Allow or deny access to websites based on categories (eg. gambling, social media, etc.)
 
 ### Exposing services to the internet
 
@@ -44,14 +44,15 @@ For more complex applications, an [Azure Application Gateway](https://learn.micr
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
 
+<!-- TODO: Remove this section once Resource Locks have been removed -->
 ## Resource locks on networking components
 
 To maintain the integrity and stability of the networking infrastructure, [resource locks](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json) are automatically applied to key networking components, including Virtual Networks (VNets). These locks prevent accidental deletion of critical resources.
 
 **Important:** If you need to delete a resource that you've created within the VNet (such as a VM), you may encounter issues due to these locks. In such cases:
 
-* You can temporarily remove the lock to perform the necessary operation.
-* You have the permissions to remove these locks when needed.
-* Be aware that our automation will reapply the locks periodically to ensure ongoing protection.
+* You can temporarily remove the lock to perform the necessary operation
+* You have the permissions to remove these locks when needed
+* Be aware that our automation will re-apply the locks periodically to ensure ongoing protection
 
 For more detailed guidance on working with resource locks, please refer to the [Be Mindful](../best-practices/be-mindful.md#working-with-resource-locks) documentation.

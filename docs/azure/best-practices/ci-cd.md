@@ -46,7 +46,7 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
     Please take special note of the pre-requisites listed in the README file in the `/tools/cicd_self_hosted_agents/` directory. It describes the necessary subnets that the self-hosted runners need to be deployed in.
 
 !!! question "Cross-Subscription Access"
-    If you plan to deploy the self-hosted runners into a different Azure subscription than where your resources will be deployed (ie. in your **Tools** subscription), you will need to [submit a firewall request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team. This request will allow the self-hosted runners to access the necessary resources in the other subscription.
+    If you plan to deploy the self-hosted runners into a different Azure subscription than where your resources will be deployed (ie. in your **Tools** subscription), you will need to [submit a firewall request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team. This request should state that you need to allow the self-hosted runners to access resources in another subscription.
 
 !!! note ""
    When using the [Azure Verified Module (AVM) for CICD Agents and Runners](https://github.com/Azure/terraform-azurerm-avm-ptn-cicd-agents-and-runners) (or any other modules), Terraform may show that it will remove certain tags from resources. This is because the module is not aware of the tags that are set on the resources. If you want to keep the tags, you can add a `lifecycle` block with the [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature, to the resource in your Terraform code to ignore the tags.

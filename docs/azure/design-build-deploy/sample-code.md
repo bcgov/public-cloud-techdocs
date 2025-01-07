@@ -1,0 +1,16 @@
+# Azure Landing Zone Sample Code
+
+Last updated: **{{ git_revision_date_localized }}**
+
+We have a centralized repository ([Azure Landing Zone Samples](https://github.com/bcgov/azure-lz-samples)) of sample code that you can use to get started. This repository contains sample code for application patterns and tools for use in the OCIO Azure Landing Zone.
+
+## Sample Applications
+<!-- TODO: Update these links once the sample app code is migrated to the new repo -->
+* Container-based application: [Azure Startup Sample Application (Containers)](https://github.com/bcgov/azure-startup-sample-app-containers)
+* Serverless-based application: [Azure Startup Sample Application (Serverless)](https://github.com/bcgov-c/ecf-azure-startup-sample-app-serverless)
+
+For additional guidance on application architecture, please refer to the [Microsoft Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/).
+
+## Sample Tools
+
+* CI/CD self-hosted agents: [CI/CD Self-Hosted GitHub Runners](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_self_hosted_agents/README.md)

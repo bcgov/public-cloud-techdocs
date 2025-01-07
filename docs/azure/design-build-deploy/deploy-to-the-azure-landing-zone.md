@@ -51,4 +51,7 @@ There are multiple ways to deploy your application to the Azure Landing Zone usi
 While we don't have a specific example for each tool, we recommend that you choose the tool that you are most comfortable with and that best fits your needs.
 
 !!! warning "Using Terraform for IaC"
-    If you are using Terraform to deploy your application to Azure, please take note of the following: [Using Terraform to Create Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets) and [AzAPI Terraform Provider (using azapi_update_resource)](../best-practices/be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
+    If you are using Terraform to deploy your application to Azure, please take note of the following:
+
+    * [Using Terraform to Create Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets)
+    * [AzAPI Terraform Provider (using azapi_update_resource)](../best-practices/be-mindful.md#azapi-terraform-provider-using-azapi_update_resource)
