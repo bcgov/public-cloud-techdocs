@@ -10,7 +10,7 @@ The following sections describe the requirements for building your application o
 
 2. Once approved, your Project Set will be provisioned, followed up by an email sent to the Product Owner and Technical Lead(s) once the provisioning is complete.
 
-3. Learn how to manage user access to Azure by reviewing [User Management in Azure](user-management.md).
+3. Learn how to manage user access in Azure by reviewing [User Management in Azure](user-management.md).
 
 ## Limitations of the Azure Landing Zone
 
@@ -21,7 +21,7 @@ Take the following into consideration when building your application in the Azur
 
 * Only HTTPS applications that are compatible with public endpoints through [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) are supported.
 
-* The only supported regions are Canada Central (ie. `canadacentral`) and Canada East (ie. `canadaeast`).
+* The only supported regions are Canada Central and Canada East.
 
 * Most networking is under the management of the Azure Landing Zone and is not subject to change.
   * See [Networking within the Azure Landing Zone](networking.md) for more information.

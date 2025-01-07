@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-This guide provides an overview of user management in the Azure Landing Zone, specifically tailored for Product Owners (POs) and Technical Leads (TLs) who have been granted a restricted Owner role on the Project Set Management Group. This role is inherited on the subscription within the Project Set.
+This guide provides an overview of user management in the Azure Landing Zone, specifically tailored for Product Owners (POs) and Technical Leads (TLs) who have been granted a restricted Owner role on the Project Set Management Group. This role is inherited on the subscriptions within the Project Set.
 
 ## What you can do
 
@@ -46,11 +46,23 @@ To manage users and their roles:
 
 3. In the left sidebar, click on "**Access control (IAM)**".
 
+   ![Azure Subscription - IAM](../images/subscription-iam.png "Azure Subscription - IAM")
+
 4. Use the "**Add**" button to assign new roles to users.
 
-5. Use the "**Role assignments**" tab to view and manage existing role assignments.
+   ![Azure Subscription - IAM - Add Role](../images/subscription-iam-add-role.png "Azure Subscription - IAM - Add Role")
 
-6. To create custom roles, use the "**Roles**" tab and click "**Add custom role**".
+   ![Azure Subscription - IAM - Add Role Assignment](../images/subscription-iam-add-role-assignment.png "Azure Subscription - IAM - Add Role Assignment")
+
+5. To add a user as a **Contributor**, choose **Add Role Assignment** > **Privileged Administrator Roles** > **Contributor**.
+
+   ![Azure Subscription - IAM - Add Privileged Role Assignment](../images/subscription-iam-add-role-assignment-privileged.png "Azure Subscription - IAM - Add Privileged Role Assignment")
+
+6. Use the "**Role assignments**" tab to view and manage existing role assignments.
+
+   ![Azure Subscription - IAM - Existing Role Assignments](../images/subscription-iam-existing-role-assignments.png "Azure Subscription - IAM - Existing Role Assignments")
+
+7. To create custom roles, use the "**Roles**" tab and click "**Add custom role**".
 
 Remember, user management is a critical aspect of maintaining a secure and well-organized Azure environment. Always double-check your assignments and follow your organization's security policies.
 

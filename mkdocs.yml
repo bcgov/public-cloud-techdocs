@@ -5,7 +5,7 @@ edit_uri: edit/main/docs/
 nav:
   - Welcome:
       - Overview: index.md
-      - Why use the Public cloud: welcome/why-use-public-cloud.md
+      - Why use the Public Cloud: welcome/why-use-public-cloud.md
       - Provision a Project Set: welcome/provision-a-project-set.md
       - Training: welcome/training.md
       - Support: welcome/support.md
@@ -35,7 +35,7 @@ nav:
           - User management: azure/design-build-deploy/user-management.md
           - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
           - Networking: azure/design-build-deploy/networking.md
-          - Sample apps: azure/design-build-deploy/sample-apps.md
+          - Sample code: azure/design-build-deploy/sample-code.md
       - Best practices:
           - Be mindful: azure/best-practices/be-mindful.md
           - CI/CD: azure/best-practices/ci-cd.md
