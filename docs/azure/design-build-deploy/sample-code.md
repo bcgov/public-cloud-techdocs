@@ -10,6 +10,6 @@ We have a centralized repository ([Azure Landing Zone Samples](https://github.co
 
 For additional guidance on application architecture, please refer to the [Microsoft Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/).
 
-## Sample Tools
+## Sample tools
 
 * CI/CD self-hosted agents: [CI/CD Self-Hosted GitHub Runners](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_self_hosted_agents/README.md)
