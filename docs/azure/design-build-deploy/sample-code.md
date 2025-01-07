@@ -1,4 +1,4 @@
-# Azure Landing Zone Sample Code
+# Azure Landing Zone sample code
 
 Last updated: **{{ git_revision_date_localized }}**
 
