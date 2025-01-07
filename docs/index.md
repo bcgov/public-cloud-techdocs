@@ -8,7 +8,7 @@ This documentation provides information for using Public Cloud services within t
 
 ## Provision a Project Set
 
-To get started in the Public Cloud you can provision a Project Set in AWS or Azure using the [Product Registry](https://registry.developer.gov.bc.ca).
+To get started in the Public Cloud you can provision a Project Set in AWS or Azure using the [Platform Product Registry](https://registry.developer.gov.bc.ca).
 
 For more information, see [Provision a Project Set](welcome/provision-a-project-set.md).
 
