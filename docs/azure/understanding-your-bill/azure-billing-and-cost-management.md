@@ -35,7 +35,7 @@ Azure Cost Management provides a dashboard that shows your costs and usage over 
 
 ## Analyze cost drivers
 
-Azure Cost Management helps you understand what's driving your costs. You can see which services are costing you the most money and which resources you are using the most, using [cost reporting and analytics](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/reporting-get-started).
+Azure Cost Management shows what's driving your costs. It helps you identify your most expensive services and most used resources through [cost reporting and analytics](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/reporting-get-started).
 
 !["Cost Analysis"](../images/cost-analysis.png "Cost Analysis")
 
