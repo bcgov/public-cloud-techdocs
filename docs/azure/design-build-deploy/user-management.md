@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-This guide provides an overview of user management in the Azure Landing Zone, specifically tailored for Product Owners (POs) and Technical Leads (TLs) who have been granted a restricted Owner role on the Project Set Management Group. This role is inherited on the subscriptions within the Project Set.
+This guide explains how Product Owners (POs) and Technical Leads (TLs) can manage users in the Azure Landing Zone. It focuses on those with a restricted Owner role on the Project Set Management Group, which applies to the subscriptions within the Project Set.
 
 ## What you can do
 
