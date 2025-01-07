@@ -32,7 +32,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   - An estimate for the product's projected monthly spend on cloud services
     - For estimating AWS monthly costs, please use the [AWS Cost Calculator](https://calculator.aws/#/)
     - For estimating Azure monthly costs, please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/)
-  - An Account code for billing purposes. Refer to the Memorandum of Understanding (MoU) for more information.
+  - An Account code for billing purposes. Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/cloud/services/public/onboard/#mou) for more information
     
   For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
