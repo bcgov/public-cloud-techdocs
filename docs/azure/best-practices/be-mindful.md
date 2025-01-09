@@ -78,30 +78,6 @@ If you are using the [AzAPI Terraform Provider](https://learn.microsoft.com/en-u
 
 This means, changes to the `azapi_update_resource` resource may _appear_ to apply changes (ie. remove properties/configurations previous added according to the `terraform plan` output), but this doesn't actually apply those changes in Azure.
 
-<!-- TODO: Remove this section once Resource Locks have been removed -->
-## Working with resource locks
-
-As part of our security and governance measures, resource locks are automatically applied to critical infrastructure components, particularly networking resources like Virtual Networks (VNets). While these locks provide an important safeguard against accidental deletion, they can sometimes interfere with legitimate resource management tasks.
-
-### Deleting resources protected by locks
-
-If you encounter issues when trying to delete a resource you've created (such as a VM) due to a lock on the parent resource (like a VNet), follow these steps:
-
-1. **Identify the lock**: Locate the resource lock on the parent resource (usually the VNet).
-
-2. **Remove the lock**: You have permissions to remove these locks when necessary. To do so:
-   - Navigate to the VNet in the Azure portal
-   - Go to the "Locks" section
-   - Delete the lock that's preventing the operation
-
-3. **Perform your operation**: Once the lock is removed, you should be able to delete your resource as needed.
-
-4. **Be aware of automation**: Our automation systems will periodically reapply these locks to ensure ongoing protection. If you need the lock to remain off for an extended period, please contact the Public Cloud team.
-
-5. **Best practice**: After completing your task, if the automation hasn't yet reapplied the lock, consider manually reapplying it to maintain security.
-
-Remember, these locks are in place for good reason. Always double-check that you're deleting the correct resources and understand the implications before removing any locks.
-
 ## Azure Control-Plane vs Data-Plane access differences
 
 When working with Azure services, it's important to understand the differences between [control-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#control-plane) and [data-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#data-plane) access. The control plane is used to manage resources, while the data plane is used to interact with the resources themselves.
