@@ -41,10 +41,12 @@ nav:
           - CI/CD: azure/best-practices/ci-cd.md
           - Governance: azure/best-practices/governance.md
           - Azure AI Services: azure/best-practices/azure-ai.md
+      - Tools:
+        - Helpful tools: azure/tools/tools.md
       - Understand your billing:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming features:
-          - Domain Join: azure/upcoming-features/domain-join.md
+          - Domain join: azure/upcoming-features/domain-join.md
           - Express route: azure/upcoming-features/express-route.md
       - Enterprise support:
           - Azure Enterprise Support: azure/support/enterprise-support.md
