@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-## Helpful Tools
+## Helpful tools
 
 While there are many tools available to help you manage your Azure environment, the following are some that we have found to be particularly useful.
 
