@@ -17,7 +17,7 @@ A command-line interface (CLI) tool specifically designed to analyze Azure resou
 
 ### Microsoft Assessments
 
-Self-guided questionnaires designed to help you identify areas to improve your architecture, workloads, and implementation, with actionable recommendations. Check out the [Microsoft Assessments](https://learn.microsoft.com/en-us/assessments/browse/?page=1&pagesize=30).
+Self-guided questionnaires designed to help you identify areas to improve your architecture, workloads and implementation, with actionable recommendations. Check out the [Microsoft Assessments](https://learn.microsoft.com/en-us/assessments/browse/?page=1&pagesize=30).
 
 ![Microsoft Assessments](../images/microsoft-assessments.png "Microsoft Assessments")
 
