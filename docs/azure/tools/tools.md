@@ -6,7 +6,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 While there are many tools available to help you manage your Azure environment, the following are some that we have found to be particularly useful.
 
-!!! abstract "Tools List"
+!!! abstract "Tools list"
     If you have a favorite tool that you think should be included in this list, please let us know by emailing the Public Cloud Platform team at [cloud.pathfinder@gov.bc.ca](mailto:cloud.pathfinder@gov.bc.ca?subject=Azure%20Tools%20Suggestion).
 
 ### Azure Quick Review (AZQR)
