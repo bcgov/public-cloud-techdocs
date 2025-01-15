@@ -2,6 +2,11 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
+This page is designed for those who manage and maintain Azure environments. The purpose of this document is to provide a curated list of tools that can help you efficiently manage your Azure resources, ensure compliance with best practices, and optimize your cloud infrastructure. Whether you are looking to automate tasks, monitor performance, or enhance security, the tools listed here will assist you in achieving your goals.
+
+!!! tip "Azure tools"
+    It is important to note that these tools **do not** replace, but complement the [built-in Azure tools](../best-practices/governance.md), providing additional functionality and insights to enhance your Azure management experience.
+
 ## Helpful tools
 
 While there are many tools available to help you manage your Azure environment, the following are some that we have found to be particularly useful.
