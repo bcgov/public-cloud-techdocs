@@ -2,12 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following describes how to manage and govern your Azure environment. While the Public Cloud team provides the initial guardrails and standards for the environment, **each ministry team is responsible** for managing their own resources and ensuring compliance with the standards.
-
-!!! abstract "Microsoft Assessments"
-    In addition to the built-in tools in Azure (described below), Microsoft also provides self-guided questionnaires designed to help you identify areas to improve your architecture, workloads, and implementation, with actionable recommendations. Check out the [Microsoft Assessments](https://learn.microsoft.com/en-us/assessments/browse/).
-
-    ![Microsoft Assessments](../images/microsoft-assessments.png "Microsoft Assessments")
+The following describes how to manage and govern your Azure environment. While the Public cloud team provides the initial guardrails and standards for the environment, **each ministry team is responsible** for managing their own resources and ensuring compliance with the standards.
 
 ## Security
 
