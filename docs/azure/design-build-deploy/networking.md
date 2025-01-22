@@ -2,6 +2,10 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
+The following sections describe the networking components within the Azure Landing Zone, including the Virtual Network (VNet), spoke-to-spoke connectivity, and internet connectivity.
+
+## Virtual network (VNet)
+
 Within each Project Set deployed in the Azure Landing Zone, a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) is created to provide network isolation and security for the resources deployed within it. This VNet is the foundation for all network connectivity within the Azure Landing Zone.
 
 This VNet is connected with the central hub (vWAN), and receives default routes to direct all traffic (ie. Internet and private) through the firewall located in the central hub.
@@ -43,3 +47,18 @@ Advanced features are implemented and configured including:
 For more complex applications, an [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is the preferred method for exposing your application to the Internet. It provides a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
+
+## Protected network resources
+
+In order to maintain the security of the Azure Landing Zone, there are certain network resources that are protected and cannot be modified by teams, and other network resources that cannot be created in the Landing Zone. These include:
+
+* Modifying the Virtual Network (VNet) DNS settings
+  * This is required so that all traffic is routed through the central firewall, for compliance requirements
+* Creating Express Route circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
+  * This is so that traffic is not bypassing the central firewall
+* Creating Virtual Networks
+  * This is to avoid overlapping IP address ranges that may be in use by other Project Sets
+* Creating Virtual Network peering with other VNets
+  * This is required to ensure spoke-to-spoke traffic is managed centrally through the firewall
+* Deleting the `setbypolicy` Diagnostics Settings
+  * You can create your own Diagnostics Settings for your resources, but you cannot delete the default one
