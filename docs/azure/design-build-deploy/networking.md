@@ -8,6 +8,9 @@ The following sections describe the networking components within the Azure Landi
 
 Within each Project Set deployed in the Azure Landing Zone, a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) is created to provide network isolation and security for the resources deployed within it. This VNet is the foundation for all network connectivity within the Azure Landing Zone.
 
+!!! danger "VNet CIDR Changes"
+    The CIDR range for the VNet is defined at the time of deployment, and cannot be changed after deployment. By default, each Project Set is provided with a `/24` CIDR range. If you require a change to the  CIDR range, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+
 This VNet is connected with the central hub (vWAN), and receives default routes to direct all traffic (ie. Internet and private) through the firewall located in the central hub.
 
 There are no subnets that are pre-created within the VNet. Each team is responsible for creating their own subnets based on their requirements. Subnets should be created within the VNet to segment resources based on their function or security requirements.
