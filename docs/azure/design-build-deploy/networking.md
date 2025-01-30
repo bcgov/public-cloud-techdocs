@@ -47,7 +47,7 @@ Advanced features are implemented and configured including:
 
 ### Exposing services to the internet
 
-For more complex applications, an [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is the preferred method for exposing your application to the Internet. It provides a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
+For applications with advanced requirements, an [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) is the recommended way to expose applications to the Internet. It includes an OSI Layer 7 web traffic load balancer to help manage web application traffic.
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
 
