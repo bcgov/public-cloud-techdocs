@@ -15,7 +15,7 @@ As a Product Owner or Technical Lead with restricted Owner permissions, you have
 
 ## What you can't do
 
-As a Product Owner or Technical Lead with restricted Owner permissions, you do not have the ability to:
+As a Product Owner or Technical Lead with restricted Owner permissions, you don't have the ability to:
 
 * Assign users to an Owner role
 * Assign users to roles at various levels:
