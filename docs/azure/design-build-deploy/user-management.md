@@ -28,7 +28,7 @@ As a Product Owner or Technical Lead with restricted Owner permissions, you don'
 !!! info "Assigning Users to Roles"
     We are transitioning from direct user role assignments to Entra ID Security Groups. This simplifies access auditing for regulatory compliance.
 
-    You will still be able to directly assign Service Principals to Roles.
+    You'll still be able to directly assign Service Principals to Roles.
 
 ## Best practices for user management
 
