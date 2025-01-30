@@ -8,13 +8,6 @@ This guide explains how Product Owners (POs) and Technical Leads (TLs) can manag
 
 As a Product Owner or Technical Lead with restricted Owner permissions, you have the ability to:
 
-* Assign users to roles at various levels:
-
-   - Project Set Management Group (prefixed with your Project Set license plate, ie. "abc123")
-   - Subscription (prefixed with your Project Set license plate, ie. "abc123")
-   - Resource groups
-   - Individual resources
-
 * Create [custom Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
 * Create and manage [Service Principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
 * Create and manage [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
@@ -22,9 +15,20 @@ As a Product Owner or Technical Lead with restricted Owner permissions, you have
 
 ## What you can't do
 
-As a Product Owner or Technical Lead with restricted Owner permissions, you do not have the ability to:
+As a Product Owner or Technical Lead with restricted Owner permissions, you don't have the ability to:
 
 * Assign users to an Owner role
+* Assign users to roles at various levels:
+
+   - Project Set Management Group (prefixed with your Project Set license plate, ie. "abc123")
+   - Subscription (prefixed with your Project Set license plate, ie. "abc123")
+   - Resource groups
+   - Individual resources
+
+!!! info "Assigning Users to Roles"
+    We are transitioning from direct user role assignments to Entra ID Security Groups. This simplifies access auditing for regulatory compliance.
+
+    You'll still be able to directly assign Service Principals to Roles.
 
 ## Best practices for user management
 
