@@ -35,6 +35,9 @@ Additionally, you will need to create the appropriate ingress and egress Network
 
 [![Azure Bastion - Egress Rules](../images/azure-bastion-outbound-nsg-rules.png "Azure Bastion - Egress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/outbound.png#lightbox)
 
+!!! tip "Azure Bastion Deployment"
+    To support our customers, and expedite the deployment of all the required resources, we have created a Terraform module. For further information, please refer to the Tools > [Azure Bastion](../tools/bastion.md) page.
+
 ## Azure OpenAI and Private DNS
 <!-- Remove or update this section once it is confirmed that the Azure Policy resolves this -->
 When working with Azure OpenAI, you may need to create a Private Endpoint to resolve the Azure OpenAI service endpoints.
