@@ -44,6 +44,7 @@ nav:
       - Tools:
         - Helpful tools: azure/tools/tools.md
         - Azure Cloud Shell: azure/tools/cloud-shell.md
+        - Azure Bastion: azure/tools/bastion.md
       - Understand your billing:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming features:
