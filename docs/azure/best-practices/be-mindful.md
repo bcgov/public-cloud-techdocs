@@ -37,7 +37,7 @@ If this is your scenario, please submit a [support request](https://citz-do.atla
 
 If you are using Terraform to create your infrastructure, in particular the subnets within your assigned Virtual Network, please be aware of the following challenge.
 
-The Azure Landing Zones have an Azure Policy implemented that requires every subnet to have an associated Network Security Group (NSG) for security controls compliance. The challenge with this is that Terraform does not support the creation of subnets with an associated NSG in a _single step_.
+The Azure Landing Zones have an Azure Policy implemented that requires every subnet to have an associated Network Security Group (NSG) for security controls compliance. The challenge with this is that Terraform doesn't support the creation of subnets with an associated NSG in a _single step_.
 
 Therefore, instead of using the `azurerm_subnet` resource to create subnets, you must use the `azapi_resource` resource from the [AzAPI Terraform Provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs). This resource allows you to create subnets with an associated NSG in a single step.
 

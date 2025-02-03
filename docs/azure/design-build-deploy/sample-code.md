@@ -16,5 +16,5 @@ For additional guidance on application architecture, please refer to the [Micros
 * Azure Bastion: [Azure Bastion](https://github.com/bcgov/azure-lz-samples/blob/main/tools/bastion/README.md)
 * CI/CD self-hosted agents: [CI/CD Self-Hosted GitHub Runners](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_self_hosted_agents/README.md)
 
-!!! tip "Other Tools"
+!!! tip "Other tools"
     Also see further tools and details on the [Tools](../tools/tools.md) page.

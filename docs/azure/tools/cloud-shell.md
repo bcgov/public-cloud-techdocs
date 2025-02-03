@@ -15,7 +15,7 @@ To provide access to your private resources, you can [deploy Cloud Shell into an
     
     You can find this module in the [Azure Landing Zone Samples](https://github.com/bcgov/azure-lz-samples) repository, under `/tools/cloud_shell_vnet/`. Please ensure to review the [README](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cloud_shell_vnet/README.md) file in the module for instructions on how to use it.
 
-## Deleting Cloud Shell Resources
+## Deleting Cloud Shell resources
 
 If you have deployed Cloud Shell in a virtual network, and you decide to later no longer use this configuration, please be aware of the following challenges:
 
