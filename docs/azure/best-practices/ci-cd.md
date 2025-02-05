@@ -51,7 +51,7 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
 !!! note "Terraform and resource tags"
     When using the [Azure Verified Module (AVM) for CICD Agents and Runners](https://github.com/Azure/terraform-azurerm-avm-ptn-cicd-agents-and-runners) (or any other modules), Terraform may show that it will remove certain tags from resources. This is because the module is not aware of the tags that are set on the resources. If you want to keep the tags, you can add a `lifecycle` block with the [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature, to the resource in your Terraform code to ignore the tags.
 
-## Azure Pipelines
+## Azure pipelines
 
 If you are using Azure Pipelines for your CI/CD pipeline, consider the following best practices:
 
