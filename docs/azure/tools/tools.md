@@ -20,6 +20,8 @@ A command-line interface (CLI) tool specifically designed to analyze Azure resou
 
 ![Azure Quick Review - PowerBI - Recommendations View](../images/azqr-powerbi-recommendations-view.png "Azure Quick Review - PowerBI - Recommendations View")
 
+You can also create a pipeline to automate the execution of AZQR on a schedule. Check out the following article for an example: [Automate Azure Quick Review with GitHub Actions](https://carlos.mendible.com/2025/01/19/automate-azure-quick-review-with-github-actions/).
+
 ### Microsoft Assessments
 
 Self-guided questionnaires designed to help you identify areas to improve your architecture, workloads and implementation, with actionable recommendations. Check out the [Microsoft Assessments](https://learn.microsoft.com/en-us/assessments/browse/?page=1&pagesize=30).
