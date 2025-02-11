@@ -41,7 +41,7 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 
 ![GitHub Actions for Azure](../images/azure-github-actions-marketplace.png "GitHub Actions for Azure")
 
-!!! tip "CI/CD Best Practices"
+!!! tip "CI/CD best practices"
     Be sure to review the [CI/CD Best Practices](../best-practices/ci-cd.md) before implementing GitHub Actions.
 
 ### Infrastructure-as-Code (IaC)
