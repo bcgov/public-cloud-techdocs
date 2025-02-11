@@ -6,15 +6,16 @@ We have a centralized repository ([Azure Landing Zone Samples](https://github.co
 
 ## Sample applications
 <!-- TODO: Update these links once the sample app code is migrated to the new repo -->
-* Samples pending
+- Samples pending
 
 For additional guidance on application architecture, please refer to the [Microsoft Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/).
 
 ## Sample tools
 
-* Azure Cloud Shell in a Virtual Network: [Azure Cloud Shell in a Virtual Network](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cloud_shell_vnet/README.md)
-* Azure Bastion: [Azure Bastion](https://github.com/bcgov/azure-lz-samples/blob/main/tools/bastion/README.md)
-* CI/CD self-hosted agents: [CI/CD Self-Hosted GitHub Runners](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_self_hosted_agents/README.md)
+- Azure Cloud Shell in a Virtual Network: [Azure Cloud Shell in a Virtual Network](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cloud_shell_vnet/README.md)
+- Azure Bastion: [Azure Bastion](https://github.com/bcgov/azure-lz-samples/blob/main/tools/bastion/README.md)
+- CI/CD self-hosted agents: [CI/CD Self-Hosted GitHub Runners](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_self_hosted_agents/README.md)
+- Managed DevOps Pools: [CI/CD Managed DevOps Pools](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cicd_managed_devops_pools/README.md)
 
 !!! tip "Other tools"
     Also see further tools and details on the [Tools](../tools/tools.md) page.
