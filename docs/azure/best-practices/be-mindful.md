@@ -30,10 +30,10 @@ In some scenarios, you may have a need to create a custom DNS Zone. Generally, t
 
 If this is your scenario, please submit a [support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3), so that the Public Cloud team can work with you to create and attach the custom DNS Zone to the central Private DNS Resolver.
 
-!!! failure "Private DNS Zone Attachment to VNet"
+!!! failure "Private DNS Zone attachment to VNet"
     Attaching your custom Private DNS Zone to your Virtual Network (VNet) will not work, as all DNS queries are routed through the central Private DNS Resolver.
 
-## Using Terraform to create Subnets
+## Using Terraform to create subnets
 
 If you are using Terraform to create your infrastructure, in particular the subnets within your assigned Virtual Network, please be aware of the following challenge.
 
@@ -41,7 +41,7 @@ The Azure Landing Zones have an Azure Policy implemented that requires every sub
 
 Therefore, instead of using the `azurerm_subnet` resource to create subnets, you must use the `azapi_resource` resource from the [AzAPI Terraform Provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs). This resource allows you to create subnets with an associated NSG in a single step.
 
-!!! abstract "AzAPI Resource Provider"
+!!! abstract "AzAPI resource provider"
     You need to use the `azapi_resource` resource, because you are updating an existing Virtual Network (VNet) resource with a new subnet (and associated Network Security Group).
 
 **Example code:**
@@ -88,7 +88,7 @@ For example, some Azure services and solution patterns may require additional da
 
 For a list of built-in roles and their permissions, refer to the [Azure built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) documentation.
 
-## API Management Service
+## API Management service
 
 The current version (v1) of the Azure [API Management Service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts) doesn't work with [inbound Private Endpoints](https://learn.microsoft.com/en-us/azure/api-management/virtual-network-concepts#inbound-private-endpoint). To access the service from within a virtual network, you must create a DNS record. Unlike other [private endpoints](#private-endpoints-and-dns) in the Landing Zones, this process isn't automated.
 

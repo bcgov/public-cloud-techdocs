@@ -8,17 +8,17 @@ This guide explains how Product Owners (POs) and Technical Leads (TLs) can manag
 
 As a Product Owner or Technical Lead with restricted Owner permissions, you have the ability to:
 
-* Create [custom Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
-* Create and manage [Service Principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
-* Create and manage [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
-* Create and manage all resources within your subscription
+- Create [custom Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
+- Create and manage [Service Principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
+- Create and manage [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
+- Create and manage all resources within your subscription
 
 ## What you can't do
 
 As a Product Owner or Technical Lead with restricted Owner permissions, you don't have the ability to:
 
-* Assign users to an Owner role
-* Assign users to roles at various levels:
+- Assign users to an Owner role
+- Assign users to roles at various levels:
 
    - Project Set Management Group (prefixed with your Project Set license plate, ie. "abc123")
    - Subscription (prefixed with your Project Set license plate, ie. "abc123")
