@@ -13,7 +13,7 @@ You can view the full list of services available to the ministries under the [Un
 
 ## How to receive support
 
-1. Log into [Azure Portal](https://portal.azure.com) with your IDIR. Only users with access to applications in the OCIO-managed Landing Zone can use the Unified Enterprise support plan. New users may take up to **7 business days** to gain access. If you need to open a support case before access is enabled, contact the OCIO Public Cloud team at <cloud.pathfinder@gov.bc.ca>.
+1. Log into [Azure Portal](https://portal.azure.com) with your IDIR. Only users with access to applications in the OCIO-managed Landing Zone can use the Unified Enterprise support plan. New users may take up to **7 business days** to gain access. If you need to open a support case before access is enabled, please [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 2. Review step-by-step instructions on opening an [Azure support request](https://learn.microsoft.com/en-us/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
