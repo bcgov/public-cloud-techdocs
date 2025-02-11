@@ -10,7 +10,7 @@ The following sections describe the requirements for building your application o
 
 2. Once approved, your project set will be provisioned followed up by an email sent to the Product Owner and Technical Lead once the provisioning is complete
 
-3. Request access for the rest of the team by submitting a request to <cloud.pathfinder@gov.bc.ca>. Refer to the guidelines on what details to include in your request for [account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
+3. Request access for the rest of the team by submitting a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3). Refer to the guidelines on what details to include in your request for [account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
 
 ## Limitations of the AWS Landing Zone
 

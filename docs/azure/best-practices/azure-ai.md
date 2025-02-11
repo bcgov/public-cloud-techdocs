@@ -22,7 +22,7 @@ When using Azure AI services, you may need to deploy a Virtual Machine within yo
 
 The simplest method to do this, is to deploy an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network, to connect to a Virtual Machine that is also deployed to the same private network as the AI service.
 
-!!! question "Azure Bastion SKU"
+!!! question "Which Azure Bastion SKU to use?"
     The minimum Bastion SKU required is **Basic**, as the **Developer** SKU is not currently available in the Canada regions.
 
 Azure Bastion does require a specifically-named Subnet to be created within the VNet. The subnet name must be **AzureBastionSubnet**. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24). After adding this subnet to your virtual network, you can deploy Azure Bastion.
@@ -35,8 +35,8 @@ Additionally, you will need to create the appropriate ingress and egress Network
 
 [![Azure Bastion - Egress Rules](../images/azure-bastion-outbound-nsg-rules.png "Azure Bastion - Egress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/outbound.png#lightbox)
 
-!!! tip "Azure Bastion Deployment"
-    To support our customers, and expedite the deployment of all the required resources, we've created a Terraform module. For further information, please refer to the Tools > [Azure Bastion](../tools/bastion.md) page.
+!!! example "Azure Bastion deployment example"
+    To support our customers, and expedite the deployment of all the required resources, we've created an example Terraform module. For further information, please refer to the Tools > [Azure Bastion](../tools/bastion.md) page.
 
 ## Azure OpenAI and Private DNS
 <!-- Remove or update this section once it is confirmed that the Azure Policy resolves this -->

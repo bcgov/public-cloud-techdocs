@@ -3,4 +3,5 @@ IgnoreDirectoryMissingTrailingSlash: true # don't fail when directory links don'
 IgnoreURLs:
     - "localhost" # suppress failures of URLs containing localhost
     - "https://github.com/bcgov-c"
+    - "https://loginproxy.gov.bc.ca"
     - "https://login.nimbus.cloud.gov.bc.ca/"

@@ -33,8 +33,6 @@ To find the license plate for an Azure Project Set, follow these steps:
 There are multiple ways to get support for the Public Cloud Platform, including:
 
 - [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) (preferred method)
-<!-- TODO: Do we want to remove the direct email as an option? -->
-- [Email the Public Cloud Platform team](mailto:cloud.pathfinder@gov.bc.ca)
 - [Rocket.Chat](https://chat.developer.gov.bc.ca/)
 
 ## Cloud vendor support

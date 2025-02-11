@@ -36,10 +36,11 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
     
   For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
-  - Sign a Memorandum of Understanding (MoU) with the OCIO. Request an MoU template from <cloud.pathfinder@gov.bc.ca>.
-  - Book an onboarding session with the Public Cloud team at <cloud.pathfinder@gov.bc.ca>.
+  - Sign a Memorandum of Understanding (MoU) with the OCIO.
+  - Book an onboarding session with the Public Cloud team.
+<!-- TODO: Update the "book onboarding session" with a link to the Support Portal request type, and/or MS Teams integration (when available) -->
 
-2. Navigate to the top menu called **Public Cloud Products**.
+1. Navigate to the top menu called **Public Cloud Products**.
 
   ![public-cloud](../images/provision-a-project-set/public-cloud.png)
 

@@ -8,7 +8,7 @@ By default, Azure Cloud Shell sessions run in a container in a Microsoft network
 
 To provide access to your private resources, you can [deploy Cloud Shell into an Azure virtual network](https://learn.microsoft.com/en-us/azure/cloud-shell/vnet/overview) that you control. This technique is called _virtual network isolation_.
 
-!!! tip "Microsoft QuickStart Template for Deploying Cloud Shell in a Virtual Network"
+!!! example "Deploying Cloud Shell in a Virtual Network example"
     Although Microsoft provides a [QuickStart template](https://learn.microsoft.com/en-us/azure/cloud-shell/vnet/deployment) for deploying Cloud Shell in a virtual network, this template includes deploying resources that are not permitted in the Azure Landing Zones (namely Private DNS Zones).
 
     To support our customers who would like to deploy Cloud Shell in a virtual network, we have created a Terraform module that deploys the same resources as Microsoft's QuickStart template (including the same configuration), but without deploying the Private DNS Zones. 
@@ -25,5 +25,5 @@ To confirm the container instance has been deleted, check the **Network Profile*
 
 ![Azure Cloud Shell - Removes Containers Operation Event](../images/azure-cloud-shell-remove-containers-event.png "Azure Cloud Shell - Removes Containers Operation Event")
 
-!!! tip "Azure Alert for Monitoring Container Instance Deletion"
+!!! tip "Monitoring container instance deletion"
     You could create an **Azure Alert** to monitor for this event to notify you when the container instance has been deleted.
