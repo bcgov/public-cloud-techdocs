@@ -51,6 +51,12 @@ For applications with advanced requirements, an [Azure Application Gateway](http
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
 
+## VNet integration vs private endpoints
+
+When working with Azure PaaS services, there are multiple ways to [integrate Azure services with virtual networks for network isolation](https://learn.microsoft.com/en-us/azure/virtual-network/vnet-integration-for-azure-services).
+
+While [VNet integration](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-for-azure-services), and [Service Endpoints](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview) are valid options, the recommended approach is to use [Private Endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview). This is because there is automation in place that will create the DNS record for the private endpoint in the centralized Private DNS Zone. For more information, please refer to the [Private Endpoints and DNS](../best-practices/be-mindful.md#private-endpoints-and-dns) section on the **Best Practices** page.
+
 ## Protected network resources
 
 In order to maintain the security of the Azure Landing Zone, there are certain network resources that are protected and cannot be modified by teams, and other network resources that cannot be created in the Landing Zone. These include:
