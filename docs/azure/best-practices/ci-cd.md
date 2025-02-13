@@ -6,13 +6,13 @@ Last updated: **{{ git_revision_date_localized }}**
 
 If you are using GitHub Actions for your CI/CD pipeline, consider the following best practices:
 
-* Configure [OpenID Connect (OIDC) authentication](#configuring-github-action-oidc-authentication-to-azure) for GitHub Actions to authenticate with Azure.
+- Configure [OpenID Connect (OIDC) authentication](#configuring-github-action-oidc-authentication-to-azure) for GitHub Actions to authenticate with Azure.
 
-* If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
+- If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
 
-* [Self-hosted runners](#github-self-hosted-runners-on-azure) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
+- [Self-hosted runners](#github-self-hosted-runners-on-azure) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
 
-### Configuring GitHub Action OIDC Authentication to Azure
+### Configuring GitHub Action OIDC authentication to Azure
 
 To allow GitHub Actions to securely access Azure subscriptions, use OpenID Connect (OIDC) authentication.
 
@@ -34,7 +34,7 @@ Here's a quick summary on how to set it up:
 
 This allows GitHub Actions to authenticate to Azure and access resources.
 
-### GitHub Self-Hosted Runners on Azure
+### GitHub self-hosted runners on Azure
 
 Microsoft has created an [Azure Verified Module (AVM) for CICD Agents and Runners](https://github.com/Azure/terraform-azurerm-avm-ptn-cicd-agents-and-runners). The Public Cloud team has tested this module, and verified that it works within our Azure environment (with a few customizations).
 
@@ -55,7 +55,7 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
 
 If you are using Azure Pipelines for your CI/CD pipeline, consider the following best practices:
 
-* Configure [Azure DevOps Workload identity federation (OIDC) with Terraform](https://devblogs.microsoft.com/devops/introduction-to-azure-devops-workload-identity-federation-oidc-with-terraform/) for Azure Pipelines to authenticate with Azure.
+- Configure [Azure DevOps Workload identity federation (OIDC) with Terraform](https://devblogs.microsoft.com/devops/introduction-to-azure-devops-workload-identity-federation-oidc-with-terraform/) for Azure Pipelines to authenticate with Azure.
 
 ### Managed DevOps Pools on Azure
 

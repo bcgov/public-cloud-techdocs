@@ -2,17 +2,17 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-## Cost Reporting and Cost Recovery
+## Cost reporting and cost recovery
 
 As part of applying the [principles of FinOps](https://www.finops.org/framework/principles/), and to help streamline our cost tracking processes, we've implemented an automated tagging policy that will now apply standardized tags to all resources within your subscriptions. This is designed to improve our cost recovery process while requiring no action on your part.
 
-### Tags Being Applied
+### Tags being applied
 
 You'll notice the following tags appearing on your resources:
 
-* `account_coding`
-* `billing_group`
-* `ministry_name`
+- `account_coding`
+- `billing_group`
+- `ministry_name`
 
 These tags are inherited from the Subscription-level tags (which are created using the information you provide when [provisioning a new Project Set](../../welcome/provision-a-project-set.md)).
 
@@ -53,16 +53,16 @@ Azure Cost Management lets you set [budgets](https://learn.microsoft.com/en-us/a
 
 ## Next steps
 
-* [Provision a Project Set](../../welcome/provision-a-project-set.md)
-* [User Management in Azure](../design-build-deploy/user-management.md)
-* [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
+- [Provision a Project Set](../../welcome/provision-a-project-set.md)
+- [User Management in Azure](../design-build-deploy/user-management.md)
+- [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
 ## Resources
 
-* [Azure Cost Management overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management)
-* [Understand and work with scopes](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes)
-* [How to optimize your cloud investment with Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-best-practices)
-* [How to budget your Azure cloud spend with Microsoft Cost Management](https://techcommunity.microsoft.com/blog/finopsblog/how-to-budget-your-azure-cloud-spend-with-microsoft-cost-management/4153963)
-* [Identify your savings potential in Azure](https://techcommunity.microsoft.com/blog/finopsblog/identify-your-savings-potential-in-azure/4131194)
-* [Unlock savings potential with Azure Advisor's Cost Optimization workbook](https://techcommunity.microsoft.com/blog/finopsblog/unlock-savings-potential-with-azure-advisors-cost-optimization-workbook/4135863)
-* [Switch off Virtual Machines on a schedule using an Azure Tag](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/switch-off-virtual-machines-on-a-schedule-using-an-azure-tag/4207182)
+- [Azure Cost Management overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management)
+- [Understand and work with scopes](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes)
+- [How to optimize your cloud investment with Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-best-practices)
+- [How to budget your Azure cloud spend with Microsoft Cost Management](https://techcommunity.microsoft.com/blog/finopsblog/how-to-budget-your-azure-cloud-spend-with-microsoft-cost-management/4153963)
+- [Identify your savings potential in Azure](https://techcommunity.microsoft.com/blog/finopsblog/identify-your-savings-potential-in-azure/4131194)
+- [Unlock savings potential with Azure Advisor's Cost Optimization workbook](https://techcommunity.microsoft.com/blog/finopsblog/unlock-savings-potential-with-azure-advisors-cost-optimization-workbook/4135863)
+- [Switch off Virtual Machines on a schedule using an Azure Tag](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/switch-off-virtual-machines-on-a-schedule-using-an-azure-tag/4207182)

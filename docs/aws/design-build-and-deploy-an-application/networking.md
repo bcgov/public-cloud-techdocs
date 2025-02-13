@@ -33,7 +33,7 @@ In the Perimeter account, we employ a [Gateway Load Balancer (GWLB)](https://aws
 
 Our firewall setup strictly permits only HTTP/HTTPS traffic, with all other forms of traffic being blocked. This includes SSH egress traffic, which might affect accessing git repositories and other services relying on SSH. For git repository access, we recommend using HTTPS instead of SSH.
 
-If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by contacting them by email at <Cloud.Pathfinder@gov.bc.ca>
+If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by [creating a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Transit gateway
 
@@ -164,7 +164,7 @@ API Gateway scales automatically to handle varying levels of traffic, ensuring t
 API Gateway is a fully managed service, reducing operational overhead and allowing you to focus on building and improving your APIs.
 
 **When to use ALBs**
-While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please reach out to <Cloud.Pathfinder@gov.bc.ca> for integration support.
+While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please create a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for integration support.
 
 ## Serverless resources
 

@@ -90,4 +90,4 @@ To provide a centralized view of costs across all accounts and projects, the Pub
 
 By following these guidelines, you help maintain the security and compliance of our AWS environment. If these limitations significantly impact your work, contact the Public Cloud team for guidance, workarounds, or to request exceptions for critical business needs.
 
-If you have any questions or need assistance, please contact the Public Cloud team at <cloud.pathfinder@gov.bc.ca>.
+If you have any questions or need assistance, create a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) ticket.

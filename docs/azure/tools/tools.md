@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 This page is designed for those who manage and maintain Azure environments. The purpose of this document is to provide a curated list of tools that can help you efficiently manage your Azure resources, ensure compliance with best practices, and optimize your cloud infrastructure. Whether you are looking to automate tasks, monitor performance, or enhance security, the tools listed here will assist you in achieving your goals.
 
-!!! tip "Azure tools"
+!!! info "Azure tools"
     It is important to note that these tools **do not** replace, but complement the [built-in Azure tools](../best-practices/governance.md), providing additional functionality and insights to enhance your Azure management experience.
 
 ## Helpful tools
@@ -12,13 +12,18 @@ This page is designed for those who manage and maintain Azure environments. The 
 While there are many tools available to help you manage your Azure environment, the following are some that we have found to be particularly useful.
 
 !!! abstract "Tools list"
-    If you have a favorite tool that you think should be included in this list, please let us know by emailing the Public Cloud Platform team at [cloud.pathfinder@gov.bc.ca](mailto:cloud.pathfinder@gov.bc.ca?subject=Azure%20Tools%20Suggestion).
+    If you have a favorite tool that you think should be included in this list, please let us know by [creating a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) with the details.
 
 ### Azure Quick Review (AZQR)
 
 A command-line interface (CLI) tool specifically designed to analyze Azure resources and identify whether they comply with Azure’s best practices and recommendations. Its primary purpose is to provide users with a detailed overview of their Azure resources, enabling them to easily identify any non-compliant configurations or potential areas for improvement. Check out the [Azure Quick Review (AZQR)](https://azure.github.io/azqr/).
 
 ![Azure Quick Review - PowerBI - Recommendations View](../images/azqr-powerbi-recommendations-view.png "Azure Quick Review - PowerBI - Recommendations View")
+
+You can also create a pipeline to automate the execution of AZQR on a schedule. Check out the following for an example:
+
+- [GitHub Actions workflow for AZQR](https://github.com/Azure/azqr/blob/main/examples/cicd/github-actions.yml)
+- [Azure DevOps pipeline for AZQR](https://github.com/Azure/azqr/blob/main/examples/cicd/azdo-pipeline.yml)
 
 ### Microsoft Assessments
 
@@ -34,3 +39,12 @@ A browser extension that allows you to download icons from the Azure portal. Hel
 - Edge: [Amazing Icon Downloader](https://microsoftedge.microsoft.com/addons/detail/amazing-icon-downloader/goanjjfecbakkdmbchgoooajnbiafong)
 
 ![Amazing Icon Downloader](../images/amazing-icon-downloader.png "Amazing Icon Downloader")
+
+### Terraform Scanning Tools
+
+Tools that scan Terraform code to identify security vulnerabilities, compliance issues, and other potential problems. Check out the following:
+
+- [Checkov](https://www.checkov.io/)
+- [TFLint](https://github.com/terraform-linters/tflint)
+- [Trivy](https://trivy.dev/latest/)
+- [InfraCost](https://www.infracost.io/)

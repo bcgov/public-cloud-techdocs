@@ -39,7 +39,7 @@ Rocket.Chat will be your main communication channel for platform updates and sup
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
-### Public Cloud Community Updates
+### Public Cloud community updates
 
 Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public Cloud Accelerator Service (also known as CloudPathFinder) and its community, and changes to the platform.
 
