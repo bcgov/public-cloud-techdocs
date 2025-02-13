@@ -164,7 +164,7 @@ API Gateway scales automatically to handle varying levels of traffic, ensuring t
 API Gateway is a fully managed service, reducing operational overhead and allowing you to focus on building and improving your APIs.
 
 **When to use ALBs**
-While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for integration support.
+While API Gateway is recommended for modern applications, there is still a use case for ALBs with legacy applications where it may be difficult or impossible to use an API Gateway. If your application is unable to accommodate an API Gateway, then please create a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for integration support.
 
 ## Serverless resources
 
