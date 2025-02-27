@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 This guide explains how to manage user access in your Azure Landing Zone. It's designed for Product Owners (POs) and Technical Leads (TLs) who need to administer user permissions within their Project Set.
 
-## Understanding Your Project Set
+## Understanding your project set
 
 Your Project Set consists of up to four Azure subscriptions grouped under a single Management Group. Depending on your needs, you may have deployed one or more of these subscriptions:
 
@@ -20,9 +20,9 @@ The specific subscriptions that are deployed for your Project Set are defined in
 
 All your resources are organized within these subscriptions, and your unique Project Set license plate (e.g., "abc123") prefixes all your Management Groups and subscriptions.
 
-## Access Management Overview
+## Access management overview
 
-### Permission Tiers
+### Permission tiers
 
 Your Project Set uses three standard permission levels:
 
@@ -33,7 +33,7 @@ Your Project Set uses three standard permission levels:
 !!! note "Policy Restrictions"
     While these roles provide different levels of access, all actions are still subject to Azure Policy restrictions. Even with Owner or Contributor roles, certain operations may be restricted by policies applied to your Project Set. These policies help ensure compliance with security standards and organizational requirements.
 
-### Security Group Structure
+### Security group structure
 
 Access is managed through EntraID security groups that follow this naming pattern:
 
@@ -49,7 +49,7 @@ These groups are assigned roles at the Management Group level, which automatical
 
 ![Management Group IAM](../images/management-group-iam.png)
 
-## What You Can and Cannot Do
+## What you can and cannot do
 
 ### As a Product Owner or Technical Lead with the Owner role, you can:
 
@@ -75,7 +75,7 @@ This restriction is by design to maintain security and simplify access auditing 
 !!! info "Service Principals Exception"
     While you cannot directly assign users or groups to roles, you can still directly assign Service Principals to roles.
 
-## Managing Group Membership
+## Managing group membership
 
 As a Product Owner, you have two options for managing your security groups:
 
@@ -97,7 +97,7 @@ As a Product Owner, you have two options for managing your security groups:
 4. Find and select your security group (prefixed with your Project Set license plate)
 5. Use the "Members" tab to add or remove users
 
-## Best Practices for User Management
+## Best practices for user management
 
 1. **Use the right permission level**: Assign users to the appropriate security group based on their needs:
    - Readers for those who only need to view resources
@@ -112,6 +112,6 @@ As a Product Owner, you have two options for managing your security groups:
 
 5. **Be aware of policy restrictions**: Understand that Azure Policies may restrict certain actions regardless of RBAC permissions.
 
-## Need Help?
+## Need help?
 
 If you need assistance with user management or have questions about your access structure, [please contact the Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.
