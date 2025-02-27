@@ -6,7 +6,7 @@ This guide explains how to manage user access in your Azure Landing Zone. It's d
 
 ## Understanding Your Project Set
 
-Your Project Set consists of four Azure subscriptions grouped under a single management group:
+Your Project Set consists of up to four Azure subscriptions grouped under a single Management Group. Depending on your needs, you may have deployed one or more of these subscriptions:
 
 ```
 Project Set Management Group (abc123)
@@ -16,7 +16,9 @@ Project Set Management Group (abc123)
 └── Tools Subscription (abc123-tools)
 ```
 
-All your resources are organized within these subscriptions, and your unique Project Set license plate (e.g., "abc123") prefixes all your management groups and subscriptions.
+The specific subscriptions that are deployed for your Project Set are defined in the [Product Registry](https://registry.developer.gov.bc.ca/). This is where your team would have specified which environments (Development, Test, Production, and/or Tools) you need for your project.
+
+All your resources are organized within these subscriptions, and your unique Project Set license plate (e.g., "abc123") prefixes all your Management Groups and subscriptions.
 
 ## Access Management Overview
 
@@ -43,7 +45,7 @@ For example:
 - `DO_PuC_Azure_Live_abc123_Contributors`
 - `DO_PuC_Azure_Live_abc123_Readers`
 
-These groups are assigned roles at the management group level, which automatically propagates permissions down to all four subscriptions. This approach ensures consistent access control across your entire Project Set.
+These groups are assigned roles at the Management Group level, which automatically propagates permissions down to all subscriptions within your Project Set. This approach ensures consistent access control across your entire Project Set, regardless of how many subscriptions you have deployed (from one to four).
 
 ![Management Group IAM](../images/management-group-iam.png)
 
