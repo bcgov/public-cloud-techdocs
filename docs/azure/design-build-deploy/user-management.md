@@ -1,4 +1,4 @@
-# User Management in the Azure Landing Zone
+# User management in the Azure Landing Zone
 
 Last updated: **{{ git_revision_date_localized }}**
 
