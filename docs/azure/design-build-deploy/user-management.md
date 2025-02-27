@@ -38,6 +38,7 @@ Access is managed through EntraID security groups that follow this naming patter
 `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 
 For example:
+
 - `DO_PuC_Azure_Live_abc123_Owners`
 - `DO_PuC_Azure_Live_abc123_Contributors`
 - `DO_PuC_Azure_Live_abc123_Readers`
