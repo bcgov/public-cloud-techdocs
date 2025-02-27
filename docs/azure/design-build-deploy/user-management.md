@@ -2,76 +2,116 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-This guide explains how Product Owners (POs) and Technical Leads (TLs) can manage users in the Azure Landing Zone. It focuses on those with a restricted Owner role on the Project Set Management Group, which applies to the subscriptions within the Project Set.
+This guide explains how to manage user access in your Azure Landing Zone. It's designed for Product Owners (POs) and Technical Leads (TLs) who need to administer user permissions within their Project Set.
 
-## What you can do
+## Understanding Your Project Set
 
-As a Product Owner or Technical Lead with restricted Owner permissions, you have the ability to:
+Your Project Set consists of up to four Azure subscriptions grouped under a single Management Group. Depending on your needs, you may have deployed one or more of these subscriptions:
 
-- Create [custom Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
-- Create and manage [Service Principals](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser)
-- Create and manage [Managed Identities](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview)
-- Create and manage all resources within your subscription
+```
+Project Set Management Group (abc123)
+├── Development Subscription (abc123-dev)
+├── Test Subscription (abc123-test)
+├── Production Subscription (abc123-prod)
+└── Tools Subscription (abc123-tools)
+```
 
-## What you can't do
+The specific subscriptions that are deployed for your Project Set are defined in the [Product Registry](https://registry.developer.gov.bc.ca/). This is where your team would have specified which environments (Development, Test, Production, and/or Tools) you need for your project.
 
-As a Product Owner or Technical Lead with restricted Owner permissions, you don't have the ability to:
+All your resources are organized within these subscriptions, and your unique Project Set license plate (e.g., "abc123") prefixes all your Management Groups and subscriptions.
 
-- Assign users to an Owner role
-- Assign users to roles at various levels:
+## Access Management Overview
 
-   - Project Set Management Group (prefixed with your Project Set license plate, ie. "abc123")
-   - Subscription (prefixed with your Project Set license plate, ie. "abc123")
-   - Resource groups
-   - Individual resources
+### Permission Tiers
 
-!!! info "Assigning Users to Roles"
-    We are transitioning from direct user role assignments to Entra ID Security Groups. This simplifies access auditing for regulatory compliance.
+Your Project Set uses three standard permission levels:
 
-    You'll still be able to directly assign Service Principals to Roles.
+- **Reader**: View-only access to resources
+- **Contributor**: Can create and manage resources but cannot modify access permissions
+- **Owner**: Administrative access with full control (with certain security restrictions)
 
-## Best practices for user management
+!!! note "Policy Restrictions"
+    While these roles provide different levels of access, all actions are still subject to Azure Policy restrictions. Even with Owner or Contributor roles, certain operations may be restricted by policies applied to your Project Set. These policies help ensure compliance with security standards and organizational requirements.
 
-To ensure secure and efficient user management, we recommend the following best practices:
+### Security Group Structure
 
-1. **Assign roles at higher levels**: Whenever possible, assign users to roles at the Management Group or Subscription levels. This approach simplifies management and provides consistent access across resources.
+Access is managed through EntraID security groups that follow this naming pattern:
 
-2. **Follow the principle of least privilege**: Only give users the roles they need to perform their specific job functions. This minimizes potential security risks.
+`DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 
-3. **Regularly review access**: Periodically review user access and remove unnecessary permissions to maintain a secure environment.
+For example:
 
-## How to manage users in the Azure portal
+- `DO_PuC_Azure_Live_abc123_Owners`
+- `DO_PuC_Azure_Live_abc123_Contributors`
+- `DO_PuC_Azure_Live_abc123_Readers`
 
-To manage users and their roles:
+These groups are assigned roles at the Management Group level, which automatically propagates permissions down to all subscriptions within your Project Set. This approach ensures consistent access control across your entire Project Set, regardless of how many subscriptions you have deployed (from one to four).
 
-1. Log in to the [Azure portal](https://portal.azure.com).
+![Management Group IAM](../images/management-group-iam.png)
 
-2. Navigate to your Subscription or Management Group (remember, these are prefixed with your Project Set license plate, ie. "abc123").
+## What You Can and Cannot Do
 
-3. In the left sidebar, click on "**Access control (IAM)**".
+### As a Product Owner or Technical Lead with the Owner role, you can:
 
-   ![Azure Subscription - IAM](../images/subscription-iam.png "Azure Subscription - IAM")
+- Manage membership in your security groups
+- Create custom roles for specific needs
+- Create and manage service principals
+- Assign service principals to a role on resources
+- Create and manage managed identities
+- Create and manage all resources within your subscriptions (subject to policy restrictions)
 
-4. Use the "**Add**" button to assign new roles to users.
+### You cannot:
 
-   ![Azure Subscription - IAM - Add Role](../images/subscription-iam-add-role.png "Azure Subscription - IAM - Add Role")
+- Assign users or groups directly to an Owner role
+- Create direct role assignments (outside of security groups) at any level:
+  - Project Set Management Group
+  - Subscriptions
+  - Resource groups
+  - Individual resources
+- Bypass Azure Policy restrictions (policies take precedence over RBAC permissions)
 
-   ![Azure Subscription - IAM - Add Role Assignment](../images/subscription-iam-add-role-assignment.png "Azure Subscription - IAM - Add Role Assignment")
+This restriction is by design to maintain security and simplify access auditing for regulatory compliance.
 
-5. To add a user as a **Contributor**, choose **Add Role Assignment** > **Privileged Administrator Roles** > **Contributor**.
+!!! info "Service Principals Exception"
+    While you cannot directly assign users or groups to roles, you can still directly assign Service Principals to roles.
 
-   ![Azure Subscription - IAM - Add Privileged Role Assignment](../images/subscription-iam-add-role-assignment-privileged.png "Azure Subscription - IAM - Add Privileged Role Assignment")
+## Managing Group Membership
 
-6. Use the "**Role assignments**" tab to view and manage existing role assignments.
+As a Product Owner, you have two options for managing your security groups:
 
-   ![Azure Subscription - IAM - Existing Role Assignments](../images/subscription-iam-existing-role-assignments.png "Azure Subscription - IAM - Existing Role Assignments")
+### Option 1: Using Microsoft Account Management
 
-7. To create custom roles, use the "**Roles**" tab and click "**Add custom role**".
+1. Go to [Microsoft Account Groups](https://myaccount.microsoft.com/groups)
+2. Sign in with your Microsoft account
+3. You'll see a list of groups you own or are a member of
+4. For groups you own, you can:
+   - Add or remove members
+   - View group details
+   - Manage group settings
 
-Remember, user management is a critical aspect of maintaining a secure and well-organized Azure environment. Always double-check your assignments and follow your organization's security policies.
+### Option 2: Using the Azure Portal
 
-For more detailed instructions on specific tasks or advanced user management techniques, please refer to the [official Azure documentation](https://docs.microsoft.com/en-us/azure/role-based-access-control/).
+1. Log in to the [Azure portal](https://portal.azure.com)
+2. Navigate to your Azure Active Directory
+3. Go to "Groups" in the left sidebar
+4. Find and select your security group (prefixed with your Project Set license plate)
+5. Use the "Members" tab to add or remove users
 
-## Note on Project Set license plates
+## Best Practices for User Management
 
-Your Management Groups and Subscriptions are prefixed with your unique Project Set license plate (ie. "abc123"). This prefix helps identify and organize resources specific to your project. When navigating the Azure portal or assigning roles, always look for resources and groups that start with your Project Set license plate.
+1. **Use the right permission level**: Assign users to the appropriate security group based on their needs:
+   - Readers for those who only need to view resources
+   - Contributors for those who need to create and manage resources
+   - Owners only for those who need administrative access
+
+2. **Follow the principle of least privilege**: Only give users the minimum access they need to perform their job functions.
+
+3. **Regularly review access**: Periodically audit your security groups and remove unnecessary permissions.
+
+4. **Document your access structure**: Maintain documentation of who has access to what and why.
+
+5. **Be aware of policy restrictions**: Understand that Azure Policies may restrict certain actions regardless of RBAC permissions.
+
+## Need Help?
+
+If you need assistance with user management or have questions about your access structure, [please contact the Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.
