@@ -56,6 +56,15 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   TLS 1.2 must be used
 *   **DDoS Protection:** Virtual Networks will automatically have Azure DDoS Network Protection enabled (if not already present).
 
+### Private endpoints and DNS integration
+
+*   **Private Endpoints Required:** Access to most Azure PaaS services (like Storage Accounts, Key Vault, SQL Databases, etc.) is restricted to private endpoints only. This means that these services will not have public IP addresses and will only be accessible from within your virtual network (or peered networks). Creating a PaaS service without configuring a private endpoint, or attempting to enable public access after creation, will be blocked by a "Deny" policy.
+*   **Centralized Private DNS Zones:** To make Private Endpoints work correctly, DNS resolution needs to be handled properly. The landing zone uses a centralized set of Private DNS Zones, managed within the "Connectivity" subscription (or a dedicated DNS subscription).
+    *   You are prevented from creating your own Private DNS Zones for supported PaaS services within your landing zone subscriptions. This is enforced by a "Deny" policy. This ensures consistency and prevents conflicts.
+    *   Policies will automatically create the necessary DNS records in the centralized Private DNS Zones when you deploy a Private Endpoint. This is handled by "DeployIfNotExists" policies. You generally don't need to manually manage DNS for Private Endpoints.
+*   **Policy Naming:** Policies related to private endpoints will have naming that includes "Deploy-Private-DNS-Generic".
+*   **DNS Zone Groups:** When you create a private endpoint, the policy will automatically create a "private DNS zone group" and link it to the correct Private DNS Zone.
+
 ## Security requirements
 
 *   **HTTPS Only:** Access to many services (like web apps, function apps, storage accounts, and APIs) will be enforced to use HTTPS only. HTTP (unencrypted) connections will be denied or automatically redirected to HTTPS.
