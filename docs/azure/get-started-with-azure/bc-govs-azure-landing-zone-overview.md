@@ -28,6 +28,8 @@ The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en
 
 [![Defender for Cloud Overview](../images/defender-for-cloud-overview.png "Defender for Cloud Overview")](https://learn.microsoft.com/en-us/azure/reusable-content/ce-skilling/azure/media/defender-for-cloud/overview.png#lightbox)
 
+For more information see [Azure Guardrails](./design-build-deploy/guardrails.md)
+
 ### Networking
 
 The Cloud Adoption Framework (CAF) implements a hub-and-spoke network topology. The hub is the central point of connectivity to the on-premises network, and the spoke is the virtual network that connects to the hub. The hub-and-spoke model allows for the centralization of services and management, while providing isolation and segmentation for workloads.

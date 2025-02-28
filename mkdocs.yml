@@ -30,6 +30,7 @@ nav:
   - Azure:
       - Get started with Azure:
           - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md
+          - Azure Security and compliance guardrails: azure/get-started-with-azure/guardrails.md
       - Design, build, and deploy:
           - Requirements: azure/design-build-deploy/requirements.md
           - User management: azure/design-build-deploy/user-management.md
