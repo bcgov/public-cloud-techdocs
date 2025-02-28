@@ -41,7 +41,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   **No Service Endpoints:** Service Endpoints are likely *denied*. The preferred approach is to use Private Endpoints for secure access to PaaS services.
 
 ### VNet management
-*   **No VNet Creation:** New VNets *cannot* be created in the landing zone, except for a special VNet with "-vwan-spoke" in the name (presumably related to Azure Virtual WAN integration).
+*   **No VNet Creation:** New VNets *cannot* be created in the landing zone.
 *   **No DNS Changes to VNet:** VNet DNS settings are enforced and cannot be changed. This is configured at the landing zone level.
 *   **Azure Firewall Policy Required:** If an Azure Firewall is deployed, it *must* have an associated Firewall Policy.
 *   **VNet Peering Not Allowed:** VNet peering is not allowed within the landing zone. All network connectivity is managed centrally.
