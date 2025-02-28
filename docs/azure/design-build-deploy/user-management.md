@@ -31,7 +31,7 @@ Your Project Set uses three standard permission levels:
 - **Owner**: Administrative access with full control (with certain security restrictions)
 
 !!! note "Policy Restrictions"
-    While these roles provide different levels of access, all actions are still subject to Azure Policy restrictions. Even with Owner or Contributor roles, certain operations may be restricted by policies applied to your Project Set. These policies help ensure compliance with security standards and organizational requirements.
+    While these roles provide different levels of access, all actions are still subject to [Azure Policy restrictions](../get-started-with-azure/guardrails.md). Even with Owner or Contributor roles, certain operations may be restricted by policies applied to your Project Set. These policies help ensure compliance with security standards and organizational requirements.
 
 ### Security group structure
 
@@ -58,7 +58,7 @@ These groups are assigned roles at the Management Group level, which automatical
 - Create and manage service principals
 - Assign service principals to a role on resources
 - Create and manage managed identities
-- Create and manage all resources within your subscriptions (subject to policy restrictions)
+- Create and manage all resources within your subscriptions (subject to [policy restrictions](../get-started-with-azure/guardrails.md))
 
 ### You cannot:
 
@@ -68,7 +68,7 @@ These groups are assigned roles at the Management Group level, which automatical
   - Subscriptions
   - Resource groups
   - Individual resources
-- Bypass Azure Policy restrictions (policies take precedence over RBAC permissions)
+- Bypass [Azure Policy restrictions](../get-started-with-azure/guardrails.md) (policies take precedence over RBAC permissions)
 
 This restriction is by design to maintain security and simplify access auditing for regulatory compliance.
 
@@ -110,7 +110,7 @@ As a Product Owner, you have two options for managing your security groups:
 
 4. **Document your access structure**: Maintain documentation of who has access to what and why.
 
-5. **Be aware of policy restrictions**: Understand that Azure Policies may restrict certain actions regardless of RBAC permissions.
+5. **Be aware of policy restrictions**: Understand that [Azure Policies](../get-started-with-azure/guardrails.md) may restrict certain actions regardless of RBAC permissions.
 
 ## Need help?
 
