@@ -25,7 +25,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 
 *   **Allowed Locations (Regions):** You can only deploy resources in Canada Central and Canada East. If you try to deploy to a region not on the approved list, the deployment will be **blocked**. Note that networking is only provided in Canada Central.
 *   **Resource Group Locations:** The location (region) of a resource group *must* match the location of the resources within it.
-*   **Denied Resource Types:**  There is likely a general "Deny" policy for specific resource types that are *not* allowed within the landing zone, preventing their creation. The precise list is defined, but not included in your shared code.
+*   **Denied Resource Types:** There is a "Deny" policy for specific resource types that are *not* allowed within the landing zone, preventing their creation.
 
 ## Networking restrictions
 
@@ -37,8 +37,8 @@ Think of these guardrails as automatic checks and balances. They don't require y
 ### Subnet configuration requirements
 *   **Subnets Require Network Security Groups (NSGs):** Every subnet *must* have a Network Security Group (NSG) associated with it. You *cannot* create a subnet without an NSG. NSGs act like mini-firewalls for your subnets, controlling inbound and outbound traffic.
 *   **Subnets Require Private Endpoint Network Policies**: Subnets created must have the private endpoint network policy enabled.
-*   **Subnets Require User Defined Routes (UDRs):** Every subnet (except specific exceptions like `AzureBastionSubnet` and gateway subnets) *must* have a User-Defined Route (UDR) table associated. This is likely used to force traffic through a central firewall (e.g., Azure Firewall) in the hub VNet.
-*   **No Service Endpoints:** Service Endpoints are likely *denied*. The preferred approach is to use Private Endpoints for secure access to PaaS services.
+*   **Subnets Require User Defined Routes (UDRs):** Every subnet (except specific exceptions like `AzureBastionSubnet` and gateway subnets) *must* have a User-Defined Route (UDR) table associated. This is used to force traffic through a central firewall (e.g., Azure Firewall) in the hub VNet.
+*   **No Service Endpoints:** Service Endpoints are *denied*. The preferred approach is to use Private Endpoints for secure access to PaaS services.
 
 ### VNet management
 *   **No VNet Creation:** New VNets *cannot* be created in the landing zone.
