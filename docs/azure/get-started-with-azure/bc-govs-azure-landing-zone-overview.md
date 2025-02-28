@@ -28,7 +28,7 @@ The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en
 
 [![Defender for Cloud Overview](../images/defender-for-cloud-overview.png "Defender for Cloud Overview")](https://learn.microsoft.com/en-us/azure/reusable-content/ce-skilling/azure/media/defender-for-cloud/overview.png#lightbox)
 
-For more information see [Azure Guardrails](./design-build-deploy/guardrails.md)
+For more information see [Azure Guardrails](guardrails.md)
 
 ### Networking
 
