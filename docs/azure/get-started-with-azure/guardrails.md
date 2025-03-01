@@ -94,30 +94,30 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ### Key vault requirements
 
-*   **Deletion Protection:**
-    * Soft delete is *enabled* on all Key Vaults, preventing accidental or malicious permanent deletion of secrets, keys, and certificates
-    * Purge protection is *enabled* on all Key Vaults, adding an extra layer of protection against permanent deletion
-*   **Access Control:**
-    * Key Vault Firewall is enabled on all Key Vaults, and configured to *Deny All* traffic
-    * Key Vault must use Azure RBAC - policy will deny creation using access policies
-*   **Keys:**
-    * Must have expiration dates set
-    * Minimum RSA key sizes are enforced
-    * Policies audit if keys are close to expiration
-*   **Managed HSM Keys:**
-    * Must have expiration date
-    * Must use allowed cryptography curve names  
-    * Cannot be active longer than specified days
-    * Expired keys must be deleted
-*   **Secrets:**
-    * Must have expiration date
-    * Cannot be active longer than specified days
-    * Must have content type set
-    * Policies audit if close to expiration
-*   **Certificates:**
-    * Must use integrated certificate authority
-    * Cannot use non-integrated certificate authorities
-    * Must have lifetime actions triggered at specific percentage
+* **Deletion Protection:**
+  * Soft delete is *enabled* on all Key Vaults, preventing accidental or malicious permanent deletion of secrets, keys, and certificates
+  * Purge protection is *enabled* on all Key Vaults, adding an extra layer of protection against permanent deletion
+* **Access Control:**
+  * Key Vault Firewall is enabled on all Key Vaults, and configured to *Deny All* traffic
+  * Key Vault must use Azure RBAC - policy will deny creation using access policies
+* **Keys:**
+  * Must have expiration dates set
+  * Minimum RSA key sizes are enforced
+  * Policies audit if keys are close to expiration
+* **Managed HSM Keys:**
+  * Must have expiration date
+  * Must use allowed cryptography curve names  
+  * Cannot be active longer than specified days
+  * Expired keys must be deleted
+* **Secrets:**
+  * Must have expiration date
+  * Cannot be active longer than specified days
+  * Must have content type set
+  * Policies audit if close to expiration
+* **Certificates:**
+  * Must use integrated certificate authority
+  * Cannot use non-integrated certificate authorities
+  * Must have lifetime actions triggered at specific percentage
 
 ### Storage account security
 
