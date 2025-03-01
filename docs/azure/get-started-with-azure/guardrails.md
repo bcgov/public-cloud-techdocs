@@ -94,23 +94,30 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ### Key vault requirements
 
-*   **Soft Delete:** Soft delete is *enabled* on all Key Vaults, preventing accidental or malicious permanent deletion of secrets, keys, and certificates.
-*   **Purge Protection:** Purge protection is *enabled* on all Key Vaults, adding an extra layer of protection against permanent deletion.
-*   **Expiration Dates:** Secrets and keys *must* have expiration dates set.
-*   **Key and Secret Lifetimes:** Policies will *audit* if keys and secrets are close to their expiration date.
-*   **Key Vault Firewall:** Enabled on all Key Vaults, and configured to *Deny All* traffic.
-*   **RSA Key Sizes:** Minimum RSA key sizes are enforced for certificates and keys.
-*   **Key Vault should use Azure RBAC:** The policy will deny the creation of a Key Vault using access policies.
-*   **Key Vault should have certificate lifetime actions triggered at a specific percentage of life time**
-*   **Managed HSM key expiry:** Managed HSM keys should have an expiration date.
-*   **Managed HSM keys should use allowed cryptography curve names.**
-*   **Managed HSM keys should not be active for longer than the specified days.**
-*   **Secrets should have an expiry date.**
-*   **Secrets should not be active for longer than the specified days.**
-*   **Secrets should have content type set.**
-*   **Certificates from non-integrated certificate authorities should not be used.**
-*   **Certificates issued by integrated certificate authority should be used.**
-*   **Expired managed HSM keys should be deleted**
+*   **Deletion Protection:**
+    * Soft delete is *enabled* on all Key Vaults, preventing accidental or malicious permanent deletion of secrets, keys, and certificates
+    * Purge protection is *enabled* on all Key Vaults, adding an extra layer of protection against permanent deletion
+*   **Access Control:**
+    * Key Vault Firewall is enabled on all Key Vaults, and configured to *Deny All* traffic
+    * Key Vault must use Azure RBAC - policy will deny creation using access policies
+*   **Keys:**
+    * Must have expiration dates set
+    * Minimum RSA key sizes are enforced
+    * Policies audit if keys are close to expiration
+*   **Managed HSM Keys:**
+    * Must have expiration date
+    * Must use allowed cryptography curve names  
+    * Cannot be active longer than specified days
+    * Expired keys must be deleted
+*   **Secrets:**
+    * Must have expiration date
+    * Cannot be active longer than specified days
+    * Must have content type set
+    * Policies audit if close to expiration
+*   **Certificates:**
+    * Must use integrated certificate authority
+    * Cannot use non-integrated certificate authorities
+    * Must have lifetime actions triggered at specific percentage
 
 ### Storage account security
 
