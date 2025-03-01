@@ -38,6 +38,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   **Subnets Require Network Security Groups (NSGs):** Every subnet *must* have a Network Security Group (NSG) associated with it. You *cannot* create a subnet without an NSG. NSGs act like mini-firewalls for your subnets, controlling inbound and outbound traffic.
 *   **Subnets Require Private Endpoint Network Policies**: Subnets created must have the private endpoint network policy enabled.
 *   **No Service Endpoints:** Service Endpoints are *denied*. The preferred approach is to use Private Endpoints for secure access to PaaS services.
+*   **Private Subnets Only:** All subnets are configured as private by default, with no direct outbound internet access. Any required internet connectivity is managed centrally through the central virtual WAN and firewall infrastructure. This aligns with Microsoft's move away from default outbound access in virtual networks.
 
 ### VNet management
 *   **No VNet Creation:** New VNets *cannot* be created in the landing zone.
