@@ -133,7 +133,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
     *   Unused public IP addresses.
     *   Empty App Service plans.
 
-## Identity & access management
+## Identity & access management {#identity--access-management}
 
 * Access is managed through EntraID security groups with standardized naming: `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 * Three standard permission levels are enforced:
