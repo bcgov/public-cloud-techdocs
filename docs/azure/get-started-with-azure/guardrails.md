@@ -6,25 +6,25 @@ This document explains the "guardrails" (security and compliance rules) set up i
 
 Think of these guardrails as automatic checks and balances. They don't require you to do anything extra most of the time, but they might prevent you from doing something that goes against our established best practices, or they might automatically configure resources to meet compliance standards.
 
-!!! info
+!!! info "About Azure Policy Effects"
     This document focuses on the things that you might be *prevented* from doing (Deny policies), the things you *must* do as a result, or things that will be automatically configured (DeployIfNotExists and Modify policies). Audit policies are also in place, which will flag non-compliant resources, but won't block deployments.
 
 ## Key areas covered
 
-1.  **Resource Deployment Restrictions:** Where and what you can deploy.
-2.  **Networking Restrictions:** How your networks are configured and protected.
-3.  **Security Requirements:** Mandatory security settings.
-4.  **Data Protection:** How your data is protected at rest and in transit.
-5.  **Cost Optimization:** Preventing unnecessary costs.
-6.  **Identity & Access Management:** Controlling who can access resources.
-7.  **Specific Service Guardrails:** Restrictions related to specific Azure services.
-8.  **Monitoring:** Diagnostic data collection and automated security checks.
-9.  **Tagging:** Automatic application of tags.
+1.  [**Resource Deployment Restrictions:**](#resource-deployment-restrictions) Where and what you can deploy.
+2.  [**Networking Restrictions:**](#networking-restrictions) How your networks are configured and protected.
+3.  [**Security Requirements:**](#security-requirements) Mandatory security settings.
+4.  [**Data Protection:**](#data-protection) How your data is protected at rest and in transit.
+5.  [**Cost Optimization:**](#cost-optimization) Preventing unnecessary costs.
+6.  [**Identity & Access Management:**](#identity--access-management) Controlling who can access resources.
+7.  [**Specific Service Guardrails:**](#specific-service-guardrails) Restrictions related to specific Azure services.
+8.  [**Monitoring:**](#monitoring) Diagnostic data collection and automated security checks.
+9.  [**Tagging:**](#tagging) Automatic application of tags.
 
 ## Resource deployment restrictions
 
-*   **Allowed Locations (Regions):** You can only deploy resources in Canada Central and Canada East. If you try to deploy to a region not on the approved list, the deployment will be **blocked**. Note that networking is only provided in Canada Central.
-*   **Resource Group Locations:** The location (region) of a resource group *must* match the location of the resources within it.
+*   **Allowed Locations (Regions):** Resource Groups and resources can only be deployed in Canada Central and Canada East. If you try to deploy to a region not on the approved list, the deployment will be **blocked**. Note that networking is only provided in Canada Central.
+*   **Resource Groups:** Resource Groups can only be created in Canada Central and Canada East regions. Resources must be deployed to a Resource Group in the same region as the resource itself. For example, if you want to deploy a VM in Canada Central, you must first create a Resource Group in Canada Central and then deploy the VM into that Resource Group.
 *   **Denied Resource Types:** There is a "Deny" policy for specific resource types that are *not* allowed within the landing zone, preventing their creation.
 
 ## Networking restrictions
@@ -37,13 +37,11 @@ Think of these guardrails as automatic checks and balances. They don't require y
 ### Subnet configuration requirements
 *   **Subnets Require Network Security Groups (NSGs):** Every subnet *must* have a Network Security Group (NSG) associated with it. You *cannot* create a subnet without an NSG. NSGs act like mini-firewalls for your subnets, controlling inbound and outbound traffic.
 *   **Subnets Require Private Endpoint Network Policies**: Subnets created must have the private endpoint network policy enabled.
-*   **Subnets Require User Defined Routes (UDRs):** Every subnet (except specific exceptions like `AzureBastionSubnet` and gateway subnets) *must* have a User-Defined Route (UDR) table associated. This is used to force traffic through a central firewall (e.g., Azure Firewall) in the hub VNet.
 *   **No Service Endpoints:** Service Endpoints are *denied*. The preferred approach is to use Private Endpoints for secure access to PaaS services.
 
 ### VNet management
 *   **No VNet Creation:** New VNets *cannot* be created in the landing zone.
 *   **No DNS Changes to VNet:** VNet DNS settings are enforced and cannot be changed. This is configured at the landing zone level.
-*   **Azure Firewall Policy Required:** If an Azure Firewall is deployed, it *must* have an associated Firewall Policy.
 *   **VNet Peering Not Allowed:** VNet peering is not allowed within the landing zone. All network connectivity is managed centrally.
 
 ### Protected resources
@@ -54,7 +52,6 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   Application Gateways *must* use the "WAF_v2" SKU (Web Application Firewall).
 *   The WAF *must* be in "Prevention" mode.
 *   TLS 1.2 must be used
-*   **DDoS Protection:** Virtual Networks will automatically have Azure DDoS Network Protection enabled (if not already present).
 
 ### Private endpoints and DNS integration
 
@@ -62,7 +59,6 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   **Centralized Private DNS Zones:** To make Private Endpoints work correctly, DNS resolution needs to be handled properly. The landing zone uses a centralized set of Private DNS Zones, managed within the "Connectivity" subscription (or a dedicated DNS subscription).
     *   You are prevented from creating your own Private DNS Zones for supported PaaS services within your landing zone subscriptions. This is enforced by a "Deny" policy. This ensures consistency and prevents conflicts.
     *   Policies will automatically create the necessary DNS records in the centralized Private DNS Zones when you deploy a Private Endpoint. This is handled by "DeployIfNotExists" policies. You generally don't need to manually manage DNS for Private Endpoints.
-*   **Policy Naming:** Policies related to private endpoints will have naming that includes "Deploy-Private-DNS-Generic".
 *   **DNS Zone Groups:** When you create a private endpoint, the policy will automatically create a "private DNS zone group" and link it to the correct Private DNS Zone.
 
 ## Security requirements
@@ -101,9 +97,9 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 *   **Purge Protection:** Purge protection is *enabled* on all Key Vaults, adding an extra layer of protection against permanent deletion.
 *   **Expiration Dates:** Secrets and keys *must* have expiration dates set.
 *   **Key and Secret Lifetimes:** Policies will *audit* if keys and secrets are close to their expiration date.
-*   **Key Vault Firewall:** Enabled on all key vaults, and configured to *Deny All* traffic.
+*   **Key Vault Firewall:** Enabled on all Key Vaults, and configured to *Deny All* traffic.
 *   **RSA Key Sizes:** Minimum RSA key sizes are enforced for certificates and keys.
-*   **Key Vault should use Azure RBAC** The policy will deny the creation of a Key Vault using access policies.
+*   **Key Vault should use Azure RBAC:** The policy will deny the creation of a Key Vault using access policies.
 *   **Key Vault should have certificate lifetime actions triggered at a specific percentage of life time**
 *   **Managed HSM key expiry:** Managed HSM keys should have an expiration date.
 *   **Managed HSM keys should use allowed cryptography curve names.**
@@ -117,10 +113,10 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ### Storage account security
 
-*   **Data Loss Prevention** Azure Storage accounts should restrict the allowed copy scope.
+*   **Data Loss Prevention:** Azure Storage accounts should restrict the allowed copy scope.
 *   Storage Accounts with custom domains assigned are denied.
 *   **No SFTP**: Storage Accounts are not allowed to have SFTP support enabled for Blob storage.
-*   **No local users:** Storage accounts *cannot* use local users for features like SFTP.  Authentication should be managed through Azure AD.
+*   **No local users:** Storage accounts *cannot* use local users for features like SFTP. Authentication should be managed through Azure AD.
 
 ## Cost optimization
 
@@ -168,7 +164,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 *   No public blob access.
 *   Container delete retention policies (for data loss protection).
 *   Restrictions on Cross-Origin Resource Sharing (CORS) rules.
-*   No local users
+*   No local users.
 *   Restrictions on storage account keys.
 
 ### Azure Automation
@@ -183,7 +179,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 *   Mandatory subnet connectivity for compute clusters and instances.
 *   Restrictions on remote login port public access for compute clusters.
 *   Restrictions on node count for compute clusters.
-*   Restrictions on the idle timeout before scaledown
+*   Restrictions on the idle timeout before scaledown.
 
 ### Azure Databricks
 
