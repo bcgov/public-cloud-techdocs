@@ -17,6 +17,7 @@ For more information, see [Provision a Project Set](welcome/provision-a-project-
 AWS offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
 - [AWS Landing Zone Overview](aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
+- [Security and compliance guardrails](aws/get-started-with-aws/security-guardrails.md)
 - [Requirements for Building Your Application in AWS](aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md)
 - [User Management in AWS](aws/design-build-and-deploy-an-application/user-management.md)
 - [Networking in AWS](aws/design-build-and-deploy-an-application/networking.md)
@@ -27,6 +28,7 @@ AWS offers a broad set of global cloud-based products including compute, storage
 Azure is a comprehensive set of cloud services that developers and IT professionals use to build, deploy, and manage applications through Microsoft's global network of datacenters.
 
 - [Azure Landing Zone Overview](azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
+- [Security and compliance guardrails](azure/get-started-with-azure/guardrails.md)
 - [Requirements for Building Your Application in Azure](azure/design-build-deploy/requirements.md)
 - [User Management in Azure](azure/design-build-deploy/user-management.md)
 - [Networking in Azure](azure/design-build-deploy/networking.md)
