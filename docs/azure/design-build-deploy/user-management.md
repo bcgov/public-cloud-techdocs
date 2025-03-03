@@ -2,11 +2,11 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-This guide explains how to manage user access in your Azure Landing Zone. It's designed for Product Owners (POs) and Technical Leads (TLs) who need to administer user permissions within their Project Set.
+This guide explains how to manage user access in your Azure Landing Zone. It's designed for Product Owners (POs) and Technical Leads (TLs) who need to administer user permissions within their project set.
 
 ## Understanding your project set
 
-Your Project Set consists of up to four Azure subscriptions grouped under a single Management Group. Depending on your needs, you may have deployed one or more of these subscriptions:
+Your project set consists of up to four Azure subscriptions grouped under a single management group. Depending on your needs, you may have deployed one or more of these subscriptions:
 
 ```
 Project Set Management Group (abc123)
@@ -16,15 +16,15 @@ Project Set Management Group (abc123)
 └── Tools Subscription (abc123-tools)
 ```
 
-The specific subscriptions that are deployed for your Project Set are defined in the [Product Registry](https://registry.developer.gov.bc.ca/). This is where your team would have specified which environments (Development, Test, Production, and/or Tools) you need for your project.
+The specific subscriptions that are deployed for your project set are defined in the [Platform Product Registry](https://registry.developer.gov.bc.ca/). This is where your team would have specified which environments: Development, Test, Production, and/or Tools, you need for your project.
 
-All your resources are organized within these subscriptions, and your unique Project Set license plate (e.g., "abc123") prefixes all your Management Groups and subscriptions.
+All your resources are organized within these subscriptions, and your unique project set license plate, for example: "abc123", prefixes all your management groups and subscriptions.
 
 ## Access management overview
 
 ### Permission tiers
 
-Your Project Set uses three standard permission levels:
+Your project set uses three standard permission levels:
 
 - **Reader**: View-only access to resources
 - **Contributor**: Can create and manage resources but cannot modify access permissions
