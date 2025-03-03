@@ -121,19 +121,19 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ### Storage account security
 
-*   **Data Loss Prevention:** Azure Storage accounts should restrict the allowed copy scope
+*   **Data Loss Prevention (DLP):** Azure Storage accounts should restrict the allowed copy scope
 *   Storage Accounts with custom domains assigned are denied
-*   **No SFTP**: Storage Accounts are not allowed to have SFTP support enabled for Blob storage
+*   **No Secure File Transfer Protocol (SFTP)**: Storage Accounts are not allowed to have SFTP support enabled for Blob storage
 *   **No local users:** Storage accounts *cannot* use local users for features like SFTP. Authentication should be managed through Azure AD
 
 ## Cost optimization
 
-* **Unused Resources:** Policies will *audit* for resources that are potentially unused and driving unnecessary costs, such as:
+* **Unused resources:** Policies will *audit* for resources that are potentially unused and driving unnecessary costs, such as:
   *   Unattached disks
   *   Unused public IP addresses
   *   Empty App Service plans
 
-## Identity & access management {#identity--access-management}
+## Identity and access management {#identity--access-management}
 
 * Access is managed through EntraID security groups with standardized naming: `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 * Three standard permission levels are enforced:
@@ -211,7 +211,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ## Tagging
 
-*   **Tag Inheritance:**  Resources and resource groups will automatically inherit specific tags (e.g., "Account Code," "Billing Group," "Ministry Name") from the subscription. This ensures consistent tagging across the environment
+*   **Tag inheritance:**  Resources and resource groups will automatically inherit specific tags (e.g., "Account Code," "Billing Group," "Ministry Name") from the subscription. This ensures consistent tagging across the environment
 
 ## Important considerations
 
