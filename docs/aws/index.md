@@ -43,7 +43,7 @@ Relevant technical information about the components that make up the AWS Secure 
 
 ### Rocket.Chat
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud PaaS. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
+Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud PaaS. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#contact).
 
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
@@ -52,7 +52,7 @@ If you already have access, you can
 
 Every six weeks, we host a platform community MeetUp where we talk about changes to the platform.
 
-[Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
+[Learn how to register for this and other events](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#contact).
 
 ### Reusable code and services
 
@@ -60,7 +60,7 @@ We have several [sample applications](design-build-and-deploy-an-application/dep
 
 ### External training
 
-See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
+See some [external training resources](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#training).
 
 <!-- ## Get support on the platform
 * [Troubleshooting and support](troubleshooting-and-support.md) -->

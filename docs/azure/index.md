@@ -26,4 +26,4 @@ Best practices on the platform:
 
 ### External training
 
-- See some [external training resources](https://digital.gov.bc.ca/cloud/services/public/get-support/#training).
+- See some [external training resources](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#training).
