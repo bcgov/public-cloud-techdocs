@@ -36,7 +36,7 @@ Azure is a comprehensive set of cloud services that developers and IT profession
 
 ### Rocket.Chat
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Public Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
+Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Public Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#contact).
 
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
@@ -45,4 +45,4 @@ If you already have access, you can
 
 Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public Cloud Accelerator Service (also known as CloudPathFinder) and its community, and changes to the platform.
 
-[Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/public/get-support/#contact).
+[Learn how to register for this and other events](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#contact).
