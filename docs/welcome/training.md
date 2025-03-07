@@ -11,7 +11,7 @@ Amazon Web Services (AWS) has a variety of training resources available to help 
 - [AWS Learning Library](https://www.aws.training/LearningLibrary)
 - [AWS Workshops](https://workshops.aws/)
 
-For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/cloud/services/public/get-support/#training) page.
+For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#training) page.
 
 ## Azure
 
@@ -22,4 +22,4 @@ Microsoft Azure offers a range of training resources to help you learn about the
 - [Microsoft Virtual Training Days](https://events.microsoft.com/en-us/mvtd?language=English){:data-proofer-ignore}
 - [Enterprise Skills Initiative](https://esi.microsoft.com/)
 
-For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/cloud/services/public/get-support/#training) page.
+For more information, please refer to the [Public Cloud Support - Training](https://digital.gov.bc.ca/delivery/cloud/public/get-support/#training) page.

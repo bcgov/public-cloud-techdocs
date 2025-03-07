@@ -64,7 +64,7 @@ For additional information and guidance, please refer to the Microsoft [Advanced
 
 ## Related pages
 
-- [Public cloud services](https://digital.gov.bc.ca/cloud/services/public)
-- [Public cloud hosting 101](https://digital.gov.bc.ca/cloud/services/public/intro/)
+- [Public cloud services](https://digital.gov.bc.ca/delivery/cloud/public)
+- [Public cloud hosting 101](https://digital.gov.bc.ca/delivery/cloud/public/intro/)
 - [Deploy to the Azure Landing Zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
 - [IAM User Management](../design-build-deploy/user-management.md)
