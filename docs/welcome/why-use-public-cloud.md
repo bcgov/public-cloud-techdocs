@@ -26,5 +26,5 @@ For B.C. Government ministry teams developing applications in the Public Cloud, 
 
 ## Related pages
 
-- [Public cloud services](https://digital.gov.bc.ca/delivery/cloud/public)
-- [Public cloud hosting 101](https://digital.gov.bc.ca/delivery/cloud/public/intro/)
+- [Public cloud services](https://digital.gov.bc.ca/technology/cloud/public)
+- [Public cloud hosting 101](https://digital.gov.bc.ca/technology/cloud/public/intro/)
