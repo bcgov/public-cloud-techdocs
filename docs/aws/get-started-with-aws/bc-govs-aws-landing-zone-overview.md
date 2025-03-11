@@ -26,7 +26,7 @@ For B.C. government ministry teams developing applications in the AWS Public Clo
 
 ## How to get access
 
-Explore a [comprehensive guide](https://digital.gov.bc.ca/delivery/cloud/public/onboard) for onboarding your team to the public cloud.
+Explore a [comprehensive guide](https://digital.gov.bc.ca/technology/cloud/public/onboard) for onboarding your team to the public cloud.
 
 ## Components and features
 
@@ -227,7 +227,7 @@ By recognizing and respecting the role of these ASEA-managed resources, ministry
 
 ## Related pages
 
-- [Public cloud services](https://digital.gov.bc.ca/delivery/cloud/public)
-- [Public cloud hosting 101](https://digital.gov.bc.ca/delivery/cloud/public/intro/)
+- [Public cloud services](https://digital.gov.bc.ca/technology/cloud/public)
+- [Public cloud hosting 101](https://digital.gov.bc.ca/technology/cloud/public/intro/)
 - [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
 - [IAM User Management Service](../design-build-and-deploy-an-application/iam-user-service.md)
