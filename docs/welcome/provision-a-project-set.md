@@ -19,7 +19,7 @@ A project set consists of up to four distinct environments for development (`dev
 
 New requests must be reviewed and approved by the Public Cloud platform team. The same rule applies for teams that already have projects on the platform and require additional Project Sets.
 
-To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/delivery/cloud/public/onboard/).
+To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/technology/cloud/public/onboard/).
 
 ## Request a Project Set
 
@@ -32,7 +32,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   - An estimate for the product's projected monthly spend on cloud services
     - For estimating AWS monthly costs, please use the [AWS Cost Calculator](https://calculator.aws/#/)
     - For estimating Azure monthly costs, please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/)
-  - An Account code for billing purposes. Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/delivery/cloud/public/onboard/#mou) for more information
+  - An Account code for billing purposes. Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/technology/cloud/public/onboard/#mou) for more information
     
   For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
@@ -74,7 +74,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
   - Budgets are a tool for the team to receive email billing alerts, so it's important that they are accurate. However they can be updated later.
   - You will receive a budget alert when your monthly spend has reached 50%, 80%, and 100% of your estimated monthly budget. This tool is intended to allow ministry teams to quickly react and control cost surges within the accounts.
-  - For help estimating your budget please see the [costs and billing](https://digital.gov.bc.ca/delivery/cloud/public/intro/#costs) section of our introductory documentation.
+  - For help estimating your budget please see the [costs and billing](https://digital.gov.bc.ca/technology/cloud/public/intro/#costs) section of our introductory documentation.
 
   ![budget](../images/provision-a-project-set/budget.png)
 
@@ -97,6 +97,6 @@ Other team members can be added to the Project Set by the Product Owner or Techn
 ## Related pages
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
-- [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/delivery/cloud/public/onboard/)
+- [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
 - [AWS Landing Zone Overview](../aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
 - [Azure Landing Zone Overview](../azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
