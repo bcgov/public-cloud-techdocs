@@ -39,9 +39,11 @@ nav:
           - Sample code: azure/design-build-deploy/sample-code.md
       - Best practices:
           - Be mindful: azure/best-practices/be-mindful.md
-          - CI/CD: azure/best-practices/ci-cd.md
+          - IaC and CI/CD: azure/best-practices/iac-and-ci-cd.md
           - Governance: azure/best-practices/governance.md
+          - Azure Services: azure/best-practices/azure-services.md
           - Azure AI Services: azure/best-practices/azure-ai.md
+          - External Microsoft Services: azure/best-practices/external-services.md
       - Tools:
         - Helpful tools: azure/tools/tools.md
         - Azure Cloud Shell: azure/tools/cloud-shell.md
