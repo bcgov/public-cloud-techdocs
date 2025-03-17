@@ -63,7 +63,7 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 
 - Configure [OpenID Connect (OIDC) authentication](#configuring-github-action-oidc-authentication-to-azure) for GitHub Actions to authenticate with Azure.
 
-- If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](../best-practices/be-mindful.md#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](be-mindful.md#azapi-terraform-provider-using-azapi_update_resource).
+- If using [Terraform](https://www.terraform.io/), be aware of the limitations when [creating Subnets](#using-terraform-to-create-subnets), and the use of the [AzAPI Terraform Provider](#azapi-terraform-provider-using-azapi_update_resource).
 
 - [Self-hosted runners](#github-self-hosted-runners-on-azure) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
 
