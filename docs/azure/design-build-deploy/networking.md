@@ -8,8 +8,11 @@ The following sections describe the networking components within the Azure Landi
 
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
 
-!!! danger "VNet CIDR changes"
-    The VNet's CIDR range is set during deployment and can't be changed later. Each Project Set is provided with a `/24` CIDR range by default. To request a CIDR range change, [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+!!! danger "Allocated IP addresses"
+    Each Project Set is provided with approximately **251 IP addresses** (ie. `/24`) by default. If your application requires more IP addresses than the `/24` provides, contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+
+    !!! note "Microsoft IP reservations"
+        Microsoft **reserves 5 IP addresses** from **each subnet** within a Virtual Network. Therefore a `/24` subnet would not have 256 IP addresses available for use, but rather 251 IP addresses.
 
 This VNet is connected with the central hub (vWAN), and receives default routes to direct all traffic (ie. Internet and private) through the firewall located in the central hub.
 
@@ -18,7 +21,7 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 !!! danger "Security controls for subnets"
     There are some security controls in place, that require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may cause some challenges when creating subnets. The simplest approach is to create a NSG first, and then create the subnet (with the NSG associated with it).
 
-    For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [Be Mindful](../best-practices/be-mindful.md#using-terraform-to-create-subnets) documentation.
+    For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [IaC and CI/CD](../best-practices/iac-and-ci-cd.md#using-terraform-to-create-subnets) documentation.
 
     Additionally, as part of implementing a **Zero Trust** security model, all subnets need to be created as [Private Subnets](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access#utilize-the-private-subnet-parameter-public-preview).
 

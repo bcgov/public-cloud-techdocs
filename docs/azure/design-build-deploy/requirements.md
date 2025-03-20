@@ -34,5 +34,5 @@ Take the following into consideration when building your application in the Azur
 
 - [Provision a Project Set](../../welcome/provision-a-project-set.md)
 - [User Management in Azure](user-management.md)
-- [Configuring GitHub Action OIDC Authentication to Azure](../best-practices/ci-cd.md#configuring-github-action-oidc-authentication-to-azure)
+- [Configuring GitHub Action OIDC Authentication to Azure](../best-practices/iac-and-ci-cd.md#configuring-github-action-oidc-authentication-to-azure)
 - [Deploy to the Azure Landing Zone](deploy-to-the-azure-landing-zone.md)
