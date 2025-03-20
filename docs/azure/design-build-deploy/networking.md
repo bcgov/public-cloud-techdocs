@@ -8,8 +8,11 @@ The following sections describe the networking components within the Azure Landi
 
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
 
-!!! danger "VNet CIDR changes"
-    The VNet's CIDR range is set during deployment and can't be changed later. Each Project Set is provided with a `/24` CIDR range by default. To request a CIDR range change, [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+!!! danger "Allocated IP addresses"
+    Each Project Set is provided with approximately **251 IP addresses** (ie. `/24`) by default. If your application requires more IP addresses than the `/24` provides, contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+
+    !!! note "Microsoft IP reservations"
+        Microsoft **reserves 5 IP addresses** from **each subnet** within a Virtual Network. Therefore a `/24` subnet would not have 256 IP addresses available for use, but rather 251 IP addresses.
 
 This VNet is connected with the central hub (vWAN), and receives default routes to direct all traffic (ie. Internet and private) through the firewall located in the central hub.
 
