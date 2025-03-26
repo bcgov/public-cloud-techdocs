@@ -51,6 +51,59 @@ resource "azapi_resource" "subnets" {
 
 For further details about this limitation, please refer to the following GitHub Issue: [Example of using the Subnet Association resources with Azure Policy](https://github.com/hashicorp/terraform-provider-azurerm/issues/9022).
 
+### Using Terraform to create private endpoints
+
+If you are using Terraform to create your infrastructure, in particular Private Endpoints within your assigned Virtual Network, please be aware of the following challenge.
+
+After the Private Endpoint is created, the automation (via Azure Policy) within the Landing Zones will automatically associate the Private Endpoint with the appropriate Private DNS Zone, and create the necessary DNS records (see [Private Endpoints and DNS](./be-mindful.md#private-endpoints-and-dns) for more details).
+
+However, the next time you run `terraform plan` or `terraform apply`, Terraform will detect that this change has occurred outside of your specific Terraform code, and will attempt to **remove** the association between the Private Endpoint and the Private DNS Zone. This will cause issues with resolving your resources via the Private Endpoint.
+
+**Example `terraform plan` output:**
+
+```terraform
+  ~ resource "azurerm_private_endpoint" "this" {
+        id                            = "/subscriptions/xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/caf-ghr/providers/Microsoft.Network/privateEndpoints/pe-acrghr"
+        name                          = "pe-acrghr"
+
+      - private_dns_zone_group {
+          - id                   = "/subscriptions/xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/caf-ghr/providers/Microsoft.Network/privateEndpoints/pe-acrghr/privateDnsZoneGroups/deployedByPolicy" -> null
+          - name                 = "deployedByPolicy" -> null
+          - private_dns_zone_ids = [
+              - "/subscriptions/xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/bcgov-managed-lz-forge-dns/providers/Microsoft.Network/privateDnsZones/privatelink.azurecr.io",
+            ] -> null
+        }
+    }
+```
+
+While the Azure Policy **_should_** automatically re-associate the Private Endpoint with the Private DNS Zone, it is recommended to add a `lifecycle` block with the [ignore_changes](https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes) feature on the `private_dns_zone_group` resource property in your Terraform code, to ignore the changes that are applied through the Azure Policy.
+
+**Example `terraform lifecycle ignore_changes`:**
+
+```terraform
+resource "azurerm_private_endpoint" "example" {
+  name                = "example-endpoint"
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  subnet_id           = azurerm_subnet.example.id
+
+  private_service_connection {
+    name                           = "example-privateserviceconnection"
+    private_connection_resource_id = azurerm_storage_account.example.id
+    subresource_names              = ["blob"]
+    is_manual_connection           = false
+  }
+
+  lifecycle {
+    ignore_changes = [
+      # Ignore changes to private_dns_zone_group, e.g. because an Azure Policy
+      # updates it automatically.
+      private_dns_zone_group,
+    ]
+  }
+}
+```
+
 ### AzAPI Terraform provider (using `azapi_update_resource`)
 
 If you are using the [AzAPI Terraform Provider](https://learn.microsoft.com/en-us/azure/developer/terraform/overview), specifically the [azapi_update_resource](https://registry.terraform.io/providers/azure/azapi/latest/docs/resources/update_resource) resource, be aware of the following limitation: _When you delete `azapi_update_resource`, **no operation will be performed**, and these properties will stay **unchanged**. If you want to restore the modified properties to some values, you must apply the restored properties before deleting_.
