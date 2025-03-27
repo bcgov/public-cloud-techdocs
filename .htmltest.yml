@@ -5,3 +5,4 @@ IgnoreURLs:
     - "https://github.com/bcgov-c"
     - "https://loginproxy.gov.bc.ca"
     - "https://login.nimbus.cloud.gov.bc.ca/"
+    - "https://techcommunity.microsoft.com/blog/" # Although this is a valid URL, the link validation times out

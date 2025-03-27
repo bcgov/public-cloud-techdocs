@@ -54,6 +54,15 @@ For applications with advanced requirements, an [Azure Application Gateway](http
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
 
+!!! failure "Application Gateway backend health probes"
+    The Application Gateway backend may show a status of **Unknown**. This is because internet and private traffic are routed through the Azure Firewall in the Virtual WAN Hub.
+
+    ![Application Gateway - Backend Health Probes - Unknown Status](../images/appgw-unknown.png "Application Gateway - Backend Health Probes - Unknown Status")
+
+    To resolve this, a custom **User Defined Route (UDR)** must be created to send traffic to the backend pool via an Azure Firewall in the Virtual WAN hub. 
+    
+    Due to Landing Zone security and governance requirements, you cannot create this UDR yourself. Please contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for assistance with this, and reference the following Microsoft documentation: [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons).
+
 ## VNet integration vs private endpoints
 
 When working with Azure PaaS services, there are multiple ways to [integrate Azure services with virtual networks for network isolation](https://learn.microsoft.com/en-us/azure/virtual-network/vnet-integration-for-azure-services).
@@ -66,6 +75,8 @@ In order to maintain the security of the Azure Landing Zone, there are certain n
 
 - Modifying the Virtual Network (VNet) DNS settings
   - This is required so that all traffic is routed through the central firewall, for compliance requirements
+- Modifying the Virtual Network (VNet) address space
+  - This is required so that overlapping IP address ranges are not created in the Azure Landing Zone
 - Creating Express Route circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
   - This is so that traffic is not bypassing the central firewall
 - Creating Virtual Networks
