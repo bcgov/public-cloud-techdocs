@@ -5,5 +5,4 @@ IgnoreURLs:
     - "https://github.com/bcgov-c"
     - "https://loginproxy.gov.bc.ca"
     - "https://login.nimbus.cloud.gov.bc.ca/"
-    - "https://techcommunity.microsoft.com/blog/finopsblog/how-to-budget-your-azure-cloud-spend-with-microsoft-cost-management/4153963" # Although this is a valid URL, the link validation times out
-    - "https://techcommunity.microsoft.com/blog/finopsblog/unlock-savings-potential-with-azure-advisors-cost-optimization-workbook/4135863"
+    - "https://techcommunity.microsoft.com/blog/" # Although this is a valid URL, the link validation times out
