@@ -7,15 +7,17 @@ The following are some things to be aware of when working with specific Azure se
 !!! question "Azure AI and ML services"
     Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
 
-## Azure services
+## App Service
 
-### Azure App Service
-
-If you use an [Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/overview), and you plan to [integrate it with an Azure Virtual Network](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration), keep in mind this limitation: **You can't delete a subnet that has previously had an integrated App Service, if the integration has not been removed**.
+If you use an [App Service](https://learn.microsoft.com/en-us/azure/app-service/overview), and you plan to [integrate it with an Azure Virtual Network](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration), keep in mind this limitation: **You can't delete a subnet that has previously had an integrated App Service, if the integration has not been removed**.
 
 To follow best practices when using Azure App Services with VNet integration, if you plan to delete the App Service, ensure that you **remove the integration** with the Virtual Network **before** deleting the App Service. This will allow you to delete the associated Subnet without any issues.
 
-### API Management service
+## Application Gateway
+
+If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview), please be aware that the backend health may show a status of **Unknown**. For more information and direction on how to resolve this, see the [Networking within the Azure Landing Zone - Exposing services to the internet](../design-build-deploy/networking.md#exposing-services-to-the-internet) section.
+
+## API Management service
 
 The current version (v1) of the Azure [API Management Service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts) doesn't work with [inbound Private Endpoints](https://learn.microsoft.com/en-us/azure/api-management/virtual-network-concepts#inbound-private-endpoint). To access the service from within a virtual network, you must create a DNS record. Unlike other [private endpoints](./be-mindful.md#private-endpoints-and-dns) in the Landing Zones, this process isn't automated.
 
@@ -23,7 +25,7 @@ If you are using v1 of the API Management Service, please [submit a Service Requ
 
 Version 2 of the API Management Service [isn't currently available](https://learn.microsoft.com/en-us/azure/api-management/api-management-region-availability#supported-regions-for-v2-tiers-and-workspace-gateways) in the Canada Azure regions. When available, use this version, as it'll support Private Endpoints.
 
-### Azure Database for PostgreSQL Flexible server
+## Azure Database for PostgreSQL Flexible server
 
 When deploying an [Azure Database for PostgreSQL Flexible server](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview), you have multiple network connectivity options, including [Public access (allowed IP addresses) and Private endpoint](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-networking), and [Private access (VNet Integration)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-networking-private#private-access-vnet-integration).
 
