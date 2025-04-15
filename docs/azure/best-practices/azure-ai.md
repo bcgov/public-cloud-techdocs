@@ -4,10 +4,17 @@ Last updated: **{{ git_revision_date_localized }}**
 
 Many of the ministry teams are using Azure AI services to build intelligent applications. Artificial Intelligence and Machine Learning are rapidly changing technologies. The following are some recommendations and guidance based on observations and experiences from the ministry teams.
 
+!!! tip "Azure OpenAI best practices"
+    Be sure to review the following Microsoft blog post, which highlights key best practices for deploying and managing Azure OpenAI workloads. The blog post covers architectural considerations, security measures, governance strategies, networking configurations, and more.
+
+    It also includes an Azure OpenAI review checklist with **180+ best practice items** covering AI Landing Zone for every critical area: Governance, Operations, Networking, Identity, Cost Management, and Business Continuity & Disaster Recovery (BCDR).
+
+    - [Azure OpenAI best practices: A quick-reference guide to optimize your deployments](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/azure-openai-best-practices-a-quick-reference-guide-to-optimize-your-deployments/4403546)
+
 ## Region availability
 
 Although the [Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions, not all [models](https://azure.microsoft.com/en-us/products/ai-model-catalog?msockid=2274ddfe4fb768de0595c8be4e1d6918#tabs-pill-bar-oc92d8_tab0) or services may be available in the Canada regions (for example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models). It is recommended to check the region availability of the services/models before starting development.
-
+<!-- Recommend review by Security and compliance team -->
 The most common Azure AI Services that are used by the ministry teams are:
 
 - Azure OpenAI
@@ -23,9 +30,9 @@ When using Azure AI services, you may need to deploy a Virtual Machine within yo
 The simplest method to do this, is to deploy an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network, to connect to a Virtual Machine that is also deployed to the same private network as the AI service.
 
 !!! question "Which Azure Bastion SKU to use?"
-    The minimum Bastion SKU required is **Basic**, as the **Developer** SKU is not currently available in the Canada regions.
+    The minimum Bastion SKU required is **Developer**, where the `AzureBastionSubnet` subnet is not required. However, some features are limited or not available with this SKU. Please review the Microsoft [Bastion SKU](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#skus) documentation to determine the best SKU for your needs.
 
-Azure Bastion does require a specifically-named Subnet to be created within the VNet. The subnet name must be **AzureBastionSubnet**. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24). After adding this subnet to your virtual network, you can deploy Azure Bastion.
+If you are using a SKU other than **Developer**, Azure Bastion does require a specifically-named Subnet to be created within the VNet. The subnet name must be **AzureBastionSubnet**. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24). After adding this subnet to your virtual network, you can deploy Azure Bastion.
 
 Additionally, you will need to create the appropriate ingress and egress Network Security Group (NSG) rules to allow traffic to and from the Azure Bastion service. Please refer to the [Working with NSG access and Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-nsg#apply) documentation for specific details.
 
@@ -44,10 +51,10 @@ When working with Azure OpenAI, you may need to create a Private Endpoint to res
 
 It has been observed in several cases, where the DNS `A-Record` for the Azure OpenAI service is not being created properly in the Private DNS Zone. This can cause issues with the service not being able to resolve the endpoint.
 
-If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public Cloud support team to investigate and resolve the issue.
+If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public cloud support team to investigate and resolve the issue.
 
 ## Regulated Landing Zone compliance
-
+<!-- Recommend review by Security and compliance team -->
 If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
 
 To prevent deployment issues caused by policy enforcement, ensure that these services are configured with the highest level of security from the outset.
