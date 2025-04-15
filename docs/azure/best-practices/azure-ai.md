@@ -14,7 +14,7 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 ## Region availability
 
 Although the [Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions, not all [models](https://azure.microsoft.com/en-us/products/ai-model-catalog?msockid=2274ddfe4fb768de0595c8be4e1d6918#tabs-pill-bar-oc92d8_tab0) or services may be available in the Canada regions (for example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models). It is recommended to check the region availability of the services/models before starting development.
-
+<!-- Recommend review by Security and compliance team -->
 The most common Azure AI Services that are used by the ministry teams are:
 
 - Azure OpenAI
@@ -51,10 +51,10 @@ When working with Azure OpenAI, you may need to create a Private Endpoint to res
 
 It has been observed in several cases, where the DNS `A-Record` for the Azure OpenAI service is not being created properly in the Private DNS Zone. This can cause issues with the service not being able to resolve the endpoint.
 
-If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public Cloud support team to investigate and resolve the issue.
+If you encounter this issue, please open a [support ticket](../../welcome/support.md) with the Public cloud support team to investigate and resolve the issue.
 
 ## Regulated Landing Zone compliance
-
+<!-- Recommend review by Security and compliance team -->
 If you are deploying Azure Cognitive Services, OpenAI, or Machine Learning, there are several Microsoft Enterprise Scale guardrail policies that are enforced that control permitted SKUs, secure authentication through Managed Identities, storage configuration, outbound network access, etc.
 
 To prevent deployment issues caused by policy enforcement, ensure that these services are configured with the highest level of security from the outset.
