@@ -112,6 +112,20 @@ As a Product Owner, you have two options for managing your security groups:
 
 5. **Be aware of policy restrictions**: Understand that [Azure Policies](../get-started-with-azure/guardrails.md) may restrict certain actions regardless of RBAC permissions.
 
+## Service principals
+
+[Service principals](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) are security objects within a Microsoft Entra ID application that define what an application can do in a given tenant. They're set up in the Azure portal during the application registration process and configured to access Azure resources.
+
+!!! info "Managed identities"
+    Managed identities are similar to service principals but are automatically managed by Azure. They provide an identity for applications to use when connecting to resources that support Azure AD authentication. Managed identities are created and managed by Azure, so you don't have to worry about credentials or secrets.
+
+    For more information, see [What are managed identities for Azure resources?](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+
+For guidance on creating and managing service principals, refer to the [Register a Microsoft Entra app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal) documentation.
+
+!!! danger "Long lived credentials"
+    To avoid security risks, we highly discourage the use of **long-lived credentials**. Instead, use short-lived credentials or managed identities whenever possible. This reduces the risk of credential leakage and ensures that your applications are more secure.
+
 ## Azure Control-Plane vs Data-Plane access differences
 
 Understand the differences between [control-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#control-plane) and [data-plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane#data-plane) access. The control plane is used to manage resources, while the data plane is used to interact with the resources themselves.
