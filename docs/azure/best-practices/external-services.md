@@ -23,7 +23,7 @@ Power Platform supports configuring billing to be associated with an Azure subsc
 For more information, please refer to the [Power Platform - Set up pay-as-you-go](https://learn.microsoft.com/en-us/power-platform/admin/pay-as-you-go-set-up?tabs=new) documentation.
 
 !!! info "Information"
-If you plan on using an Azure subscription for Power Platform billing, please **pre-create** the Resource Group where the Power Platform resources will be deployed, and then contact the [Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to apply the necessary resource region exemptions.
+    If you plan on using an Azure subscription for Power Platform billing, please **pre-create** the Resource Group where the Power Platform resources will be deployed, and then contact the [Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to apply the necessary resource region exemptions.
 
     This is required, because the Azure Landing Zones have a region restriction to `Canada Central` and `Canada East`, but the Power Platform's region selection do not align with the Azure regions. In the Power Platform, you can only select `Canada` as a region, which includes all Canadian regions.
 
@@ -42,4 +42,4 @@ Unity Catalog provides a centralized data governance layer for Databricks assets
 | **Metastore (for Unity Catalog)** | Databricks Account       | ❌ No           | ✅ Yes               |
 
 !!! info "Unity Catalog Status"
-As noted in the [Azure Services](./azure-services.md#azure-databricks-and-unity-catalog) documentation, **Unity Catalog is currently not enabled or governed** within the BC Government's Azure environment. Please refer to that page for more details on the current status and implications.
+    As noted in the [Azure Services](./azure-services.md#azure-databricks-and-unity-catalog) documentation, **Unity Catalog is currently not enabled or governed** within the BC Government's Azure environment. Please refer to that page for more details on the current status and implications.
