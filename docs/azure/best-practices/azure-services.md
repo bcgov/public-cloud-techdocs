@@ -39,7 +39,7 @@ Although the connectivity method says "**public access**", this is the option yo
 
 Azure Databricks is **available for use** in our environment, while Unity Catalog (a governance layer) is currently not enabled. This document outlines the distinction between these components, clarifies where each resides and is managed, and explains the current status of Unity Catalog.
 
-### 🔍 Key Distinctions
+### Key Distinctions
 
 | Feature                        | Owned/Managed by         | Lives in Azure? | Lives in Databricks?   |
 | ------------------------------ | ------------------------ | --------------- | ---------------------- |
@@ -49,22 +49,23 @@ Azure Databricks is **available for use** in our environment, while Unity Catalo
 | **Azure AD (Entra ID)**        | Microsoft                | ✅ Yes          | Used via federation    |
 | **Data Storage (e.g., ADLS)**  | Azure                    | ✅ Yes          | Accessed by Databricks |
 
-### 🧠 How Unity Catalog Works
+### How Unity Catalog Works
 
 - **Unity Catalog** is a centralized **data governance layer** for Databricks that enables fine-grained access control across all data assets (tables, views, files).
-- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.databricks.com](https://accounts.databricks.com).
+- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net
+  ](https://accounts.azuredatabricks.net).
 - It can enforce **identity-based policies**, using **Microsoft Entra ID** groups via SCIM federation or manual assignment.
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
-### ⚠️ Current Status in Our Environment
+### Current Status in Our Environment
 
-> **Azure Databricks is available, but Unity Catalog is currently unavailable for use.**
+!!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use."
 
 - While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
 - As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
 - Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
 
-### 🔧 Practical Considerations
+### Practical Considerations
 
 - Unity Catalog must be enabled and managed at the **Databricks Account level** — this is separate from Azure Portal or subscription-level controls.
 - Currently, there is no designated service owner to manage Unity Catalog, which is why it remains disabled in our environment.
@@ -73,7 +74,7 @@ Azure Databricks is **available for use** in our environment, while Unity Catalo
   - In the **same Azure region**
 - It offers central management of catalogs, schemas, tables, permissions, lineage, and audit logs.
 
-#### 🔒 Governance Implication
+#### Governance Implication
 
 If and when Unity Catalog is introduced, a central **data governance function** will be required to:
 
