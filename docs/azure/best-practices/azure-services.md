@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 The following are some things to be aware of when working with specific Azure services within the Azure Landing Zone. This does not list every Azure service, but rather, shares some best practices and limitations for specific services, based on the experience of the Public Cloud team and feedback from end-users.
 
 !!! question "Azure AI and ML services"
-  Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
+    Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
 
 ## App Service
 
