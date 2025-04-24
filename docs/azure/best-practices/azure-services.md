@@ -39,7 +39,7 @@ Although the connectivity method says "**public access**", this is the option yo
 
 [Azure Databricks](https://learn.microsoft.com/en-us/azure/databricks/introduction/) is **available for use** in our environment, while [Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/) (a governance layer) is currently not enabled. This document outlines the distinction between these components, clarifies where each resides and is managed, and explains the current status of Unity Catalog.
 
-### Key Distinctions
+### Key distinctions
 
 | Feature                        | Owned/Managed by         | Lives in Azure? | Lives in Databricks?   |
 | ------------------------------ | ------------------------ | --------------- | ---------------------- |
@@ -49,7 +49,7 @@ Although the connectivity method says "**public access**", this is the option yo
 | **Azure AD (Entra ID)**        | Microsoft                | ✅ Yes          | Used via federation    |
 | **Data Storage (e.g., ADLS)**  | Azure                    | ✅ Yes          | Accessed by Databricks |
 
-### How Unity Catalog Works
+### How Unity Catalog works
 
 - **Unity Catalog** is a centralized **data governance layer** for Databricks that enables fine-grained access control across all data assets (tables, views, files).
 - It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net
@@ -62,7 +62,7 @@ Although the connectivity method says "**public access**", this is the option yo
     - As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
     - Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
 
-### Practical Considerations
+### Practical considerations
 
 - Unity Catalog must be enabled and managed at the **Databricks Account level** — this is separate from Azure Portal or subscription-level controls.
 - Currently, there is no designated service owner to manage Unity Catalog, which is why it remains disabled in our environment.
@@ -71,7 +71,7 @@ Although the connectivity method says "**public access**", this is the option yo
   - In the **same Azure region**
 - It offers central management of catalogs, schemas, tables, permissions, lineage, and audit logs.
 
-#### Governance Implication
+#### Governance implication
 
 If and when Unity Catalog is introduced, a central **data governance function** will be required to:
 
