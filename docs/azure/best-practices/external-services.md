@@ -28,3 +28,18 @@ For more information, please refer to the [Power Platform - Set up pay-as-you-go
     This is required, because the Azure Landing Zones have a region restriction to `Canada Central` and `Canada East`, but the Power Platform's region selection do not align with the Azure regions. In the Power Platform, you can only select `Canada` as a region, which includes all Canadian regions.
 
     ![Power Platform - Region Selection](../images/power-platform-region-selection.png "Power Platform - Region Selection")
+
+## Azure Databricks and Unity Catalog
+
+While the [Azure Databricks Workspace](https://learn.microsoft.com/en-us/azure/databricks/introduction/) is an Azure resource managed through the Azure Resource Manager, some of its advanced features, like [Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/), operate outside the standard Azure management plane.
+
+Unity Catalog provides a centralized data governance layer for Databricks assets but is managed through the **Databricks control plane** via the [Databricks account console](https://accounts.azuredatabricks.net), not through the Azure Portal.
+
+| Feature                           | Owned/Managed by         | Lives in Azure? | Lives in Databricks? |
+| --------------------------------- | ------------------------ | --------------- | -------------------- |
+| **Azure Databricks Workspace**    | Azure Resource Manager   | ✅ Yes          | ✅ Yes (shared)      |
+| **Unity Catalog**                 | Databricks Control Plane | ❌ No           | ✅ Yes               |
+| **Metastore (for Unity Catalog)** | Databricks Account       | ❌ No           | ✅ Yes               |
+
+!!! info "Unity Catalog Status"
+    As noted in the [Azure Services](./azure-services.md#azure-databricks-and-unity-catalog) documentation, **Unity Catalog is currently not enabled or governed** within the BC Government's Azure environment. Please refer to that page for more details on the current status and implications.
