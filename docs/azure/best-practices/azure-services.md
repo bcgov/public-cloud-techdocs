@@ -57,13 +57,10 @@ Although the connectivity method says "**public access**", this is the option yo
 - It can enforce **identity-based policies**, using **Microsoft Entra ID** groups via SCIM federation or manual assignment.
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
-### Current Status in Our Environment
-
 !!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use."
-
-- While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
-- As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
-- Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
+    - While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
+    - As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
+    - Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
 
 ### Practical Considerations
 
