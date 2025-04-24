@@ -37,7 +37,7 @@ Although the connectivity method says "**public access**", this is the option yo
 
 ### Overview
 
-Azure Databricks is **available for use** in our environment, while Unity Catalog (a governance layer) is currently not enabled. This document outlines the distinction between these components, clarifies where each resides and is managed, and explains the current status of Unity Catalog.
+[Azure Databricks](https://learn.microsoft.com/en-us/azure/databricks/introduction/) is **available for use** in our environment, while [Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/) (a governance layer) is currently not enabled. This document outlines the distinction between these components, clarifies where each resides and is managed, and explains the current status of Unity Catalog.
 
 ### Key Distinctions
 
