@@ -53,27 +53,20 @@ These groups are assigned roles at the Management Group level, which automatical
 
 ### As a Product Owner or Technical Lead with the Owner role, you can:
 
-- Manage membership in your security groups
-- Create custom roles for specific needs
-- Create and manage service principals
-- Assign service principals to a role on resources
-- Create and manage managed identities
-- Create and manage all resources within your subscriptions (subject to [policy restrictions](../get-started-with-azure/guardrails.md))
+- Manage membership in your security groups (`DO_PuC_Azure_Live_{LicensePlate}_{Role}`) to grant Owner, Contributor, or Reader access across the Project Set.
+- Create custom roles for specific needs.
+- Assign users or groups directly to **non-privileged** roles (e.g., Reader, job function, or custom roles) at the Subscription, Resource Group, or Resource level to grant specific, granular access. This follows the principle of least privilege.
+- Create and manage service principals.
+- Assign service principals to any non-privileged.
+- Create and manage managed identities.
+- Create and manage all resources within your subscriptions (subject to [policy restrictions](../get-started-with-azure/guardrails.md)).
 
 ### You cannot:
 
-- Assign users or groups directly to an Owner role
-- Create direct role assignments (outside of security groups) at any level:
-  - Project Set Management Group
-  - Subscriptions
-  - Resource groups
-  - Individual resources
-- Bypass [Azure Policy restrictions](../get-started-with-azure/guardrails.md) (policies take precedence over RBAC permissions)
+- Assign users or groups directly to **privileged** roles (e.g., Owner, Contributor) at any level (Management Group, Subscription, Resource Group, Resource). Assignment to these roles **must** be done by managing membership in the appropriate `DO_PuC_Azure_Live_{LicensePlate}_{Role}` security group.
+- Bypass [Azure Policy restrictions](../get-started-with-azure/guardrails.md) (policies take precedence over RBAC permissions).
 
-This restriction is by design to maintain security and simplify access auditing for regulatory compliance.
-
-!!! info "Service Principals Exception"
-    While you cannot directly assign users or groups to roles, you can still directly assign Service Principals to roles.
+This approach balances security for high-privilege access with flexibility for granular, least-privilege assignments. However, it makes access auditing more complex as permissions can be granted in two ways (group membership for privileged roles, direct assignment for non-privileged roles).
 
 ## Managing group membership
 
@@ -99,16 +92,18 @@ As a Product Owner, you have two options for managing your security groups:
 
 ## Best practices for user management
 
-1. **Use the right permission level**: Assign users to the appropriate security group based on their needs:
-   - Readers for those who only need to view resources
-   - Contributors for those who need to create and manage resources
-   - Owners only for those who need administrative access
+1. **Use the right permission level**: Assign users to the appropriate security group (`DO_PuC_Azure_Live_{LicensePlate}_{Role}`) for privileged access (Owner, Contributor). For non-privileged access needs (e.g., specific job function or custom roles), consider direct role assignments at the necessary scope (Subscription, Resource Group, Resource) to adhere strictly to the principle of least privilege.
 
-2. **Follow the principle of least privilege**: Only give users the minimum access they need to perform their job functions.
+   - Use security groups for broad, Project Set-wide privileged access.
+   - Use direct assignments for specific, limited, non-privileged access.
 
-3. **Regularly review access**: Periodically audit your security groups and remove unnecessary permissions.
+2. **Follow the principle of least privilege**: Only give users the minimum access they need. Use direct assignments for non-privileged roles where possible instead of granting broader Contributor access via groups if not required.
 
-4. **Document your access structure**: Maintain documentation of who has access to what and why.
+3. **Regularly review and audit access**: Periodically audit **both** security group memberships **and** direct role assignments across your subscriptions. Remove unnecessary permissions promptly. Since access can be granted in multiple ways, thorough auditing is crucial.
+
+   - **How to Audit**: You can list and download role assignments using the Azure portal to facilitate your review. Follow the steps outlined in the Microsoft documentation: [List Azure role assignments using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-portal#download-role-assignments).
+
+4. **Document your access structure**: Maintain clear documentation of who has access to what, _how_ that access was granted (group or direct assignment), and why.
 
 5. **Be aware of policy restrictions**: Understand that [Azure Policies](../get-started-with-azure/guardrails.md) may restrict certain actions regardless of RBAC permissions.
 
