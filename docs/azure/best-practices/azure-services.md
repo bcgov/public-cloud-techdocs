@@ -13,6 +13,9 @@ If you use an [App Service](https://learn.microsoft.com/en-us/azure/app-service/
 
 To follow best practices when using Azure App Services with VNet integration, if you plan to delete the App Service, ensure that you **remove the integration** with the Virtual Network **before** deleting the App Service. This will allow you to delete the associated Subnet without any issues.
 
+!!! failure ""Subnet deletion failure"
+    If you forget to remove the integration, and have deleted the App Service, you will need to [open a support case](../support/enterprise-support.md#how-to-receive-support) with Microsoft Support to have the integration removed before you can delete the Subnet.
+
 ## Application Gateway
 
 If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview), please be aware that the backend health may show a status of **Unknown**. For more information and direction on how to resolve this, see the [Networking within the Azure Landing Zone - Exposing services to the internet](../design-build-deploy/networking.md#exposing-services-to-the-internet) section.
@@ -52,15 +55,16 @@ Although the connectivity method says "**public access**", this is the option yo
 ### How Unity Catalog works
 
 - **Unity Catalog** is a centralized **data governance layer** for Databricks that enables fine-grained access control across all data assets (tables, views, files).
-- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net
-  ](https://accounts.azuredatabricks.net).
+- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net](https://accounts.azuredatabricks.net).
 - It can enforce **identity-based policies**, using **Microsoft Entra ID** groups via SCIM federation or manual assignment.
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
-!!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use."
-    - While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
-    - As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
-    - Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
+!!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use"
+    While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
+    
+    As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
+
+    Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
 
 ### Practical considerations
 

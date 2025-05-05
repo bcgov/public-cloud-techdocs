@@ -28,13 +28,13 @@ The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en
 
 [![Defender for Cloud Overview](../images/defender-for-cloud-overview.png "Defender for Cloud Overview")](https://learn.microsoft.com/en-us/azure/reusable-content/ce-skilling/azure/media/defender-for-cloud/overview.png#lightbox)
 
-For more information see [Azure Guardrails](guardrails.md)
+For more information see [Azure Guardrails](guardrails.md).
 
 ### Networking
 
 The Cloud Adoption Framework (CAF) implements a hub-and-spoke network topology. The hub is the central point of connectivity to the on-premises network, and the spoke is the virtual network that connects to the hub. The hub-and-spoke model allows for the centralization of services and management, while providing isolation and segmentation for workloads.
 
-The B.C. government has implemented the hub-and-spoke module using the modern [Virtual WAN (vWAN)](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) architecture. Within this architecture, each Project Set is provisioned with a spoke Virtual Network (VNet) that connects to the Virtual Hub (vHub).
+The B.C. Government has implemented the hub-and-spoke module using the modern [Virtual WAN (vWAN)](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about) architecture. Within this architecture, each Project Set is provisioned with a spoke Virtual Network (VNet) that connects to the Virtual Hub (vHub).
 
 [![Virtual WAN Network Topology](../images/virtual-wan-topology.png "Virtual WAN Network Topology")](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/media/virtual-wan-topology.png#lightbox)
 

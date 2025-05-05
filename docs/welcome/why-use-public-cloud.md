@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 ## Benefits of building apps in the Public Cloud
 
-Ministry teams in the B.C. government who want to build applications in the Public Cloud can rely on the OCIO's secure and compliant Landing Zones. It offers a robust, secure, and efficient framework designed to meet the needs and compliance requirements of the B.C. government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's Landing Zones offers several significant benefits:
+Ministry teams in the B.C. Government who want to build applications in the Public Cloud can rely on the OCIO's secure and compliant Landing Zones. It offers a robust, secure, and efficient framework designed to meet the needs and compliance requirements of the B.C. Government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's Landing Zones offers several significant benefits:
 
 1. **Enhanced security compliance**: It aligns with high-standard security frameworks like [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) and the [Canadian Centre for Cybersecurity (CCCS) Medium](https://www.cyber.gc.ca/en/guidance/annex-4a-profile-1-protected-b-medium-integrity-medium-availability-itsg-33) Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders.
 
