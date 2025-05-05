@@ -55,7 +55,7 @@ Although the connectivity method says "**public access**", this is the option yo
 ### How Unity Catalog works
 
 - **Unity Catalog** is a centralized **data governance layer** for Databricks that enables fine-grained access control across all data assets (tables, views, files).
-- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net](https://accounts.azuredatabricks.net).
+- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned and managed through [https://accounts.azuredatabricks.net](https://accounts.azuredatabricks.net).
 - It can enforce **identity-based policies**, using **Microsoft Entra ID** groups via SCIM federation or manual assignment.
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 

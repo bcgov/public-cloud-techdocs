@@ -38,7 +38,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   For **new product teams** requesting a Project Set in a Public cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
   - Sign a Memorandum of Understanding (MoU) with the OCIO
-  - Book an onboarding session with the Public cloud team
+  - Book an onboarding session with the Public Cloud team
     - This can be done through the [Jira Support Portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
   <!-- TODO: Update the "book onboarding session" with a link to the Support Portal request type, and/or MS Teams integration (when available) -->
 
