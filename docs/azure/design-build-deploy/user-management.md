@@ -133,4 +133,4 @@ For a list of built-in roles and their permissions, refer to the [Azure built-in
 
 ## Need help?
 
-If you need assistance with user management or have questions about your access structure, [please contact the Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.
+If you need assistance with user management or have questions about your access structure, [please contact the Public cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.

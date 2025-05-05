@@ -2,11 +2,11 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following sections describe the requirements for building your application on the B.C. Government Public Cloud Azure Landing Zone.
+The following sections describe the requirements for building your application on the B.C. government Public cloud Azure Landing Zone.
 
 ## Prerequisites
 
-1. Create a [provisioning request for a Project Set](../../welcome/provision-a-project-set.md) for your team on the B.C. Government Public Cloud.
+1. Create a [provisioning request for a Project Set](../../welcome/provision-a-project-set.md) for your team on the B.C. government Public cloud.
 
 2. Once approved, your Project Set will be provisioned, followed up by an email sent to the Product Owner and Technical Lead(s) once the provisioning is complete.
 
@@ -16,7 +16,7 @@ The following sections describe the requirements for building your application o
 
 Take the following into consideration when building your application in the Azure Landing zone:
 
-- There is no direct (private) connectivity to the B.C. Government network. Any application requiring access to data on this network must use a public endpoint.
+- There is no direct (private) connectivity to the B.C. government network. Any application requiring access to data on this network must use a public endpoint.
   - See [Upcoming Features: Express Route](../upcoming-features/express-route.md) for more information.
 
 - Only HTTPS applications that are compatible with public endpoints through [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) are supported.

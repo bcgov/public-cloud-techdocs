@@ -1,4 +1,4 @@
-# Welcome to the Public Cloud Azure Technical Documentation
+# Welcome to the Public cloud Azure Technical Documentation
 
 Last updated: **{{ git_revision_date_localized }}**
 

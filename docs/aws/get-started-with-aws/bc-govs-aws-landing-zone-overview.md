@@ -1,14 +1,14 @@
-# B.C. Government OCIO AWS Landing Zone overview
+# B.C. government OCIO AWS Landing Zone overview
 
 Last updated: **{{ git_revision_date_localized }}**
 
-An overview of the B.C. Government OCIO's Landing Zone in AWS, how to get access, its benefits, components, and features.
+An overview of the B.C. government OCIO's Landing Zone in AWS, how to get access, its benefits, components, and features.
 
 ---
 
-## Benefits of building apps in the AWS Public Cloud
+## Benefits of building apps in the AWS Public cloud
 
-Ministry teams in the B.C. government who want to build applications in the Public Cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed  to meet the needs and compliance requirements of the BC government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's AWS landing zone offers several significant benefits:
+Ministry teams in the B.C. government who want to build applications in the Public cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed  to meet the needs and compliance requirements of the BC government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's AWS landing zone offers several significant benefits:
 
 1. **Enhanced security compliance**: It aligns with high-standard security frameworks like NIST 800-53 and the CCCS Medium Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders
 
@@ -20,13 +20,13 @@ Ministry teams in the B.C. government who want to build applications in the Publ
 
 5. **Long-term management and evolution**: This tool not only helps deploy applications initially but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs
 
-6. **Leveraging cutting-egde capabilities in public cloud**: When you build in public cloud, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
+6. **Leveraging cutting-egde capabilities in Public cloud**: When you build in Public cloud, they can tap into a wide range of services and capabilities, spanning from advanced analytics to AI and machine learning tools. This integration has the potential to greatly boost the functionality and reach of government applications
 
-For B.C. government ministry teams developing applications in the AWS Public Cloud, the OCIO landing zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
+For B.C. government ministry teams developing applications in the AWS Public cloud, the OCIO landing zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
 ## How to get access
 
-Explore a [comprehensive guide](https://digital.gov.bc.ca/technology/cloud/public/onboard) for onboarding your team to the public cloud.
+Explore a [comprehensive guide](https://digital.gov.bc.ca/technology/cloud/public/onboard) for onboarding your team to the Public cloud.
 
 ## Components and features
 
@@ -67,7 +67,7 @@ A project set consists of four distinct AWS accounts for development (dev), test
 
 ### Security guardrails
 
-The AWS Secure Environment Accelerator (ASEA) product provides a security framework for B.C. government ministry teams developing applications in the AWS Public Cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
+The AWS Secure Environment Accelerator (ASEA) product provides a security framework for B.C. government ministry teams developing applications in the AWS Public cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
 
 #### Preventative controls
 
@@ -162,7 +162,7 @@ This logging architecture ensures that ministry teams can effectively monitor, a
 
 ### IAM Users (service accounts)
 
-The IAM User Management and Key Rotation solution, an integral part of the B.C. Government AWS Landing Zone, offers a secure and automated method for managing IAM users and their access keys. This solution is needed for scenarios where access to AWS services is required from outside the AWS environment, such as from on-premises systems.
+The IAM User Management and Key Rotation solution, an integral part of the B.C. government AWS Landing Zone, offers a secure and automated method for managing IAM users and their access keys. This solution is needed for scenarios where access to AWS services is required from outside the AWS environment, such as from on-premises systems.
 
 For detailed user documentation, see the [IAM User Management Service](../design-build-and-deploy-an-application/iam-user-service.md) page.
 
@@ -223,11 +223,11 @@ By recognizing and respecting the role of these ASEA-managed resources, ministry
 
 ## Next steps
 
-- [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+- [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
 
 ## Related pages
 
 - [Public cloud services](https://digital.gov.bc.ca/technology/cloud/public)
 - [Public cloud hosting 101](https://digital.gov.bc.ca/technology/cloud/public/intro/)
-- [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+- [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
 - [IAM User Management Service](../design-build-and-deploy-an-application/iam-user-service.md)

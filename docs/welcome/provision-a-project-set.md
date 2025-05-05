@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [Product Registry](https://registry.developer.gov.bc.ca/login).
+On the Public cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [Product Registry](https://registry.developer.gov.bc.ca/login).
 
 ---
 
@@ -17,7 +17,7 @@ A project set consists of up to four distinct environments for development (`dev
 
 ## Prerequisites
 
-New requests must be reviewed and approved by the Public Cloud platform team. The same rule applies for teams that already have projects on the platform and require additional Project Sets.
+New requests must be reviewed and approved by the Public cloud platform team. The same rule applies for teams that already have projects on the platform and require additional Project Sets.
 
 To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/technology/cloud/public/onboard/).
 
@@ -35,14 +35,14 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   - An Account code for billing purposes
     - Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/technology/cloud/public/onboard/#mou) for more information
     
-  For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
+  For **new product teams** requesting a Project Set in a Public cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
   - Sign a Memorandum of Understanding (MoU) with the OCIO
-  - Book an onboarding session with the Public Cloud team
+  - Book an onboarding session with the Public cloud team
     - This can be done through the [Jira Support Portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
   <!-- TODO: Update the "book onboarding session" with a link to the Support Portal request type, and/or MS Teams integration (when available) -->
 
-2. Navigate to the top menu called **Public Cloud Products**.
+2. Navigate to the top menu called **Public cloud Products**.
 
   ![public-cloud](../images/provision-a-project-set/public-cloud.png)
 
@@ -99,6 +99,6 @@ Other team members can be added to the Project Set by the Product Owner or Techn
 ## Related pages
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
-- [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
+- [Onboard your team to Public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
 - [AWS Landing Zone Overview](../aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
 - [Azure Landing Zone Overview](../azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)

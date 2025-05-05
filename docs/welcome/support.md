@@ -1,10 +1,10 @@
-# Public Cloud Support
+# Public cloud Support
 
 Last updated: **{{ git_revision_date_localized }}**
 
 ## Project Set license plate
 
-When requesting support from the Public Cloud team, please provide the 6-character alphanumeric Project Set **license plate**. This is a unique identifier for your Project Set that helps us provide support more efficiently.
+When requesting support from the Public cloud team, please provide the 6-character alphanumeric Project Set **license plate**. This is a unique identifier for your Project Set that helps us provide support more efficiently.
 
 ### AWS
 
@@ -30,7 +30,7 @@ To find the license plate for an Azure Project Set, follow these steps:
 
 ## Support options
 
-There are multiple ways to get support for the Public Cloud Platform, including:
+There are multiple ways to get support for the Public cloud Platform, including:
 
 - [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) (preferred method)
 - [Rocket.Chat](https://chat.developer.gov.bc.ca/)
