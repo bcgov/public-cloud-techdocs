@@ -42,4 +42,4 @@ Unity Catalog provides a centralized data governance layer for Databricks assets
 | **Metastore (for Unity Catalog)** | Databricks Account       | ❌ No           | ✅ Yes               |
 
 !!! info "Unity Catalog Status"
-    As noted in the [Azure Services](./azure-services.md#azure-databricks-and-unity-catalog) documentation, **Unity Catalog is currently not enabled or governed** within the BC Government's Azure environment. Please refer to that page for more details on the current status and implications.
+    As noted in the [Azure Services](./azure-services.md#azure-databricks-and-unity-catalog) documentation, **Unity Catalog is currently not enabled or governed** within the B.C. Government's Azure environment. Please refer to that page for more details on the current status and implications.
