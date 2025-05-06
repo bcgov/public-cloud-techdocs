@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-On the Public Cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [Product Registry](https://registry.developer.gov.bc.ca/login).
+On the Public cloud platform, different teams organize their work in isolated **Project Sets**. Before working in the cloud platform, the **Product Owner** of the respective team must submit a Project Set provisioning request for your team, through the [Product Registry](https://registry.developer.gov.bc.ca/login).
 
 ---
 
@@ -17,7 +17,7 @@ A project set consists of up to four distinct environments for development (`dev
 
 ## Prerequisites
 
-New requests must be reviewed and approved by the Public Cloud platform team. The same rule applies for teams that already have projects on the platform and require additional Project Sets.
+New requests must be reviewed and approved by the Public cloud platform team. The same rule applies for teams that already have projects on the platform and require additional Project Sets.
 
 To do that you must meet the prerequisites for provisioning a Project Set outlined in our [onboarding documentation](https://digital.gov.bc.ca/technology/cloud/public/onboard/).
 
@@ -32,19 +32,21 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
   - An estimate for the product's projected monthly spend on cloud services
     - For estimating AWS monthly costs, please use the [AWS Cost Calculator](https://calculator.aws/#/)
     - For estimating Azure monthly costs, please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-ca/pricing/calculator/)
-  - An Account code for billing purposes. Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/technology/cloud/public/onboard/#mou) for more information
+  - An Account code for billing purposes
+    - Refer to the [Memorandum of Understanding (MoU)](https://digital.gov.bc.ca/technology/cloud/public/onboard/#mou) for more information
     
-  For **new product teams** requesting a Project Set in a Public Cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
+  For **new product teams** requesting a Project Set in a Public cloud Landing Zone, complete the following 2 steps before submitting the provisioning request:
 
-  - Sign a Memorandum of Understanding (MoU) with the OCIO.
-  - Book an onboarding session with the Public Cloud team.
-<!-- TODO: Update the "book onboarding session" with a link to the Support Portal request type, and/or MS Teams integration (when available) -->
+  - Sign a Memorandum of Understanding (MoU) with the OCIO
+  - Book an onboarding session with the Public Cloud team
+    - This can be done through the [Jira Support Portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
+  <!-- TODO: Update the "book onboarding session" with a link to the Support Portal request type, and/or MS Teams integration (when available) -->
 
-2. Navigate to the top menu called **Public Cloud Products**.
+2. Navigate to the top menu called **Public cloud Products**.
 
   ![public-cloud](../images/provision-a-project-set/public-cloud.png)
 
-3. On the top right side of the screen click on the button **Create +** to create a Project Set.
+3. On the top right side of the screen click on the **Create +** button to create a Project Set.
 
   ![create](../images/provision-a-project-set/create.png)
 
@@ -66,7 +68,7 @@ To do that you must meet the prerequisites for provisioning a Project Set outlin
 
 7. Enter your **billing number**.
 
-  - This number should be reflected on the team's signed MoU, and is related to the Expense Authority funding the project.
+  - This number should be reflected on the team's signed Memorandum of Understanding (MoU), and is related to the Expense Authority funding the project.
 
   ![billing](../images/provision-a-project-set/billing.png)
 
@@ -90,13 +92,13 @@ Other team members can be added to the Project Set by the Product Owner or Techn
 
 Once the Azure subscriptions have been provisioned, the Product Owner and Technical Lead(s) will be able to see them all in the [Azure Portal](https://portal.azure.com/) and they will have a restricted Owner role on the subscriptions.
 
-Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) directly in the [Azure Portal](https://portal.azure.com/). For more information on how to do this, see [Azure User Management](../azure/design-build-deploy/user-management.md).
+Other team members can be added to the Project Set by the Product Owner or Technical Lead(s) through the designated Entra ID security groups. For more information on how to do this, see [Azure User Management](../azure/design-build-deploy/user-management.md).
 
 ---
 
 ## Related pages
 
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
-- [Onboard your team to public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
+- [Onboard your team to Public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
 - [AWS Landing Zone Overview](../aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
 - [Azure Landing Zone Overview](../azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)

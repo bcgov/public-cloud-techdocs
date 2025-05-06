@@ -23,7 +23,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 
 ## Resource deployment restrictions
 
-*   **Allowed Locations (Regions):** Resource Groups and resources can only be deployed in Canada Central and Canada East. If you try to deploy to a region not on the approved list, the deployment will be **blocked**. Note that networking is only provided in Canada Central
+*   **Allowed Locations (Regions):** Resource Groups and resources can only be deployed in Canada Central and Canada East. If you try to deploy to a region not on the approved list, the deployment will be **blocked**. Note that networking is currently only provided in Canada Central
 *   **Resource Groups:** Resource Groups can only be created in Canada Central and Canada East regions. Resources must be deployed to a Resource Group in the same region as the resource itself. For example, if you want to deploy a VM in Canada Central, you must first create a Resource Group in Canada Central and then deploy the VM into that Resource Group
 *   **Denied Resource Types:** There is a "Deny" policy for specific resource types that are *not* allowed within the landing zone, preventing their creation
 
@@ -32,7 +32,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 ### General network security
 *   **No Public IPs (Generally):** You *cannot* create public IP addresses directly. This is a crucial security measure to minimize our public attack surface. Services should typically be accessed through private endpoints or other secure means
 *   **No Public IP on NICs:** Network interfaces *cannot* have a public IP address associated
-*   **No Management Port Access from Internet:** NSG rules allowing inbound access from the "Internet" source on common management ports (SSH/RDP - ports 22 and 3389) are *blocked*. Access to these ports is only allowed through secure, managed pathways (e.g., Azure Bastion, Just-In-Time VM Access)
+*   **No Management Port Access from Internet:** Network Security Group (NSG) rules allowing inbound access from the "Internet" source on common management ports (SSH/RDP - ports 22 and 3389) are *blocked*. Access to these ports is only allowed through secure, managed pathways (e.g., Azure Bastion, Just-In-Time VM Access)
 
 ### Subnet configuration requirements
 *   **Subnets Require Network Security Groups (NSGs):** Every subnet *must* have a Network Security Group (NSG) associated with it. You *cannot* create a subnet without an NSG. NSGs act like mini-firewalls for your subnets, controlling inbound and outbound traffic
@@ -58,8 +58,8 @@ Think of these guardrails as automatic checks and balances. They don't require y
 
 *   **Private Endpoints Required:** Access to most Azure PaaS services (like Storage Accounts, Key Vault, SQL Databases, etc.) is restricted to private endpoints only. This means that these services will not have public IP addresses and will only be accessible from within your virtual network (or peered networks). Creating a PaaS service without configuring a private endpoint, or attempting to enable public access after creation, will be blocked by a "Deny" policy
 *   **Centralized Private DNS Zones:** To make Private Endpoints work correctly, DNS resolution needs to be handled properly. The landing zone uses a centralized set of Private DNS Zones, managed within the "Connectivity" subscription (or a dedicated DNS subscription)
-    *   You are prevented from creating your own Private DNS Zones for supported PaaS services within your landing zone subscriptions. This is enforced by a "Deny" policy. This ensures consistency and prevents conflicts
-    *   Policies will automatically create the necessary DNS records in the centralized Private DNS Zones when you deploy a Private Endpoint. This is handled by "DeployIfNotExists" policies. You generally don't need to manually manage DNS for Private Endpoints
+  *   You are prevented from creating your own Private DNS Zones for supported PaaS services within your landing zone subscriptions. This is enforced by a "Deny" policy. This ensures consistency and prevents conflicts
+  *   Policies will automatically create the necessary DNS records in the centralized Private DNS Zones when you deploy a Private Endpoint. This is handled by "DeployIfNotExists" policies. You generally don't need to manually manage DNS for Private Endpoints
 *   **DNS Zone Groups:** When you create a private endpoint, the policy will automatically create a "private DNS zone group" and link it to the correct Private DNS Zone
 
 ## Security requirements
@@ -122,9 +122,9 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 ### Storage account security
 
 *   **Data Loss Prevention (DLP):** Azure Storage accounts should restrict the allowed copy scope
-*   Storage Accounts with custom domains assigned are denied
+*   **No custom domains:** Storage Accounts with custom domains assigned are denied
 *   **No Secure File Transfer Protocol (SFTP)**: Storage Accounts are not allowed to have SFTP support enabled for Blob storage
-*   **No local users:** Storage accounts *cannot* use local users for features like SFTP. Authentication should be managed through Azure AD
+*   **No local users:** Storage accounts *cannot* use local users for features like SFTP. Authentication should be managed through Entra ID
 
 ## Cost optimization
 
@@ -135,7 +135,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 ## Identity and access management {#identity--access-management}
 
-* Access is managed through EntraID security groups with standardized naming: `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
+* Access is managed through Entra ID security groups with standardized naming: `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 * Three standard permission levels are enforced:
   * Reader: View-only access to resources
   * Contributor: Can create and manage resources but cannot modify access permissions
@@ -144,7 +144,8 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 * Security groups are assigned roles at the Management Group level which propagates to all subscriptions
 * Service principals can be directly assigned roles on resources
 * All actions are subject to Azure Policy restrictions regardless of role
-* See [User management](../design-build-deploy/user-management.md) for complete details
+
+See [User management](../design-build-deploy/user-management.md) for complete details
 
 ## Specific service guardrails
 
@@ -217,7 +218,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
 
 *   **Exceptions:** In rare cases, exceptions to these policies *may* be granted, but this would require a formal review and justification process
 *   **"Audit" vs. "Deny":** "Audit" policies will report on non-compliance, but will *not* block deployments. "Deny" policies will actively *prevent* non-compliant deployments. "DeployIfNotExists" or "Modify" policies will attempt to automatically configure resources to be compliant
-*   **Order of policy enforcement:** If there are policies that are both "Audit" and "Deny" then, deny policies will always take precedence
+*   **Order of policy enforcement:** If there are policies that are both "Audit" and "Deny", then deny policies will always take precedence
 *   **Changes:** This document, and the policies themselves, are subject to change. We will communicate any significant updates
 
 !!! info "Technical details"

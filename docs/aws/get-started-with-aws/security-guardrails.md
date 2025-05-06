@@ -86,8 +86,8 @@ You don't have direct access to billing information or the ability to set up det
 
 Budgets and notifications are pre-configured to alert you when your spend is approaching limits. These values are set in the [Platform Product Registry](https://registry.developer.gov.bc.ca). You may also set up additional budgets and alerts as needed.
 
-To provide a centralized view of costs across all accounts and projects, the Public Cloud team has created a Cost Explorer dashboard. This dashboard helps track and analyze costs for all projects and accounts. For more details, see [AWS billing and cost management dashboards](../understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md).
+To provide a centralized view of costs across all accounts and projects, the Public cloud team has created a Cost Explorer dashboard. This dashboard helps track and analyze costs for all projects and accounts. For more details, see [AWS billing and cost management dashboards](../understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md).
 
-By following these guidelines, you help maintain the security and compliance of our AWS environment. If these limitations significantly impact your work, contact the Public Cloud team for guidance, workarounds, or to request exceptions for critical business needs.
+By following these guidelines, you help maintain the security and compliance of our AWS environment. If these limitations significantly impact your work, contact the Public cloud team for guidance, workarounds, or to request exceptions for critical business needs.
 
 If you have any questions or need assistance, create a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) ticket.

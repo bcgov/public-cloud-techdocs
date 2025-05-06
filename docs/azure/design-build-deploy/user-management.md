@@ -35,7 +35,7 @@ Your project set uses three standard permission levels:
 
 ### Security group structure
 
-Access is managed through EntraID security groups that follow this naming pattern:
+Access is managed through Entra ID security groups that follow this naming pattern:
 
 `DO_PuC_Azure_Live_{LicensePlate}_{Role}`
 
@@ -85,7 +85,7 @@ As a Product Owner, you have two options for managing your security groups:
 ### Option 2: Using the Azure Portal
 
 1. Log in to the [Azure portal](https://portal.azure.com)
-2. Navigate to your Azure Active Directory
+2. Navigate to Entra ID
 3. Go to "Groups" in the left sidebar
 4. Find and select your security group (prefixed with your Project Set license plate)
 5. Use the "Members" tab to add or remove users
@@ -133,4 +133,4 @@ For a list of built-in roles and their permissions, refer to the [Azure built-in
 
 ## Need help?
 
-If you need assistance with user management or have questions about your access structure, [please contact the Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.
+If you need assistance with user management or have questions about your access structure, [please contact the Public cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support.

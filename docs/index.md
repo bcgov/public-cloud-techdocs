@@ -1,14 +1,14 @@
-# Welcome to the Public Cloud Technical Documentation
+# Welcome to the Public cloud Technical Documentation
 
 Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 
-This documentation provides information for using Public Cloud services within the B.C. Government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. Government's public cloud environment.
+This documentation provides information for using Public cloud services within the B.C. government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. government's Public cloud environment.
 
 ## Provision a Project Set
 
-To get started in the Public Cloud you can provision a Project Set in AWS or Azure using the [Platform Product Registry](https://registry.developer.gov.bc.ca).
+To get started in the Public cloud you can provision a Project Set in AWS or Azure using the [Platform Product Registry](https://registry.developer.gov.bc.ca).
 
 For more information, see [Provision a Project Set](welcome/provision-a-project-set.md).
 
@@ -36,13 +36,13 @@ Azure is a comprehensive set of cloud services that developers and IT profession
 
 ### Rocket.Chat
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Public Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).
+Rocket.Chat will be your main communication channel for platform updates and support while you work in the B.C. government's Public cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).
 
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
-### Public Cloud community updates
+### Public cloud community updates
 
-Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public Cloud Accelerator Service (also known as CloudPathFinder) and its community, and changes to the platform.
+Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public cloud Accelerator Service (formerly known as CloudPathFinder) and its community, and changes to the platform.
 
 [Learn how to register for this and other events](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).

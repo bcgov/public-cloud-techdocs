@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following are some things to be aware of when working with specific Azure services within the Azure Landing Zone. This does not list every Azure service, but rather, shares some best practices and limitations for specific services, based on the experience of the Public Cloud team and feedback from end-users.
+The following are some things to be aware of when working with specific Azure services within the Azure Landing Zone. This does not list every Azure service, but rather, shares some best practices and limitations for specific services, based on the experience of the Public cloud team and feedback from end-users.
 
 !!! question "Azure AI and ML services"
     Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
@@ -13,6 +13,9 @@ If you use an [App Service](https://learn.microsoft.com/en-us/azure/app-service/
 
 To follow best practices when using Azure App Services with VNet integration, if you plan to delete the App Service, ensure that you **remove the integration** with the Virtual Network **before** deleting the App Service. This will allow you to delete the associated Subnet without any issues.
 
+!!! failure ""Subnet deletion failure"
+    If you forget to remove the integration, and have deleted the App Service, you will need to [open a support case](../support/enterprise-support.md#how-to-receive-support) with Microsoft Support to have the integration removed before you can delete the Subnet.
+
 ## Application Gateway
 
 If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview), please be aware that the backend health may show a status of **Unknown**. For more information and direction on how to resolve this, see the [Networking within the Azure Landing Zone - Exposing services to the internet](../design-build-deploy/networking.md#exposing-services-to-the-internet) section.
@@ -21,7 +24,7 @@ If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azur
 
 The current version (v1) of the Azure [API Management Service](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts) doesn't work with [inbound Private Endpoints](https://learn.microsoft.com/en-us/azure/api-management/virtual-network-concepts#inbound-private-endpoint). To access the service from within a virtual network, you must create a DNS record. Unlike other [private endpoints](./be-mindful.md#private-endpoints-and-dns) in the Landing Zones, this process isn't automated.
 
-If you are using v1 of the API Management Service, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team to have the DNS record created for you.
+If you are using v1 of the API Management Service, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public cloud team to have the DNS record created for you.
 
 Version 2 of the API Management Service [isn't currently available](https://learn.microsoft.com/en-us/azure/api-management/api-management-region-availability#supported-regions-for-v2-tiers-and-workspace-gateways) in the Canada Azure regions. When available, use this version, as it'll support Private Endpoints.
 
@@ -52,15 +55,16 @@ Although the connectivity method says "**public access**", this is the option yo
 ### How Unity Catalog works
 
 - **Unity Catalog** is a centralized **data governance layer** for Databricks that enables fine-grained access control across all data assets (tables, views, files).
-- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned/managed through [https://accounts.azuredatabricks.net
-  ](https://accounts.azuredatabricks.net).
+- It is **not an Azure-native service**. It runs on the **Databricks control plane**, and is provisioned and managed through [https://accounts.azuredatabricks.net](https://accounts.azuredatabricks.net).
 - It can enforce **identity-based policies**, using **Microsoft Entra ID** groups via SCIM federation or manual assignment.
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
-!!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use."
-    - While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
-    - As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
-    - Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
+!!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use"
+    While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
+    
+    As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
+
+    Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
 
 ### Practical considerations
 

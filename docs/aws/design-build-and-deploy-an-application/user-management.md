@@ -73,9 +73,9 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 }
 ```
 
-## Accessing the Public Cloud AWS Landing Zone
+## Accessing the Public cloud AWS Landing Zone
 
-- Once a user is added to a role, they can access the product (AWS accounts) from the [Public Cloud Landing Zone.](https://login.nimbus.cloud.gov.bc.ca/) If users have multiple roles, they can choose any of those roles when logging in to the account.
+- Once a user is added to a role, they can access the product (AWS accounts) from the [Public cloud Landing Zone.](https://login.nimbus.cloud.gov.bc.ca/) If users have multiple roles, they can choose any of those roles when logging in to the account.
 ![AWS landing zone screen preview of the dashboard showing access to choose different types to login based on user credentials](../images/user-management/landing_zone.png)
 
 ## AWS managed policies overview

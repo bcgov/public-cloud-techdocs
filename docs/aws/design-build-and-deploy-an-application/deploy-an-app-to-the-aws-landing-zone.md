@@ -1,8 +1,8 @@
-# Deploy an application to the  B.C. Government AWS Landing Zone
+# Deploy an application to the  B.C. government AWS Landing Zone
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The B.C. Government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
+The B.C. government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
 
 This guide explains how to:
 
@@ -26,7 +26,7 @@ To follow this guide, you need:
 
 ## AWS Accounts in your project set
 
-The B.C. Government ASEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
+The B.C. government ASEA uses separate AWS accounts for development (dev), testing (test), and production (prod) environments. This isolates and protects each stage of the deployment lifecycle.
 
 - The dev account is for developers to experiment and test features
 - The test account mirrors production and is used for quality assurance testing
@@ -186,7 +186,7 @@ Examples of using API Gateway with VPC Link can be found in the the [sample appl
 
 ## Sample applications
 
-The Public Cloud team has created sample applications to demonstrate various application architectures. These sample applications are available on GitHub:
+The Public cloud team has created sample applications to demonstrate various application architectures. These sample applications are available on GitHub:
 
 - [AWS Serverless](https://github.com/bcgov/startup-sample-project-aws-serverless-OIDC)
 - [AWS Containers](https://github.com/bcgov/startup-sample-project-aws-containers)

@@ -2,11 +2,11 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following sections describe the requirements for building your application on the B.C. Government Public Cloud, AWS Landing Zone.
+The following sections describe the requirements for building your application on the B.C. government Public cloud, AWS Landing Zone.
 
 ## Prerequisites
 
-1. Create a [provisioning request for a project set](../../welcome/provision-a-project-set.md) for your team on the B.C. Government Public Cloud
+1. Create a [provisioning request for a project set](../../welcome/provision-a-project-set.md) for your team on the B.C. government Public cloud
 
 2. Once approved, your project set will be provisioned followed up by an email sent to the Product Owner and Technical Lead once the provisioning is complete
 
@@ -26,7 +26,7 @@ Take the following into consideration when building your application on the AWS 
 
 * Most networking is under the management of AWS Landing Zone and is not subject to change. Security groups are the exception to this rule
 
-* IAM Users and their access keys can only be generated  by the [IAM User management service](iam-user-service.md), which is created and managed by the Public Cloud team
+* IAM Users and their access keys can only be generated  by the [IAM User management service](iam-user-service.md), which is created and managed by the Public cloud team
 
 ## Other requirements and best practices
 
@@ -112,11 +112,11 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 ## Next steps
 
-* [Deploy an application to the B.C. Government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
+* [Deploy an application to the B.C. government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
 
 ## Related pages
 
 * [Provision a project set](../../welcome/provision-a-project-set.md)
 * [Account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
 * [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws)
-* [Deploy an application to the B.C. Government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+* [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)

@@ -17,6 +17,11 @@ To add call-outs to your markdown content, please refer to the following links f
 https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/content-syntax-guide/#admonitions
 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
 
+## HTML Link Validation
+The build process will validate all links in the markdown files. If a link is broken or unreachable, the build will fail. For more information on how the validation works, along with how to add exceptions, please refer to the following link:
+- [https://github.com/bcgov/devhub-techdocs-publish/blob/stable/docs/index.md#link-validation-using-htmltest](https://github.com/bcgov/devhub-techdocs-publish/blob/stable/docs/index.md#link-validation-using-htmltest)
+- [https://github.com/wjdp/htmltest](https://github.com/wjdp/htmltest)
+
 # Deploy locally
 To deploy locally you need to have Node.js installed. If you don't have it installed, you can download it from [here](https://nodejs.org/en/download/). You will also need to have Docker installed. If you don't have it installed, you can download it from [here](https://www.docker.com/products/docker-desktop).
 

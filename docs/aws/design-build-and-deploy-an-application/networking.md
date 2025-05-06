@@ -17,7 +17,7 @@ These resources are accessible through AWS Resource Access Manager (RAM), which 
 
 This streamlined approach eliminates the need for duplicating resources across multiple accounts reducing the operational burden associated with managing resources in each individual account.
 
-The distinction between the Shared Networking and Perimeter accounts is driven by the need for "separation of duties" in networking and security. In essence, ASEA's networking architecture guarantees centralized, well-organized, and secure communication. This is achieved through Transit Gateway routing, distinct security measures for the Perimeter VPC, and efficient resource management in the Shared Network account, as depicted in the B.C. Government ASEA's networking diagram below:
+The distinction between the Shared Networking and Perimeter accounts is driven by the need for "separation of duties" in networking and security. In essence, ASEA's networking architecture guarantees centralized, well-organized, and secure communication. This is achieved through Transit Gateway routing, distinct security measures for the Perimeter VPC, and efficient resource management in the Shared Network account, as depicted in the B.C. government ASEA's networking diagram below:
 
 ![networking-architecture](../images/networking/network-architecture.png)
 
@@ -148,7 +148,7 @@ Generally, in the ASEA we recommend one of two methods of exposing services to t
 - API Gateway
 - Application Load Balancer (ALB)
 
-Making strategic choices between AWS API Gateway and ALBs is essential for optimizing cloud architecture. API Gateway is the preferred option for internet exposure, catering to modern applications using RESTful APIs and serverless computing. ALBs are should only be used for supporting legacy applications, and require integration support from the Public Cloud team.
+Making strategic choices between AWS API Gateway and ALBs is essential for optimizing cloud architecture. API Gateway is the preferred option for internet exposure, catering to modern applications using RESTful APIs and serverless computing. ALBs are should only be used for supporting legacy applications, and require integration support from the Public cloud team.
 
 **Create an API in API Gateway**
 For general instructions on how to cerate an API gateway and safely expose it to the internet please see this [AWS documentation on HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html). For ASEA specific examples deployed using Terraform via GitHub Actions please see our [serverless, or container based sample applications](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#sample-applications). Creating resources via Terraform/ automation is always preferred.

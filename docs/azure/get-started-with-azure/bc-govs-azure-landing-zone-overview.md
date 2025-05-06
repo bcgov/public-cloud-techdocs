@@ -1,14 +1,14 @@
-# B.C. Government OCIO Azure Landing Zone overview
+# B.C. government OCIO Azure Landing Zone overview
 
 Last updated: **{{ git_revision_date_localized }}**
 
-An overview of the B.C. Government OCIO's Landing Zone in Azure, how to get access, its benefits, components, and features.
+An overview of the B.C. government OCIO's Landing Zone in Azure, how to get access, its benefits, components, and features.
 
 ---
 
-## Benefits of building apps in the Azure Public Cloud
+## Benefits of building apps in the Azure Public cloud
 
-For B.C. Government ministry teams developing applications in the Azure Public Cloud, the OCIO Landing Zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
+For B.C. government ministry teams developing applications in the Azure Public cloud, the OCIO Landing Zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
 
 The [Microsoft Cloud Adoption Framework (CAF)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview), and [Well-Architected Framework (WAF)](https://learn.microsoft.com/en-us/azure/well-architected/what-is-well-architected-framework) ensures that you can develop and deploy applications in a secure, compliant, and controlled Azure environment, enabling you to focus on delivering innovative and effective digital services.
 
@@ -22,13 +22,13 @@ In this section, we'll provide a high level overview of the components and featu
 
 ### Security guardrails
 
-The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#regulatory-compliance) initiatives provides a security framework for B.C. Government ministry teams developing applications in the Azure Public Cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
+The built-in Azure Policy [Regulatory Compliance](https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives#regulatory-compliance) initiatives provides a security framework for B.C. government ministry teams developing applications in the Azure Public cloud. This framework includes both preventative and detective controls to ensure a secure and compliant cloud environment.
 
 [Microsoft Defender for Cloud (MDfC)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction) (formerly known as Security Center) offers a centralized dashboard for assessing the security posture of your resources in Azure. Defender for Cloud frameworks such as the [Microsoft Cloud Security Benchmark](https://learn.microsoft.com/en-us/security/benchmark/azure/overview), [CIS Microsoft Azure Foundations Benchmark](https://learn.microsoft.com/en-us/azure/governance/policy/samples/cis-azure-2-0-0), [Cloud Security Posture Management (CSPM)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management), [NIST SP 800-53](https://learn.microsoft.com/en-us/azure/governance/policy/samples/nist-sp-800-53-r5), and [Canada Federal PBMM](https://learn.microsoft.com/en-us/azure/governance/policy/samples/canada-federal-pbmm) have been enabled for comprehensive checks against Azure resources.
 
 [![Defender for Cloud Overview](../images/defender-for-cloud-overview.png "Defender for Cloud Overview")](https://learn.microsoft.com/en-us/azure/reusable-content/ce-skilling/azure/media/defender-for-cloud/overview.png#lightbox)
 
-For more information see [Azure Guardrails](guardrails.md)
+For more information see [Azure Guardrails](guardrails.md).
 
 ### Networking
 

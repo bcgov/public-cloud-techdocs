@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified Support plan. There is a delay of approximately **2 weeks** for the Azure Unified Support plan to be activated.
+Once your Project Set has been provisioned, each Azure Subscription will be enrolled in the Azure Unified support plan. There is a delay of approximately **2 weeks** for the Azure Unified support plan to be activated.
 
 !!! info "Third-party vendor landing zones"
     If you use a third-party vendor's landing zone in Azure, you cannot use the B.C. government's Unified Enterprise support plan.

@@ -9,7 +9,7 @@ The following sections describe the networking components within the Azure Landi
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
 
 !!! danger "Allocated IP addresses"
-    Each Project Set is provided with approximately **251 IP addresses** (ie. `/24`) by default. If your application requires more IP addresses than the `/24` provides, contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    Each Project Set is provided with approximately **251 IP addresses** (ie. `/24`) by default. If your application requires more IP addresses than the `/24` provides, contact the Public cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
     !!! note "Microsoft IP reservations"
         Microsoft **reserves 5 IP addresses** from **each subnet** within a Virtual Network. Therefore a `/24` subnet would not have 256 IP addresses available for use, but rather 251 IP addresses.
@@ -29,7 +29,7 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 
 If your team has multiple environments (ie. Dev, Test, Prod, Tools) within the same Project Set, you may require connectivity between the different environments. This is known as spoke-to-spoke connectivity.
 <!-- TODO: Update to point to the Firewall Request Form once it is released -->
-By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
+By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public cloud team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
 
 ## Internet connectivity
 
@@ -61,7 +61,7 @@ To adhere to security best practices, the Application Gateway should also be con
 
     To resolve this, a custom **User Defined Route (UDR)** must be created to send traffic to the backend pool via an Azure Firewall in the Virtual WAN hub. 
     
-    Due to Landing Zone security and governance requirements, you cannot create this UDR yourself. Please contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for assistance with this, and reference the following Microsoft documentation: [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons).
+    Due to Landing Zone security and governance requirements, you cannot create this UDR yourself. Please contact the Public cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for assistance with this, and reference the following Microsoft documentation: [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons).
 
 ## VNet integration vs private endpoints
 
