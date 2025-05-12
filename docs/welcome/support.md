@@ -34,6 +34,9 @@ There are multiple ways to get support for the Public cloud Platform, including:
 
 - [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) (preferred method)
 - [Rocket.Chat](https://chat.developer.gov.bc.ca/)
+  - Channel: [public-cloud-support](https://chat.developer.gov.bc.ca/channel/public-cloud-general)
+  - Channel: [public-cloud-how-to](https://chat.developer.gov.bc.ca/channel/public-cloud-how-to)
+  - Channel: [public-cloud-alerts](https://chat.developer.gov.bc.ca/channel/public-cloud-alerts)
 
 ## Cloud vendor support
 
