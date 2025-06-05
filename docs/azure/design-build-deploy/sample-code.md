@@ -16,7 +16,7 @@ We have a centralized repository ([Azure Landing Zone Samples](https://github.co
 
 For additional guidance on application architecture, please refer to the [Microsoft Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/).
 
-!!! warning "Microsoft QucikStart templates"
+!!! warning "Microsoft QuickStart templates"
     Many of the Microsoft QuickStart templates are not designed to be deployed in a regulated/government environment. Most templates will attempt to deploy resources that are not allowed in the Azure Landing Zone (ie. Private DNS Zones, etc.). 
     
     It is highly likely that you will need to modify the templates to work in a regulated/government environment. Please expect additional effort when attempting to use these templates.
