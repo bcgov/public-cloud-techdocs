@@ -13,7 +13,7 @@ If you use an [App Service](https://learn.microsoft.com/en-us/azure/app-service/
 
 To follow best practices when using Azure App Services with VNet integration, if you plan to delete the App Service, ensure that you **remove the integration** with the Virtual Network **before** deleting the App Service. This will allow you to delete the associated Subnet without any issues.
 
-!!! failure ""Subnet deletion failure"
+!!! failure "Subnet deletion failure"
     If you forget to remove the integration, and have deleted the App Service, you will need to [open a support case](../support/enterprise-support.md#how-to-receive-support) with Microsoft Support to have the integration removed before you can delete the Subnet.
 
 ## Application Gateway
