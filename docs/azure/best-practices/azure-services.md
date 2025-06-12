@@ -83,3 +83,23 @@ If and when Unity Catalog is introduced, a central **data governance function** 
 - Control access policies at a cross-workspace level
 - Maintain consistent audit and data lineage tracking
 - Coordinate identity integration with Microsoft Entra ID
+
+## Azure Kubernetes Service (AKS) Networking
+
+When deploying AKS clusters, it is critical to ensure that the **service and pod CIDR ranges do not overlap** with any other networks that cluster pods will need to communicate with. Overlapping address spaces can cause connectivity issues between your AKS workloads and other resources, both within Azure and on-premises.
+
+**Important notes:**
+
+- **Virtual Networks (VNets) are pre-created** by the Public Cloud team. You cannot create new VNets, but you can create subnets within the existing VNet for your AKS resources.
+- Plan your subnet, pod, and service address ranges carefully to avoid conflicts and to allow for future scaling.
+
+For more information and best practices, see:
+
+- [AKS Networking Concepts](https://learn.microsoft.com/en-us/azure/aks/concepts-network)
+- [IP Address Planning for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-network-ip-address-planning)
+- [CNI Overview](https://learn.microsoft.com/en-us/azure/aks/concepts-network-cni-overview)
+- [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-overlay)
+- [Azure CNI Pod Subnet](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-pod-subnet)
+
+> **Need help or unsure about your AKS networking setup?**
+> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or [Rocket.Chat](https://chat.developer.gov.bc.ca/). See [Support options](../../welcome/support.md) for more details.
