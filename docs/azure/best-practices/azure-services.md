@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 The following are some things to be aware of when working with specific Azure services within the Azure Landing Zone. This does not list every Azure service, but rather, shares some best practices and limitations for specific services, based on the experience of the Public cloud team and feedback from end-users.
 
 !!! question "Azure AI and ML services"
-    Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
+Looking for information on **Artificial Intelligence (AI)** or **Machine Learning (ML)** services? We have a dedicated page for [Azure AI Services](./azure-ai.md).
 
 ## App Service
 
@@ -14,7 +14,7 @@ If you use an [App Service](https://learn.microsoft.com/en-us/azure/app-service/
 To follow best practices when using Azure App Services with VNet integration, if you plan to delete the App Service, ensure that you **remove the integration** with the Virtual Network **before** deleting the App Service. This will allow you to delete the associated Subnet without any issues.
 
 !!! failure "Subnet deletion failure"
-    If you forget to remove the integration, and have deleted the App Service, you will need to [open a support case](../support/enterprise-support.md#how-to-receive-support) with Microsoft Support to have the integration removed before you can delete the Subnet.
+If you forget to remove the integration, and have deleted the App Service, you will need to [open a support case](../support/enterprise-support.md#how-to-receive-support) with Microsoft Support to have the integration removed before you can delete the Subnet.
 
 ## Application Gateway
 
@@ -60,8 +60,8 @@ Although the connectivity method says "**public access**", this is the option yo
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
 !!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use"
-    While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
-    
+While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
+
     As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
 
     Workspaces will continue to rely on **legacy workspace-level access controls** and standard Databricks role-based permissions until further notice.
@@ -83,3 +83,25 @@ If and when Unity Catalog is introduced, a central **data governance function** 
 - Control access policies at a cross-workspace level
 - Maintain consistent audit and data lineage tracking
 - Coordinate identity integration with Microsoft Entra ID
+
+## Azure Kubernetes Service (AKS) Networking
+
+When deploying AKS clusters, it is critical to ensure that the **service and pod CIDR ranges do not overlap** with any other networks that cluster pods will need to communicate with. Overlapping address spaces can cause connectivity issues between your AKS workloads and other resources, both within Azure and on-premises.
+
+**Important notes:**
+
+- **Virtual Networks (VNets) are pre-created** by the Public Cloud team. You cannot create new VNets, but you can create subnets within the existing VNet for your AKS resources
+- Plan your subnet, pod, and service address ranges carefully to avoid conflicts and to allow for future scaling
+- **Reserved address space**: The `10.10.0.0/16` range is reserved for AKS deployments. However, this same range may also be used for extended non-routable peered VNets if teams require additional IP addresses beyond what's provided in the standard routable VNet
+- **Future network expansion**: If you anticipate needing an extended network in the future, it's important to plan your AKS CIDR ranges accordingly to avoid conflicts. Contact the Public Cloud team early in your planning process for guidance on optimal address allocation
+
+For more information and best practices, see:
+
+- [AKS Networking Concepts](https://learn.microsoft.com/en-us/azure/aks/concepts-network)
+- [IP Address Planning for AKS](https://learn.microsoft.com/en-us/azure/aks/concepts-network-ip-address-planning)
+- [CNI Overview](https://learn.microsoft.com/en-us/azure/aks/concepts-network-cni-overview)
+- [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-overlay)
+- [Azure CNI Pod Subnet](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-pod-subnet)
+
+> **Need help or unsure about your AKS networking setup?**
+> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or [Rocket.Chat](https://chat.developer.gov.bc.ca/). See [Support options](../../welcome/support.md) for more details.
