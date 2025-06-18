@@ -1,4 +1,4 @@
-# Next Steps
+# Next steps
 
 Last updated: **{{ git_revision_date_localized }}**
 
@@ -11,7 +11,7 @@ At this point, you should have a Project Set provisioned in Azure. Now what?
 
 Per the [Azure Landing Zone Overview](../get-started-with-azure/bc-govs-azure-landing-zone-overview.md#networking), each Project Set has its own Virtual Network (VNet) to isolate resources and provide secure connectivity.
 
-Since most projects will deploy common Azure resources that have network security guardrails, such as preventing databases from being exposed to the public Internet, you will need to **create a Subnet** within the VNet to host your resource's **Private Endpoints**.
+Since most projects will deploy common Azure resources that have network security guardrails, such as preventing databases from being exposed to the public internet, you will need to **create a Subnet** within the VNet to host your resource's **Private Endpoints**.
 
 !!! quote "Dedicated subnet for private endpoints"
     According to the Microsoft [Private Endpoint documentation](https://learn.microsoft.com/en-us/azure/private-link/private-link-faq#do-i-require-a-dedicated-subnet-for-private-endpoints--), "_You don't require a dedicated subnet for Private Endpoints. You can choose a Private Endpoint IP from any subnet from the virtual network where your service is deployed._"
@@ -30,16 +30,16 @@ The number of Subnets you will need to create depends on the architecture of you
 
 ## Working with Private Endpoints
 
-Private Endpoints are a secure way to connect to Azure services over a private link, ensuring that traffic between your resources and the Azure service does not traverse the public Internet.
+Private Endpoints are a secure way to connect to Azure services over a private link, ensuring that traffic between your resources and the Azure service does not traverse the public internet.
 
 When you deploy Azure resources, you should create a **Private Endpoint** for each service. This Private Endpoint will be deployed within the Subnet you created earlier, and it will allow your resources to communicate with the Azure service securely.
 
-However, because Private Endpoints are **not accessible** from the public Internet, you will need to interact with these resources **from within** the Virtual Network. This is typically done by deploying a **Virtual Machine (VM)** within the same Virtual Network.
+However, because Private Endpoints are **not accessible** from the public internet, you will need to interact with these resources **from within** the Virtual Network. This is typically done by deploying a **Virtual Machine (VM)** within the same Virtual Network.
 
 !!! note "Virtual machine subnet"
     You can deploy a Virtual Machine into an existing Subnet, or you can create a new Subnet specifically for the VM.
 
-After deploying a Virtual Machine, you will need to deploy **Azure Bastion** to securely connect to the VM over the Internet.
+After deploying a Virtual Machine, you will need to deploy **Azure Bastion** to securely connect to the VM over the internet.
 
 !!! question "Which Azure Bastion SKU to use?"
     The minimum Bastion SKU required is **Developer**. This SKU **does not** require a dedicated Subnet. However, please review the [Azure Bastion SKU](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#skus) documentation to determine the best SKU for your needs.
