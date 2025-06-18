@@ -35,6 +35,7 @@ nav:
           - Requirements: azure/design-build-deploy/requirements.md
           - User management: azure/design-build-deploy/user-management.md
           - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
+          - Next steps: azure/design-build-deploy/next-steps.md
           - Networking: azure/design-build-deploy/networking.md
           - Sample code: azure/design-build-deploy/sample-code.md
       - Best practices:
