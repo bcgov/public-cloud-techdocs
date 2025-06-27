@@ -132,7 +132,6 @@ AWS provides comprehensive monitoring capabilities for AI services:
 ### Cost monitoring
 - Track AI service costs in [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
 - Set up [billing alerts](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) for unexpected usage
-- Use [cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) to track AI costs by project or team
 
 ### Operational monitoring
 - Use [AWS CloudTrail](https://docs.aws.amazon.com/cloudtrail/) for API call auditing

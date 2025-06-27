@@ -76,7 +76,6 @@ For detailed information about user management and permissions, see our [user ma
 - Standardized account structure across all project sets
 - Centralized user access management through Entra ID security groups
 - Pre-built networking and security configurations
-- Cost allocation and monitoring built-in
 
 ### Development-friendly
 
