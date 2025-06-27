@@ -46,7 +46,6 @@ Navigate to [AWS Security Hub](https://ca-central-1.console.aws.amazon.com/secur
 Your AWS account is governed by Service Control Policies (SCPs) and other organizational policies:
 
 - **Service Control Policies** prevent actions that violate security or compliance requirements
-- **Tag policies** enforce consistent resource tagging
 
 !!! warning "Policy Enforcement"
     Organizational policies are enforced at the OU level and cannot be overridden. These policies implement the [guardrails](../get-started-with-lza/guardrails.md) that ensure platform security and compliance.
@@ -74,7 +73,7 @@ Navigate to [AWS Cost Explorer](https://ca-central-1.console.aws.amazon.com/cost
 !!! example "Cost Analysis Best Practices"
 
     - **Filter by service** to identify your largest cost drivers
-    - **Group by resource tags** to allocate costs to projects or teams
+    - **Group by resource tags** to organize cost reporting
     - **Set up cost alerts** to monitor spending against budgets
     - **Review monthly** to identify optimization opportunities
 
@@ -95,13 +94,12 @@ For detailed cost management guidance, see [AWS Cost Management](../understandin
 
 Implement consistent resource tagging for:
 
-- **Cost allocation** - Track spending by project, team, or environment (note: detailed cost allocation tags are limited by platform restrictions)
-- **Resource organization** - Group related resources for management
+- **Resource organization** - Organize and group related resources by project, team, or environment
 - **Automation** - Enable automated workflows based on tags
 - **Compliance** - Meet organizational tagging requirements
 
 !!! tip "Tagging Best Practices"
-    Establish a tagging strategy early and enforce it consistently. Common tags include Environment, Project, Owner, and CostCenter.
+    Establish a tagging strategy early and enforce it consistently. Common tags include Environment, Project, Owner, and Purpose.
 
 ### Resource lifecycle management
 

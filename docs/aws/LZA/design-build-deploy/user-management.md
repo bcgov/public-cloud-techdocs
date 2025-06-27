@@ -34,15 +34,15 @@ LZA provides five predefined user roles, each with specific AWS permissions:
 
 Access is managed through Entra ID security groups that follow this naming pattern:
 
-`DO_PuC_AWS_Live_{LicensePlate}_{Role}`
+`DO_PuC_AWS_{LicensePlate}_{Role}`
 
 For example:
 
-- `DO_PuC_AWS_Live_abc123_Admins`
-- `DO_PuC_AWS_Live_abc123_Developers`
-- `DO_PuC_AWS_Live_abc123_Viewers`
-- `DO_PuC_AWS_Live_abc123_BillingViewers`
-- `DO_PuC_AWS_Live_abc123_SecurityAuditors`
+- `DO_PuC_AWS_abc123_Admins`
+- `DO_PuC_AWS_abc123_Developers`
+- `DO_PuC_AWS_abc123_Viewers`
+- `DO_PuC_AWS_abc123_BillingViewers`
+- `DO_PuC_AWS_abc123_SecurityAuditors`
 
 These security groups are synchronized with AWS IAM roles to provide the appropriate access levels across your project set accounts.
 
@@ -118,7 +118,7 @@ As a Product Owner or Technical Lead, you can manage your project set's security
 1. Log in to the [Azure portal](https://portal.azure.com)
 2. Navigate to Entra ID
 3. Go to "Groups" in the left sidebar
-4. Find and select your security group (prefixed with `DO_PuC_AWS_Live_{LicensePlate}`)
+4. Find and select your security group (prefixed with `DO_PuC_AWS_{LicensePlate}`)
 5. Use the "Members" tab to add or remove users
 
 ## Prerequisites for user access

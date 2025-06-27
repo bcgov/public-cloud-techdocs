@@ -95,7 +95,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 ### Managed Infrastructure
 
 - **VPCs and subnets**: Platform-managed, cannot be created or modified
-- **Security groups**: EUsers can create and manage security groups
+- **Security groups**: Users can create new security groups, but platform-created security groups with Accelerator tags cannot be modified
 - **HTTPS requirement**: Only HTTPS applications supported for public endpoints
 
 ### Network Connectivity

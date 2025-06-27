@@ -37,7 +37,7 @@ You can only deploy AWS resources in the following regions:
 Platform-managed resources are protected from modification to maintain security and compliance. You can identify protected resources by:
 
 - **Names beginning with** `AWSAccelerator`
-- **Tags containing** `Accelerator: PBMM` or similar platform identifiers
+- **Tags containing** `Accelerator: AWSAccelerator` or similar platform identifiers
 
 !!! danger "Protected Resource Restrictions"
     You **cannot** change, delete, or interact with protected resources including CloudFormation stacks, IAM roles, S3 buckets, and network components.
@@ -55,7 +55,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **No VPC creation** - VPCs and subnets are platform-managed
 - **No subnet modification** - Cannot create, modify, or delete subnets
 - **No core networking changes** - Internet gateways, NAT gateways, and route tables are protected
-- **Security groups only** - The exception you can manage for network security
+- **Security groups** - You can create new security groups for network security, but platform-created security groups with Accelerator tags cannot be modified
 
 !!! info "Network Architecture"
     LZA uses a hub-and-spoke architecture with complete VPC isolation. See our [networking documentation](../design-build-deploy/networking.md) for detailed information.
@@ -108,7 +108,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **Limited policy attachment** - Follow least privilege principles
 
 !!! info "User Management"
-    All user access is managed through Entra ID security groups with standardized naming: `DO_PuC_AWS_Live_{LicensePlate}_{Role}`. See our [user management guide](../design-build-deploy/user-management.md) for details.
+    All user access is managed through Entra ID security groups with standardized naming: `DO_PuC_AW_{LicensePlate}_{Role}`. See our [user management guide](../design-build-deploy/user-management.md) for details.
 
 ### Account Actions
 
@@ -152,7 +152,7 @@ For detailed AI service guidance, see [AWS AI Services](../best-practices/aws-ai
 
 - **Platform-managed budgets** - Initial budgets configured by platform team
 - **Additional budgets allowed** - Can create supplementary budgets and alerts
-- **Cost allocation** - Limited ability to set up detailed cost allocation tags
+
 
 ## Compliance and best practices
 

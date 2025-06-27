@@ -52,7 +52,7 @@ provider "aws" {
 - Create custom routing tables
 - Modify network ACLs
 
-**Security groups are the exception** - you can create and manage security groups within the existing VPC structure.
+**Security groups can be created by users** - you can create new security groups within the existing VPC structure, but platform-created security groups with Accelerator tags cannot be modified.
 
 !!! tip "Working with managed networking"
 
@@ -124,23 +124,22 @@ Configure budget alerts early through the [Product Registry](https://registry.de
 - Compute time in ECS, Lambda, or EC2
 - AI service usage (particularly expensive for large-scale processing)
 
-### Resource tagging for cost allocation
+### Resource tagging for organization
 
-Apply **consistent tags to all resources** for proper cost tracking:
+Apply **consistent tags to all resources** for proper organization and management:
 
 ```terraform
 tags = {
   Project     = "your-project-name"
   Environment = "dev" # or test, prod, tools
   Owner       = "team-name"
-  CostCenter  = "your-cost-center"
   Purpose     = "web-app" # or database, ml-model, etc.
 }
 ```
 
 !!! tip "Tag everything from day one"
 
-    It's much harder to add cost allocation tags retroactively. Establish your tagging strategy before deploying resources.
+    Establish your tagging strategy before deploying resources for better organization and resource management.
 
 ## Security and compliance considerations
 
