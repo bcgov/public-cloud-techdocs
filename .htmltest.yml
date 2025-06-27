@@ -1,6 +1,6 @@
 CheckLinks: false # don't check URLs in <link> elements
 IgnoreDirectoryMissingTrailingSlash: true # don't fail when directory links don't have a trailing slash - techdocs generates a lot of valid links that would cause this check to fail
-IgnoreHTTPStatusCodes: [429] # suppress failures of URLs containing 429
+IgnoreHTTPStatusCodes: ["429"] # suppress failures of URLs containing 429
 IgnoreURLs:
   - "localhost" # suppress failures of URLs containing localhost
   - "https://github.com/bcgov-c"
