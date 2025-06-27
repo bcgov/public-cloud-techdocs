@@ -86,6 +86,7 @@ When deploying AWS AI services in the LZA environment, follow these security bes
 !!! example "SageMaker deployment example"
 
     When deploying Amazon SageMaker in a private network, ensure you configure:
+    
     - VPC endpoints for SageMaker API, Runtime, and Notebook instances
     - Private subnets for training and inference instances
     - Proper security group rules for notebook access
@@ -114,6 +115,7 @@ Amazon Bedrock is AWS's managed service for foundation models, but with the mark
 !!! warning "Model limitations impact"
 
     The restriction to Titan and Mistral models may limit certain use cases. If your application requires capabilities not available in these models, consider:
+    
     - Training custom models using Amazon SageMaker
     - Using other AWS AI services for specific tasks (Comprehend, Textract, etc.)
     - Discussing alternative approaches with the Public Cloud team
@@ -165,6 +167,7 @@ When deploying AI services in the AWS Landing Zone Accelerator:
 !!! note "AI ethics and responsible use"
 
     Consider implementing responsible AI practices:
+    
     - Regular bias testing and fairness assessments
     - Transparency in AI decision-making processes
     - Human oversight for critical decisions

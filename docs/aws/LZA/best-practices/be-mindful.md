@@ -101,6 +101,7 @@ The **AWS marketplace for AI models is not available** in the BC Government envi
 !!! warning "Limited AI model availability"
 
     **Available models only**:
+    
     - Amazon Titan models (Text, Embeddings, Image, Multimodal)
     - Mistral models (Mistral 7B, Mixtral)
 

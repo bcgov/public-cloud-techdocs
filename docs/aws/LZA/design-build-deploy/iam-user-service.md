@@ -195,11 +195,13 @@ While IAM users are available through this service, consider using IAM roles wit
 !!! tip "When to use IAM users vs roles"
 
     **Use IAM users for**:
+    
     - Legacy applications that cannot use roles
     - Third-party integrations requiring static credentials
     - Local development and testing scenarios
 
     **Use IAM roles for**:
+    
     - Applications running on AWS infrastructure
     - Cross-account access scenarios
     - Temporary access requirements

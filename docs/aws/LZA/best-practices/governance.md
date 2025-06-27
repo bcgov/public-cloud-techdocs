@@ -72,6 +72,7 @@ Navigate to [AWS Cost Explorer](https://ca-central-1.console.aws.amazon.com/cost
 - **Forecasting** to predict future costs
 
 !!! example "Cost Analysis Best Practices"
+
     - **Filter by service** to identify your largest cost drivers
     - **Group by resource tags** to allocate costs to projects or teams
     - **Set up cost alerts** to monitor spending against budgets
