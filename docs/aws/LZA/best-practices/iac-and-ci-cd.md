@@ -61,7 +61,23 @@ resource "random_id" "bucket_suffix" {
 
 #### State management
 
-Use remote state storage for team collaboration and state locking:
+Use remote state storage for team collaboration and state locking. As of Terraform 1.11+, you can use native S3 state locking without requiring DynamoDB:
+
+**Native S3 State Locking (Terraform 1.11+) - Recommended**
+
+```terraform
+terraform {
+  backend "s3" {
+    bucket         = "your-terraform-state-bucket"
+    key            = "infrastructure/terraform.tfstate"
+    region         = "ca-central-1"
+    encrypt        = true
+    use_lockfile   = true  # Enable native S3 locking
+  }
+}
+```
+
+**Traditional DynamoDB State Locking (Backwards compatibility)**
 
 ```terraform
 terraform {
@@ -74,6 +90,13 @@ terraform {
   }
 }
 ```
+
+**Key differences:**
+
+- **Native S3 locking**: Simpler setup, no additional AWS resources needed, no extra costs
+- **DynamoDB locking**: Stronger consistency guarantees for high-concurrency scenarios
+
+For most use cases, native S3 locking is sufficient and preferred due to its simplicity. For detailed configuration options, see the [official Terraform S3 backend documentation](https://developer.hashicorp.com/terraform/language/settings/backends/s3).
 
 #### Using Terraform to create security groups
 
