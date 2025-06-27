@@ -85,6 +85,7 @@ To make your applications accessible from the internet:
 LZA strongly encourages Infrastructure as Code (IaC) for consistent and repeatable deployments.
 
 Popular IaC tools supported in LZA:
+
 - **[Terraform](https://www.terraform.io/)**: Multi-cloud infrastructure tool
 - **[AWS CloudFormation](https://aws.amazon.com/cloudformation/)**: AWS native IaC service
 - **[AWS CDK](https://aws.amazon.com/cdk/)**: Code-based infrastructure definition
