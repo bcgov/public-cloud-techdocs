@@ -13,13 +13,15 @@ Per the [AWS Landing Zone Accelerator Overview](../get-started-with-lza/aws-land
 
 The VPC structure in LZA includes pre-configured subnets:
 
-- **Web-MainTgwAttach subnets** (2 × /27): For internet-facing resources and Transit Gateway connectivity
+- **Web-MainTgwAttach subnets** (2 × /27): VPC entry point and Transit Gateway connectivity
 - **App subnets** (2 × /26): For application servers and containers  
 - **Data subnets** (2 × /28): For databases and data storage
 - **Management subnets** (2 × /28): For administrative and monitoring tools
 
 !!! warning "IP Address Limitations"
     Each VPC has a /24 CIDR range providing only 256 IP addresses total. Plan your resource deployment carefully, and consider requesting a [secondary CIDR range](networking.md#extended-network-ip-exhaustion-solution) early if you anticipate high resource density.
+
+For detailed networking information including subnet use cases, public routing, and architecture details, see our [Networking documentation](networking.md).
 
 ## Working with AWS Services
 

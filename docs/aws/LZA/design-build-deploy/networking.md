@@ -40,6 +40,31 @@ Each VPC is divided into **8 subnets across 2 Availability Zones (A and B)**:
 !!! warning "IP Address Limitations"
     With only 256 IPs per VPC total, each subnet type exists in both AZ-A and AZ-B. Plan your IP usage carefully considering the per-AZ allocation.
 
+### Subnet Use Cases
+
+Each subnet type is designed for specific workload categories:
+
+**Web-MainTgwAttach subnets**
+- Application Load Balancers (ALBs) for public and internal routing
+
+**App subnets**
+- EC2 instances running application servers
+- ECS/Fargate containers and services
+- Lambda functions with VPC configuration
+- Application-tier compute resources
+
+**Data subnets**  
+- RDS database instances
+- ElastiCache clusters
+- EFS mount targets
+- Data storage and persistence services
+
+**Management subnets**
+- Administrative tools and utilities
+
+!!! note "Security Group and Network ACL Strategy"
+    LZA includes pre-configured security groups and Network ACLs that implement the principle of least privilege, allowing traffic flow from Web → App → Data subnets.
+    
 ## Extended Network - IP Exhaustion Solution
 
 ### Secondary CIDR Range
