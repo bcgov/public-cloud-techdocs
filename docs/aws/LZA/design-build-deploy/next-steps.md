@@ -11,16 +11,6 @@ At this point, you should have a Project Set provisioned in AWS Landing Zone Acc
 
 Per the [AWS Landing Zone Accelerator Overview](../get-started-with-lza/aws-landing-zone-accelerator-overview.md#your-project-set-structure), each Project Set has its own VPC in each account to isolate resources and provide secure connectivity.
 
-Since most projects will deploy common AWS resources that have network security guardrails, you will need to **create Security Groups** within the VPC to control traffic between your resources and potentially **request additional networking** if you encounter IP address limitations.
-
-!!! quote "Security Groups vs Network ACLs"
-    [Security Groups documentation](https://docs.aws.amazon.com/vpc/latest/userguide/security-groups.html), "_Security groups act as a virtual firewall for your instances to control inbound and outbound traffic._" They are stateful and provide instance-level security.
-
-    LZA provides platform-managed Network ACLs and some security groups, but you can create additional security groups as needed for your specific application requirements.
-
-!!! tip "Security Group creation"
-    You can create new Security Groups through the AWS Management Console, AWS CLI, or Infrastructure as Code tools like Terraform. However, platform-created security groups with Accelerator tags cannot be modified.
-
 The VPC structure in LZA includes pre-configured subnets:
 
 - **Web-MainTgwAttach subnets** (2 × /27): For internet-facing resources and Transit Gateway connectivity
@@ -33,7 +23,12 @@ The VPC structure in LZA includes pre-configured subnets:
 
 ## Working with AWS Services
 
-AWS LZA provides a secure foundation for deploying various AWS services. When you deploy AWS resources, you should follow security best practices and use appropriate service configurations.
+AWS LZA operates in the **Canada Central (ca-central-1)** region and provides a secure foundation for deploying AWS services. All AWS services available in the Canada Central region are available for use within your Project Set, giving you access to the full range of AWS capabilities while maintaining data residency within Canada.
+
+!!! note "Regional service availability"
+    The Canada Central region offers comprehensive AWS service coverage including compute, storage, databases, machine learning, analytics, and more. You can check current service availability at the [AWS Regional Services page](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
+
+When you deploy AWS resources, you should follow security best practices and use appropriate service configurations.
 
 ### Connecting to your resources
 
@@ -96,7 +91,7 @@ For detailed guidance, see our [Infrastructure as Code best practices](../best-p
 
 Deploy your CI/CD pipelines in the **Tools account** for centralized management:
 
-1. **GitHub Actions with OIDC**: Secure authentication without long-term credentials
+1. **[GitHub Actions with OIDC](../best-practices/iac-and-ci-cd.md#configuring-github-action-oidc-authentication-to-aws)**: Secure authentication without long-term credentials
 2. **AWS CodePipeline**: Native AWS CI/CD service
 3. **Cross-account deployments**: Use AWS APIs to deploy to other accounts
 
