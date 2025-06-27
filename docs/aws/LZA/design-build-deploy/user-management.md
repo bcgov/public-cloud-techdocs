@@ -192,6 +192,3 @@ If you need assistance with user management or have questions about your access 
 - Refer to the [Platform Product Registry](https://registry.developer.gov.bc.ca/) for managing the Product Owner and Technical Leads
 - Consult the [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/) for advanced AWS permissions concepts
 
-## Conclusion
-
-The LZA user management system combines the flexibility of AWS IAM with the centralized identity management of Entra ID security groups. This approach provides secure, auditable, and efficient access control while maintaining the familiar role-based structure from the ASEA platform. By understanding these roles and following best practices, you can ensure that your team has appropriate access to AWS resources while maintaining security and compliance requirements.

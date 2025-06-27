@@ -64,7 +64,3 @@ The dashboards offer advanced filtering capabilities to tailor the cost and usag
 - **Ministry filters**: Users can filter data at the ministry level, such as CITZ, to view aggregated cost and usage data relevant to their specific ministry
 - **Project set filters**: Users can drill down into specific project sets (e.g., `tnfhhm`) to analyze data associated with that set of AWS accounts
 - **Account-level filters**: Within a project set, users can further filter data by individual AWS accounts, for example: `tnfhhm-dev`, `tnfhhm-test` to gain insights into the cost and usage patterns of each account
-
-## Conclusion
-
-By following the outlined process to obtain the necessary role and using the dashboard's filtering capabilities, users can effectively monitor and analyze AWS cost and usage data. This structured approach ensures both security and granularity in accessing and interpreting cloud resource data.
