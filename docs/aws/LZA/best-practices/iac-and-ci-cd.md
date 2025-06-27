@@ -50,7 +50,6 @@ resource "aws_s3_bucket" "example_bucket" {
     Environment = var.environment
     Project     = var.project_name
     Owner       = var.owner
-    CostCenter  = var.cost_center
   }
 }
 
