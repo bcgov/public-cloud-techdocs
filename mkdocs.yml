@@ -11,7 +11,34 @@ nav:
       - Support: welcome/support.md
   - AWS:
       - Overview: aws/index.md
-      - ASEA (Current):
+      - LZA (Current):
+          - Overview: aws/LZA/index.md
+          - Get started with LZA:
+              - AWS Landing Zone Accelerator overview: aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md
+              - AWS security and compliance guardrails: aws/LZA/get-started-with-lza/guardrails.md
+          - Design, build, and deploy:
+              - Requirements: aws/LZA/design-build-deploy/requirements.md
+              - User management: aws/LZA/design-build-deploy/user-management.md
+              - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
+              - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
+              - Next steps: aws/LZA/design-build-deploy/next-steps.md
+              - Networking: aws/LZA/design-build-deploy/networking.md
+              - Sample code: aws/LZA/design-build-deploy/sample-code.md
+          - Best practices:
+              - Be mindful: aws/LZA/best-practices/be-mindful.md
+              - IaC and CI/CD: aws/LZA/best-practices/iac-and-ci-cd.md
+              - Governance: aws/LZA/best-practices/governance.md
+              - AWS Services: aws/LZA/best-practices/aws-services.md
+              - AWS AI Services: aws/LZA/best-practices/aws-ai.md
+          - Tools:
+              - Helpful tools: aws/LZA/tools/tools.md
+              - AWS CloudShell: aws/LZA/tools/cloud-shell.md
+              - AWS Systems Manager Session Manager: aws/LZA/tools/session-manager.md
+          - Understand your AWS billing:
+              - AWS Cost Management: aws/LZA/understanding-your-bill/aws-cost-management.md
+          - Enterprise support:
+              - AWS Enterprise Support: aws/LZA/support/enterprise-support.md
+      - ASEA (Legacy):
           - Overview: aws/ASEA/index.md
           - Get started with ASEA:
               - AWS Landing Zone overview: aws/ASEA/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
@@ -29,36 +56,6 @@ nav:
               - AWS Calgary region: aws/ASEA/upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
           - Enterprise Support:
               - AWS Enterprise Support: aws/ASEA/support/enterprise-support.md
-      - LZA (Coming Soon):
-          - Overview: aws/LZA/index.md
-          - Get started with LZA:
-              - AWS Landing Zone Accelerator overview: aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md
-              - AWS security and compliance guardrails: aws/LZA/get-started-with-lza/guardrails.md
-          - Design, build, and deploy:
-              - Requirements: aws/LZA/design-build-deploy/requirements.md
-              - User management: aws/LZA/design-build-deploy/user-management.md
-              - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
-              - Next steps: aws/LZA/design-build-deploy/next-steps.md
-              - Networking: aws/LZA/design-build-deploy/networking.md
-              - Sample code: aws/LZA/design-build-deploy/sample-code.md
-          - Best practices:
-              - Be mindful: aws/LZA/best-practices/be-mindful.md
-              - IaC and CI/CD: aws/LZA/best-practices/iac-and-ci-cd.md
-              - Governance: aws/LZA/best-practices/governance.md
-              - AWS Services: aws/LZA/best-practices/aws-services.md
-              - AWS AI Services: aws/LZA/best-practices/aws-ai.md
-              - External AWS Services: aws/LZA/best-practices/external-services.md
-          - Tools:
-              - Helpful tools: aws/LZA/tools/tools.md
-              - AWS CloudShell: aws/LZA/tools/cloud-shell.md
-              - AWS Systems Manager Session Manager: aws/LZA/tools/session-manager.md
-          - Understand your AWS billing:
-              - AWS Cost Management: aws/LZA/understanding-your-bill/aws-cost-management.md
-          - Upcoming features:
-              - Calgary region: aws/LZA/upcoming-features/calgary-region.md
-              - Enhanced networking: aws/LZA/upcoming-features/enhanced-networking.md
-          - Enterprise support:
-              - AWS Enterprise Support: aws/LZA/support/enterprise-support.md
   - Azure:
       - Get started with Azure:
           - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md

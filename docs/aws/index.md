@@ -2,19 +2,19 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The B.C. government offers two AWS landing zone solutions to support ministry teams in building secure and compliant applications in the public cloud:
-
-## AWS Secure Environment Accelerator (ASEA)
-
-The current production-ready AWS landing zone solution:
-
-- [ASEA Documentation](ASEA/index.md)
+All new AWS projects are created in the AWS Landing Zone Accelerator (LZA). Existing projects in the AWS Secure Environment Accelerator (ASEA) will remain available until October 31, 2025.
 
 ## AWS Landing Zone Accelerator (LZA)
 
-The next-generation AWS landing zone solution (coming soon):
+The current AWS landing zone solution for all new projects:
 
 - [LZA Documentation](LZA/index.md)
+
+## AWS Secure Environment Accelerator (ASEA)
+
+Available for existing projects until end-of-life: October 31, 2025:
+
+- [ASEA Documentation](ASEA/index.md)
 
 ---
 
@@ -26,7 +26,7 @@ The next-generation AWS landing zone solution (coming soon):
 
 ### Rocket.Chat
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Private Cloud PaaS. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).
+Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov Public Cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).
 
 If you already have access, you can
 [log in to Rocket.Chat](https://chat.developer.gov.bc.ca).

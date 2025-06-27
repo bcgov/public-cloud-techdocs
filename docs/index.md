@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 
-This documentation provides information for using Public cloud services within the B.C. government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. government's Public cloud environment.
+This documentation provides information for using Public cloud services within the B.C. government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws-lza) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. government's Public cloud environment.
 
 ## Provision a Project Set
 
@@ -12,16 +12,16 @@ To get started in the Public cloud you can provision a Project Set in AWS or Azu
 
 For more information, see [Provision a Project Set](welcome/provision-a-project-set.md).
 
-## Amazon Web Services (AWS)
+## Amazon Web Services (AWS LZA)
 
 AWS offers a broad set of global cloud-based products including compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
-- [AWS Landing Zone Overview](aws/get-started-with-aws/bc-govs-aws-landing-zone-overview.md)
-- [Security and compliance guardrails](aws/get-started-with-aws/security-guardrails.md)
-- [Requirements for Building Your Application in AWS](aws/design-build-and-deploy-an-application/requirements-for-building-your-application.md)
-- [User Management in AWS](aws/design-build-and-deploy-an-application/user-management.md)
-- [Networking in AWS](aws/design-build-and-deploy-an-application/networking.md)
-- [Deploy an Application to the AWS Landing Zone](aws/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
+- [AWS Landing Zone Overview](aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md)
+- [Security and compliance guardrails](aws/LZA/get-started-with-lza/guardrails.md)
+- [Requirements for Building Your Application in AWS](aws/LZA/design-build-deploy/requirements.md)
+- [User Management in AWS](aws/LZA/design-build-deploy/user-management.md)
+- [Networking in AWS](aws/LZA/design-build-deploy/networking.md)
+- [Deploy an Application to the AWS Landing Zone](aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md)
 
 ## Microsoft Azure
 

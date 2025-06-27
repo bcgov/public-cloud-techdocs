@@ -2,6 +2,17 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
+## Quick access
+
+**Access your AWS accounts**: [AWS SSO Portal](https://bcgov.awsapps.com/start/#/?tab=accounts)
+
+Need help with access? See our [user management guide](design-build-deploy/user-management.md) for detailed information about roles and permissions.
+
+## AWS LZA resources
+
+- **Official AWS solution page**: [Landing Zone Accelerator on AWS](https://aws.amazon.com/solutions/implementations/landing-zone-accelerator-on-aws/)
+- **Open source repository**: [AWS Landing Zone Accelerator on GitHub](https://github.com/awslabs/landing-zone-accelerator-on-aws)
+
 ## Get started with LZA
 
 Start here for the first steps on working in our AWS Landing Zone Accelerator (LZA):
@@ -14,10 +25,11 @@ Start here for the first steps on working in our AWS Landing Zone Accelerator (L
 Best practices for building applications on the LZA platform:
 
 - [Requirements](design-build-deploy/requirements.md)
+- [Networking](design-build-deploy/networking.md)
 - [User management](design-build-deploy/user-management.md)
 - [Deploy to the AWS Landing Zone Accelerator](design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md)
+- [IAM User management service](design-build-deploy/iam-user-service.md)
 - [Next steps](design-build-deploy/next-steps.md)
-- [Networking](design-build-deploy/networking.md)
 - [Sample code](design-build-deploy/sample-code.md)
 
 ## Best practices
@@ -29,7 +41,6 @@ Guidelines and best practices for AWS LZA:
 - [Governance](best-practices/governance.md)
 - [AWS Services](best-practices/aws-services.md)
 - [AWS AI Services](best-practices/aws-ai.md)
-- [External AWS Services](best-practices/external-services.md)
 
 ## Tools
 
@@ -44,11 +55,6 @@ Helpful tools for working with AWS LZA:
 Use the Cost Management tools to get an overview of your spend in AWS:
 
 - [AWS Cost Management](understanding-your-bill/aws-cost-management.md)
-
-## Upcoming features
-
-- [Calgary region](upcoming-features/calgary-region.md)
-- [Enhanced networking](upcoming-features/enhanced-networking.md)
 
 ## Enterprise support
 
