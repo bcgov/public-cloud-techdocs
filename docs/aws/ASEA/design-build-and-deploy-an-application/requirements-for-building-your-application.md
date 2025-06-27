@@ -6,11 +6,11 @@ The following sections describe the requirements for building your application o
 
 ## Prerequisites
 
-1. Create a [provisioning request for a project set](../../welcome/provision-a-project-set.md) for your team on the B.C. government Public cloud
+1. Create a [provisioning request for a project set](../../../welcome/provision-a-project-set.md) for your team on the B.C. government Public cloud
 
 2. Once approved, your project set will be provisioned followed up by an email sent to the Product Owner and Technical Lead once the provisioning is complete
 
-3. Request access for the rest of the team by submitting a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) ticket. Refer to the guidelines on what details to include in your request for [account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
+3. Request access for the rest of the team by submitting a [Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) ticket. Refer to the guidelines on what details to include in your request for [account access](../../../welcome/provision-a-project-set.md#accessing-your-project-set)
 
 ## Limitations of the AWS Landing Zone
 
@@ -116,7 +116,7 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 ## Related pages
 
-* [Provision a project set](../../welcome/provision-a-project-set.md)
-* [Account access](../../welcome/provision-a-project-set.md#accessing-your-project-set)
+* [Provision a project set](../../../welcome/provision-a-project-set.md)
+* [Account access](../../../welcome/provision-a-project-set.md#accessing-your-project-set)
 * [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws)
 * [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)
