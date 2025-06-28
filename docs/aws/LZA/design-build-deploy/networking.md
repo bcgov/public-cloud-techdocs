@@ -40,30 +40,61 @@ Each VPC is divided into **8 subnets across 2 Availability Zones (A and B)**:
 !!! warning "IP Address Limitations"
     With only 256 IPs per VPC total, each subnet type exists in both AZ-A and AZ-B. Plan your IP usage carefully considering the per-AZ allocation.
 
-### Subnet Use Cases
+#### Web-MainTgwAttach Subnets
+- **CIDR**: `/27` - 54 usable IPs
+- **Resources**: Application Load Balancers (ALBs), API Gateways
+- **Security Group**: `Web` - HTTP/HTTPS from internet, management access
+- **Network ACL**: Default
 
-Each subnet type is designed for specific workload categories:
+#### App Subnets
+- **CIDR**: `/26` - 118 usable IPs
+- **Resources**: EC2 instances, ECS/Fargate containers, Lambda functions
+- **Security Group**: `App` - Traffic from Web tier, management access, east-west communication
+- **Network ACL**: Default
 
-**Web-MainTgwAttach subnets**
-- Application Load Balancers (ALBs) for public and internal routing
+#### Data Subnets
+- **CIDR**: `/28` - 22 usable IPs
+- **Resources**: RDS instances, ElastiCache clusters, EFS mount targets
+- **Security Group**: `Data` - Database ports from App tier only, management access
+- **Network ACL**: Restricts access to App subnets only
 
-**App subnets**
-- EC2 instances running application servers
-- ECS/Fargate containers and services
-- Lambda functions with VPC configuration
-- Application-tier compute resources
+#### Management Subnets
+- **CIDR**: `/28` - 22 usable IPs
+- **Resources**: Bastion hosts, monitoring tools, administrative utilities  
+- **Security Group**: `Management` - SSH/RDP from management hosts and on-premises
+- **Network ACL**: Default
 
-**Data subnets**  
-- RDS database instances
-- ElastiCache clusters
-- EFS mount targets
-- Data storage and persistence services
+## Traffic Flow and Security
 
-**Management subnets**
-- Administrative tools and utilities
+### Multi-Layer Defense Strategy
+```
+Internet/Intranet → Web Subnets → App Subnets → Data Subnets
+                   ↓             ↓             ↓
+                   Web SG        App SG        Data SG + NACL
+                   (Instance)    (Instance)    (Instance + Subnet)
+```
 
-!!! note "Security Group and Network ACL Strategy"
-    LZA includes pre-configured security groups and Network ACLs that implement the principle of least privilege, allowing traffic flow from Web → App → Data subnets.
+### Security Controls
+
+**Layer 1: Network ACLs (Subnet-Level)**
+- Stateless filtering at subnet boundaries
+- Data subnets: Restrict access to App subnets only
+- Other tiers: Default ACLs (future expansion planned)
+
+**Layer 2: Security Groups (Instance-Level)**  
+- Stateful filtering for individual resources
+- Principle of least privilege between tiers
+- Management access separated from application flow
+
+### Key Traffic Flows
+1. **Internet/Intranet → Web** - full access
+2. **Web → App** - Load balancer to application communication  
+3. **App → Data** - Database connections only (dual-layer protection)
+4. **Management → All Tiers** - Administrative access
+5. **East-West** - Communication within App and Data tiers
+
+!!! warning "Platform-Managed Controls"
+    Security Groups and Network ACLs with Accelerator tags cannot be modified. Create custom controls as needed while maintaining the baseline security posture.
     
 ## Extended Network - IP Exhaustion Solution
 
