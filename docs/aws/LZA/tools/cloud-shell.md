@@ -92,7 +92,7 @@ CloudShell uses your existing IAM permissions:
 
 ## Common use cases
 
-### AWS CLI Operations
+### AWS CLI operations
 
 ```bash
 # List EC2 instances
