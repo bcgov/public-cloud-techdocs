@@ -127,7 +127,7 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 
 To allow GitHub Actions to securely access Azure subscriptions, use OpenID Connect (OIDC) authentication.
 
-For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-azure).
+For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).
 
 Here's a quick summary on how to set it up:
 

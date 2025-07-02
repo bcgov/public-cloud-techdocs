@@ -1,20 +1,24 @@
-# AWS billing and cost management dashboards
+# AWS Cost Management
 
 Last updated: **{{ git_revision_date_localized }}**
 
-Learn more about  managing your AWS spending and resources with our [AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs), featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
+!!! warning "Coming Soon"
+
+    The AWS LZA cost management solution powered by QuickSight is not yet available but is coming soon. This documentation is provided in advance of the feature release.
+
+Learn more about managing your AWS spending and resources with our AWS billing and cost management dashboard (link coming soon), featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
 
 Powered by Amazon QuickSight, these tools meticulously analyze your AWS expenditure and resource utilization. They aim to equip you with the insights necessary to make well-informed, data-backed decisions, ultimately helping you streamline your cloud operations and optimize cost efficiency.
 
 Through our deployment of these advanced dashboards, we transform raw data into actionable insights, offering a granular view of your AWS costs and usage patterns.
 
-Explore our comprehensive documentation to discover how to access and leverage these dashboards effectively, enabling you to manage your AWS environment strategically and sustainably.
+Explore our comprehensive documentation to discover how to access and leverage these dashboards effectively, enabling you to manage your AWS Landing Zone Accelerator (LZA) environment strategically and sustainably.
 
-Make sure to read the role-based access section below before [logging into the AWS billing and cost management dashboard](https://loginproxy.gov.bc.ca/auth/realms/public-cloud/protocol/saml/clients/amazon-qs).
+Make sure to read the role-based access section below before logging into the AWS billing and cost management dashboard (link coming soon).
 
 ## Project set structure
 
-A project set in our AWS environment consists of 4 AWS accounts, each designated for a specific purpose within the project lifecycle. For example, `tnfhhm` is a project set that includes the following accounts:
+A project set in our AWS Landing Zone Accelerator (LZA) environment consists of 4 AWS accounts, each designated for a specific purpose within the project lifecycle. For example, `tnfhhm` is a project set that includes the following accounts:
 
 1. `tnfhhm-dev` - Development account
 2. `tnfhhm-test` - Testing account
@@ -34,15 +38,19 @@ Users can access these accounts using predefined AWS roles, each tailored to spe
 To access the dashboards, users must be assigned the **billing viewers** role. This role is crucial for accessing detailed billing and cost information across the project set.
 
 ## Row-level security implementation
-We've deployed a RLS (Row-Level Security) data set in Amazon QuickSight to ensure users see only authorized data. This mechanism is crucial for maintaining data confidential and complying with our security standards.
+
+We've deployed a RLS (Row-Level Security) data set in Amazon QuickSight to ensure users see only authorized data. This mechanism is crucial for maintaining data confidentiality and complying with our security standards.
 
 ## Data refresh limits and scheduling
+
 It's worth noting that the Enterprise edition of our dashboards has a limitation on data refresh frequency. Specifically, data can be fully refreshed up to 32 times per day. To comply with this limitation and ensure timely data updates, we've scheduled a Lambda function to run every 30 minutes from 8 AM to 5 PM PST, Monday to Friday. This function checks for users with **billing viewers** access in Keycloak and updates the RLS data sheet stored in the S3 bucket.
 
 ## Timing and access considerations
+
 Because of this scheduling, there could be a maximum delay of 30 minutes for a user to access the project set data in the dashboard after being assigned the **billing viewers** role through the registry. It's important to keep this timing in mind when anticipating access to the dashboards.
 
 ## Accessing multiple project sets
+
 Users with responsibilities across multiple project sets can access and view billing data and dashboards for each set if they have the **billing viewers** role for those specific project sets.
 
 If you need to view billing information for multiple project sets, make sure you're granted the **billing viewers** role for each set you want to monitor.
@@ -56,7 +64,6 @@ Users who need access to the dashboards should request the **billing viewers** r
 3. The Product Owner or Technical Lead will grant the appropriate role using the user management functionality available at [B.C. government's Platform Product Registry](https://registry.developer.gov.bc.ca/public-cloud/products/all)
 4. For detailed steps on user role assignment, refer to the [user management documentation](https://developer.gov.bc.ca/docs/default/component/public-cloud-techdocs/user-management/)
 
-
 ## Dashboard functionality
 
 The dashboards offer advanced filtering capabilities to tailor the cost and usage data presentation to the user's needs. These filters include:
@@ -65,6 +72,3 @@ The dashboards offer advanced filtering capabilities to tailor the cost and usag
 - **Project set filters**: Users can drill down into specific project sets (e.g., `tnfhhm`) to analyze data associated with that set of AWS accounts
 - **Account-level filters**: Within a project set, users can further filter data by individual AWS accounts, for example: `tnfhhm-dev`, `tnfhhm-test` to gain insights into the cost and usage patterns of each account
 
-## Conclusion
-
-By following the outlined process to obtain the necessary role and using the dashboard's filtering capabilities, users can effectively monitor and analyze AWS cost and usage data. This structured approach ensures both security and granularity in accessing and interpreting cloud resource data.
