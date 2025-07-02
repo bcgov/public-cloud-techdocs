@@ -52,7 +52,7 @@ CloudShell comes with many tools pre-installed:
 !!! warning "Storage Limitations"
     CloudShell provides 1 GB of persistent storage. Large files or extensive downloads may consume this space quickly. Monitor your usage with `df -h $HOME`.
 
-### Security Features
+### Security features
 
 - **IAM integration** - Uses your current IAM permissions
 - **Temporary credentials** - No long-term credentials stored
