@@ -114,7 +114,7 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 * [Deploy an application to the B.C. government AWS Landing Zone](deploy-an-app-to-the-aws-landing-zone.md)
 
-## Related pages
+## Related documentation
 
 * [Provision a project set](../../../welcome/provision-a-project-set.md)
 * [Account access](../../../welcome/provision-a-project-set.md#accessing-your-project-set)
