@@ -125,7 +125,7 @@ To make workloads publicly available, use:
 2. **Automatic routing** from public ALB to your tagged internal ALB
 3. **Internal ALB** (Your VPC) uses rules (host, path) to route traffic to target groups
 
-#### Configuration Requirements
+#### Configuration requirements
 
 - **Tag for public routing**: Tag Internal ALBs with `Public = True` to trigger automation
 - **443 listener required**: Teams **must** use the 443 listener on their internal ALB to ensure all internal traffic outside their VPC is encrypted in transit
