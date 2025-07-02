@@ -108,7 +108,7 @@ aws cloudformation deploy --template-file template.yaml --stack-name my-stack
 aws sts get-caller-identity
 ```
 
-### Script Development and Testing
+### Script development and testing
 
 ```bash
 # Create a script
