@@ -81,7 +81,7 @@ In the LZA environment:
 !!! info "VPC Resource Access"
     CloudShell cannot directly access resources in private VPCs. Use Session Manager or other tools for private resource access.
 
-### Permission Model
+### Permission model
 
 CloudShell uses your existing IAM permissions:
 
