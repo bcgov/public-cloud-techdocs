@@ -106,7 +106,7 @@ When IP addresses are exhausted, a **secondary non-routable CIDR range** (`10.10
 - **NAT routing**: Traffic from non-routable range routes through Private NAT in the routable range
 - **Request process**: Contact the [Public Cloud Service Desk (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to add secondary CIDR ranges
 
-## Exposing Services Publicly
+## Exposing services publicly
 
 ### Recommended Methods
 
