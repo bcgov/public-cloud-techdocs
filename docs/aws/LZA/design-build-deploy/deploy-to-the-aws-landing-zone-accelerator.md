@@ -67,7 +67,7 @@ We recommend using Infrastructure as Code for consistent, repeatable deployments
 - **[Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)**: Multi-cloud infrastructure tool with AWS Provider
 - **[Pulumi](https://www.pulumi.com/docs/clouds/aws/)**: Modern infrastructure as code platform
 
-### 4. CI/CD Pipelines
+### 4. CI/CD pipelines
 
 Deploy your CI/CD pipeline resources to the **Tools account** for centralized management:
 
