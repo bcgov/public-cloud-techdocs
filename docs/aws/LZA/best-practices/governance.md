@@ -105,7 +105,7 @@ Implement consistent resource tagging for:
 
 Manage resources throughout their lifecycle:
 
-- **Provisioning** - Use Infrastructure as Code for consistent deployments
+- **Provisioning** - Use Infrastructure as Code for consistent deployments; see the [Infrastructure-as-Code (IaC) and CI/CD](./iac-and-ci-cd.md) best practices.
 - **Monitoring** - Track resource utilization and performance
 - **Optimization** - Right-size resources based on actual usage
 - **Decommissioning** - Remove unused resources to control costs
