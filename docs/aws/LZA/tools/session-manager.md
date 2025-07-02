@@ -50,7 +50,7 @@ For reference, Session Manager requires these permissions (automatically configu
 
 ## Accessing instances via Session Manager
 
-### Through AWS Console
+### Through AWS console
 
 1. **Navigate to EC2 Console** - Go to the [EC2 Instances page](https://ca-central-1.console.aws.amazon.com/ec2/home?region=ca-central-1#Instances:)
 2. **Select your instance** - Choose the instance you want to connect to
