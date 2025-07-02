@@ -99,7 +99,7 @@ rm -rf sessionmanager-bundle.zip sessionmanager-bundle/
 - **Encrypted connections** - All traffic encrypted using TLS 1.2
 - **Private IP only** - Works with instances that have no public IP addresses
 
-### Audit and Logging
+### Audit and logging
 
 Session Manager provides comprehensive logging capabilities:
 
