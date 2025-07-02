@@ -74,7 +74,7 @@ Platform-managed resources are protected from modification to maintain security 
 
 ## Security and compliance
 
-### Encryption Requirements
+### Encryption requirements
 
 !!! warning "Mandatory Encryption"
     Encryption is **required** for all storage services and cannot be disabled.
