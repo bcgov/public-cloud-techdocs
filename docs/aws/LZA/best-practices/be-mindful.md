@@ -200,7 +200,7 @@ terraform {
 
 ### Environment promotion strategy
 
-Design your deployment pipeline to account for complete VPC isolation:
+Design your deployment pipeline to account for complete Virtual Private Cloud (VPC) isolation:
 
 - **API-based deployments**: Can be centralized in Tools account (using AWS APIs only)
 - **VPC-based deployments**: Must run within each target account individually
