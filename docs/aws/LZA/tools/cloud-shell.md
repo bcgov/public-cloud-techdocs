@@ -152,7 +152,7 @@ git push origin main
 
 ## Best practices
 
-### File Management
+### File management
 
 - **Use home directory** - Store persistent files in `$HOME`
 - **Clean up regularly** - Remove temporary files to conserve space
