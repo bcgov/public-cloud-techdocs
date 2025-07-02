@@ -148,7 +148,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 
 ## Platform constraints
 
-### Managed Infrastructure
+### Managed infrastructure
 
 - **VPCs and subnets**: Platform-managed, cannot be created or modified
 - **Security groups**: Users can create new security groups, but platform-created security groups with Accelerator tags cannot be modified
