@@ -41,7 +41,7 @@ Navigate to [AWS Security Hub](https://ca-central-1.console.aws.amazon.com/secur
 
 ## Compliance monitoring
 
-### AWS Organizations Policies
+### AWS organizations policies
 
 Your AWS account is governed by Service Control Policies (SCPs) and other organizational policies:
 
