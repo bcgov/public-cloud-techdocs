@@ -251,7 +251,7 @@ resource "aws_security_group" "example" {
 
 ## Troubleshooting
 
-### Instance Not Appearing
+### Instance not appearing
 
 If your instance doesn't appear in Session Manager:
 
