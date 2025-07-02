@@ -115,7 +115,7 @@ To make workloads publicly available, use:
 1. **API Gateway** (preferred where appropriate) - Can be public and linked to private VPC with VPC Link
 2. **Application Load Balancer (ALB)** - Requires routing through public ALBs
 
-### Application Load Balancer Public Routing
+### Application load balancer public routing
 
 **Public routing to internal ALBs** is now **self-serve** through a two-tier architecture:
 
