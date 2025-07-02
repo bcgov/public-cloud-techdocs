@@ -110,7 +110,7 @@ Platform-managed resources are protected from modification to maintain security 
 !!! info "User Management"
     All user access is managed through Entra ID security groups with standardized naming: `DO_PuC_AW_{LicensePlate}_{Role}`. See our [user management guide](../design-build-deploy/user-management.md) for details.
 
-### Account Actions
+### Account actions
 
 - **Cannot leave organization** - Account is permanently part of the AWS Organization
 - **Cannot close account** - Account closure must be requested through the [Platform Product Registry](https://registry.developer.gov.bc.ca/) by the project owner
