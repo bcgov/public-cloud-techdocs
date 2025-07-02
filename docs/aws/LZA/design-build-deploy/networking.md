@@ -146,7 +146,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 !!! tip "SSL/TLS Certificate Options"
     You can either use the provided default certificate for `internal.stratus.cloud.gov.bc.ca` to quickly get started, or create and use your own custom certificates for your specific domain requirements.
 
-## Platform Constraints
+## Platform constraints
 
 ### Managed Infrastructure
 
