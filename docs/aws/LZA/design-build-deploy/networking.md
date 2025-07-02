@@ -160,7 +160,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 - **Cross-account data sharing**: Must use AWS APIs, public endpoints, or external services
 - **On-premises connectivity**: Direct Connect available (coming soon)
 
-## Best Practices
+## Best practices
 
 1. **Plan IP usage** carefully given the /24 VPC limitation
 2. **Use security groups** for traffic control between resources
