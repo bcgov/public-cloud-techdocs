@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-Many of the ministry teams are exploring AWS AI services to build intelligent applications. Artificial Intelligence and Machine Learning are rapidly evolving technologies. The following are recommendations and guidance based on AWS best practices and the specific configurations available in the BC Government's AWS Landing Zone Accelerator.
+Many of the ministry teams are exploring AWS AI services to build intelligent applications. Artificial Intelligence (AI) and Machine Learning (ML) are rapidly evolving technologies. The following are recommendations and guidance based on AWS best practices and the specific configurations available in the B.C. government's AWS Landing Zone Accelerator.
 
 !!! tip "AWS AI best practices"
 
