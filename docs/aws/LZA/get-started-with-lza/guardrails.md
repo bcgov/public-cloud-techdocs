@@ -123,7 +123,7 @@ Platform-managed resources are protected from modification to maintain security 
 !!! warning "Marketplace Access"
     Access to AWS Marketplace is **limited**. Contact the [Public Cloud Service Desk](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for software or service requests.
 
-### Service Availability
+### Service availability
 
 - **Some services blocked** - Verify service availability before planning deployments
 - **Action restrictions** - Available services may have limited functionality
