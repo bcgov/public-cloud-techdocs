@@ -22,7 +22,7 @@ LZA implements a hub-and-spoke topology with:
 
 ## VPC and subnet structure
 
-### VPC Limitations
+### VPC limitations
 
 Each workload receives a **/24 VPC** providing **256 IP addresses**.
 
