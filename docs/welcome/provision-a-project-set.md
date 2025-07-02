@@ -98,7 +98,7 @@ Other team members can be added to the Project Set by the Product Owner or Techn
 
 ## Related pages
 
-- [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
+- [B.C. Gov's Platform Product Registry](https://registry.developer.gov.bc.ca/login)
 - [Onboard your team to Public cloud hosting](https://digital.gov.bc.ca/technology/cloud/public/onboard/)
 - [AWS Landing Zone Overview](../aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md)
 - [Azure Landing Zone Overview](../azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
