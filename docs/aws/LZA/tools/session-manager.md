@@ -11,7 +11,7 @@ Session Manager provides secure and seamless shell connectivity to your EC2 inst
 
 ## Prerequisites
 
-### Instance Requirements
+### Instance requirements
 
 Before using Session Manager, ensure your EC2 instances meet these requirements:
 
