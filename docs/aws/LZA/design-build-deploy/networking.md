@@ -20,7 +20,7 @@ LZA implements a hub-and-spoke topology with:
 - **Complete isolation**: No private communication between VPCs
 - **Dedicated CIDRs**: Each VPC gets unique IP ranges for traffic identification
 
-## VPC and Subnet Structure
+## VPC and subnet structure
 
 ### VPC Limitations
 
