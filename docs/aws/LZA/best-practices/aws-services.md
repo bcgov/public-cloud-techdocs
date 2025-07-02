@@ -19,7 +19,7 @@ When complete, this section will cover:
 - **Troubleshooting guides** for service-specific issues unique to the LZA platform
 - **Configuration examples** demonstrating proper service setup within LZA constraints
 
-## Current Service Guidance
+## Current service guidance
 
 For immediate assistance with AWS service deployment and configuration in LZA, please:
 
