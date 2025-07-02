@@ -167,7 +167,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 3. **Design for isolation** - architect applications assuming no private cross-account communication
 4. **Request secondary CIDR** early if you anticipate IP exhaustion
 
-## Related Documentation
+## Related documentation
 
 - [Requirements](requirements.md) - Platform limitations and constraints
 - [Be Mindful](../best-practices/be-mindful.md) - Important considerations for LZA
