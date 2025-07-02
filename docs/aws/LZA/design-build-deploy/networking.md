@@ -108,7 +108,7 @@ When IP addresses are exhausted, a **secondary non-routable CIDR range** (`10.10
 
 ## Exposing services publicly
 
-### Recommended Methods
+### Recommended methods
 
 To make workloads publicly available, use:
 
