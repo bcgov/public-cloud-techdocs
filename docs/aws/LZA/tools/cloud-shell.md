@@ -175,7 +175,7 @@ git push origin main
 
 ## Limitations and considerations
 
-### Technical Limitations
+### Technical limitations
 
 - **Compute resources** - Limited CPU and memory for intensive operations
 - **Network restrictions** - Cannot access private VPC resources directly
