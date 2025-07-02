@@ -154,7 +154,7 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 - **Security groups**: Users can create new security groups, but platform-created security groups with Accelerator tags cannot be modified
 - **HTTPS requirement**: Only HTTPS applications supported for public endpoints
 
-### Network Connectivity
+### Network connectivity
 
 - **No VPC-to-VPC communication**: All VPCs are completely isolated
 - **Cross-account data sharing**: Must use AWS APIs, public endpoints, or external services
