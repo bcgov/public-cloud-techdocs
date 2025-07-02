@@ -156,7 +156,7 @@ For detailed AI service guidance, see [AWS AI Services](../best-practices/aws-ai
 
 ## Compliance and best practices
 
-### Following Guidelines
+### Following guidelines
 
 By adhering to these guardrails, you help maintain:
 
