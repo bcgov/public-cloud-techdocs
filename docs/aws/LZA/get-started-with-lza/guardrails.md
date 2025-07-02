@@ -148,7 +148,7 @@ For detailed AI service guidance, see [AWS AI Services](../best-practices/aws-ai
 !!! info "Cost Monitoring"
     While detailed billing is restricted, you can monitor costs through AWS Cost Explorer and receive budget alerts when approaching spending limits.
 
-### Budget Management
+### Budget management
 
 - **Platform-managed budgets** - Initial budgets configured by platform team
 - **Additional budgets allowed** - Can create supplementary budgets and alerts
