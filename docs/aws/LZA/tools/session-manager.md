@@ -87,7 +87,7 @@ sudo ./sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/
 rm -rf sessionmanager-bundle.zip sessionmanager-bundle/
 ```
 
-!!! tip "Installation Methods"
+!!! tip "Installation methods"
     **Homebrew is recommended** for macOS users as it handles updates automatically. For other operating systems or alternative installation methods, see the [AWS documentation for Session Manager plugin installation](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html).
 
 ## Session Manager features
