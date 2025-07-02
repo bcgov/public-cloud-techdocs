@@ -194,7 +194,7 @@ git push origin main
 
 ## Troubleshooting
 
-### Common Issues
+### Common issues
 
 **CloudShell won't launch:**
 - Check your IAM permissions for CloudShell
