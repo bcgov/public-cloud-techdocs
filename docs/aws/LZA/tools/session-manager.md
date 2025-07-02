@@ -172,7 +172,7 @@ resource "aws_instance" "example" {
 }
 ```
 
-### Using Custom Instance Role
+### Using custom instance role
 
 If you need a custom IAM role, ensure it includes Session Manager permissions:
 
