@@ -139,7 +139,7 @@ For detailed AI service guidance, see [AWS AI Services](../best-practices/aws-ai
 
 ## Cost management
 
-### Billing Access
+### Billing access
 
 - **No direct billing access** - Cannot view detailed billing information
 - **Cost Explorer available** - Can view total spend and cost breakdowns
