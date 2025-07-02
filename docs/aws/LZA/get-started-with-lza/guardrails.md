@@ -66,7 +66,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **Public exposure options** - Use API Gateway or Application Load Balancer for internet-facing services; see [Application Load Balancer Public Routing](../design-build-deploy/networking.md#application-load-balancer-public-routing) for configuration details
 - **VPC endpoints** - Limited to specific services; cannot create custom VPC endpoints
 
-### Route Table Restrictions
+### Route table restrictions
 
 - **Can add routes** to existing route tables
 - **Cannot modify or delete** existing routes
