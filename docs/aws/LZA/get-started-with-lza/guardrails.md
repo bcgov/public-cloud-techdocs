@@ -84,7 +84,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **EFS file systems** - Encryption required
 - **S3 buckets** - Server-side encryption enforced
 
-### Security Services
+### Security services
 
 - **GuardDuty** - Limited ability to modify settings
 - **Security Hub** - Findings may be read-only for protected resources
