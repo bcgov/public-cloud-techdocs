@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-Once your Project Set has been provisioned, the AWS Account will be enrolled in the AWS Enterprise Support. Only the Production AWS Account will be enrolled in the AWS Enterprise Support.
+Once your Project Set has been [provisioned](../../../welcome/provision-a-project-set.md), the AWS Account will be enrolled in the AWS Enterprise Support. Only the Production AWS Account will be enrolled in the AWS Enterprise Support.
 
 ## Filing AWS support tickets
 
