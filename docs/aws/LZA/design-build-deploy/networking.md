@@ -119,7 +119,7 @@ To make workloads publicly available, use:
 
 **Public routing to internal ALBs** is now **self-serve** through a two-tier architecture:
 
-#### How Public Routing Works
+#### How public routing works
 
 1. **Public ALB** (Perimeter Network) receives internet traffic on `*.{license_plate}.stratus.cloud.gov.bc.ca`
 2. **Automatic routing** from public ALB to your tagged internal ALB
