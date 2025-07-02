@@ -124,7 +124,7 @@ chmod +x deploy-app.sh
 ./deploy-app.sh
 ```
 
-### File Management
+### File management
 
 ```bash
 # Download files from S3
