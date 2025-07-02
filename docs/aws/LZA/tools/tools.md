@@ -188,7 +188,7 @@ Local AWS cloud stack for development and testing.
 
 ## Architecture and documentation
 
-### AWS Architecture Icons
+### AWS architecture icons
 
 Official AWS icons for creating architecture diagrams.
 
