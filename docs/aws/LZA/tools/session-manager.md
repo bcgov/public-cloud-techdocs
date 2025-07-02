@@ -92,7 +92,7 @@ rm -rf sessionmanager-bundle.zip sessionmanager-bundle/
 
 ## Session Manager features
 
-### Secure Shell Access
+### Secure Shell access
 
 - **No SSH keys required** - Authentication handled through AWS IAM
 - **No open ports** - No inbound security group rules needed
