@@ -219,7 +219,7 @@ aws ce get-cost-and-usage \
     --group-by Type=DIMENSION,Key=SERVICE
 ```
 
-### AWS Budgets
+### AWS budgets
 
 Set up cost and usage budgets with alerts.
 
