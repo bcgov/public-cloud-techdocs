@@ -61,7 +61,7 @@ CloudShell comes with many tools pre-installed:
 
 ## LZA-specific considerations
 
-### Regional Availability
+### Regional availability
 
 CloudShell is available in Canada Central region:
 
