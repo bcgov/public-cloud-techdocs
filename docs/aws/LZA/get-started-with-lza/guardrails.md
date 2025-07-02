@@ -129,7 +129,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **Action restrictions** - Available services may have limited functionality
 - **Request process** - Submit requests for additional services through support
 
-### AI/ML Services
+### AI/ML services
 
 - **Limited model access** - Only Amazon Titan and Mistral models available
 - **No public marketplace** - Cannot access public AI model marketplace
