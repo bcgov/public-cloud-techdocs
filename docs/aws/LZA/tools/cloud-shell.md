@@ -137,7 +137,7 @@ nano config.json
 aws s3 cp config.json s3://my-bucket/
 ```
 
-### Git Operations
+### Git operations
 
 ```bash
 # Clone repository
