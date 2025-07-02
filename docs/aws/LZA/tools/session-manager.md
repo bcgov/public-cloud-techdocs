@@ -62,7 +62,7 @@ For reference, Session Manager requires these permissions (automatically configu
 
 Install and configure the Session Manager plugin for AWS CLI:
 
-#### macOS Installation (Recommended)
+#### macOS installation (recommended)
 
 ```bash
 # Install via Homebrew (easiest method)
