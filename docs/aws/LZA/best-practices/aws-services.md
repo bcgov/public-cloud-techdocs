@@ -31,7 +31,7 @@ For immediate assistance with AWS service deployment and configuration in LZA, p
 
 If you've encountered specific challenges or developed solutions for AWS services in LZA, we welcome your feedback and contributions to help build this resource for the community.
 
-## Related Documentation
+## Related documentation
 
 - [Be Mindful](be-mindful.md) - Important platform considerations
 - [IaC and CI/CD](iac-and-ci-cd.md) - Infrastructure and deployment best practices
