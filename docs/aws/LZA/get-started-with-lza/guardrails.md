@@ -90,7 +90,7 @@ Platform-managed resources are protected from modification to maintain security 
 - **Security Hub** - Findings may be read-only for protected resources
 - **AWS Macie** - Configuration managed by platform team
 
-### Logging and Monitoring
+### Logging and monitoring
 
 - **CloudWatch logs** - Cannot modify or delete platform-managed logs
 - **CloudWatch alarms** - Can create your own, cannot modify protected alarms
