@@ -165,7 +165,7 @@ By adhering to these guardrails, you help maintain:
 - **Cost optimization** - Preventing unnecessary expenses
 - **Operational efficiency** - Standardized approaches across teams
 
-### Getting Help
+### Getting help
 
 If these limitations significantly impact your work:
 
