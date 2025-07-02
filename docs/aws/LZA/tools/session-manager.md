@@ -260,7 +260,7 @@ If your instance doesn't appear in Session Manager:
 3. **Region consistency** - Verify you're in the correct AWS region (Canada Central)
 4. **Instance state** - Confirm the instance is running and has been up for a few minutes
 
-### Connection Issues
+### Connection issues
 
 Common connection problems and solutions:
 
