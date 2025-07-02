@@ -93,7 +93,7 @@ aws configure sso
 - [Learn about user management](user-management.md)
 - [Review best practices](../best-practices/be-mindful.md)
 
-## Related pages
+## Related documenation
 
 - [Provision a Project Set](../../../welcome/provision-a-project-set.md)
 - [User Management in AWS LZA](user-management.md)
