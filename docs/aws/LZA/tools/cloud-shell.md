@@ -69,7 +69,7 @@ CloudShell is available in Canada Central region:
 - **Automatic region** - CloudShell operates in your selected console region
 - **Cross-region access** - Can manage resources in any accessible region
 
-### Network Access
+### Network access
 
 In the LZA environment:
 
