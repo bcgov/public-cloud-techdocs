@@ -246,7 +246,7 @@ resource "aws_security_group" "example" {
 }
 ```
 
-!!! warning "Custom Role Requirements"
+!!! warning "Custom role requirements"
     When creating custom IAM roles for EC2 instances, you **must** include Session Manager permissions by attaching the `AmazonSSMManagedInstanceCore` managed policy or equivalent custom permissions.
 
 ## Troubleshooting
