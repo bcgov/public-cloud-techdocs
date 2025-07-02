@@ -154,7 +154,7 @@ Session Manager integrates with LZA's Entra ID-based access control:
 
 ## Terraform configuration examples
 
-### Using Default Instance Role
+### Using default instance role
 
 Here's a basic Terraform configuration using the default instance role (Session Manager permissions included automatically):
 
