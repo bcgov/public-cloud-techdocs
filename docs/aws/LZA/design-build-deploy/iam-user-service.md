@@ -215,7 +215,7 @@ If you need assistance with the IAM User management service:
 - **Policy questions**: Consult the [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/)
 - **General support**: See our [support page](../../../welcome/support.md) for all available options
 
-## Related pages
+## Related documentation
 
 - [AWS Landing Zone Accelerator overview](../get-started-with-lza/aws-landing-zone-accelerator-overview.md)
 - [User management in AWS LZA](user-management.md)
