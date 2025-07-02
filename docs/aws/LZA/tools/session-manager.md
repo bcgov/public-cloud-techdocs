@@ -22,7 +22,7 @@ Before using Session Manager, ensure your EC2 instances meet these requirements:
 !!! info "Automatic Configuration in LZA"
     All virtual machines in the LZA environment are automatically configured with Session Manager permissions on their default instance roles. If you create custom IAM roles for your instances, you must include the Session Manager permissions.
 
-### Required IAM Permissions
+### Required IAM permissions
 
 For reference, Session Manager requires these permissions (automatically configured in LZA):
 
