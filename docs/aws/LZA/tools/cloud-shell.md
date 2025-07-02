@@ -42,7 +42,7 @@ CloudShell comes with many tools pre-installed:
 - **Shell environments** - Bash shell with common utilities
 - **Container tools** - Docker CLI (for building containers)
 
-### Persistent Storage
+### Persistent storage
 
 - **Home directory** - 1 GB of persistent storage per user
 - **File persistence** - Files in your home directory persist between sessions
