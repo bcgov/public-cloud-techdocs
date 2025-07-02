@@ -32,4 +32,4 @@ With AWS Enterprise Support, you have access to:
 - **Well-Architected Reviews** and operational guidance
 - **Access to AWS Trusted Advisor** with full checks and recommendations
 
-For general questions about the BC Government's public cloud platform, continue to use the [Public Cloud Service Desk (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or see our [support page](../../../welcome/support.md) for all available support options.
+For general questions about the B.C. government's Public cloud platform, continue to use the [Public Cloud Service Desk (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or see our [support page](../../../welcome/support.md) for all available support options.
