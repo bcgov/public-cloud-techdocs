@@ -111,7 +111,7 @@ Session Manager provides comprehensive logging capabilities:
 !!! example "Enabling Session Logging"
     Configure session logging through Systems Manager Preferences to capture all session activity for compliance and security auditing.
 
-### Port Forwarding
+### Port forwarding
 
 Session Manager supports port forwarding for accessing applications:
 
