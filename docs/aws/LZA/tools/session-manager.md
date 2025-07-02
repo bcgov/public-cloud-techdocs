@@ -144,7 +144,7 @@ Session Manager requires **no inbound rules** in security groups:
 !!! warning "Outbound Access Required"
     Instances must have outbound HTTPS (port 443) access to AWS Systems Manager endpoints. This is typically allowed by default in LZA security groups.
 
-### IAM Integration
+### IAM integration
 
 Session Manager integrates with LZA's Entra ID-based access control:
 
