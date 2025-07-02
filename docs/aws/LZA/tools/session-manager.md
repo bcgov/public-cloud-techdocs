@@ -125,7 +125,7 @@ aws ssm start-session --target i-1234567890abcdef0 \
 
 ## LZA-specific considerations
 
-### Network Connectivity
+### Network connectivity
 
 In the LZA environment:
 
