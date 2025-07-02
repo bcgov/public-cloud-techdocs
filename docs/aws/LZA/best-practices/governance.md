@@ -50,7 +50,7 @@ Your AWS account is governed by Service Control Policies (SCPs) and other organi
 !!! warning "Policy Enforcement"
     Organizational policies are enforced at the OU level and cannot be overridden. These policies implement the [guardrails](../get-started-with-lza/guardrails.md) that ensure platform security and compliance.
 
-### Compliance Reporting
+### Compliance reporting
 
 Monitor your compliance status through:
 
