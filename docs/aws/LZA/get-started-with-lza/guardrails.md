@@ -60,7 +60,7 @@ Platform-managed resources are protected from modification to maintain security 
 !!! info "Network Architecture"
     LZA uses a hub-and-spoke architecture with complete VPC isolation. See our [networking documentation](../design-build-deploy/networking.md) for detailed information.
 
-### Internet Access Limitations
+### Internet access limitations
 
 - **No direct internet access** - All ingress and egress traffic goes through the perimeter firewall; ingress uses the public ALB service
 - **Public exposure options** - Use API Gateway or Application Load Balancer for internet-facing services; see [Application Load Balancer Public Routing](../design-build-deploy/networking.md#application-load-balancer-public-routing) for configuration details
