@@ -133,7 +133,7 @@ In the LZA environment:
 - **No internet gateway required** - Works entirely through AWS private network
 - **Firewall compatibility** - Traffic flows through managed VPC endpoints, compatible with LZA security controls
 
-### Security Group Configuration
+### Security group configuration
 
 Session Manager requires **no inbound rules** in security groups:
 
