@@ -75,7 +75,7 @@ session-manager-plugin --version
 aws ssm start-session --target i-1234567890abcdef0 --region ca-central-1
 ```
 
-#### macOS Manual Installation (Alternative)
+#### macOS manual installation (alternative)
 
 ```bash
 # Download and install manually
