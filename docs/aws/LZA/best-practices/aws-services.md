@@ -9,7 +9,7 @@ This section will provide comprehensive guidance on AWS services that have uniqu
 !!! info "Coming Soon"
     We are actively developing detailed documentation for AWS services that require special attention in the LZA platform. This will include service-specific best practices, configuration examples, and troubleshooting guidance.
 
-## What You'll Find Here
+## What you'll find here
 
 When complete, this section will cover:
 
