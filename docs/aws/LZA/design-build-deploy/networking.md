@@ -26,7 +26,7 @@ LZA implements a hub-and-spoke topology with:
 
 Each workload receives a **/24 VPC** providing **256 IP addresses**.
 
-### Subnet Allocation
+### Subnet allocation
 
 Each VPC is divided into **8 subnets across 2 Availability Zones (A and B)**:
 
