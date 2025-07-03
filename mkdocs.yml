@@ -66,6 +66,7 @@ nav:
           - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
           - Next steps: azure/design-build-deploy/next-steps.md
           - Networking: azure/design-build-deploy/networking.md
+          - On-premises connectivity: azure/design-build-deploy/networking-express-route.md
           - Sample code: azure/design-build-deploy/sample-code.md
       - Best practices:
           - Be mindful: azure/best-practices/be-mindful.md
@@ -85,6 +86,8 @@ nav:
           - Express route: azure/upcoming-features/express-route.md
       - Enterprise support:
           - Azure Enterprise Support: azure/support/enterprise-support.md
+draft_docs: |
+    azure/design-build-deploy/networking-express-route.md
 plugins:
   - techdocs-core
   - git-revision-date-localized
