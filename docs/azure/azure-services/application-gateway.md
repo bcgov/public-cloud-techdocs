@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview), please be aware that the backend health may show a status of **Unknown**. This is because internet and private traffic are routed through the Azure Firewall in the Virtual WAN Hub.
+If you are using an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview), be aware that the backend health may show a status of **Unknown**. This is because internet and private traffic are routed through the Azure Firewall in the Virtual WAN Hub.
 
 ![Application Gateway - Backend Health Probes - Unknown Status](../images/appgw-unknown.png "Application Gateway - Backend Health Probes - Unknown Status")
 

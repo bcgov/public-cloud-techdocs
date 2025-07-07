@@ -4,8 +4,8 @@ Last updated: **{{ git_revision_date_localized }}**
 
 When deploying AKS clusters, it is critical to ensure that the **service and pod CIDR ranges do not overlap** with any other networks that cluster pods will need to communicate with. Overlapping address spaces can cause connectivity issues between your AKS workloads and other resources, both within Azure and on-premises.
 
-!!! warning "Important notes"
-    - **Virtual Networks (VNets) are pre-created** by the Public Cloud team. You cannot create new VNets, but you can create subnets within the existing VNet for your AKS resources
+!!! warning "Important notes about AKS networking"
+    - **Virtual Networks (VNets) are pre-created** by the Public cloud team. You cannot create new VNets, but you can create subnets within the existing VNet for your AKS resources
     - Plan your subnet, pod, and service address ranges carefully to avoid conflicts and to allow for future scaling
     - **Reserved address space**: The `10.10.0.0/16` range is reserved for AKS deployments. However, this same range may also be used for extended non-routable peered VNets if teams require additional IP addresses beyond what's provided in the standard routable VNet
     - **Future network expansion**: If you anticipate needing an extended network in the future, it's important to plan your AKS CIDR ranges accordingly to avoid conflicts. Contact the Public Cloud team early in your planning process for guidance on optimal address allocation
