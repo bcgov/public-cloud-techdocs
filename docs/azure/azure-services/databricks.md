@@ -22,7 +22,7 @@ Last updated: **{{ git_revision_date_localized }}**
 - It governs access to data even when the actual storage resides in **Azure Data Lake Storage Gen2** or other Azure-native services.
 
 !!! info "Azure Databricks is available, but Unity Catalog is currently unavailable for use"
-While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
+    While technically supported within Azure Databricks, **we do not currently have an assigned owner or governance process** for Unity Catalog in our environment.
 
     As such, Unity Catalog **has not been enabled** in any workspace, and users should **not attempt to configure or use it** at this time.
 

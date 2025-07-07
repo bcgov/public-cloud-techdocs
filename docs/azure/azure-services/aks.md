@@ -19,7 +19,7 @@ When your AKS nodes and pods use Azure CNI, they inherit DNS servers from the vi
 !!! tip "Recommendation"
     We strongly recommend using Azure CNI Overlay for AKS clusters to ensure proper DNS resolution and network performance. If you are experiencing issues with DNS resolution in your AKS cluster, it may be due to the absence of Azure CNI Overlay.
 
-If you encounter DNS failures — such as cert-manager hanging on ACME validation despite CoreDNS being healthy — you can override the nameservers in the cert-manager pod spec.
+If you encounter DNS failures — such as `cert-manager` hanging on ACME validation despite CoreDNS being healthy — you can override the nameservers in the `cert-manager` pod spec.
 
 ```yaml
 spec:

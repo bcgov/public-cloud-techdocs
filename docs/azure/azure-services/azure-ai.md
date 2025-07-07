@@ -14,7 +14,10 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 ## Region availability
 
 Although the [Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions, not all [models](https://azure.microsoft.com/en-us/products/ai-model-catalog?msockid=2274ddfe4fb768de0595c8be4e1d6918#tabs-pill-bar-oc92d8_tab0) or services may be available in the Canada regions (for example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models). It is recommended to check the region availability of the services/models **before** starting development.
-<!-- Recommend review by Security and compliance team -->
+
+!!! tip "Canada East region"
+    Currently, Azure AI models are only available in the **Canada East** region. Our current implementation of Landing Zones **does not** include any networking connectivity to the Canada East region.
+
 The most common Azure AI Services that are used by the ministry teams are:
 
 - Azure OpenAI
@@ -28,19 +31,6 @@ If another Ministry team has implemented a similar solution, it is recommended t
 When using Azure AI services, you may need to deploy a Virtual Machine within your Azure virtual network, to deploy models in a private-only AI service. This is because of the security guardrails that protect government data from the Internet.
 
 The simplest method to do this, is to deploy an [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/quickstart-host-portal) within your virtual network, to connect to a Virtual Machine that is also deployed to the same private network as the AI service.
-
-!!! question "Which Azure Bastion SKU to use?"
-    The minimum Bastion SKU required is **Developer**, where the `AzureBastionSubnet` subnet is not required. However, some features are limited or not available with this SKU. Please review the Microsoft [Bastion SKU](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#skus) documentation to determine the best SKU for your needs.
-
-If you are using a SKU other than **Developer**, Azure Bastion does require a specifically-named Subnet to be created within the VNet. The subnet name must be **AzureBastionSubnet**. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24). After adding this subnet to your virtual network, you can deploy Azure Bastion.
-
-Additionally, you will need to create the appropriate ingress and egress Network Security Group (NSG) rules to allow traffic to and from the Azure Bastion service. Please refer to the [Working with NSG access and Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-nsg#apply) documentation for specific details.
-
-> Note: The rule priority number does not need to match the example below, but the rule configuration should match.
-
-[![Azure Bastion - Ingress Rules](../images/azure-bastion-inbound-nsg-rules.png "Azure Bastion - Ingress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/inbound.png#lightbox)
-
-[![Azure Bastion - Egress Rules](../images/azure-bastion-outbound-nsg-rules.png "Azure Bastion - Egress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/outbound.png#lightbox)
 
 !!! example "Azure Bastion deployment example"
     To support our customers, and expedite the deployment of all the required resources, we've created an example Terraform module. For further information, please refer to the Tools > [Azure Bastion](../tools/bastion.md) page.
