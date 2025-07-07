@@ -4,10 +4,21 @@ Last updated: **{{ git_revision_date_localized }}**
 
 Azure Bastion is a fully managed PaaS service that you provision to securely connect to virtual machines via private IP address. It provides secure and seamless RDP/SSH connectivity to your virtual machines directly over TLS from the Azure portal.
 
-If you are using a SKU other than **Developer**, Azure Bastion requires a Virtual Network, and a specifically named subnet called `AzureBastionSubnet`. There are also specific Network Security Group (NSG) rules that need to be configured to allow traffic to and from the Azure Bastion service.
+!!! question "Which Azure Bastion SKU to use?"
+    The minimum Bastion SKU required is **Developer**, where the `AzureBastionSubnet` subnet is not required. However, some features are limited or not available with this SKU. Please review the Microsoft [Bastion SKU](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#skus) documentation to determine the best SKU for your needs.
+
+If you are using a SKU other than **Developer**, Azure Bastion requires a Virtual Network, and a specifically named subnet called `AzureBastionSubnet`. The subnet address range that you specify must be **/26 or larger** (for example, /25 or /24).
 
 !!! warning "Bastion subnet size"
     Please review the Microsoft documentation about the requirements for the [Azure Bastion subnet](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#subnet), in particular the subnet size.
+
+Additionally, you will need to create the appropriate ingress and egress Network Security Group (NSG) rules to allow traffic to and from the Azure Bastion service. Please refer to the [Working with NSG access and Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-nsg#apply) documentation for specific details.
+
+> Note: The rule priority number does not need to match the example below, but the rule configuration should match.
+
+[![Azure Bastion - Ingress Rules](../images/azure-bastion-inbound-nsg-rules.png "Azure Bastion - Ingress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/inbound.png#lightbox)
+
+[![Azure Bastion - Egress Rules](../images/azure-bastion-outbound-nsg-rules.png "Azure Bastion - Egress Rules")](https://learn.microsoft.com/en-us/azure/bastion/media/bastion-nsg/outbound.png#lightbox)
 
 !!! example "Azure Bastion deployment example"
     Microsoft provides multiple [deployment guides](https://learn.microsoft.com/en-us/azure/bastion/tutorial-create-host-portal) for Azure Bastion.

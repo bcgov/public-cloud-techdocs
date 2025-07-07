@@ -3,88 +3,94 @@ docs_dir: docs
 repo_url: https://github.com/bcgov/public-cloud-techdocs
 edit_uri: edit/main/docs/
 nav:
-  - Welcome:
-      - Overview: index.md
-      - Why use the Public Cloud: welcome/why-use-public-cloud.md
-      - Provision a Project Set: welcome/provision-a-project-set.md
-      - Training: welcome/training.md
-      - Support: welcome/support.md
-  - AWS:
-      - Overview: aws/index.md
-      - LZA (Current):
-          - Overview: aws/LZA/index.md
-          - Get started with LZA:
-              - AWS Landing Zone Accelerator overview: aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md
-              - AWS security and compliance guardrails: aws/LZA/get-started-with-lza/guardrails.md
-          - Design, build, and deploy:
-              - Requirements: aws/LZA/design-build-deploy/requirements.md
-              - User management: aws/LZA/design-build-deploy/user-management.md
-              - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
-              - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
-              - Next steps: aws/LZA/design-build-deploy/next-steps.md
-              - Networking: aws/LZA/design-build-deploy/networking.md
-              - Sample code: aws/LZA/design-build-deploy/sample-code.md
-          - Best practices:
-              - Be mindful: aws/LZA/best-practices/be-mindful.md
-              - IaC and CI/CD: aws/LZA/best-practices/iac-and-ci-cd.md
-              - Governance: aws/LZA/best-practices/governance.md
-              - AWS Services: aws/LZA/best-practices/aws-services.md
-              - AWS AI Services: aws/LZA/best-practices/aws-ai.md
-          - Tools:
-              - Helpful tools: aws/LZA/tools/tools.md
-              - AWS CloudShell: aws/LZA/tools/cloud-shell.md
-              - AWS Systems Manager Session Manager: aws/LZA/tools/session-manager.md
-          - Understand your AWS billing:
-              - AWS Cost Management: aws/LZA/understanding-your-bill/aws-cost-management.md
-          - Enterprise support:
-              - AWS Enterprise Support: aws/LZA/support/enterprise-support.md
-      - ASEA (Legacy):
-          - Overview: aws/ASEA/index.md
-          - Get started with ASEA:
-              - AWS Landing Zone overview: aws/ASEA/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
-              - AWS Security and compliance guardrails: aws/ASEA/get-started-with-aws/security-guardrails.md
-          - Design, build, and deploy:
-              - Requirements: aws/ASEA/design-build-and-deploy-an-application/requirements-for-building-your-application.md
-              - User Management: aws/ASEA/design-build-and-deploy-an-application/user-management.md
-              - Deploy an app to BC Gov's AWS Landing Zone: aws/ASEA/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
-              - Networking: aws/ASEA/design-build-and-deploy-an-application/networking.md
-              - AWS IAM User service: aws/ASEA/design-build-and-deploy-an-application/iam-user-service.md
-              - Sample apps: aws/ASEA/design-build-and-deploy-an-application/sample-apps.md
-          - Understand your AWS billing:
-              - AWS Cost Management dashboard: aws/ASEA/understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md
-          - Upcoming features:
-              - AWS Calgary region: aws/ASEA/upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
-          - Enterprise Support:
-              - AWS Enterprise Support: aws/ASEA/support/enterprise-support.md
-  - Azure:
-      - Get started with Azure:
-          - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md
-          - Azure security and compliance guardrails: azure/get-started-with-azure/guardrails.md
-      - Design, build, and deploy:
-          - Requirements: azure/design-build-deploy/requirements.md
-          - User management: azure/design-build-deploy/user-management.md
-          - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
-          - Next steps: azure/design-build-deploy/next-steps.md
-          - Networking: azure/design-build-deploy/networking.md
-          - Sample code: azure/design-build-deploy/sample-code.md
-      - Best practices:
-          - Be mindful: azure/best-practices/be-mindful.md
-          - IaC and CI/CD: azure/best-practices/iac-and-ci-cd.md
-          - Governance: azure/best-practices/governance.md
-          - Azure Services: azure/best-practices/azure-services.md
-          - Azure AI Services: azure/best-practices/azure-ai.md
-          - External Microsoft Services: azure/best-practices/external-services.md
-      - Tools:
-          - Helpful tools: azure/tools/tools.md
-          - Azure Cloud Shell: azure/tools/cloud-shell.md
-          - Azure Bastion: azure/tools/bastion.md
-      - Understand your billing:
-          - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
-      - Upcoming features:
-          - Domain join: azure/upcoming-features/domain-join.md
-          - Express route: azure/upcoming-features/express-route.md
-      - Enterprise support:
-          - Azure Enterprise Support: azure/support/enterprise-support.md
+- Welcome:
+    - Overview: index.md
+    - Why use the Public Cloud: welcome/why-use-public-cloud.md
+    - Provision a Project Set: welcome/provision-a-project-set.md
+    - Training: welcome/training.md
+    - Support: welcome/support.md
+- AWS:
+    - Overview: aws/index.md
+    - LZA (Current):
+        - Overview: aws/LZA/index.md
+        - Get started with LZA:
+            - AWS Landing Zone Accelerator overview: aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md
+            - AWS security and compliance guardrails: aws/LZA/get-started-with-lza/guardrails.md
+        - Design, build, and deploy:
+            - Requirements: aws/LZA/design-build-deploy/requirements.md
+            - User management: aws/LZA/design-build-deploy/user-management.md
+            - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
+            - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
+            - Next steps: aws/LZA/design-build-deploy/next-steps.md
+            - Networking: aws/LZA/design-build-deploy/networking.md
+            - Sample code: aws/LZA/design-build-deploy/sample-code.md
+        - Best practices:
+            - Be mindful: aws/LZA/best-practices/be-mindful.md
+            - IaC and CI/CD: aws/LZA/best-practices/iac-and-ci-cd.md
+            - Governance: aws/LZA/best-practices/governance.md
+            - AWS Services: aws/LZA/best-practices/aws-services.md
+            - AWS AI Services: aws/LZA/best-practices/aws-ai.md
+        - Tools:
+            - Helpful tools: aws/LZA/tools/tools.md
+            - AWS CloudShell: aws/LZA/tools/cloud-shell.md
+            - AWS Systems Manager Session Manager: aws/LZA/tools/session-manager.md
+        - Understand your AWS billing:
+            - AWS Cost Management: aws/LZA/understanding-your-bill/aws-cost-management.md
+        - Enterprise support:
+            - AWS Enterprise Support: aws/LZA/support/enterprise-support.md
+    - ASEA (Legacy):
+        - Overview: aws/ASEA/index.md
+        - Get started with ASEA:
+            - AWS Landing Zone overview: aws/ASEA/get-started-with-aws/bc-govs-aws-landing-zone-overview.md
+            - AWS Security and compliance guardrails: aws/ASEA/get-started-with-aws/security-guardrails.md
+        - Design, build, and deploy:
+            - Requirements: aws/ASEA/design-build-and-deploy-an-application/requirements-for-building-your-application.md
+            - User Management: aws/ASEA/design-build-and-deploy-an-application/user-management.md
+            - Deploy an app to BC Gov's AWS Landing Zone: aws/ASEA/design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md
+            - Networking: aws/ASEA/design-build-and-deploy-an-application/networking.md
+            - AWS IAM User service: aws/ASEA/design-build-and-deploy-an-application/iam-user-service.md
+            - Sample apps: aws/ASEA/design-build-and-deploy-an-application/sample-apps.md
+        - Understand your AWS billing:
+            - AWS Cost Management dashboard: aws/ASEA/understanding-your-aws-bill/aws-billing-and-cost-management-dashboard-via-quicksight.md
+        - Upcoming features:
+            - AWS Calgary region: aws/ASEA/upcoming-features/calgary-region-in-aws-secure-environment-accelerator.md
+        - Enterprise Support:
+            - AWS Enterprise Support: aws/ASEA/support/enterprise-support.md
+- Azure:
+    - Get started with Azure:
+        - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md
+        - Azure security and compliance guardrails: azure/get-started-with-azure/guardrails.md
+    - Design, build, and deploy:
+        - Requirements: azure/design-build-deploy/requirements.md
+        - User management: azure/design-build-deploy/user-management.md
+        - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
+        - Next steps: azure/design-build-deploy/next-steps.md
+        - Networking: azure/design-build-deploy/networking.md
+        - Sample code: azure/design-build-deploy/sample-code.md
+    - Best practices:
+        - Be mindful: azure/best-practices/be-mindful.md
+        - IaC and CI/CD: azure/best-practices/iac-and-ci-cd.md
+        - Governance: azure/best-practices/governance.md
+    - Insights on Azure Services:
+        - API Management: azure/azure-services/api-management.md
+        - App Service: azure/azure-services/app-service.md
+        - Application Gateway: azure/azure-services/application-gateway.md
+        - Azure AI Services: azure/azure-services/azure-ai.md
+        - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
+        - Azure Kubernetes Service: azure/azure-services/aks.md
+        - Databricks: azure/azure-services/databricks.md
+        - External Microsoft Services: azure/azure-services/external-services.md
+    - Tools:
+        - Helpful tools: azure/tools/tools.md
+        - Azure Cloud Shell: azure/tools/cloud-shell.md
+        - Azure Bastion: azure/tools/bastion.md
+    - Understand your billing:
+        - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
+    - Upcoming features:
+        - Domain join: azure/upcoming-features/domain-join.md
+        - Express route: azure/upcoming-features/express-route.md
+    - Enterprise support:
+        - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
-  - techdocs-core
-  - git-revision-date-localized
+- techdocs-core
+- git-revision-date-localized
