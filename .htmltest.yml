@@ -6,6 +6,6 @@ IgnoreURLs:
   - "https://github.com/bcgov/public-cloud-techdocs/edit/" # ignore GitHub edit URLs that get rate limited (429 errors)
   - "https://loginproxy.gov.bc.ca"
   - "https://login.nimbus.cloud.gov.bc.ca/"
-  - "https://techcommunity.microsoft.com/blog/" # Although this is a valid URL, the link validation times out
-  - "https://github.com/Azure/azqr/blob/main/examples/cicd/github-actions.yml" # Although this is a valid link, the link validation fails
-  - "https://github.com/Azure/azqr/blob/main/examples/cicd/azdo-pipeline.yml" # Although this is a valid link, the link validation fails
+  # - "https://techcommunity.microsoft.com/blog/" # Although this is a valid URL, the link validation times out
+  # - "https://github.com/Azure/azqr/blob/main/examples/cicd/github-actions.yml" # Although this is a valid link, the link validation fails
+  # - "https://github.com/Azure/azqr/blob/main/examples/cicd/azdo-pipeline.yml" # Although this is a valid link, the link validation fails
