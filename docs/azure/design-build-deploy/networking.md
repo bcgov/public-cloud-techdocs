@@ -4,6 +4,9 @@ Last updated: **{{ git_revision_date_localized }}**
 
 The following sections describe the networking components within the Azure Landing Zone, including the Virtual Network (VNet), spoke-to-spoke connectivity, and internet connectivity.
 
+!!! warning "Subnet planning"
+    It is **crucial** that you plan out your subnetting strategy **before** deploying resources in the Azure Landing Zone. This will help prevent any potential issues that would require re-architecting your network later on.
+
 ## Virtual network (VNet)
 
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
@@ -54,14 +57,8 @@ For applications with advanced requirements, an [Azure Application Gateway](http
 
 To adhere to security best practices, the Application Gateway should also be configured with a [Web Application Firewall (WAF)](https://learn.microsoft.com/en-us/azure/application-gateway/features#web-application-firewall) to protect your applications from common exploits and vulnerabilities.
 
-!!! failure "Application Gateway backend health probes"
-    The Application Gateway backend may show a status of **Unknown**. This is because internet and private traffic are routed through the Azure Firewall in the Virtual WAN Hub.
-
-    ![Application Gateway - Backend Health Probes - Unknown Status](../images/appgw-unknown.png "Application Gateway - Backend Health Probes - Unknown Status")
-
-    To resolve this, a custom **User Defined Route (UDR)** must be created to send traffic to the backend pool via an Azure Firewall in the Virtual WAN hub. 
-    
-    Due to Landing Zone security and governance requirements, you cannot create this UDR yourself. Please contact the Public cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for assistance with this, and reference the following Microsoft documentation: [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons).
+!!! warning "Application Gateway backend health probes"
+    Please be aware that the backend health may show a status of **Unknown**. For more information and direction on how to resolve this, see the **Insights on Azure Services** - [Application Gateway](../azure-services/application-gateway.md) documentation.
 
 ## VNet integration vs private endpoints
 

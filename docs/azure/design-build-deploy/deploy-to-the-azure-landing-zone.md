@@ -35,7 +35,7 @@ az <AZURE RESOURCE TYPE> create ...
 !!! note "Other Command-Line Tools"
     There are other command-line tools like [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/), that you can use to create and manage your Azure resources. You can choose the tool that you are most comfortable with.
 
-## GitHub Actions / Infrastructure-as-Code (IaC)
+## GitHub Actions
 
 GitHub Actions is a feature of GitHub that allows you to automate your workflow. Microsoft developed **GitHub Actions for Azure** and designed them be used with Azure. You can see all of the GitHub Actions for Azure in the [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions){:data-proofer-ignore}.
 
@@ -44,7 +44,7 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 !!! tip "CI/CD best practices"
     Be sure to review the [CI/CD Best Practices](../best-practices/iac-and-ci-cd.md) before implementing GitHub Actions.
 
-### Infrastructure-as-Code (IaC)
+## Infrastructure-as-Code (IaC)
 
 There are multiple ways to deploy your application to the Azure Landing Zone using Infrastructure-as-Code (IaC). You can use tools like [Terraform](https://www.terraform.io/), [Azure Resource Manager (ARM) templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/), [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), [Ansible](https://learn.microsoft.com/en-us/azure/developer/ansible/overview), [Chef](https://learn.microsoft.com/en-us/azure/developer/chef/overview), or [Pulumi](https://devblogs.microsoft.com/devops/infrastructure-as-code-azure-python-wpulumi/) to define your Infrastructure-as-Code and deploy it to Azure.
 

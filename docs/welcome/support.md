@@ -42,5 +42,5 @@ There are multiple ways to get support for the Public cloud Platform, including:
 
 Each cloud vendor provides support for their services. Here are the support options for each vendor:
 
-- [AWS Support](../aws/support/enterprise-support.md)
+- [AWS Support](../aws/LZA/support/enterprise-support.md)
 - [Azure Support](../azure/support/enterprise-support.md)
