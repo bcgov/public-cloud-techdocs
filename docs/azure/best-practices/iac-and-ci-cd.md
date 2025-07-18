@@ -27,7 +27,7 @@ Therefore, instead of using the `azurerm_subnet` resource to create subnets, you
 
 ```terraform
 resource "azapi_resource" "subnets" {
-  type = "Microsoft.Network/virtualNetworks/subnets@2023-04-01"
+  type = "Microsoft.Network/virtualNetworks/subnets@2024-05-01"
 
   name      = "SubnetName"
   parent_id = data.azurerm_virtual_network.vnet.id
@@ -37,13 +37,14 @@ resource "azapi_resource" "subnets" {
     data.azurerm_virtual_network.vnet.id
   ]
 
-  body = jsonencode({
+  # It's not necessary to use the `jsonencode` function to encode the HCL object to JSON, just use the HCL object directly
+  body = {
     properties = {
       networkSecurityGroup = {
         id = azurerm_network_security_group.id
       }
     }
-  })
+  }
 
   response_export_values = ["*"]
 }
