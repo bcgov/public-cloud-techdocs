@@ -7,6 +7,12 @@ The following sections describe the networking components within the Azure Landi
 !!! warning "Subnet planning"
     It is **crucial** that you plan out your subnetting strategy **before** deploying resources in the Azure Landing Zone. This will help prevent any potential issues that would require re-architecting your network later on.
 
+!!! warning "Subnet delegation"
+    Depending on your solution architecture and which Azure services you are using, you may need to use [subnet delegation](https://learn.microsoft.com/en-us/azure/virtual-network/manage-subnet-delegation?tabs=manage-subnet-delegation-portal) to allow certain Azure services to create resources in your subnets.
+
+Understand the impact, especially in Production environments. **Plan your subnet sizes carefully**.
+Once you deploy resources in a subnet, you cannot change its delegation unless you remove all resources. You also cannot resize the subnet until you remove the delegation.
+
 ## Virtual network (VNet)
 
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
