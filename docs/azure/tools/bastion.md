@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 Azure Bastion is a fully managed PaaS service that you provision to securely connect to virtual machines via private IP address. It provides secure and seamless RDP/SSH connectivity to your virtual machines directly over TLS from the Azure portal.
 
 !!! warning "Bastion session cached credentials"
-    When using a Virtual Machine within a VNet to work with the Azure portal, your credentials may be cached in the browser. This means that if you have a shared Virtual Machine for your team, it is **strongly recommended** to use a **private browser session** (or incognito mode) or to ensure that you **log out** of the Azure portal after each session. Otherwise, your credentials may be cached and used by other users who access the same Virtual Machine.
+When you use a Virtual Machine in a VNet to access the Azure portal, the browser may cache your credentials. If your team shares the VM, it is **strongly recommended** to use a **private browser session** (incognito mode) or make sure you **log out** of the Azure portal after each session. Otherwise, other users could access your cached credentials.
 
 !!! question "Which Azure Bastion SKU to use?"
     The minimum Bastion SKU required is **Developer**, where the `AzureBastionSubnet` subnet is not required. However, some features are limited or not available with this SKU. Please review the Microsoft [Bastion SKU](https://learn.microsoft.com/en-us/azure/bastion/configuration-settings#skus) documentation to determine the best SKU for your needs.
