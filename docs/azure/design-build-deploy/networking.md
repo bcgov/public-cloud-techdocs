@@ -10,7 +10,8 @@ The following sections describe the networking components within the Azure Landi
 !!! warning "Subnet delegation"
     Depending on your solution architecture and which Azure services you are using, you may need to use [subnet delegation](https://learn.microsoft.com/en-us/azure/virtual-network/manage-subnet-delegation?tabs=manage-subnet-delegation-portal) to allow certain Azure services to create resources in your subnets.
 
-    Please ensure that you are aware of the implications of this. Especially for Production environments, you need to **carefully plan** your subnet sizes. This is because once you have deployed resources in a subnet, you cannot change the subnet delegation without removing all the resources in that subnet. You also cannot change the subnet size until the subnet delegation is removed.
+Understand the impact, especially in Production environments. **Plan your subnet sizes carefully**.
+Once you deploy resources in a subnet, you cannot change its delegation unless you remove all resources. You also cannot resize the subnet until you remove the delegation.
 
 ## Virtual network (VNet)
 
