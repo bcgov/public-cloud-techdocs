@@ -8,4 +8,6 @@ To support domain join for Windows-based virtual machines (VMs) in the Azure Lan
 
 ### Current status
 
-Preliminary discussions have been initiated to determine the best approach for implementing the DNS service within the Azure Landing Zone. The team is evaluating the use of Microsoft Entra Domain Services or a custom DNS solution to meet the requirements of domain join.
+With the hybrid connectivity established via Azure Express Route, the next step is to implement a DNS service that can resolve domain names for on-premises resources. This includes supporting domain join for VMs in the Azure environment.
+
+Planning is underway with the Access and Directory Management Services (ADMS) team to determine the best approach for implementing the DNS service. The goal is to ensure that VMs can successfully join the domain and communicate with on-premises resources.

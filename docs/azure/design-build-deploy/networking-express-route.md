@@ -1,12 +1,14 @@
-# On-premises connectivity with Azure ExpressRoute
+# On-premises connectivity with Azure Express Route
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following sections describe how hybrid connectivity is implemented in Azure using ExpressRoute, along with the process to establish connectivity between a Project Set's virtual network and an on-premises network.
+The following sections describe how hybrid connectivity is implemented in Azure using Express Route, along with the process to establish connectivity between a Project Set's virtual network and an on-premises network.
 
 ## Overview
 
-Azure ExpressRoute is a service that provides a private connection between an organization's on-premises infrastructure and Azure data centers. This connection does not go over the public internet, which enhances security, reliability, and performance.
+Azure Express Route is a service that provides a private connection between an organization's on-premises infrastructure and Azure data centers. This connection does not go over the public internet, which enhances security, reliability, and performance.
+
+Our configuration of Express Route also include encryption of data in transit (via IPSEC), ensuring that data remains secure while being transmitted between Azure and on-premises networks.
 
 ## Azure to on-premises connectivity
 
@@ -16,7 +18,7 @@ To establish connectivity between an Azure virtual network and an on-premises ne
 
 1. Traffic is routed from the **Azure Virtual Network (VNet)**. This traffic is directed to the centralized **Azure Firewall**, which acts as a security boundary and controls the flow of traffic.
   - To allow traffic to flow from the Azure VNet to the on-premises network, the Azure Firewall must be configured with appropriate rules. Please submit an Azure [Firewall Change Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18).
-2. After passing through the **Azure Firewall**, the traffic is routed the **Express Route** connection.
+2. After passing through the **Azure Firewall**, the traffic is routed to the **Express Route** connection.
   - This requires that the Virtual WAN vHub has the proper **private traffic range** configured. Please ensure that you include the private IP address range of the on-premises network you want to connect to.
 3. Express Route then **forwards the traffic** to the on-premises network.
   - The on-premises network must be **configured to accept traffic from the Azure VNet**.
@@ -43,3 +45,6 @@ The **Traffic Table** should **add a traffic rule** (using the naming pattern of
 For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 
 ![STMS Firewall Change Request - Add Traffic](../images/firewall-request-add-traffic-table-example.png "STMS Firewall Change Request - Add Traffic")
+
+!!! warning "Bi-directional traffic"
+    Remember, if you require bi-directional traffic (ie. on-premises to Azure), you will need to include an additional rule in the Traffic Table for that flow.
