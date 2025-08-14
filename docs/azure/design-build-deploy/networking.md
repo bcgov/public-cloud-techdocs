@@ -80,7 +80,7 @@ In order to maintain the security of the Azure Landing Zone, there are certain n
   - This is required so that all traffic is routed through the central firewall, for compliance requirements
 - Modifying the Virtual Network (VNet) address space
   - This is required so that overlapping IP address ranges are not created in the Azure Landing Zone
-- Creating Express Route circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
+- Creating ExpressRoute circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
   - This is so that traffic is not bypassing the central firewall
 - Creating Virtual Networks
   - This is to avoid overlapping IP address ranges that may be in use by other Project Sets

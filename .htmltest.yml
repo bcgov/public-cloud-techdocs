@@ -6,3 +6,4 @@ IgnoreURLs:
   - "https://github.com/bcgov/public-cloud-techdocs/edit/" # ignore GitHub edit URLs that get rate limited (429 errors)
   - "https://loginproxy.gov.bc.ca"
   - "https://login.nimbus.cloud.gov.bc.ca/"
+  - "https://ssbc-client.gov.bc.ca/"

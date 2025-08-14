@@ -16,8 +16,8 @@ The following sections describe the requirements for building your application o
 
 Take the following into consideration when building your application in the Azure Landing zone:
 
-- There is no direct (private) connectivity to the B.C. government network. Any application requiring access to data on this network must use a public endpoint.
-  - See [Upcoming Features: Express Route](../upcoming-features/express-route.md) for more information.
+- Direct (private) connectivity to the B.C. government network is supported through [ExpressRoute](./networking-express-route.md). However, any application requiring access to data hosted on-premises will need to submit a firewall request.
+  - See the [On-premises connectivity](./networking-express-route.md) for more information.
 
 - Only HTTPS applications that are compatible with public endpoints through [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) are supported.
 
