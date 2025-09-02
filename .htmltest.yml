@@ -7,3 +7,4 @@ IgnoreURLs:
   - "https://loginproxy.gov.bc.ca"
   - "https://login.nimbus.cloud.gov.bc.ca/"
   - "https://ssbc-client.gov.bc.ca/"
+  - "https://digital.gov.bc.ca/"
