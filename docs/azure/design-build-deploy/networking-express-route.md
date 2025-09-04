@@ -4,6 +4,10 @@ Last updated: **{{ git_revision_date_localized }}**
 
 The following sections explain how to set up hybrid connectivity in Azure with ExpressRoute and connect a Project Set’s virtual network to an on-premises network.
 
+!!! info "Early Adopters"
+    Azure ExpressRoute is currently available only for early adopters.  
+    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access.
+
 ## Overview
 
 Azure ExpressRoute provides a private connection between an organization’s on-premises infrastructure and Azure data centres. Because this connection does not travel over the public internet, it offers stronger security, reliability and performance.
