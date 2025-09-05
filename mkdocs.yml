@@ -24,6 +24,8 @@ nav:
             - Service Control Policies: aws/LZA/design-build-deploy/scp.md
             - Next steps: aws/LZA/design-build-deploy/next-steps.md
             - Networking: aws/LZA/design-build-deploy/networking.md
+            - Custom DNS: aws/LZA/design-build-deploy/custom-dns.md
+            - EKS with ALB: aws/LZA/design-build-deploy/working-with-eks-and-alb.md
             - Sample code: aws/LZA/design-build-deploy/sample-code.md
         - Best practices:
             - Be mindful: aws/LZA/best-practices/be-mindful.md
