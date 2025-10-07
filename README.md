@@ -1,4 +1,6 @@
 # Public Cloud technical documentation
+![Lifecycle: Active](https://img.shields.io/badge/Lifecycle-Active-97ca00)
+
 This is a single location for all technical/developer documentation for product teams working on the Public Cloud Platform.
 
 Visit the deployed Gatsby site at [docs.developer.gov.bc.ca](https://developer.gov.bc.ca/). See how that's deployed at the [private-cloud-techdocs](https://github.com/bcgov/platform-developer-docs/tree/07904f54dc36c33db156145945be6c00b62483d2) repo.
