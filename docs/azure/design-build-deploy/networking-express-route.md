@@ -4,6 +4,10 @@ Last updated: **{{ git_revision_date_localized }}**
 
 The following sections explain how to set up hybrid connectivity in Azure with ExpressRoute and connect a Project Set’s virtual network to an on-premises network.
 
+!!! info "Early Adopters"
+    Azure ExpressRoute is currently available only for early adopters.  
+    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access.
+
 ## Overview
 
 Azure ExpressRoute provides a private connection between an organization’s on-premises infrastructure and Azure data centres. Because this connection does not travel over the public internet, it offers stronger security, reliability and performance.
@@ -48,3 +52,10 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 
 !!! warning "Bi-directional traffic"
     If you need bi-directional traffic, for example on-premises to Azure, add another rule in the Traffic Table for that flow.
+
+## OpenShift connectivity
+
+If you are using OpenShift, and want to connect to it from Azure, you will need to submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). However, for the Source or Destination fields, use the appropriate Objects for the OpenShift cluster you are connecting to.
+
+!!! note "OpenShift firewall objects"
+    For specific details on the appropriate OpenShift firewall objects to use, please refer to the [OpenShift documentation](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/topology/).

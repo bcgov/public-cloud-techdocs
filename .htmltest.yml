@@ -10,3 +10,5 @@ IgnoreURLs:
   - "https://developer.hashicorp.com/"
   - "https://www.terraform.io/"
   - "https://techcommunity.microsoft.com/"
+  - "https://digital.gov.bc.ca/"
+  - "https://hungryboysl.wordpress.com"
