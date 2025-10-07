@@ -46,3 +46,7 @@ If you already have access, you can
 Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public cloud Accelerator Service (formerly known as CloudPathFinder) and its community, and changes to the platform.
 
 [Get the calendar invite, and view past decks](https://digital.gov.bc.ca/technology/cloud/public/get-support/#subscribe).
+
+### External training
+
+See some [external training resources](https://digital.gov.bc.ca/technology/cloud/public/get-support/#training).
