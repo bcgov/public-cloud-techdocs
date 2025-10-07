@@ -48,3 +48,10 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 
 !!! warning "Bi-directional traffic"
     If you need bi-directional traffic, for example on-premises to Azure, add another rule in the Traffic Table for that flow.
+
+## OpenShift connectivity
+
+If you are using OpenShift, and want to connect to it from Azure, you will need to submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). However, for the Source or Destination fields, use the appropriate Objects for the OpenShift cluster you are connecting to.
+
+!!! note "OpenShift firewall objects"
+    For specific details on the appropriate OpenShift firewall objects to use, please refer to the [OpenShift documentation](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/topology/).
