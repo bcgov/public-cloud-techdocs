@@ -7,5 +7,8 @@ IgnoreURLs:
   - "https://loginproxy.gov.bc.ca"
   - "https://login.nimbus.cloud.gov.bc.ca/"
   - "https://ssbc-client.gov.bc.ca/"
+  - "https://developer.hashicorp.com/"
+  - "https://www.terraform.io/"
+  - "https://techcommunity.microsoft.com/"
   - "https://digital.gov.bc.ca/"
   - "https://hungryboysl.wordpress.com"
