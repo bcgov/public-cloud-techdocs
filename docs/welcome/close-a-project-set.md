@@ -57,7 +57,7 @@ Before proceeding with closing your Project Set, ensure you have:
 
 ## After closing your Project Set
 
-- **Billing will stop** immediately for new charges once the project accounts/subscriptions have been closed by the Public Cloud team.
+- **Billing will stop** immediately for new charges once the project accounts/subscriptions have been closed by the Public Cloud team
 - **Final billing statements** will be generated for any remaining charges
 - **All team members** will lose access to the cloud environments
 - **You'll receive confirmation** once the closure is complete

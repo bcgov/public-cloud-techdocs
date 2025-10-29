@@ -1,34 +1,34 @@
-# Custom URLs for Applications
+# Custom URLs for applications
 
 ## Purpose
 
 This document explains how teams can present a custom, friendly URL for an application that already runs behind an internal Application Load Balancer (ALB) in your workload account.
 
-## CloudFront Method — How It Works (High Level)
+## How CloudFront works (overview)
 
-   • Certificate: Obtain or import a public TLS certificate in ACM (us-east-1) that covers your custom hostname (e.g., app.example.com).
-   • Distribution: Create a CloudFront distribution in your workload account, add your alternate domain name (the custom hostname), and select the us-east-1 certificate for viewer TLS.
-   • Origin: Configure a VPC Origin targeting your internal ALB (same account) and set HTTPS-only from CloudFront to the ALB.
-   • DNS: In your DNS, point the hostname to the CloudFront distribution (Route 53 ALIAS or external CNAME).
+   • Certificate: Obtain or import a public TLS certificate in ACM (us-east-1) that covers your custom hostname (e.g., app.example.com)
+   • Distribution: Create a CloudFront distribution in your workload account, add your alternate domain name (the custom hostname), and select the us-east-1 certificate for viewer TLS
+   • Origin: Configure a VPC Origin targeting your internal ALB (same account) and set HTTPS-only from CloudFront to the ALB
+   • DNS: In your DNS, point the hostname to the CloudFront distribution (Route 53 ALIAS or external CNAME)
 
-## API Gateway method — How It Works (High Level)
+## How API Gateway works (overview)
 
-Use API Gateway as a managed front door with a custom domain for your API. You create the API in your workload account, attach a custom domain, and (for private backends) connect it to your internal ALB via VPC Link.
- • Create the API: Prefer HTTP API for new builds; use REST only if you need REST-specific features.
+Use API Gateway as a managed front door with a custom domain for your API. You create the API in your workload account, attach a custom domain, and (for private backends) connect it to your internal ALB via VPC Link
+ • Create the API: Prefer HTTP API for new builds; use REST only if you need REST-specific features
  • Private integration: Set up a VPC Link and integrate the API to your internal ALB.
  • Custom domain:
- • Regional: ACM certificate in the same Region as the API; map your stage/base path.
- • DNS: Point your hostname to the API Gateway custom domain (Route 53 ALIAS or external CNAME).
+ • Regional: ACM certificate in the same Region as the API; map your stage/base path
+ • DNS: Point your hostname to the API Gateway custom domain (Route 53 ALIAS or external CNAME)
 
-## AppSync (GraphQL) method — How It Works (High Level)
+## How AppSync (GraphQL) works (overview)
 
-Use AWS AppSync when your application exposes a GraphQL API and you want a single custom hostname for both HTTPS GraphQL and realtime WebSocket traffic.
- • Create the API: Define your AppSync GraphQL API (schema, resolvers, auth modes).
+Use AWS AppSync when your application exposes a GraphQL API and you want a single custom hostname for both HTTPS GraphQL and realtime WebSocket traffic
+ • Create the API: Define your AppSync GraphQL API (schema, resolvers, auth modes)
  • Custom domain:
- • Request/import an ACM certificate in us-east-1 for your hostname (AppSync custom domains require this).
- • In AppSync, create a Custom Domain and associate it with your API + certificate.
- • DNS: Point your hostname to the AppSync custom-domain target (Route 53 ALIAS or external CNAME to the CloudFront domain AppSync provides).
- • Private integration: Use Lambda resolvers placed in private subnets to call your internal ALB. AppSync cannot VPC-link directly to an internal ALB.
+ • Request/import an ACM certificate in us-east-1 for your hostname (AppSync custom domains require this)
+ • In AppSync, create a Custom Domain and associate it with your API + certificate
+ • DNS: Point your hostname to the AppSync custom-domain target (Route 53 ALIAS or external CNAME to the CloudFront domain AppSync provides)
+ • Private integration: Use Lambda resolvers placed in private subnets to call your internal ALB.AppSync cannot VPC-link directly to an internal ALB
 
 ## References (AWS Docs)
 
