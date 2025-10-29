@@ -15,7 +15,7 @@ This document explains how teams can present a custom, friendly URL for an appli
 
 Use API Gateway as a managed front door with a custom domain for your API. You create the API in your workload account, attach a custom domain, and (for private backends) connect it to your internal ALB via VPC Link
  • Create the API: Prefer HTTP API for new builds; use REST only if you need REST-specific features
- • Private integration: Set up a VPC Link and integrate the API to your internal ALB.
+ • Private integration: Set up a VPC Link and integrate the API to your internal ALB
  • Custom domain:
  • Regional: ACM certificate in the same Region as the API; map your stage/base path
  • DNS: Point your hostname to the API Gateway custom domain (Route 53 ALIAS or external CNAME)
