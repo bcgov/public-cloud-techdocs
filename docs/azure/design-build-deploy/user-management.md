@@ -53,15 +53,18 @@ These groups are assigned roles at the Management Group level, which automatical
 
 ### As a Product Owner or Technical Lead with the Owner role, you can:
 
-- Manage membership in your security groups (`DO_PuC_Azure_Live_{LicensePlate}_{Role}`) to grant Owner, Contributor, or Reader access across the Project Set.
-- Create custom roles for specific needs.
-- Assign users or groups directly to **non-privileged** roles (e.g., Reader, job function, or custom roles) at the Subscription, Resource Group, or Resource level to grant specific, granular access. This follows the principle of least privilege.
-- Create and manage service principals.
-- Assign service principals to any non-privileged.
-- Create and manage managed identities.
-- Create and manage all resources within your subscriptions (subject to [policy restrictions](../get-started-with-azure/guardrails.md)).
+!!! note
+    To manage group memberships, the Product Owner must add users (including Technical Leads) as group owners. By default, only Product Owners can manage security group memberships. The Product Owner can delegate this ability to any user by making them a group owner.
 
-### You cannot:
+- Manage membership in your security groups (`DO_PuC_Azure_Live_{LicensePlate}_{Role}`) to grant Owner, Contributor, or Reader access across the Project Set (requires group owner permissions)
+- Create custom roles for specific needs
+- Assign users or groups directly to **non-privileged** roles (e.g., Reader, job function, or custom roles) at the Subscription, Resource Group, or Resource level to grant specific, granular access. This follows the principle of least privilege
+- Create and manage service principals
+- Assign service principals to any non-privileged
+- Create and manage managed identities
+- Create and manage all resources within your subscriptions (subject to [policy restrictions](../get-started-with-azure/guardrails.md))
+
+### You cannot
 
 - Assign users or groups directly to **privileged** roles (e.g., Owner, Contributor) at any level (Management Group, Subscription, Resource Group, Resource). Assignment to these roles **must** be done by managing membership in the appropriate `DO_PuC_Azure_Live_{LicensePlate}_{Role}` security group.
 - Bypass [Azure Policy restrictions](../get-started-with-azure/guardrails.md) (policies take precedence over RBAC permissions).
