@@ -6,7 +6,7 @@ The following sections explain how to set up hybrid connectivity in Azure with E
 
 !!! info "Early Adopters"
     Azure ExpressRoute is currently available only for early adopters.  
-    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access.
+    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
 
@@ -55,7 +55,7 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 
 ## OpenShift connectivity
 
-If you are using OpenShift, and want to connect to it from Azure, you will need to submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). However, for the Source or Destination fields, use the appropriate Objects for the OpenShift cluster you are connecting to.
+If you use OpenShift and want to connect from Azure, submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). For the **Source** or **Destination fields**, enter the appropriate Objects for the OpenShift cluster you’re connecting to.
 
 !!! note "OpenShift firewall objects"
     For specific details on the appropriate OpenShift firewall objects to use, please refer to the [OpenShift documentation](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/topology/).
