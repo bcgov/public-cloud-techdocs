@@ -1,13 +1,13 @@
-# Service Control Policies (SCPs) in our LZA (Quick Note)
+# Service Control Policies (SCPs) in our LZA (quick note)
 
 Last updated: **{{ git_revision_date_localized }}**
 
 ## What are SCPs?
 
-- Org-level guardrails in AWS Organizations.
-- **Deny-only:** they set the maximum permissions identities can ever use within an OU/account.
-- Attach at the **root/OU/account** level—applies to everything beneath.
-- They **don’t** grant permissions; identity policies are still required.
+- Org-level guardrails in AWS Organizations
+- **Deny-only:** they set the maximum permissions identities can ever use within an OU/account
+- Attach at the **root/OU/account** level—applies to everything beneath
+- They **don’t** grant permissions; identity policies are still required
 
 ## LZA baseline SCPs (CCCS-Medium)
 

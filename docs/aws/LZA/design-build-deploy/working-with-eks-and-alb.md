@@ -4,17 +4,17 @@ This guide explains, at a high level, the two supported ways to expose EKS apps 
 
 ## Key LZA requirements to highlight up front
 
-- Tag every internal ALB with Public=True (used by our perimeter automation).
+- Tag every internal ALB with Public=True (used by our perimeter automation)
 
-- Ensure the internal ALB has a listener rule for path /bcgovhealthcheck that returns HTTP 200 (fixed response). The perimeter public ALB will probe this.
+- Ensure the internal ALB has a listener rule for path /bcgovhealthcheck that returns HTTP 200 (fixed response). The perimeter public ALB will probe this
 
-- SCPs block creating IAM OIDC providers in LZA. Use EKS Pod Identity (addon + association) instead of IRSA to give the AWS Load Balancer Controller permissions.
+- SCPs block creating IAM OIDC providers in LZA. Use EKS Pod Identity (addon + association) instead of IRSA to give the AWS Load Balancer Controller permissions
 
 ## Two patterns
 
-- Kubernetes‑managed ALB via AWS Load Balancer Controller + Ingress (share one ALB using an Ingress Group).
+- Kubernetes‑managed ALB via AWS Load Balancer Controller + Ingress (share one ALB using an Ingress Group)
 
-- Terraform‑managed ALB (prebuilt) + TargetGroupBinding (Kubernetes only registers pods into Terraform target groups).
+- Terraform‑managed ALB (prebuilt) + TargetGroupBinding (Kubernetes only registers pods into Terraform target groups)
 
 ## Pattern A — Kubernetes‑managed internal ALB (Ingress + LBC)
 
@@ -22,11 +22,11 @@ High level: Use the AWS Load Balancer Controller (LBC) so Ingress creates/owns a
 
 LZA callouts:
 
-- Add ALB tag Public=True.
+- Add ALB tag Public=True
 
-- Add a fixed 200 rule for /bcgovhealthcheck (perimeter health probe).
+- Add a fixed 200 rule for /bcgovhealthcheck (perimeter health probe)
 
-- Use EKS Pod Identity (SCPs block OIDC provider creation/IRSA).
+- Use EKS Pod Identity (SCPs block OIDC provider creation/IRSA)
 
 ## Minimal Terraform snippets only
 
@@ -82,7 +82,7 @@ resource "kubernetes_ingress_v1" "internal_alb" {
 
 ## Pattern B — Using Internal Load Balancer created outside of EKS
 
-- Below terraform snippet creates an internal ALB with a target group and later we use the TargetGroupBinding to register pods into that target group.
+- Below terraform snippet creates an internal ALB with a target group and later we use the TargetGroupBinding to register pods into that target group
 
 ```hcl
 # Internal ALB (Web subnets, existing ALB SG)
