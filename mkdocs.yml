@@ -17,7 +17,7 @@ nav:
           - Get started with LZA:
               - AWS Landing Zone Accelerator overview: aws/LZA/get-started-with-lza/aws-landing-zone-accelerator-overview.md
               - AWS security and compliance guardrails: aws/LZA/get-started-with-lza/guardrails.md
-          - Design, build, and deploy:
+          - Design, build and deploy:
               - Requirements: aws/LZA/design-build-deploy/requirements.md
               - User management: aws/LZA/design-build-deploy/user-management.md
               - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
@@ -65,7 +65,7 @@ nav:
       - Get started with Azure:
           - Azure Landing Zone overview: azure/get-started-with-azure/bc-govs-azure-landing-zone-overview.md
           - Azure security and compliance guardrails: azure/get-started-with-azure/guardrails.md
-      - Design, build, and deploy:
+      - Design, build and deploy:
           - Requirements: azure/design-build-deploy/requirements.md
           - User management: azure/design-build-deploy/user-management.md
           - Deploy to the Azure Landing Zone: azure/design-build-deploy/deploy-to-the-azure-landing-zone.md
