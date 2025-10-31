@@ -99,7 +99,7 @@ Open-source security assessment tool for AWS environments.
 
 - **Installation**: `pip install prowler-cloud`
 - **Features**: CIS benchmarks, GDPR, HIPAA compliance checks
-- **Documentation**: [Prowler documentation](https://docs.prowler.cloud/)
+- **Documentation**: [Prowler documentation](https://docs.prowler.com/introduction)
 
 ## Infrastructure scanning tools
 
