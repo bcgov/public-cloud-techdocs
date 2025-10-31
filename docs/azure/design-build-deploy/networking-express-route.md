@@ -62,7 +62,7 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 !!! warning "Bi-directional traffic"
     The above rule example only allows traffic to flow from Azure to on-premises.
 
-    If you have an on-premises system needs to initiate traffic to an Azure resource, you need to add another rule in the Traffic Table for that flow.
+    If you have an on-premises system that needs to initiate traffic to an Azure resource, you need to add another rule in the Traffic Table for that flow.
 
 ## OpenShift connectivity
 
