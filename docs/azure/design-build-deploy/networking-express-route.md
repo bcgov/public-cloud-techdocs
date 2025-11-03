@@ -35,11 +35,11 @@ To connect an Azure virtual network to an on-premises network, follow these step
     If an on-premises resource needs to **initiate traffic to an Azure resource**, request a separate firewall rule for that traffic flow.
 
 !!! tip "Shared responsibility"
-    Traffic from Azure to on-premises networks is secured and **encrypted** using ExpressRoute with IPsec.
+    Traffic from Azure to on-premises networks is secured and **encrypted** using IPSec over ExpressRoute.
 
-    However, once the traffic reaches the **on-premises network**, it is **your responsibility** to ensure that the data remains secure. This includes connectivity and data transfer _within_ the on-premises network between on-premises resources and zones.
+    Once the traffic reaches your **on-premises network**, you are responsible for keeping the data secure. This includes managing connectivity and data transfers within the on-premises network between resources and zones.
 
-    Additionally, while we facilitate the **connection** between Azure and on-premises networks through the Azure Firewall, **you are responsible** for submitting the necessary firewall requests for **on-premises firewalls** to allow the traffic from your Azure network to your target on-premises resources. It's like we drive you to the door, but you need to have the right key to get inside.
+    We set up the **connection** between Azure and your on premises network through the Azure Firewall. However, **you are responsible** for submitting the required firewall requests for your **on premises firewalls** to allow traffic from Azure to reach your target on premises resources. Think of it as us driving you to the door; you still need the right key to get in.
 
     An example request form for reference is provided below.
 
@@ -62,7 +62,7 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 !!! warning "Bi-directional traffic"
     The above rule example only allows traffic to flow from Azure to on-premises.
 
-    If you have an on-premises system that needs to initiate traffic to an Azure resource, you need to add another rule in the Traffic Table for that flow.
+    If an on-premises system needs to start traffic to an Azure resource, add another rule in the Traffic Table for that flow.
 
 ## OpenShift connectivity
 
