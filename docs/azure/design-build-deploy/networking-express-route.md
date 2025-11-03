@@ -34,6 +34,15 @@ To connect an Azure virtual network to an on-premises network, follow these step
 !!! warning "On-premises initiated traffic"
     If an on-premises resource needs to **initiate traffic to an Azure resource**, request a separate firewall rule for that traffic flow.
 
+!!! tip "Shared responsibility"
+    Traffic from Azure to on-premises networks is secured and **encrypted** using IPSec over ExpressRoute.
+
+    Once the traffic reaches your **on-premises network**, you are responsible for keeping the data secure. This includes managing connectivity and data transfers within the on-premises network between resources and zones.
+
+    We set up the **connection** between Azure and your on premises network through the Azure Firewall. However, **you are responsible** for submitting the required firewall requests for your **on premises firewalls** to allow traffic from Azure to reach your target on premises resources. Think of it as us driving you to the door; you still need the right key to get in.
+
+    An example request form for reference is provided below.
+
 ## Example request form
 
 This example shows how to request connectivity between an Azure VNet and an on-premises network.
@@ -51,11 +60,13 @@ For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
 ![STMS Firewall Change Request - Add Traffic](../images/firewall-request-add-traffic-table-example.png "STMS Firewall Change Request - Add Traffic")
 
 !!! warning "Bi-directional traffic"
-    If you need bi-directional traffic, for example on-premises to Azure, add another rule in the Traffic Table for that flow.
+    The above rule example only allows traffic to flow from Azure to on-premises.
+
+    If an on-premises system needs to start traffic to an Azure resource, add another rule in the Traffic Table for that flow.
 
 ## OpenShift connectivity
 
-If you use OpenShift and want to connect from Azure, submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). For the **Source** or **Destination fields**, enter the appropriate Objects for the OpenShift cluster you’re connecting to.
+If you use one of the on-premises OpenShift clusters and want to connect to it from Azure, submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). For the **Source** or **Destination fields**, enter the appropriate Objects for the OpenShift cluster endpoints you’re connecting to.
 
 !!! note "OpenShift firewall objects"
     For specific details on the appropriate OpenShift firewall objects to use, please refer to the [OpenShift documentation](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/topology/).
