@@ -10,6 +10,8 @@ nav:
       - Close a Project Set: welcome/close-a-project-set.md
       - Training: welcome/training.md
       - Support: welcome/support.md
+  - Shared Services:
+      - MCCS: shared-services/mccs/mccs.md
   - AWS:
       - Overview: aws/index.md
       - LZA (Current):
@@ -25,6 +27,7 @@ nav:
               - Service Control Policies: aws/LZA/design-build-deploy/scp.md
               - Next steps: aws/LZA/design-build-deploy/next-steps.md
               - Networking: aws/LZA/design-build-deploy/networking.md
+              - On-premises connectivity: aws/LZA/design-build-deploy/networking-direct-connect.md
               - Custom DNS: aws/LZA/design-build-deploy/custom-dns.md
               - EKS with ALB: aws/LZA/design-build-deploy/working-with-eks-and-alb.md
               - Sample code: aws/LZA/design-build-deploy/sample-code.md
