@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 The following sections explain how to set up hybrid connectivity in AWS/Azure and connect a Project Set’s virtual network to an on-premises network.
 
 !!! info "Early Adopters"
-    AWS DirectConnect and Azure ExpressRoute is currently available only for early adopters.  
+    AWS DirectConnect and Azure ExpressRoute are currently available only for early adopters.  
     Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
@@ -23,7 +23,7 @@ To connect an AWS virtual private cloud (VPC) or Azure virtual network (VNet) to
 ![Hybrid Connectivity](../../images/shared-services/hybrid-connectivity-aws-azure.png "Hybrid Connectivity")
 
 1. Traffic leaves  the cloud **VPC/VNet** and goes to the centralized **cloud firewall**, which acts as a security boundary and controls the flow of traffic
-2. After passing through the **cloud firewall**, the traffic goes to the **hybrid** connection (ie. DirectConnect or ExpressRoute)
+2. After passing through the **cloud firewall**, the traffic goes to the **hybrid** connection (i.e. DirectConnect or ExpressRoute)
 3. DirectConnect or ExpressRoute **forwards the traffic** to the on-premises network
 4. Traffic reaches the on-premises **edge firewall** (called the "**3PG**"). Each on-premises **Zone** also has its own firewall, which must allow traffic from the cloud VPC/VNet
 
@@ -39,7 +39,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
     If an on-premises resource needs to **initiate traffic to a cloud resource**, request a separate firewall rule for that traffic flow.
 
 !!! tip "Shared responsibility"
-    Traffic from AWS/Azure to on-premises networks is secured and **encrypted** using IPSec over DirectConnect or ExpressRoute.
+    Traffic from AWS/Azure to on-premises networks is secured and **encrypted** using IPsec over DirectConnect or ExpressRoute.
 
     Once the traffic reaches your **on-premises network**, you are responsible for keeping the data secure. This includes managing connectivity and data transfers within the on-premises network between resources and zones.
 
