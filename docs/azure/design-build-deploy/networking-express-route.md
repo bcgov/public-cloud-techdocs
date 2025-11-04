@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following sections explain how to set up hybrid connectivity in Azure with ExpressRoute and connect a Project Set’s virtual network to an on-premises network.
+The following sections show you how to set up hybrid connectivity in Azure using ExpressRoute and connect your Project Set’s virtual network to your on-premises network.
 
 !!! info "Early Adopters"
     Azure ExpressRoute is currently available only for early adopters.  

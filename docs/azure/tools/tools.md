@@ -16,7 +16,7 @@ While there are many tools available to help you manage your Azure environment, 
 
 ### Azure OpenAI PTU Calculator
 
-The Azure OpenAI PTU Calculator is a free, open-source tool that helps you optimize your Azure OpenAI costs by intelligently sizing Provisioned Throughput Units (PTUs), comparing PAYGO and PTU pricing, and analyzing your usage patterns. It supports all major Azure OpenAI models and provides real-time pricing, cost projections, and actionable recommendations.
+The Azure OpenAI PTU Calculator is a free, open-source tool that helps you manage your Azure OpenAI costs. It lets you size Provisioned Throughput Units (PTUs), compare PAYGO and PTU pricing and analyze your usage patterns. The tool supports all major Azure OpenAI models and gives you real-time pricing, cost estimates and practical recommendations.
 
 Check out the [Azure OpenAI PTU Calculator](https://www.ptucalc.com/) and its accompanying [User Guide](https://github.com/ricmmartins/azureptucalc/blob/main/docs/USER_GUIDE.md).
 

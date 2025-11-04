@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The following sections explain how to set up hybrid connectivity in AWS with DirectConnect and connect a Project Set’s virtual private cloud to an on-premises network.
+The following sections show you how to set up hybrid connectivity in AWS using DirectConnect and connect your Project Set’s virtual private cloud to your on-premises network.
 
 !!! info "Early Adopters"
     AWS DirectConnect is currently available only for early adopters.  
