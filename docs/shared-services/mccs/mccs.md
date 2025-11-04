@@ -6,7 +6,7 @@ The following sections explain how to set up hybrid connectivity in AWS/Azure an
 
 !!! info "Early Adopters"
     AWS DirectConnect and Azure ExpressRoute is currently available only for early adopters.  
-    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
 
