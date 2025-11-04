@@ -14,6 +14,12 @@ While there are many tools available to help you manage your Azure environment, 
 !!! abstract "Tools list"
     If you have a favorite tool that you think should be included in this list, please let us know by [creating a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) with the details.
 
+### Azure OpenAI PTU Calculator
+
+The Azure OpenAI PTU Calculator is a free, open-source tool that helps you optimize your Azure OpenAI costs by intelligently sizing Provisioned Throughput Units (PTUs), comparing PAYGO and PTU pricing, and analyzing your usage patterns. It supports all major Azure OpenAI models and provides real-time pricing, cost projections, and actionable recommendations.
+
+Check out the [Azure OpenAI PTU Calculator](https://www.ptucalc.com/) and its accompanying [User Guide](https://github.com/ricmmartins/azureptucalc/blob/main/docs/USER_GUIDE.md).
+
 ### Azure Quick Review (AZQR)
 
 A command-line interface (CLI) tool specifically designed to analyze Azure resources and identify whether they comply with Azure’s best practices and recommendations. Its primary purpose is to provide users with a detailed overview of their Azure resources, enabling them to easily identify any non-compliant configurations or potential areas for improvement. Check out the [Azure Quick Review (AZQR)](https://azure.github.io/azqr/).
