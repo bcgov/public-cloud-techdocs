@@ -52,5 +52,5 @@ Tools that scan Terraform code to identify security vulnerabilities, compliance 
 
 - [Checkov](https://www.checkov.io/)
 - [TFLint](https://github.com/terraform-linters/tflint)
-- [Trivy](https://trivy.dev/latest/)
+- [Trivy](https://www.aquasec.com/products/trivy/)
 - [InfraCost](https://www.infracost.io/)
