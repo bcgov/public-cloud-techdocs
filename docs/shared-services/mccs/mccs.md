@@ -35,6 +35,13 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
 2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via iStore) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
   - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
 
+!!! question "Two requests for three firewalls?"
+    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: the **cloud firewall**, the **3PG firewall** and the **zone-specific firewalls**. In our experience, you can submit all the on-premises firewall rules are submitted in the **same request form**.
+
+    When you submit an on-premises firewall request, the firewall team identifies which firewalls need updates based on the source and destination information you provide.
+    
+    You'll need to submit 2 "requests" required: One for the **cloud firewall**, and another for the **on-premises firewall(s)** respectively. 
+
 !!! warning "On-premises initiated traffic"
     If an on-premises resource needs to **initiate traffic to a cloud resource**, request a separate firewall rule for that traffic flow.
 
