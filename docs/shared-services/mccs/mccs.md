@@ -36,7 +36,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
   - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
 
 !!! question "Two requests for three firewalls?"
-    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: the **cloud firewall**, the **3PG firewall**, and the **zone-specific firewalls**. In our experience, you can submit all the on-premises firewall rules are submitted in the **same request form**.
+    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: the **cloud firewall**, the **3PG firewall** and the **zone-specific firewalls**. In our experience, you can submit all the on-premises firewall rules are submitted in the **same request form**.
 
     When you submit an on-premises firewall request, the firewall team identifies which firewalls need updates based on the source and destination information you provide.
     
