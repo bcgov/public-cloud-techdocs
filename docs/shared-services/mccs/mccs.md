@@ -105,7 +105,9 @@ When you submit the on-premises firewall request, you will receive an email that
 > This change record has been tentatively scheduled for the Date/Time mentioned above but may have to be rescheduled or rejected due to change management requirements.
 
 !!! danger "Testing responsibility"
-    After the firewall rules have been implemented, it is **your responsibility** to test the connectivity to ensure everything is working as expected. If there are any issues identified, initiate troubleshooting by contacting the network team that you received the firewall change confirmation email from, providing the **source**/**destination** addresses as well as the **approximate time** of the test.
+    After the firewall rules have been implemented, it is **your responsibility** to test the connectivity to ensure everything is working as expected.
+    
+    If there are any issues identified, initiate troubleshooting by contacting the network team that you received the firewall change confirmation email from, providing the **source**/**destination** addresses as well as the **approximate time** of the test.
 
 ## OpenShift connectivity
 
