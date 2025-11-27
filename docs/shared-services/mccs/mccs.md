@@ -6,7 +6,7 @@ The following sections explain how to set up hybrid connectivity in AWS/Azure an
 
 !!! info "Early Adopters"
     AWS DirectConnect and Azure ExpressRoute are currently available only for early adopters.  
-    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    Please contact the Public Cloud Team at [public.cloud@gov.bc.ca](mailto:public.cloud@gov.bc.ca) for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
 
@@ -18,32 +18,39 @@ In our setup, DirectConnect and ExpressRoute also encrypts data in transit with 
 
 The following describes the general network connectivity from AWS/Azure to on-premises networks.
 
-To connect an AWS virtual private cloud (VPC) or Azure virtual network (VNet) to an on-premises network, follow these steps.
+Connectivity between an AWS virtual private cloud (VPC) or Azure virtual network (VNet) to an on-premises network follows this general path.
 
 ![Hybrid Connectivity](../../images/shared-services/hybrid-connectivity-aws-azure.png "Hybrid Connectivity")
 
 1. Traffic leaves  the cloud **VPC/VNet** and goes to the centralized **cloud firewall**, which acts as a security boundary and controls the flow of traffic
 2. After passing through the **cloud firewall**, the traffic goes to the **hybrid** connection (i.e. DirectConnect or ExpressRoute)
 3. DirectConnect or ExpressRoute **forwards the traffic** to the on-premises network
-4. Traffic reaches the on-premises **edge firewall** (called the "**3PG**"). Each on-premises **Zone** also has its own firewall, which must allow traffic from the cloud VPC/VNet
+4. Traffic reaches the on-premises **edge firewall** (called the "**3PG**"). Each on-premises **Zone** also has _its own_ firewall, which must also allow traffic from the cloud VPC/VNet
 
 ## Request workflow
 
 To establish connectivity from AWS/Azure to on-premises networks, follow the steps below.
 
-1. Submit a **cloud** [firewall change request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18) to have the cloud firewall configured with the correct rules to allow traffic from the AWS VPC / Azure VNet to the on-premises edge firewall.
+!!! info "Parallel requests"
+    Both firewall requests mentioned below can be submitted in parallel. There is no need to wait for one request to be completed before submitting the other.
+
+1. Submit a **cloud** [firewall change request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18) to have the cloud firewall configured with the correct rules to allow traffic from the AWS VPC / Azure VNet to reach the on-premises edge firewall
 2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via iStore) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
   - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
+  - Refer to the [example request form](#example-request-form) section below for additional guidance on how to fill out the request form
 
 !!! question "Two requests for three firewalls?"
-    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: the **cloud firewall**, the **3PG firewall** and the **zone-specific firewalls**. In our experience, you can submit all the on-premises firewall rules are submitted in the **same request form**.
+    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: 
+    - the **cloud firewall**,
+    - the **3PG firewall**, and
+    - the **zone-specific firewalls**. 
+  
+    In our experience, you can submit all the on-premises firewall rules in the **same request form**. You do not need to submit separate requests for the 3PG firewall and each zone firewall. Therefore, only **2 requests** are needed in total: one for the **cloud firewall**, and one for the **on-premises firewall(s)** respectively.
 
-    When you submit an on-premises firewall request, the firewall team identifies which firewalls need updates based on the source and destination information you provide.
-    
-    You'll need to submit 2 "requests" required: One for the **cloud firewall**, and another for the **on-premises firewall(s)** respectively. 
+    When you submit an on-premises firewall request, the firewall team identifies which firewalls need updates based on the source and destination information you provide (though to prevent confusion or delays, you can include "**3PG**" in the **Firewall** column).
 
 !!! warning "On-premises initiated traffic"
-    If an on-premises resource needs to **initiate traffic to a cloud resource**, request a separate firewall rule for that traffic flow.
+    If an on-premises resource needs to **initiate traffic to a cloud resource**, request a separate firewall rule for that traffic flow (ie. source = on-premises resource, destination = cloud virtual network).
 
 !!! tip "Shared responsibility"
     Traffic from AWS/Azure to on-premises networks is secured and **encrypted** using IPsec over DirectConnect or ExpressRoute.
@@ -58,24 +65,49 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
 
 ## Example request form
 
-This example shows how to request connectivity between a cloud network and an on-premises network.
+This is an example of the on-premises firewall request form, and shows how to request connectivity between a cloud network and an on-premises network.
 
-In the **Object Table** create a **Network IP Range Object** for the AWS VPC or Azure VNet.
+In the **Object Table** create a **Network IP Range Object** for the AWS VPC or Azure VNet, and enter the appropriate CIDR address space.
 
+**Example AWS VPC:**
+![Example AWS VPC](../../images/shared-services/aws-vpc-example.png "Example AWS VPC")
+
+**Example Azure VNet:**
 ![Example Azure VNet](../../images/shared-services/azure-vnet-example.png "Example Azure VNet")
 
+**Example Object Table entry:**
 ![STMS Firewall Change Request - Add Object](../../images/shared-services/firewall-request-add-object-example.png "STMS Firewall Change Request - Add Object")
 
-In the **Traffic Table** add a **traffic rule** using the naming pattern of `MCCS_(Ministry Short Name)_{LZA/ALZ}_LIVE_(ProjectSet License Plate)_(ENV)` to allow traffic from the AWS VPC or Azure VNet to the on-premises network. Set the `Source` to the AWS VPC or Azure VNet address space and the `Destination` to the on-premises endpoint or network address space.
+In the **Traffic Table** add a **traffic rule** using the naming pattern of **MCCS_(Ministry Short Name)_(LZA/ALZ)_LIVE\_(ProjectSet License Plate)\_(ENV)** to allow traffic from the AWS VPC or Azure VNet to the on-premises network.
 
-For example: `MCCS_CITZ_ALZ_LIVE_abc123_prod`.
+Set the **Source** to the **Network IP Range Object** previously added in the **Object Table** (which should correspond to the AWS VPC or Azure VNet address space), and the **Destination** to the on-premises endpoint or network address space.
 
+- **Example rule name (AWS):** `MCCS_CITZ_LZA_LIVE_aaada1_prod`
+- **Example rule name (Azure):** `MCCS_CITZ_ALZ_LIVE_abc123_prod`
+
+**Example Traffic Table rule entry:**
 ![STMS Firewall Change Request - Add Traffic](../../images/shared-services/firewall-request-add-traffic-table-example.png "STMS Firewall Change Request - Add Traffic")
 
 !!! warning "Bi-directional traffic"
-    The above rule example only allows traffic to flow from the cloud network to on-premises.
+    The above rule examples include a rule for the **cloud network to on-premises** connectivity, and another rule (using the same name) for the reverse flow (**on-premises to cloud**) connectivity.
 
-    If an on-premises system needs to initiate traffic to a cloud resource, add **another rule** in the Traffic Table for that flow.
+    If an on-premises system needs to **initiate traffic** to a cloud resource, another rule in the Traffic Table is required for that.
+
+## Connectivity testing
+
+When you submit the on-premises firewall request, you will receive an email that states when the firewall changes have been implemented.
+
+**Example email:**
+> Subject: ESIT Firewall Change Request(s): RITM0123456 - iStore 1234567 - MINISTRY - FirewallSecurity_Attach - SUBMITTED FORM TITLE
+> 
+> Change record CHG0012345 has been submitted on your behalf for implementation on DATE TIME. To ensure your requested change will be implemented on the scheduled Date/Time, please review the change record and ensure all required approvals have been obtained.
+> 
+> This change record has been tentatively scheduled for the Date/Time mentioned above but may have to be rescheduled or rejected due to change management requirements.
+
+!!! danger "Testing responsibility"
+    After the firewall rules have been implemented, it is **your responsibility** to test the connectivity to ensure everything is working as expected.
+    
+    If there are any issues identified, initiate troubleshooting by contacting the network team that you received the firewall change confirmation email from, providing the **source**/**destination** addresses as well as the **approximate time** of the test.
 
 ## OpenShift connectivity
 
