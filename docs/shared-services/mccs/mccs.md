@@ -89,7 +89,7 @@ Set the **Source** to the **Network IP Range Object** previously added in the **
 ![STMS Firewall Change Request - Add Traffic](../../images/shared-services/firewall-request-add-traffic-table-example.png "STMS Firewall Change Request - Add Traffic")
 
 !!! warning "Bi-directional traffic"
-    The above rule examples includes a rule for the **cloud network to on-premises** connectivity, and another rule (using the same name) for the reverse flow (**on-premises to cloud**) connectivity.
+    The above rule examples include a rule for the **cloud network to on-premises** connectivity, and another rule (using the same name) for the reverse flow (**on-premises to cloud**) connectivity.
 
     If an on-premises system needs to **initiate traffic** to a cloud resource, another rule in the Traffic Table is required for that.
 
