@@ -18,7 +18,7 @@ In our setup, DirectConnect and ExpressRoute also encrypts data in transit with 
 
 The following describes the general network connectivity from AWS/Azure to on-premises networks.
 
-Connectivity between an AWS virtual private cloud (VPC) or Azure virtual network (VNet) to an on-premises network follows this general path.
+Use this general path to connect an AWS virtual private cloud (VPC) or Azure virtual network (VNet) to your on-premises network.
 
 ![Hybrid Connectivity](../../images/shared-services/hybrid-connectivity-aws-azure.png "Hybrid Connectivity")
 
@@ -32,7 +32,7 @@ Connectivity between an AWS virtual private cloud (VPC) or Azure virtual network
 To establish connectivity from AWS/Azure to on-premises networks, follow the steps below.
 
 !!! info "Parallel requests"
-    Both firewall requests mentioned below can be submitted in parallel. There is no need to wait for one request to be completed before submitting the other.
+    Submit both firewall requests at the same time. You don’t need to wait for one to complete.
 
 1. Submit a **cloud** [firewall change request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18) to have the cloud firewall configured with the correct rules to allow traffic from the AWS VPC / Azure VNet to reach the on-premises edge firewall
 2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via iStore) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
@@ -45,7 +45,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
     - the **3PG firewall**, and
     - the **zone-specific firewalls**. 
   
-    In our experience, you can submit all the on-premises firewall rules in the **same request form**. You do not need to submit separate requests for the 3PG firewall and each zone firewall. Therefore, only **2 requests** are needed in total: one for the **cloud firewall**, and one for the **on-premises firewall(s)** respectively.
+    In our experience, you can include all on-premises firewall rules in the same request form. You don’t need to submit separate requests for the 3PG firewall and each zone firewall. You **only** need **two requests** in total: one for the cloud firewall and one for the on-premises firewall(s).
 
     When you submit an on-premises firewall request, the firewall team identifies which firewalls need updates based on the source and destination information you provide (though to prevent confusion or delays, you can include "**3PG**" in the **Firewall** column).
 
