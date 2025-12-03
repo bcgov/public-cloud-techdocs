@@ -1,4 +1,4 @@
-# Infrastructure-as-Code (IaC) Best Practices
+# Infrastructure-as-Code (IaC) best practices
 
 Last updated: **{{ git_revision_date_localized }}**
 

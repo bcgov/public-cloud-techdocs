@@ -1,4 +1,4 @@
-# Continuous Integration and Continuous Deployment (CI/CD) Best Practices
+# Continuous Integration and Continuous Deployment (CI/CD) best practices
 
 Last updated: **{{ git_revision_date_localized }}**
 
