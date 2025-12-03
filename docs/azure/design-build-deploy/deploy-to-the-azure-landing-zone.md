@@ -42,7 +42,7 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 ![GitHub Actions for Azure](../images/azure-github-actions-marketplace.png "GitHub Actions for Azure")
 
 !!! tip "CI/CD best practices"
-    Be sure to review the [CI/CD Best Practices](../best-practices/iac-and-ci-cd.md) before implementing GitHub Actions.
+    Be sure to review the [CI/CD Best Practices](../best-practices/ci-cd.md) before implementing GitHub Actions.
 
 ## Infrastructure-as-Code (IaC)
 
@@ -53,5 +53,5 @@ While we don't have a specific example for each tool, we recommend that you choo
 !!! warning "Using Terraform for IaC"
     If you are using Terraform to deploy your application to Azure, please take note of the following:
 
-    - [Using Terraform to Create Subnets](../best-practices/iac-and-ci-cd.md#using-terraform-to-create-subnets)
-    - [AzAPI Terraform Provider (using azapi_update_resource)](../best-practices/iac-and-ci-cd.md#azapi-terraform-provider-using-azapi_update_resource)
+    - [Using Terraform to create Subnets](../best-practices/iac.md#using-terraform-to-create-subnets)
+    - [AzAPI Terraform provider (using azapi_update_resource)](../best-practices/iac.md#azapi-terraform-provider-using-azapi_update_resource)
