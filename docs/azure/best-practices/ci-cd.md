@@ -1,4 +1,4 @@
-# Infrastructure-as-Code (IaC) and CI/CD
+# Continuous Integration and Continuous Deployment (CI/CD) Best Practices
 
 Last updated: **{{ git_revision_date_localized }}**
 
@@ -17,7 +17,9 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 
 - [Self-hosted runners](#github-self-hosted-runners-on-azure) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
 
-- [GitHub-hosted runners](#github-hosted-runners-in-an-azure-vnet) can be used in an Azure VNet, but they require additional configuration to ensure secure access to Azure resources.
+<!-- TO DO: Add this section back in when we have tested and verified the GitHub-hosted runners in an Azure VNet.
+- [GitHub-hosted runners](#github-hosted-runners-in-an-azure-vnet) can be used in an Azure VNet, but they require additional configuration to ensure secure access to Azure resources. 
+-->
 
 ### Configuring GitHub Action OIDC authentication to Azure
 
@@ -52,7 +54,8 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
 !!! info "Pre-requisites"
     Please take special note of the pre-requisites listed in the README file in the `/tools/cicd_self_hosted_agents/` directory. It describes the necessary subnets that the self-hosted runners need to be deployed in.
 
-<!-- ### GitHub hosted runners in an Azure VNet
+<!-- TO DO: Add this section back in when we have tested and verified the GitHub-hosted runners in an Azure VNet.
+### GitHub hosted runners in an Azure VNet
 
 There currently is no Azure Verified Module (AVM) for GitHub-hosted runners in an Azure VNet, so we wrote our own!
 
@@ -61,7 +64,8 @@ For more information on this feature, refer to the [About Azure private networki
 You can find the sample Terraform code for deploying GitHub-hosted runners in the [Azure Landing Zone Samples (azure-lz-samples)](https://github.com/bcgov/azure-lz-samples) repo, under the `/tools/cicd_github_hosted_runners_azure_private_network/` directory.
 
 !!! info "Pre-requisites"
-    Please take special note of the pre-requisites listed in the README file. It describes the necessary Resource Provider, and values that the module needs to be deployed. -->
+    Please take special note of the pre-requisites listed in the README file. It describes the necessary Resource Provider, and values that the module needs to be deployed.
+-->
 
 ## Azure pipelines
 
