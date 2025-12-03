@@ -52,7 +52,7 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
 !!! info "Pre-requisites"
     Please take special note of the pre-requisites listed in the README file in the `/tools/cicd_self_hosted_agents/` directory. It describes the necessary subnets that the self-hosted runners need to be deployed in.
 
-### GitHub hosted runners in an Azure VNet
+<!-- ### GitHub hosted runners in an Azure VNet
 
 There currently is no Azure Verified Module (AVM) for GitHub-hosted runners in an Azure VNet, so we wrote our own!
 
@@ -61,7 +61,7 @@ For more information on this feature, refer to the [About Azure private networki
 You can find the sample Terraform code for deploying GitHub-hosted runners in the [Azure Landing Zone Samples (azure-lz-samples)](https://github.com/bcgov/azure-lz-samples) repo, under the `/tools/cicd_github_hosted_runners_azure_private_network/` directory.
 
 !!! info "Pre-requisites"
-    Please take special note of the pre-requisites listed in the README file. It describes the necessary Resource Provider, and values that the module needs to be deployed.
+    Please take special note of the pre-requisites listed in the README file. It describes the necessary Resource Provider, and values that the module needs to be deployed. -->
 
 ## Azure pipelines
 
