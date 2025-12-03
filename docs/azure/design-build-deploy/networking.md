@@ -30,7 +30,7 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 !!! danger "Security controls for subnets"
     There are some security controls in place, that require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may cause some challenges when creating subnets. The simplest approach is to create a NSG first, and then create the subnet (with the NSG associated with it).
 
-    For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [IaC and CI/CD](../best-practices/iac-and-ci-cd.md#using-terraform-to-create-subnets) documentation.
+    For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [IaC](../best-practices/iac.md#using-terraform-to-create-subnets) documentation.
 
     Additionally, as part of implementing a **Zero Trust** security model, all subnets need to be created as [Private Subnets](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/default-outbound-access#utilize-the-private-subnet-parameter-public-preview).
 

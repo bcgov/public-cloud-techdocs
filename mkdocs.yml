@@ -78,7 +78,8 @@ nav:
           - Sample code: azure/design-build-deploy/sample-code.md
       - Best practices:
           - Be mindful: azure/best-practices/be-mindful.md
-          - IaC and CI/CD: azure/best-practices/iac-and-ci-cd.md
+          - CI/CD: azure/best-practices/ci-cd.md
+          - IaC: azure/best-practices/iac.md
           - Governance: azure/best-practices/governance.md
       - Insights on Azure Services:
           - API Management: azure/azure-services/api-management.md
