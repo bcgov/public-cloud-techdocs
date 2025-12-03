@@ -46,7 +46,7 @@ Think of these guardrails as automatic checks and balances. They don't require y
 *   **VNet Peering Not Allowed:** VNet peering is not allowed within the landing zone. All network connectivity is managed centrally
 
 ### Protected resources
-*   **Protected Networking Resources Denied:** Users cannot create Express Route circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
+*   **Protected Networking Resources Denied:** Users cannot create ExpressRoute circuits, VPN Sites, VPN/NAT/Local Gateways, or Route Tables
 
 ### Application gateway requirements
 

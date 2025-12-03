@@ -4,13 +4,14 @@ Last updated: **{{ git_revision_date_localized }}**
 
 ## Overview
 
-This documentation provides information for using Public cloud services within the B.C. government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws-lza) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [provisioning project sets](#provision-a-project-set), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. government's Public cloud environment.
+This documentation provides information for using Public cloud services within the B.C. government. It covers both [Amazon Web Services (AWS)](#amazon-web-services-aws-lza) and [Microsoft Azure](#microsoft-azure) platforms, offering resources for [project set management](#project-set-management), and for designing, building, and deploying applications in these environments. Whether you're new to cloud or an experienced developer, you'll find valuable information to help you navigate the B.C. government's Public cloud environment.
 
-## Provision a Project Set
+## Project Set management
 
 To get started in the Public cloud you can provision a Project Set in AWS or Azure using the [Platform Product Registry](https://registry.developer.gov.bc.ca).
 
-For more information, see [Provision a Project Set](welcome/provision-a-project-set.md).
+- [Provision a Project Set](welcome/provision-a-project-set.md)
+- [Close a Project Set](welcome/close-a-project-set.md)
 
 ## Amazon Web Services (AWS LZA)
 
@@ -46,3 +47,7 @@ If you already have access, you can
 Every six weeks, we host a community update to provide you with the latest news and interesting information about the Public cloud Accelerator Service (formerly known as CloudPathFinder) and its community, and changes to the platform.
 
 [Get the calendar invite, and view past decks](https://digital.gov.bc.ca/technology/cloud/public/get-support/#subscribe).
+
+### External training
+
+See some [external training resources](https://digital.gov.bc.ca/technology/cloud/public/get-support/#training).

@@ -8,6 +8,7 @@ Start here for the first steps on working in our Azure Landing Zone (ALZ):
 
 - [Azure Landing Zone Overview](get-started-with-azure/bc-govs-azure-landing-zone-overview.md)
 - [Provision a Project Set](../welcome/provision-a-project-set.md)
+- [Close a Project Set](../welcome/close-a-project-set.md)
 - [User Management in Azure](design-build-deploy/user-management.md)
 
 ## Build, deploy and maintain apps

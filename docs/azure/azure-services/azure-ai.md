@@ -11,6 +11,9 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 
     - [Azure OpenAI best practices: A quick-reference guide to optimize your deployments](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/azure-openai-best-practices-a-quick-reference-guide-to-optimize-your-deployments/4403546)
 
+!!! tip "Azure OpenAI PTU Calculator"
+    Check out the [Azure OpenAI PTU Calculator](https://www.ptucalc.com/) to help optimize your Azure OpenAI costs by intelligently sizing Provisioned Throughput Units (PTUs) and analyzing your usage patterns.
+
 ## Region availability
 
 Although the [Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions, not all [models](https://azure.microsoft.com/en-us/products/ai-model-catalog?msockid=2274ddfe4fb768de0595c8be4e1d6918#tabs-pill-bar-oc92d8_tab0) or services may be available in the Canada regions (for example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models). It is recommended to check the region availability of the services/models **before** starting development.

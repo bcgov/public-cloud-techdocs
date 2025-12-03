@@ -16,7 +16,7 @@ Once the Private Endpoint for your resource is deployed, a DNS `A-record` will b
 
 However, since the endpoint is private-only, you will not be able to access the resource from outside the VNet. To access and work with these specific resources, you need to use either [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview) or an [Azure Virtual Desktop (AVD)](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview) from within the VNet.
 
-In the future, once [Express Route](../upcoming-features/express-route.md) is available, you will also be able to access these resources from the on-premises network or through a VPN.
+In the future, once [ExpressRoute](../design-build-deploy/networking-express-route.md) is available, you will also be able to access these resources from the on-premises network or through a VPN.
 
 ## Custom DNS Zones
 
