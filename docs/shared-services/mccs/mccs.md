@@ -104,7 +104,7 @@ For example, we can configure our ticketing system to automatically add a shared
 
 !["Add Approvers"](../../images/shared-services/jira-automation-rule-edit-work-item.png "Jira automation rule - Edit work item")
 
-Please [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your Ministry's specific requirements.
+Please have your **Ministry Information Security Officer (MISO)** [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your Ministry's specific requirements.
 
 ## Connectivity testing
 
