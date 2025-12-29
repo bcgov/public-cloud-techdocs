@@ -80,7 +80,6 @@ nav:
           - Be mindful: azure/best-practices/be-mindful.md
           - CI/CD: azure/best-practices/ci-cd.md
           - IaC: azure/best-practices/iac.md
-          - Governance: azure/best-practices/governance.md
       - Insights on Azure Services:
           - API Management: azure/azure-services/api-management.md
           - App Service: azure/azure-services/app-service.md
@@ -90,6 +89,11 @@ nav:
           - Azure Kubernetes Service: azure/azure-services/aks.md
           - Databricks: azure/azure-services/databricks.md
           - External Microsoft Services: azure/azure-services/external-services.md
+      - Operational Guidance:
+          - Cost Management: azure/operational-guidance/cost-management.md
+          - Policy Compliance: azure/operational-guidance/policy-compliance.md
+          - Security: azure/operational-guidance/security.md
+          - Update and patch management: azure/operational-guidance/update-patch-management.md
       - Tools:
           - Helpful tools: azure/tools/tools.md
           - Azure Cloud Shell: azure/tools/cloud-shell.md
