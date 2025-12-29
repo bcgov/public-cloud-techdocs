@@ -32,7 +32,9 @@ Think of these guardrails as automatic checks and balances. They don't require y
 ### General network security
 *   **No Public IPs (Generally):** You *cannot* create public IP addresses directly. This is a crucial security measure to minimize our public attack surface. Services should typically be accessed through private endpoints or other secure means
 *   **No Public IP on NICs:** Network interfaces *cannot* have a public IP address associated
-*   **No Management Port Access from Internet:** Network Security Group (NSG) rules allowing inbound access from the "Internet" source on common management ports (SSH/RDP - ports 22 and 3389) are *blocked*. Access to these ports is only allowed through secure, managed pathways (e.g., Azure Bastion, Just-In-Time VM Access)
+*   **No Management Port Access from Internet:** Network Security Group (NSG) rules allowing inbound access from the "Internet" source on common management ports (SSH/RDP - ports 22 and 3389) are *blocked*. Access to these ports is only allowed through secure, managed pathways (e.g., Azure Bastion). 
+    *   !!! warning "Just-In-Time (JIT) Access"
+        While Azure may suggest Just-In-Time (JIT) VM Access, this feature is **not supported** in our environment as it is designed for VMs with public IPs (which are blocked). Enabling JIT will create NSG rules that interfere with Bastion connectivity.
 
 ### Subnet configuration requirements
 *   **Subnets Require Network Security Groups (NSGs):** Every subnet *must* have a Network Security Group (NSG) associated with it. You *cannot* create a subnet without an NSG. NSGs act like mini-firewalls for your subnets, controlling inbound and outbound traffic

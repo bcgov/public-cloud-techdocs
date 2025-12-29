@@ -15,3 +15,10 @@ Within the Azure portal, navigate to [Microsoft Defender for Cloud](https://port
 ![Defender for Cloud Security Posture](../images/defender-for-cloud-security-posture.png "Defender for Cloud Security Posture")
 
 ![Defender for Cloud Regulatory Compliance](../images/defender-for-cloud-regulatory-compliance.png "Defender for Cloud Regulatory Compliance")
+
+!!! warning "Just-In-Time (JIT) VM Access Recommendations"
+    Microsoft Defender for Cloud may provide recommendations to "Enable Just-In-Time VM access" to reduce the attack surface of your virtual machines. 
+    
+    **Please ignore this specific recommendation.** 
+    
+    JIT access is intended for VMs with public IP addresses. In the BC Gov Landing Zone, public IPs are blocked by guardrails. Enabling JIT will create Network Security Group (NSG) rules that can block internal RDP/SSH traffic, effectively breaking your [Azure Bastion](../tools/bastion.md) connectivity.
