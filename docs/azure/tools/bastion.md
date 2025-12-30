@@ -36,3 +36,8 @@ Additionally, you will need to create the appropriate ingress and egress Network
     The following article is an example of this, although it uses Azure Bicep and Deployment Stacks. But the concepts can be applied to Terraform as well: [Save Cost with Azure Bicep Deployment Stacks](https://hungryboysl.wordpress.com/2025/02/02/save-cost-with-azure-bicep-deployment-stackswt-mc_idaz-mvp-5005246/).
 
     If you are using the [Bastion sample code](https://github.com/bcgov/azure-lz-samples/blob/main/tools/bastion/README.md) provided, please be aware that the sample code also includes _creating_ the **AzureBastionSubnet**. Therefore, you may need to adjust the sample code to not delete the subnet when the Bastion is deleted, or ensure you provide an available address space when it recreates the subnet along with the Bastion deployment.
+
+!!! tip "Jump Host for Portal Management"
+    Azure Bastion is not only for server administration. It is a key tool for accessing portal-based management features that are otherwise blocked by private endpoints. 
+
+    If you are using **Azure SQL Query Editor** or **Azure Data Factory Studio**, these tools require your browser to be within the private network. By using Bastion to connect to a Windows or Linux VM (Jump Host), you can use the browser *inside* that VM to manage your private-only resources through the Azure portal.
