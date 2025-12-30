@@ -174,3 +174,32 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 - [AWS VPC Documentation](https://docs.aws.amazon.com/vpc/)
 - [AWS Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/)
 - [AWS API Gateway](https://docs.aws.amazon.com/apigateway/)
+
+## High-level network ingress/egress (Workload/Member VPC ↔ Internet)
+
+### The below diagrams show our Landing Zone hub-and-spoke network design
+
+- Workload (Project Set) accounts host application VPCs, but they do not egress directly to the Internet.
+- A central Transit Gateway (TGW) in the Network account provides connectivity between VPCs and to the perimeter.
+- All north–south traffic (to/from the Internet) is forced through the Perimeter VPC in the Perimeter account, where AWS Network Firewall performs inspection.
+- The perimeter is deployed across multiple Availability Zones (firewall endpoints, NAT gateways, TGW attachments) to keep routing resilient.
+
+### Egress flow (Workload → Internet)
+
+![High-level egress: Workload VPC to Internet via TGW, Network Firewall, and NAT/IGW](../images/network/high-level-network-member-egress.drawio.png)
+
+1. A workload resource sends traffic to an Internet destination (0.0.0.0/0).
+2. The Workload VPC route table sends that traffic to the TGW attachment.
+3. The TGW (Network account) routes default Internet-bound traffic to the Perimeter VPC.
+4. Inside the Perimeter VPC, traffic is steered through NAT Gateway and then sent to AWS Network Firewall for inspection, and finally exits via the Internet Gateway (IGW).
+5. Return traffic follows a symmetric path back through the firewall and TGW to the originating workload.
+
+### Ingress flow (Internet → Workload private app)
+
+![High-level ingress: Internet to Workload VPC via Perimeter entry point, Network Firewall, TGW, and internal ALB](../images/network/high-level-network-member-ingress.drawio.png)
+
+1. Public DNS resolves the application hostname to an internet-facing entry point in the Perimeter VPC (shown as the perimeter-facing load balancer component).
+2. Incoming traffic is routed through AWS Network Firewall for inspection/allow-listing.
+3. Approved traffic is forwarded through the TGW to the target Workload VPC.
+4. In the Workload VPC, the application is fronted by an internally-scoped ALB, which forwards traffic to the private application targets.
+5. Responses return to the perimeter/public ALB via TGW, and the public ALB returns the response to the client (following the same perimeter/firewall routing path).
