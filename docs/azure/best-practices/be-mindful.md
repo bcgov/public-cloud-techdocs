@@ -16,6 +16,11 @@ Once the Private Endpoint for your resource is deployed, a DNS `A-record` will b
 
 However, since the endpoint is private-only, you will not be able to access the resource from outside the VNet. To access and work with these specific resources, you need to use either [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview) or an [Azure Virtual Desktop (AVD)](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview) from within the VNet.
 
+!!! warning "Portal-based management tools"
+    Many Azure portal-based management tools, such as the **SQL Query Editor** or **Azure Data Factory Studio**, communicate directly with the resource's endpoint from your browser. 
+    
+    If you have configured a Private Endpoint for these services, the Azure portal will not be able to connect to them from your local machine. To use these tools, you must access the Azure portal from a machine that is already within the private network (e.g., a Jump Host accessed via Bastion or AVD).
+
 In the future, once [ExpressRoute](../design-build-deploy/networking-express-route.md) is available, you will also be able to access these resources from the on-premises network or through a VPN.
 
 ## Custom DNS Zones

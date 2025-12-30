@@ -85,8 +85,10 @@ nav:
           - App Service: azure/azure-services/app-service.md
           - Application Gateway: azure/azure-services/application-gateway.md
           - Azure AI Services: azure/azure-services/azure-ai.md
+          - Azure Data Factory: azure/azure-services/data-factory.md
           - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
           - Azure Kubernetes Service: azure/azure-services/aks.md
+          - Azure SQL Database: azure/azure-services/sql-database.md
           - Databricks: azure/azure-services/databricks.md
           - External Microsoft Services: azure/azure-services/external-services.md
       - Operational Guidance:
