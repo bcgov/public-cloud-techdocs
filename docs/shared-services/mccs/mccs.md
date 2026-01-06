@@ -96,15 +96,15 @@ Set the **Source** to the **Network IP Range Object** previously added in the **
 
 ## Custom approval process
 
-If your Ministry requires a specific approval process for **_cloud_** firewall changes (ie. review/approval by a security team), we can accommodate that as part of our [cloud firewall change request process](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18).
+If your ministry requires a specific approval process for **_cloud_** firewall changes (ie. review/approval by a security team), we can accommodate that as part of our [cloud firewall change request process](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18).
 
-For example, we can configure our ticketing system to automatically add a shared email address as an **approver** to the request when a "**Request a firewall change**" ticket is created from your Ministry.
+For example, we can configure our ticketing system to automatically add a shared email address as an **approver** to the request when a "**Request a firewall change**" ticket is created from your ministry.
 
 !["Ministry and Request Type"](../../images/shared-services/jira-automation-rule-conditions.png "Jira automation rule - Conditions")
 
 !["Add Approvers"](../../images/shared-services/jira-automation-rule-edit-work-item.png "Jira automation rule - Edit work item")
 
-Please have your **Ministry Information Security Officer (MISO)** [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your Ministry's specific requirements.
+Please have your **Ministry Information Security Officer (MISO)** [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your ministry's specific requirements.
 
 ## Connectivity testing
 

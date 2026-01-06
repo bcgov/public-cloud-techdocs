@@ -91,9 +91,9 @@ nav:
           - Azure SQL Database: azure/azure-services/sql-database.md
           - Databricks: azure/azure-services/databricks.md
           - External Microsoft Services: azure/azure-services/external-services.md
-      - Operational Guidance:
+      - Operational guidance:
           - Cost Management: azure/operational-guidance/cost-management.md
-          - Policy Compliance: azure/operational-guidance/policy-compliance.md
+          - Policy compliance: azure/operational-guidance/policy-compliance.md
           - Security: azure/operational-guidance/security.md
           - Update and patch management: azure/operational-guidance/update-patch-management.md
       - Tools:
