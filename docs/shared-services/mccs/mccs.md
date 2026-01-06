@@ -35,6 +35,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
     Submit both firewall requests at the same time. You don’t need to wait for one to complete.
 
 1. Submit a **cloud** [firewall change request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18) to have the cloud firewall configured with the correct rules to allow traffic from the AWS VPC / Azure VNet to reach the on-premises edge firewall
+  - Need a specific approval process for cloud firewall changes? See the [custom approval process](#custom-approval-process) section below for more information
 2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via iStore) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
   - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
   - Refer to the [example request form](#example-request-form) section below for additional guidance on how to fill out the request form
@@ -43,7 +44,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
     There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: 
     - the **cloud firewall**,
     - the **3PG firewall**, and
-    - the **zone-specific firewalls**. 
+    - the **zone-specific firewalls**
   
     In our experience, you can include all on-premises firewall rules in the same request form. You don’t need to submit separate requests for the 3PG firewall and each zone firewall. You **only** need **two requests** in total: one for the cloud firewall and one for the on-premises firewall(s).
 
@@ -92,6 +93,18 @@ Set the **Source** to the **Network IP Range Object** previously added in the **
     The above rule examples include a rule for the **cloud network to on-premises** connectivity, and another rule (using the same name) for the reverse flow (**on-premises to cloud**) connectivity.
 
     If an on-premises system needs to **initiate traffic** to a cloud resource, another rule in the Traffic Table is required for that.
+
+## Custom approval process
+
+If your ministry requires a specific approval process for **_cloud_** firewall changes (ie. review/approval by a security team), we can accommodate that as part of our [cloud firewall change request process](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18).
+
+For example, we can configure our ticketing system to automatically add a shared email address as an **approver** to the request when a "**Request a firewall change**" ticket is created from your ministry.
+
+!["Ministry and Request Type"](../../images/shared-services/jira-automation-rule-conditions.png "Jira automation rule - Conditions")
+
+!["Add Approvers"](../../images/shared-services/jira-automation-rule-edit-work-item.png "Jira automation rule - Edit work item")
+
+Please have your **Ministry Information Security Officer (MISO)** [create a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your ministry's specific requirements.
 
 ## Connectivity testing
 
