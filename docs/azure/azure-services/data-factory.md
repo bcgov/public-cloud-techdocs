@@ -28,7 +28,7 @@ It is recommended to use the **Azure Data Factory Managed Virtual Network** and 
     **To resolve this:**
     Use a **Jump Host** within your VNet (accessed via [Azure Bastion](../tools/bastion.md)) to access the Azure portal and open ADF Studio from there. This ensures your browser is within the private network and can communicate with the ADF private endpoints.
 
-## Best Practices
+## Best practices
 
 * **Use Managed Identity:** Authenticate to data sources using the Data Factory's Managed Identity whenever possible.
 * **Customer-Managed Keys (CMK):** Data Factory supports encryption at rest using CMK for enhanced security.
