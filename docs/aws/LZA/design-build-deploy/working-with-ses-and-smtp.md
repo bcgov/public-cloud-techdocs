@@ -42,7 +42,7 @@ In our Landing Zone, IAM user creation is restricted by SCP guardrails, so workf
 
 When a system must use SMTP:
 
-1. Use an **existing IAM user** (or a new IAM user provisioned via our IAM automation/service).
+1. Use an **existing IAM user** (or a new IAM user provisioned via our [IAM automation/service](iam-user-service.md)).
 2. Ensure it has the minimum required **SES sending permissions** for the intended use.
 3. **Derive the SMTP password** from the IAM user’s secret access key using AWS’s documented method:
    - SMTP username = IAM **Access Key ID**
