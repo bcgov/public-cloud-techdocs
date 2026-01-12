@@ -122,6 +122,12 @@ When you submit the on-premises firewall request, you will receive an email that
     
     If there are any issues identified, initiate troubleshooting by contacting the network team that you received the firewall change confirmation email from, providing the **source**/**destination** addresses as well as the **approximate time** of the test.
 
+## On-premises firewall rules
+
+If you are planning to connect to an on-premises endpoint from AWS/Azure, and your application uses a standard set of ports/protocols, you may be able to leverage one of the _existing_ on-premises firewall rules.
+
+For specific details on the existing on-premises firewall rules that are in-place, please refer to the [on-premises firewall rules documentation](https://digital.gov.bc.ca/technology/cloud/public/internal-resources/internal-government-and-external-public-connections/#firewalls).
+
 ## OpenShift connectivity
 
 If you use one of the on-premises OpenShift clusters and want to connect to it from AWS/Azure, submit an [on-premises firewall request form](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm). For the **Source** or **Destination fields**, enter the appropriate firewall "Objects" for the OpenShift cluster endpoints you’re connecting to.
