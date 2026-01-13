@@ -25,7 +25,7 @@ Some legacy software only supports SMTP. In those cases, SES SMTP is acceptable,
 
 - You **must not** derive SMTP credentials from **temporary (STS) credentials**—the SES SMTP interface doesn’t support SMTP credentials generated from temporary security credentials.
 
-**Therefore:** SMTP requires a long-lived secret , derived from an IAM user access key. Because of this, treat SMTP as a compatibility option, not a default integration method.
+**Therefore:** SMTP requires a long-lived secret, derived from an IAM user access key. Because of this, treat SMTP as a compatibility option, not a default integration method.
 
 ## Landing Zone constraint: why "Create SMTP Credentials" often fails in the SES console
 
