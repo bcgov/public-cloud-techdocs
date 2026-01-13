@@ -11,7 +11,7 @@ Amazon SES supports two ways to send email:
 
 ### Preferred: Use the SES API with IAM roles (no long-lived secrets)
 
-When possible, applications should send email by calling the **SES API** through the (AWS SDK/CLI). This allows workloads to authenticate using **IAM roles** , including assumed roles.
+When possible, applications should send email by calling the **SES API** through the (AWS SDK/CLI). This allows workloads to authenticate using **IAM roles**, including assumed roles.
 
 !!! note "Important nuance"
 
