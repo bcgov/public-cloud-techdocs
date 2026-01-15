@@ -148,6 +148,18 @@ Use **Canadian spelling**:
 - "offence" (not offense)
 - "practice" (noun), "practise" (verb)
 
+### Government References
+Use **"B.C. government"** (with periods and lowercase 'government'):
+
+✅ Good: "B.C. government"  
+❌ Bad: "BC Government"  
+❌ Bad: "BC government"  
+❌ Bad: "B.C. Government"
+
+Apply the same pattern to related terms:
+- "B.C. Public Service" (not "BC Public Service")
+- "British Columbia" is acceptable when spelled out in full
+
 ### Paragraphs
 - Keep paragraphs to 5 sentences or less
 - One topic per paragraph
@@ -255,6 +267,7 @@ Before submitting documentation, verify:
 - [ ] No sentence exceeds 20 words
 - [ ] Headings and titles use sentence case
 - [ ] Only first word and proper nouns are capitalized
+- [ ] "B.C. government" used correctly (with periods, lowercase 'government')
 - [ ] Plain language used (Grade 8 reading level)
 - [ ] Complex terms are explained or have examples
 - [ ] Canadian spelling used throughout
