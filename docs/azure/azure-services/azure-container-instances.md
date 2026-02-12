@@ -24,7 +24,7 @@ properties:
     ports:
     - port: 80
   subnetIds:
-    - id: /subscriptions/<subscription-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>>
+    - id: /subscriptions/<subscription-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>
   osType: Linux
 tags: null
 type: Microsoft.ContainerInstance/containerGroups
