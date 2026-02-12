@@ -14,15 +14,15 @@ properties:
   containers:
   - name: mycontainer
     properties:
-    ...
+      # container properties here
   dnsConfig:
     nameServers:
-    - 10.0.0.10 # DNS Server 1
-    - 10.0.0.11 # DNS Server 2
+      - 10.0.0.10 # DNS Server 1
+      - 10.0.0.11 # DNS Server 2
   ipAddress:
     type: Private
     ports:
-    - port: 80
+      - port: 80
   subnetIds:
     - id: /subscriptions/<subscription-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>
   osType: Linux
