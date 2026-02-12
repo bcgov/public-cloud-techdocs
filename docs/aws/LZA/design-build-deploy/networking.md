@@ -121,7 +121,7 @@ To make workloads publicly available, use:
 
 #### How public routing works
 
-1. **Public ALB** (Perimeter Network) receives internet traffic on `*.{license_plate}.stratus.cloud.gov.bc.ca`
+1. **Public ALB** (Perimeter Network) receives internet traffic on `*.{license_plate}-{environment}.stratus.cloud.gov.bc.ca`
 2. **Automatic routing** from public ALB to your tagged internal ALB
 3. **Internal ALB** (Your VPC) uses rules (host, path) to route traffic to target groups
 
@@ -137,7 +137,7 @@ To make workloads publicly available, use:
 
 ```
 Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Groups
-         *.{license_plate}.stratus.cloud.gov.bc.ca    (443 encrypted)
+         *.{license_plate}-{environment}.stratus.cloud.gov.bc.ca    (443 encrypted)
 ```
 
 !!! warning "Encryption Requirement"
