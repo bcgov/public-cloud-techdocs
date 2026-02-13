@@ -24,6 +24,7 @@ nav:
               - User management: aws/LZA/design-build-deploy/user-management.md
               - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
               - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
+              - ALB Service: aws/LZA/design-build-deploy/alb-service.md              
               - Service Control Policies: aws/LZA/design-build-deploy/scp.md
               - Next steps: aws/LZA/design-build-deploy/next-steps.md
               - Networking: aws/LZA/design-build-deploy/networking.md

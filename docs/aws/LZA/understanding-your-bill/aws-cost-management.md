@@ -61,7 +61,7 @@ Users who need access to the dashboards should request the **billing viewers** r
 
 1. Contact the Product Owner or Technical Lead of your project set
 2. Request the **billing viewers** role, providing justification for the need to access the dashboard
-3. The Product Owner or Technical Lead will add you to the appropriate Entra ID security group (`DO_PuC_AWS_{LicensePlate}_BillingViewers`) using [Microsoft Account Management](https://myaccount.microsoft.com/groups) or the [Azure portal](https://portal.azure.com)
+3. The Product Owner (or a delegated owner of the BillingViewers group) will add you to the appropriate Entra ID security group (`DO_PuC_AWS_{LicensePlate}_BillingViewers`) using [Microsoft Account Management](https://myaccount.microsoft.com/groups) or the [Azure portal](https://portal.azure.com)
 4. For detailed steps on user role assignment, refer to the [user management documentation](../design-build-deploy/user-management.md)
 
 ## Dashboard functionality

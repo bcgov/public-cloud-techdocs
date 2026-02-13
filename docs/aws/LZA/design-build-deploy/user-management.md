@@ -46,6 +46,16 @@ For example:
 
 These security groups are synchronized with AWS IAM roles to provide the appropriate access levels across your project set accounts.
 
+## Important limitation: Nested groups are not supported
+
+AWS IAM Identity Center (SSO) does **not** support *nested groups* (a security group added as a member of another security group).  
+
+### What this means
+
+- Users must be added **directly** to your project set groups (e.g., `DO_PuC_AWS_abc123_Admins`)
+- If nested groups are used, users who are only members of the “child group” will **not** receive the expected AWS access, even though it appears correct in Entra.
+- Add users directly to the required AWS access groups,this ensures SCIM provisioning and AWS access assignments remain predictable.
+
 ## Role-based access details
 
 ### Admins
