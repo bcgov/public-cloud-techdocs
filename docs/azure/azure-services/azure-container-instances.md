@@ -17,8 +17,7 @@ properties:
       # container properties here
   dnsConfig:
     nameServers:
-      - 10.0.0.10 # DNS Server 1
-      - 10.0.0.11 # DNS Server 2
+      - 10.0.0.10 # Lookup the appropriate IP address of your VNet's custom DNS server
   ipAddress:
     type: Private
     ports:
