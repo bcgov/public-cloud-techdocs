@@ -54,7 +54,7 @@ AWS IAM Identity Center (SSO) does **not** support *nested groups* (a security g
 
 - Users must be added **directly** to your project set groups (e.g., `DO_PuC_AWS_abc123_Admins`)
 - If nested groups are used, users who are only members of the “child group” will **not** receive the expected AWS access, even though it appears correct in Entra.
-- Add users directly to the required AWS access groups,this ensures SCIM provisioning and AWS access assignments remain predictable.
+- Add users directly to the required AWS access groups. This ensures SCIM provisioning and AWS access assignments remain predictable.
 
 ## Role-based access details
 
