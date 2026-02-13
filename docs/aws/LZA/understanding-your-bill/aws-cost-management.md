@@ -47,7 +47,7 @@ It's worth noting that the Enterprise edition of our dashboards has a limitation
 
 ## Timing and access considerations
 
-Because of this scheduling, there could be a maximum delay of 30 minutes for a user to access the project set data in the dashboard after being assigned the **billing viewers** role through the registry. It's important to keep this timing in mind when anticipating access to the dashboards.
+Because of this scheduling, there could be a maximum delay of 30 minutes before a user can see project set data in the dashboard after they are granted billing viewers access. In practice, access is granted by adding the user to the appropriate Entra ID security group (DO_PuC_AWS_{LicensePlate}_BillingViewers). The dashboard’s row-level security (RLS) data set is updated on a schedule, so group membership changes may take up to 30 minutes to be reflected in QuickSight.
 
 ## Accessing multiple project sets
 
@@ -71,4 +71,3 @@ The dashboards offer advanced filtering capabilities to tailor the cost and usag
 - **Ministry filters**: Users can filter data at the ministry level, such as CITZ, to view aggregated cost and usage data relevant to their specific ministry
 - **Project set filters**: Users can drill down into specific project sets (e.g., `tnfhhm`) to analyze data associated with that set of AWS accounts
 - **Account-level filters**: Within a project set, users can further filter data by individual AWS accounts, for example: `tnfhhm-dev`, `tnfhhm-test` to gain insights into the cost and usage patterns of each account
-

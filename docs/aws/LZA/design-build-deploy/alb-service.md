@@ -176,9 +176,9 @@ The platform will create the public DNS mapping for you.
 
 To unpublish:
 
-- remove the `Public` tag, or remove `PublicHost` (depending on your intended behavior)
+- remove the `Public` tag
 
 Notes:
 
-- If you remove `PublicHost`, the ALB becomes wildcard only if no other wildcard exists.
-- If `Public` is not `True`, the ALB is treated as not public.
+- Removing `PublicHost` does **not** unpublish the ALB. It only changes which hostnames are mapped. If `Public=True` and you remove `PublicHost`, the ALB is treated as a wildcard mapping (subject to the wildcard rules described above).
+- If `Public` is not `True`, the ALB is treated as not public and no public DNS mapping is created.
