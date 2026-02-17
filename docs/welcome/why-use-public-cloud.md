@@ -4,11 +4,11 @@ Last updated: **{{ git_revision_date_localized }}**
 
 ## Benefits of building apps in the Public cloud
 
-Ministry teams in the B.C. government who want to build applications in the Public cloud can rely on the OCIO's secure and compliant Landing Zones. It offers a robust, secure, and efficient framework designed to meet the needs and compliance requirements of the B.C. government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's Landing Zones offers several significant benefits:
+Ministry teams in the B.C. government can build applications in the OCIO's secure Landing Zones. The platform offers a robust, secure, and efficient framework. It meets the needs and compliance requirements of the B.C. government. Teams develop applications in a secure and well-governed environment. The OCIO's Landing Zones offers several significant benefits:
 
 1. **Enhanced security compliance**: It aligns with high-standard security frameworks like [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) and the [Canadian Centre for Cybersecurity (CCCS) Medium](https://www.cyber.gc.ca/en/guidance/annex-4a-profile-1-protected-b-medium-integrity-medium-availability-itsg-33) Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders.
 
-2. **Streamlined development process**: It helps ministry teams concentrate on developing applications, instead of managing foundational infrastructure, by automating various aspects of the cloud environment setup. This boosts the speed of government application development.
+2. **Streamlined development process**: The platform automates cloud environment setup. This lets ministry teams focus on developing applications instead of managing infrastructure. Your team can develop faster without worrying about foundational setup.
 
 3. **Customizable and scalable architecture**: It gives you the freedom to customize the cloud architecture for your project, supporting a variety of application patterns. Whether you're working on small projects, or large complex applications, it adapts to meet your needs.
 
@@ -16,9 +16,9 @@ Ministry teams in the B.C. government who want to build applications in the Publ
 
 5. **Long-term management and evolution**: This not only helps deploy applications initially, but also aids in their ongoing management and evolution. This feature is crucial for government applications, which frequently need updates and adjustments to align with changing policy requirements and citizen needs.
 
-6. **Leveraging cutting-egde capabilities in Public cloud**: When you build in the Public cloud, you can tap into a wide range of services and capabilities, spanning from advanced analytics to Artificial Intelligence (AI) and Machine Learning (ML) tools. This integration has the potential to greatly boost the functionality and reach of government applications.
+6. **Leveraging cutting-edge capabilities in Public cloud**: The public cloud offers advanced services like analytics, Artificial Intelligence (AI), and Machine Learning (ML). You can use these tools to boost your application's functionality and reach. These capabilities help government teams innovate.
 
-For B.C. government ministry teams developing applications in the Public cloud, the OCIO Landing Zone provides a secure, compliant, and efficient pathway. This facilitates the creation of innovative and responsive applications that effectively serve the public.
+The OCIO Landing Zone provides B.C. government teams a secure, compliant pathway. Your team can build innovative applications that serve the public effectively.
 
 ## Next steps
 

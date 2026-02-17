@@ -24,6 +24,7 @@ nav:
               - User management: aws/LZA/design-build-deploy/user-management.md
               - Deploy to the AWS Landing Zone Accelerator: aws/LZA/design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md
               - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
+              - ALB Service: aws/LZA/design-build-deploy/alb-service.md
               - Service Control Policies: aws/LZA/design-build-deploy/scp.md
               - Next steps: aws/LZA/design-build-deploy/next-steps.md
               - Networking: aws/LZA/design-build-deploy/networking.md
@@ -86,6 +87,7 @@ nav:
           - App Service: azure/azure-services/app-service.md
           - Application Gateway: azure/azure-services/application-gateway.md
           - Azure AI Services: azure/azure-services/azure-ai.md
+          - Azure Container Instances: azure/azure-services/azure-container-instances.md
           - Azure Data Factory: azure/azure-services/data-factory.md
           - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
           - Azure Kubernetes Service: azure/azure-services/aks.md

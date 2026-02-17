@@ -47,7 +47,7 @@ It's worth noting that the Enterprise edition of our dashboards has a limitation
 
 ## Timing and access considerations
 
-Because of this scheduling, there could be a maximum delay of 30 minutes for a user to access the project set data in the dashboard after being assigned the **billing viewers** role through the registry. It's important to keep this timing in mind when anticipating access to the dashboards.
+Because of this scheduling, there could be a maximum delay of 30 minutes before a user can see project set data in the dashboard after they are granted billing viewers access. In practice, access is granted by adding the user to the appropriate Entra ID security group (DO_PuC_AWS_{LicensePlate}_BillingViewers). The dashboard’s row-level security (RLS) data set is updated on a schedule, so group membership changes may take up to 30 minutes to be reflected in QuickSight.
 
 ## Accessing multiple project sets
 
@@ -61,8 +61,8 @@ Users who need access to the dashboards should request the **billing viewers** r
 
 1. Contact the Product Owner or Technical Lead of your project set
 2. Request the **billing viewers** role, providing justification for the need to access the dashboard
-3. The Product Owner or Technical Lead will grant the appropriate role using the user management functionality available at [B.C. government's Platform Product Registry](https://registry.developer.gov.bc.ca/public-cloud/products/all)
-4. For detailed steps on user role assignment, refer to the [user management documentation](https://developer.gov.bc.ca/docs/default/component/public-cloud-techdocs/user-management/)
+3. The Product Owner (or a delegated owner of the BillingViewers group) will add you to the appropriate Entra ID security group (`DO_PuC_AWS_{LicensePlate}_BillingViewers`) using [Microsoft Account Management](https://myaccount.microsoft.com/groups) or the [Azure portal](https://portal.azure.com)
+4. For detailed steps on user role assignment, refer to the [user management documentation](../design-build-deploy/user-management.md)
 
 ## Dashboard functionality
 
@@ -71,4 +71,3 @@ The dashboards offer advanced filtering capabilities to tailor the cost and usag
 - **Ministry filters**: Users can filter data at the ministry level, such as CITZ, to view aggregated cost and usage data relevant to their specific ministry
 - **Project set filters**: Users can drill down into specific project sets (e.g., `tnfhhm`) to analyze data associated with that set of AWS accounts
 - **Account-level filters**: Within a project set, users can further filter data by individual AWS accounts, for example: `tnfhhm-dev`, `tnfhhm-test` to gain insights into the cost and usage patterns of each account
-

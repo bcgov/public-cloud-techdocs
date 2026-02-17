@@ -11,24 +11,24 @@ The following sections describe the networking components within the Azure Landi
     Depending on your solution architecture and which Azure services you are using, you may need to use [subnet delegation](https://learn.microsoft.com/en-us/azure/virtual-network/manage-subnet-delegation?tabs=manage-subnet-delegation-portal) to allow certain Azure services to create resources in your subnets.
 
 Understand the impact, especially in Production environments. **Plan your subnet sizes carefully**.
-Once you deploy resources in a subnet, you cannot change its delegation unless you remove all resources. You also cannot resize the subnet until you remove the delegation.
+When you deploy resources in a subnet, you cannot change its delegation unless you remove all resources first. You also cannot resize the subnet until you remove the delegation.
 
 ## Virtual network (VNet)
 
 Each Project Set in the Azure Landing Zone includes a [Virtual Network (VNet)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) which isolates and secures deployed resources. This VNet forms the foundation of network connectivity in the Azure Landing Zone.
 
 !!! danger "Allocated IP addresses"
-    Each Project Set is provided with approximately **251 IP addresses** (ie. `/24`) by default. If your application requires more IP addresses than the `/24` provides, contact the Public cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    Each Project Set gets approximately **251 IP addresses** (shown as `/24`) by default. If your application needs more IP addresses, contact the Public cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
     !!! note "Microsoft IP reservations"
         Microsoft **reserves 5 IP addresses** from **each subnet** within a Virtual Network. Therefore a `/24` subnet would not have 256 IP addresses available for use, but rather 251 IP addresses.
 
-This VNet is connected with the central hub (vWAN), and receives default routes to direct all traffic (ie. Internet and private) through the firewall located in the central hub.
+This VNet connects to the central hub (vWAN). Default routes direct all traffic (both Internet and private) through the central firewall.
 
-There are no subnets that are pre-created within the VNet. Each team is responsible for creating their own subnets based on their requirements. Subnets should be created within the VNet to segment resources based on their function or security requirements.
+No subnets are pre-created within the VNet. Each team creates their own subnets based on requirements. Subnets segment resources by function or security requirements.
 
 !!! danger "Security controls for subnets"
-    There are some security controls in place, that require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may cause some challenges when creating subnets. The simplest approach is to create a NSG first, and then create the subnet (with the NSG associated with it).
+    Security controls require every subnet to have an associated [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview). This may create challenges when creating subnets. The simplest approach is to create a NSG first, then create the subnet with the NSG associated.
 
     For further guidance on creating subnets with associated NSGs (specifically using Terraform), refer to the [IaC](../best-practices/iac.md#using-terraform-to-create-subnets) documentation.
 
@@ -36,7 +36,7 @@ There are no subnets that are pre-created within the VNet. Each team is responsi
 
 ## Spoke-to-Spoke connectivity
 
-If your team has multiple environments (ie. Dev, Test, Prod, Tools) within the same Project Set, you may require connectivity between the different environments. This is known as spoke-to-spoke connectivity.
+If your team has multiple environments (such as Dev, Test, Prod, and Tools) within the same Project Set, you might need connectivity between them. This is called spoke-to-spoke connectivity.
 <!-- TODO: Update to point to the Firewall Request Form once it is released -->
 By default, this connectivity is disabled for security reasons. If you require spoke-to-spoke connectivity, you must [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public cloud team, who will review the request based on the security requirements, and make any necessary changes in the firewall to allow this type of traffic.
 
@@ -55,7 +55,7 @@ Advanced features are implemented and configured including:
   - Applied both on HTTP and HTTPS traffic
   - Target URL extraction and validation
 - Web categories
-  - Allow or deny access to websites based on categories (eg. gambling, social media, etc.)
+  - Allow or deny access to websites based on categories such as gambling or social media
 
 ### Exposing services to the internet
 
@@ -74,7 +74,7 @@ While [VNet integration](https://learn.microsoft.com/en-us/azure/virtual-network
 
 ## Protected network resources
 
-In order to maintain the security of the Azure Landing Zone, there are certain network resources that are protected and cannot be modified by teams, and other network resources that cannot be created in the Landing Zone. These include:
+To maintain the security of the Azure Landing Zone, the following network resources are protected and cannot be modified by teams, or cannot be created in the Landing Zone:
 
 - Modifying the Virtual Network (VNet) DNS settings
   - This is required so that all traffic is routed through the central firewall, for compliance requirements
