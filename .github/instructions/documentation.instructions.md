@@ -1,10 +1,10 @@
-# GitHub Copilot Instructions - BC Government Public Cloud Technical Documentation
+# GitHub Copilot instructions - B.C. government public cloud technical documentation
 
-This repository contains technical documentation for BC Government's public cloud services. All content must follow BC Government web content standards for accessibility, plain language, and readability.
+This repository contains technical documentation for B.C. government's public cloud services. All content must follow B.C. government web content standards for accessibility, plain language, and readability.
 
-## Core Writing Standards
+## Core writing standards
 
-### 1. Use Active Voice
+### 1. Use active voice
 **Always write in active voice (subject-verb-object), not passive voice.**
 
 ✅ Good: "Section B requires you to complete the form"  
@@ -13,13 +13,13 @@ This repository contains technical documentation for BC Government's public clou
 ✅ Good: "You can order copies"  
 ❌ Bad: "Copies can be ordered"
 
-### 2. Use Present Tense
+### 2. Use present tense
 **Write in present tense to keep sentences short and engaging.**
 
 ✅ Good: "The system validates your input"  
 ❌ Bad: "The system will validate your input"
 
-### 3. Write Short Sentences
+### 3. Write short sentences
 **Aim for a maximum of 15-20 words per sentence. Break long sentences into shorter ones.**
 
 - Count the words in each sentence
@@ -29,7 +29,7 @@ This repository contains technical documentation for BC Government's public clou
 ✅ Good: "You can deploy applications to Azure. The platform provides automated scaling."  
 ❌ Bad: "You can deploy applications to Azure and the platform provides automated scaling which helps manage traffic spikes."
 
-### 4. Use Plain Language
+### 4. Use plain language
 **Write at a Grade 8 reading level or lower. Use everyday words.**
 
 Replace complex words with simpler alternatives:
@@ -42,7 +42,7 @@ Replace complex words with simpler alternatives:
 - "submit an application" → "apply"
 - "establish" → "create" or "set up"
 
-### 5. Use Sentence Case for Headings and Titles
+### 5. Use sentence case for headings and titles
 **Only capitalize the first word and proper nouns in headings, titles, and navigation items.**
 
 ✅ Good: "Deploy to the Azure landing zone"  
@@ -55,21 +55,21 @@ Replace complex words with simpler alternatives:
 ✅ Good: "AWS security and compliance guardrails"  
 ✅ Good: "Understanding your AWS bill"
 
-## Grammar and Style
+## Grammar and style
 
-### Action Verbs
+### Action verbs
 Use clear action verbs to give direction:
 - "Find a hospital near you"
 - "Download the template"
 - "Configure your settings"
 
-### Avoid '-ing' Verbs in Instructions
+### Avoid '-ing' verbs in instructions
 Be clear when using verbs ending in '-ing':
 
 ✅ Good: "When you pay for the service"  
 ❌ Bad: "When paying for the service"
 
-### Remove Unnecessary Words
+### Remove unnecessary words
 Cut adjectives and adverbs that don't improve understanding:
 
 ✅ Good: "Complete the required information"  
@@ -78,7 +78,7 @@ Cut adjectives and adverbs that don't improve understanding:
 ✅ Good: "Surveys assess user needs"  
 ❌ Bad: "Surveys are used to assess user needs"
 
-### Use Positive Form
+### Use positive form
 Tell users what they can or must do, not what they cannot:
 
 ✅ Good: "Save your work regularly"  
@@ -104,11 +104,11 @@ Use gender-neutral pronouns:
 ✅ Good: "Applicants can see their results"  
 ❌ Bad: "The applicant can see his/her results"
 
-## Formatting Standards
+## Formatting standards
 
-### Capitalization Rules
+### Capitalization rules
 
-#### Do NOT Use All Caps
+#### Do note use all caps
 Never use ALL CAPS unless it's an abbreviation or acronym (AWS, API, URL).
 
 ❌ Bad: "IMPORTANT: Read this section"  
@@ -126,7 +126,7 @@ Use sentence case - capitalize only the first word and proper nouns:
 #### Lists
 Always capitalize the first word of each list item.
 
-#### Proper Nouns
+#### Proper nouns
 Always capitalize:
 - Service names: Azure, AWS, Rocket.Chat
 - Product names: Landing Zone Accelerator, Terraform
@@ -134,8 +134,8 @@ Always capitalize:
 - Specific entities: Ministry of Finance, BC Government
 - Indigenous terms: First Nations, Indigenous, Inuit, Métis
 
-#### Common Nouns
-Do NOT capitalize common nouns:
+#### Common nouns
+Do not capitalize common nouns:
 - "the ministry" (unless part of full name: "Ministry of Finance")
 - "the government"
 - "directors and executive directors"
@@ -148,7 +148,7 @@ Use **Canadian spelling**:
 - "offence" (not offense)
 - "practice" (noun), "practise" (verb)
 
-### Government References
+### Government references
 Use **"B.C. government"** (with periods and lowercase 'government'):
 
 ✅ Good: "B.C. government"  
@@ -165,7 +165,7 @@ Apply the same pattern to related terms:
 - One topic per paragraph
 - Start new paragraph for new topics
 
-## Accessibility Requirements (WCAG 2.0)
+## Accessibility requirements (WCAG 2.0)
 
 ### Links
 Use descriptive link text that makes sense out of context:
@@ -183,7 +183,7 @@ Use descriptive link text that makes sense out of context:
 - Don't skip heading levels
 - Make headings descriptive and meaningful
 
-### Color and Contrast
+### Color and contrast
 - Don't rely on color alone to convey information
 - Ensure sufficient color contrast
 
@@ -193,9 +193,9 @@ Use lists to break up content and improve scannability:
 - Numbered lists for sequential steps
 - Keep list items parallel in structure
 
-## Technical Documentation Specific
+## Technical documentation specific
 
-### Code Blocks
+### Code blocks
 Always specify the language for syntax highlighting:
 
 ````markdown
@@ -213,18 +213,18 @@ def example():
 ```
 ````
 
-### Examples and Instructions
+### Examples and instructions
 Provide complete, working examples:
 - Include all necessary context
 - Test code examples before including them
 - Add explanatory comments where helpful
 
-### File References
+### File references
 When mentioning files, use proper markdown links:
 - `[file.md](path/to/file.md)` for internal links
 - Use relative paths for internal documentation
 
-### Admonitions (Call-outs)
+### Admonitions (call-outs)
 Use MkDocs Material admonitions for important information:
 
 ```markdown
@@ -240,7 +240,7 @@ Use MkDocs Material admonitions for important information:
 
 Available types: note, info, tip, warning, danger, example, quote
 
-## Content Organization
+## Content organization
 
 ### Structure
 Every page should follow this structure:
@@ -251,14 +251,14 @@ Every page should follow this structure:
 5. Main content with H2 sections
 6. Related pages section at end
 
-### Headings Hierarchy
+### Headings hierarchy
 - **H1 (`#`)**: Page title only (one per page)
 - **H2 (`##`)**: Major sections
 - **H3 (`###`)**: Subsections
 - **H4 (`####`)**: Only if absolutely necessary
 - Avoid H5 and below
 
-## Quality Checklist
+## Quality checklist
 
 Before submitting documentation, verify:
 
