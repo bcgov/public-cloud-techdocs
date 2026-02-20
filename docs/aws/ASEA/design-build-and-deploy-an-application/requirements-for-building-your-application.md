@@ -30,7 +30,7 @@ Take the following into consideration when building your application on the AWS 
 
 ## Other requirements and best practices
 
-To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws) is required.
+To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-aws-landing-zone.md#configuring-github-actions-oidc-authentication-to-aws) is required.
 
 To deploy your application:
 
@@ -118,5 +118,5 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 * [Provision a project set](../../../welcome/provision-a-project-set.md)
 * [Account access](../../../welcome/provision-a-project-set.md#accessing-your-project-set)
-* [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws)
+* [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-actions-oidc-authentication-to-aws)
 * [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)

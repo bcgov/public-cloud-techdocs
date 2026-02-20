@@ -92,7 +92,7 @@ Here's a quick summary on how to set it up:
    - Create a trust policy on the role with the GitHub Identity Provider
    - Attach a policy that allows access to the AWS resources that you need
 3. In GitHub workflows, configure AWS credentials with the IAM role ARN that you created.
-   - See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example
+   - See [Writing GitHub Action Workflows](#writing-github-actions-workflows) below for an example
 
 This allows GitHub Actions to assume the IAM role and access your AWS accounts.
 
@@ -116,7 +116,7 @@ terraform {
 
 By leaving the backend configuration details undefined they can be generated dynamically by the GitHub Action workflow. This allows the same workflow and Terraform configuration to be used for multiple environments.
 
-See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example.
+See [Writing GitHub Action Workflows](#writing-github-actions-workflows) below for an example.
 
 ## Writing GitHub actions workflows
 
