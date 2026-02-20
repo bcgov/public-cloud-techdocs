@@ -123,7 +123,7 @@ Use gender-neutral pronouns:
 
 ### Capitalization rules
 
-#### Do note use all caps
+#### Do not use all caps
 
 Never use ALL CAPS unless it's an abbreviation or acronym (AWS, API, URL).
 
