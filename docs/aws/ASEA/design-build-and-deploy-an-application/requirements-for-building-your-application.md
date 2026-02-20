@@ -14,7 +14,7 @@ The following sections describe the requirements for building your application o
 
 ## Limitations of the AWS Landing Zone
 
-Take the following into consideration when building your application on the AWS Landing zone:
+Take the following into consideration when building your application on the AWS Landing Zone:
 
 * There is no direct (private) connectivity to the B.C. government network. Any application requiring access to data on this network must use a public endpoint
 
@@ -42,7 +42,7 @@ To deploy your application:
 
 ## Local deployment
 
-To facilitate local deployments into AWS, from your machine. The process involves using Terraform as an Infrastructure as Code (IaC) tool, AWS CLI and Visual Studio Code (VSCode) as an Integrated Development Environment (IDE).
+To facilitate local deployments into AWS from your machine, you use Terraform as an Infrastructure as Code (IaC) tool. You also use the AWS CLI and Visual Studio Code (VSCode) as your Integrated Development Environment (IDE).
 
 * Install Terraform by following the [official Terraform guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli),
 * Understand and install  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)

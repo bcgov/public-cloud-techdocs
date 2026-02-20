@@ -1,8 +1,8 @@
-# Deploy an application to the  B.C. government AWS Landing Zone
+# Deploy an application to the B.C. government AWS Landing Zone
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The B.C. government AWS Secure Environment Accelerator (ASEA) environment uses a multi-account architecture to provide secure and isolated environments for development, testing, production, and tools. This allows teams to safely build, test, and deploy applications without affecting live services.
+The B.C. government AWS Secure Environment Accelerator (ASEA) uses a multi-account architecture. It provides separate environments for development, testing, production, and tools. This isolates and protects each stage of the deployment lifecycle.
 
 This guide explains how to:
 
@@ -34,7 +34,7 @@ The B.C. government ASEA uses separate AWS accounts for development (dev), testi
 
 A tools account contains shared resources like CI/CD pipelines, container registries, and automation tools.
 
-## Defining your Infrastructure using Terraform
+## Defining your infrastructure using Terraform
 
 Terraform lets you define cloud resources in configuration files. This infrastructure as code approach helps manage resources consistently and repeatedly.
 
