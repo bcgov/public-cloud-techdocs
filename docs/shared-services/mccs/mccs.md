@@ -42,7 +42,7 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
 
    - Navigate to MySC > Hosting > Data Center Connectivity Services > [Firewall Rule Update](https://ociomysc.service-now.com/sp?id=sc_cat_item&sys_id=47f1938a93bd3a5022a1ff50ed03d625&sysparm_category=87c0b527fb563210b0a6f36c5eefdce6)
 
-    ![MySC Firewall Request](../../images/shared-services/mysc-hosting-firewall-rule-request.png "MySC Firewall Request")
+   ![MySC Firewall Request](../../images/shared-services/mysc-hosting-firewall-rule-request.png "MySC Firewall Request")
 
    - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
    - Refer to the [example request form](#example-request-form) section below for additional guidance on how to fill out the request form
