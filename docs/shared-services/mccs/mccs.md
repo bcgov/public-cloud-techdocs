@@ -36,7 +36,11 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
 
 1. Submit a **cloud** [firewall change request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/18) to have the cloud firewall configured with the correct rules to allow traffic from the AWS VPC / Azure VNet to reach the on-premises edge firewall
   - Need a specific approval process for cloud firewall changes? See the [custom approval process](#custom-approval-process) section below for more information
-2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via iStore) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
+2. Submit an **on-premises** [firewall request](https://ssbc-client.gov.bc.ca/services/3rdpartygateway/order.htm) (via My Service Center) to create a firewall rule that allows traffic from the AWS VPC / Azure VNet, through the 3PG firewall and subsequently through the required Zone firewalls
+  - Navigate to MySC > Hosting > Data Center Connectivity Services > [Firewall Rule Update](https://ociomysc.service-now.com/sp?id=sc_cat_item&sys_id=47f1938a93bd3a5022a1ff50ed03d625&sysparm_category=87c0b527fb563210b0a6f36c5eefdce6)
+
+    ![MySC Firewall Request](../../images/shared-services/mysc-hosting-firewall-rule-request.png "MySC Firewall Request")
+
   - Include the **source** (for example your VPC/VNet) and the **destination** (for example your target on-premises network or endpoint) in the request
   - Refer to the [example request form](#example-request-form) section below for additional guidance on how to fill out the request form
 
