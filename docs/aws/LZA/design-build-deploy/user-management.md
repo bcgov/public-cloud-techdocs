@@ -48,7 +48,7 @@ These security groups are synchronized with AWS IAM roles to provide the appropr
 
 ## Important limitation: Nested groups are not supported
 
-AWS IAM Identity Center (SSO) does **not** support *nested groups* (a security group added as a member of another security group).  
+AWS IAM Identity Center (SSO) does **not** support *nested groups* (a security group added as a member of another security group).
 
 ### What this means
 
@@ -113,7 +113,7 @@ AWS IAM Identity Center (SSO) does **not** support *nested groups* (a security g
 
 As a Product Owner or Technical Lead, you can manage your project set's security groups using two methods:
 
-### Option 1: Using Microsoft Account Management
+### Option 1: using Microsoft account management
 
 1. Go to [Microsoft Account Groups](https://myaccount.microsoft.com/groups)
 2. Sign in with your Microsoft account
@@ -123,7 +123,7 @@ As a Product Owner or Technical Lead, you can manage your project set's security
    - View group details
    - Manage group settings
 
-### Option 2: Using the Azure Portal
+### Option 2: using the Azure portal
 
 1. Log in to the [Azure portal](https://portal.azure.com)
 2. Navigate to Entra ID
@@ -198,7 +198,6 @@ If users experience access problems:
 
 If you need assistance with user management or have questions about your access structure:
 
-- Contact the Public Cloud team through [BC Gov's Service Desk](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
+- Contact the Public Cloud team through the [B.C. government Service Desk](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
 - Refer to the [Platform Product Registry](https://registry.developer.gov.bc.ca/) for managing the Product Owner and Technical Leads
 - Consult the [AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/) for advanced AWS permissions concepts
-

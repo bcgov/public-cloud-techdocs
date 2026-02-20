@@ -20,4 +20,3 @@ The current AWS landing zone solution for all new projects:
 Available for existing projects until end-of-life: October 31, 2025:
 
 - [ASEA Documentation](ASEA/index.md)
-

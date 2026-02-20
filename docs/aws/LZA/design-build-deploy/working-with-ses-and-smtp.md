@@ -1,15 +1,17 @@
-# Amazon SES: Prefer API + IAM roles; use SMTP only for legacy systems
+# Amazon SES: prefer API + IAM roles; use SMTP only for legacy systems
+
+Last updated: **{{ git_revision_date_localized }}**
 
 This document describes how to send email with Amazon Simple Email Service (SES) in our AWS Landing Zone. It also explains why **SMTP credentials are a fallback option**, not the default.
 
 Amazon SES supports two ways to send email:
 
-- **Amazon SES API (recommended)**  
+- **Amazon SES API (recommended)**
 - **SES SMTP interface (legacy / compatibility option)**
 
 ## Recommendation
 
-### Preferred: Use the SES API with IAM roles (no long-lived secrets)
+### Preferred: use the SES API with IAM roles (no long-lived secrets)
 
 When possible, applications should send email by calling the **SES API** through the (AWS SDK/CLI). This allows workloads to authenticate using **IAM roles**, including assumed roles.
 
@@ -27,7 +29,7 @@ Some legacy software only supports SMTP. In those cases, SES SMTP is acceptable,
 
 **Therefore:** SMTP requires a long-lived secret, derived from an IAM user access key. Because of this, treat SMTP as a compatibility option, not a default integration method.
 
-## Landing Zone constraint: why "Create SMTP Credentials" often fails in the SES console
+## Landing Zone constraint: why "Create SMTP credentials" often fails in the SES console
 
 The SES console includes a **create SMTP credentials** option that relies on IAM user management behind the scenes. AWS documents that this process requires IAM permissions such as:
 

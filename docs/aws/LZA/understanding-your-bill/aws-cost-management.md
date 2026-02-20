@@ -1,4 +1,4 @@
-# AWS Cost Management
+# AWS cost management
 
 Last updated: **{{ git_revision_date_localized }}**
 

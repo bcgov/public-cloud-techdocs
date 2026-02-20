@@ -7,7 +7,7 @@ Once your Project Set has been provisioned, each Azure Subscription will be enro
 !!! info "Third-party vendor landing zones"
     If you use a third-party vendor's landing zone in Azure, you cannot use the B.C. government's Unified Enterprise support plan.
 
-    Ministry teams working in the OCIO-managed Landing Zone in Azure can currently access the Unified Enterprise support services for free. 
+    Ministry teams working in the OCIO-managed Landing Zone in Azure can currently access the Unified Enterprise support services for free.
 
 You can view the full list of services available to the ministries under the [Unified Enterprise support plan](https://www.microsoft.com/en-IN/microsoft-unified/plan-details){:data-proofer-ignore}.
 

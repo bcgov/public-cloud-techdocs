@@ -45,8 +45,8 @@ For example, to deploy a static website to AWS S3 and CloudFront:
   resource "aws_s3_bucket" "website" {
     bucket = "my-website-bucket"
   }
-  
-  # CloudFront distribution to cache and distribute the website 
+
+  # CloudFront distribution to cache and distribute the website
   resource "aws_cloudfront_distribution" "website_dist" {
     origin {
       domain_name = aws_s3_bucket.website.bucket_regional_domain_name
@@ -56,12 +56,12 @@ For example, to deploy a static website to AWS S3 and CloudFront:
         origin_access_identity = aws_cloudfront_origin_access_identity.website_access_identity.cloudfront_access_identity_path
       }
     }
-    
+
     enabled             = true
     default_root_object = "index.html"
-    
-    # ...other CloudFront settings  
-    
+
+    # ...other CloudFront settings
+
     # Add origin access identity
     restrictions {
       geo_restriction {
@@ -78,7 +78,7 @@ For example, to deploy a static website to AWS S3 and CloudFront:
 
 With this approach, you can version your infrastructure, collaborate with others, and repeatedly deploy your app.
 
-## Configuring GitHub Action OIDC Authentication to AWS
+## Configuring GitHub Actions OIDC authentication to AWS
 
 To allow GitHub Actions to securely access AWS accounts, use OpenID Connect (OIDC) authentication.
 
@@ -118,7 +118,7 @@ By leaving the backend configuration details undefined they can be generated dyn
 
 See [Writing GitHub Action Workflows](#writing-github-action-workflows) below for an example.
 
-## Writing GitHub Action Workflows
+## Writing GitHub actions workflows
 
 Use GitHub Actions to build CI/CD pipelines for automated deployments. For example:
 
@@ -139,31 +139,31 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: ca-central-1
           role-to-assume: arn:aws:iam::<dev-aws-account-id>:role/my-github-actions-role # This is the IAM role created for GitHub Actions
           session-name: my-github-actions-session # This is the session name for the assumed role that will show up in CloudTrail logs
-      
+
       - name: Generate backend config
         run: |
           cat <<EOF > backend.hcl
           bucket         = "dev-terraform-state-bucket"
           key            = "dev/my-app/terraform.tfstate"
-          region         = "ca-central-1" 
+          region         = "ca-central-1"
           dynamodb_table = "terraform-lock-table"
           EOF
-      
+
       - name: Init Terraform
         run: |
           terraform init -backend-config=backend.hcl
-      
+
       - name: Apply Terraform
         run: |
           terraform apply -auto-approve
-      
+
       - name: Deploy to dev
         run: |
           aws s3 sync --delete index.html s3://my-website-bucket

@@ -48,7 +48,7 @@ GitHub Actions is a feature of GitHub that allows you to automate your workflow.
 
 There are multiple ways to deploy your application to the Azure Landing Zone using Infrastructure-as-Code (IaC). You can use tools like [Terraform](https://www.terraform.io/), [Azure Resource Manager (ARM) templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/), [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep), [Ansible](https://learn.microsoft.com/en-us/azure/developer/ansible/overview), [Chef](https://learn.microsoft.com/en-us/azure/developer/chef/overview), or [Pulumi](https://devblogs.microsoft.com/devops/infrastructure-as-code-azure-python-wpulumi/) to define your Infrastructure-as-Code and deploy it to Azure.
 
-While we don't have a specific example for each tool, we recommend that you choose the tool that you are most comfortable with and that best fits your needs.
+While we do not have a specific example for each tool, we recommend that you choose the tool that you are most comfortable with and that best fits your needs.
 
 !!! warning "Using Terraform for IaC"
     If you are using Terraform to deploy your application to Azure, please take note of the following:

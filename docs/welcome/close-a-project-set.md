@@ -30,29 +30,29 @@ Before proceeding with closing your Project Set, ensure you have:
 ## How to close a Project Set
 
 1. **Login to the Product Registry**
-   
+
    Navigate to the [Product Registry](https://registry.developer.gov.bc.ca/login) and sign in with your IDIR credentials.
 
 2. **Find your Project Set**
-   
+
    Locate the Project Set you want to close in the registry. You can search by name or browse through your active projects.
 
 3. **Access the Project Set details**
-   
+
    Click on the Project Set name to open its details page.
 
 4. **Click the Delete button**
-   
+
    In the upper right corner of the Project Set details page, you'll see a **red Delete button** with a trash can icon. Click this button to initiate the closure process.
 
    ![Delete button in Product Registry](../images/close-project-set/delete-button.png)
 
 5. **Confirm the deletion**
-   
+
    You'll be prompted to confirm that you want to permanently delete the Project Set. This is your final opportunity to cancel the action.
 
 6. **Wait for completion**
-   
+
    The closure process may take some time to complete, as all resources across all environments need to be properly decommissioned.
 
 ## After closing your Project Set

@@ -13,7 +13,7 @@ One of the most important constraints in LZA is that **none of the VPCs can comm
 !!! warning "Complete VPC isolation"
 
     **No VPC can communicate privately with any other VPC** in your project set. This means:
-    
+
     - VPCs are completely isolated across accounts
     - Cross-account communication requires AWS APIs or public endpoints
 
@@ -66,7 +66,7 @@ After user permissions are granted or modified through Entra ID security groups,
 
 !!! warning "Plan for access delays"
 
-    When onboarding new team members or changing permissions, factor in the 40-minute synchronization window. Don't expect immediate access after group membership changes.
+    When onboarding new team members or changing permissions, factor in the 40-minute synchronization window. Expect up to 40 minutes for access changes to take effect after group membership updates.
 
 ### IAM User restrictions
 
@@ -96,12 +96,12 @@ LZA uses five predefined roles with specific access patterns:
 
 ### Model marketplace restrictions
 
-The **AWS marketplace for AI models is not available** in the BC Government environment. This significantly limits foundation model options:
+The **AWS marketplace for AI models is not available** in the B.C. government environment. This significantly limits foundation model options:
 
 !!! warning "Limited AI model availability"
 
     **Available models only**:
-    
+
     - Amazon Titan models (Text, Embeddings, Image, Multimodal)
     - Mistral models (Mistral 7B, Mixtral)
 
@@ -145,7 +145,7 @@ tags = {
 
 ### Data residency requirements
 
-All data must remain in **Canada Central region** to meet BC Government data residency requirements. Be careful with:
+All data must remain in **Canada Central region** to meet B.C. government data residency requirements. Be careful with:
 
 - Cross-region replication features (disabled by default)
 - Third-party service integrations that might move data
@@ -162,7 +162,7 @@ All data must remain in **Canada Central region** to meet BC Government data res
 All AWS API calls are automatically logged through [AWS CloudTrail](https://docs.aws.amazon.com/cloudtrail/). Ensure your applications:
 
 - Use structured logging
-- Don't log sensitive information
+- Avoid logging sensitive information
 - Implement proper log retention policies
 - Monitor for security events
 
@@ -211,11 +211,11 @@ Design your deployment pipeline to account for complete Virtual Private Cloud (V
 
 ### Assuming cross-account connectivity
 
-**Don't assume** any account can directly access resources in other accounts via private networking. **All VPCs are completely isolated** - design your application architecture and CI/CD pipelines accordingly.
+Assume accounts cannot directly access resources in other accounts via private networking. **All VPCs are completely isolated** - design your application architecture and CI/CD pipelines accordingly.
 
 ### Forgetting permission delays
 
-**Don't expect immediate access** after user permission changes. Plan deployment schedules around the 40-minute synchronization window.
+Expect up to 40 minutes for access changes to take effect after user permission updates. Plan deployment schedules around the synchronization window.
 
 ### Using hardcoded regions
 
@@ -223,7 +223,7 @@ Design your deployment pipeline to account for complete Virtual Private Cloud (V
 
 ### Ignoring cost monitoring
 
-**Set up cost alerts immediately** when starting development. AWS costs can surprise teams who aren't monitoring actively.
+**Set up cost alerts immediately** when starting development. AWS costs can surprise teams who are not monitoring actively.
 
 ### Creating manual resources
 

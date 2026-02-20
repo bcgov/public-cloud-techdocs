@@ -18,7 +18,7 @@ Supplements H2 heading information but does not propose new content outside of t
 
 #### H4 content heading
 
-Only add if really necessary and again complements your H3 heading  
+Only add if really necessary and again complements your H3 heading
 
 ##### Avoid H5 headings and below
 

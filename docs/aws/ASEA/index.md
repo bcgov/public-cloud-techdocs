@@ -23,8 +23,8 @@ Make sure to keep the page titles with the exact name of pages throughout the do
 
 E.g "Deploy an application to the  B.C. government AWS Landing Zone" cannot be called Build and deploy an application" as well.  This helps avoid any confusion to the user and our naming  through our public tech docs
 
-* Maintain an application (coming soon) 
-* Retire an application (coming soon) 
+* Maintain an application (coming soon)
+* Retire an application (coming soon)
 -->
 
 ## Understand your AWS billing
@@ -40,8 +40,6 @@ Relevant technical information about the components that make up the AWS Secure 
 <!-- ### Learn about the AWS Secure Environment Accelerator (ASEA) -->
 <!-- * [Technical architecture](technical-architecture.md) -->
 <!-- * [Networking](design-build-and-deploy-an-application/networking.md) -->
-
-
 
 ### Reusable code and services
 

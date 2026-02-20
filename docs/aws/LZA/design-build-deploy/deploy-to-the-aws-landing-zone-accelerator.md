@@ -143,7 +143,7 @@ For serverless architecture patterns, see the [AWS Serverless Application Lens](
 
 - Review [CloudFormation stack events](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html) for detailed error messages
 - Check [service quotas and limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in your account
-- Verify that resource names don't conflict with existing resources
+- Verify that resource names do not conflict with existing resources
 
 ## Getting help
 

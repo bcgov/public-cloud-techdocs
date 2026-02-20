@@ -76,34 +76,34 @@ To apply this configuration, follow these steps:
 
 Ensure you have AWS credentials, obtainable by visiting the AWS login page and clicking on the `Click for Credentials` button for the desired authorization role as shown in the image below. ![aws-credential-cli](../images/requirements-for-building-your-application/aws-credential-cli.png)
 
-2. Copy the credential
+1. Copy the credential
 
 ![aws-credential-cli](../images/requirements-for-building-your-application/click-credential.png)
 
-3. Paste the copied credential
+1. Paste the copied credential
 
 ![aws-credential-cli](../images/requirements-for-building-your-application/terminal.png)
 
-4. Initialize your Terraform configuration:
+1. Initialize your Terraform configuration:
 
 ```
 terraform init
 ```
 
-5. Create an execution plan:
+1. Create an execution plan:
 
 ```
 terraform plan
 ```
 
-6. Apply the changes to create the S3 bucket:
+1. Apply the changes to create the S3 bucket:
 
 ```
 terraform apply
 
 ```
 
-7. Confirm by typing yes when prompted.
+1. Confirm by typing yes when prompted.
 
 This script creates an S3 bucket with the specified configuration. Adjust parameters as needed for your specific use case.
 

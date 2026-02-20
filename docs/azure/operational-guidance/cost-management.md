@@ -1,4 +1,4 @@
-# Cost Management
+# Cost management
 
 Last updated: **{{ git_revision_date_localized }}**
 

@@ -38,7 +38,7 @@ The simplest method to do this, is to deploy an [Azure Bastion](https://learn.mi
 !!! example "Azure Bastion deployment example"
     To support our customers, and expedite the deployment of all the required resources, we've created an example Terraform module. For further information, please refer to the Tools > [Azure Bastion](../tools/bastion.md) page.
 
-## Azure OpenAI and Private DNS
+## Azure OpenAI and private DNS
 <!-- Remove or update this section once it is confirmed that the Azure Policy resolves this -->
 When working with Azure OpenAI, you may need to create a Private Endpoint to resolve the Azure OpenAI service endpoints.
 
