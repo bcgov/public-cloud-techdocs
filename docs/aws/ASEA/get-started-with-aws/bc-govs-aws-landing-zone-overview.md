@@ -6,9 +6,9 @@ An overview of the B.C. government OCIO's Landing Zone in AWS, how to get access
 
 ---
 
-## Benefits of building apps in the AWS Public cloud
+## Benefits of building apps in the AWS public cloud
 
-Ministry teams in the B.C. government who want to build applications in the Public cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed  to meet the needs and compliance requirements of the BC government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's AWS landing zone offers several significant benefits:
+Ministry teams in the B.C. government who want to build applications in the Public cloud can rely on the OCIO's secure and compliant landing zone in AWS. It offers a robust, secure, and efficient framework designed to meet the needs and compliance requirements of the B.C. government. This ensures that applications are developed within a secure and well-governed cloud environment. The OCIO's AWS landing zone offers several significant benefits:
 
 1. **Enhanced security compliance**: It aligns with high-standard security frameworks like NIST 800-53 and the CCCS Medium Cloud Control Profile, which is crucial for government applications handling sensitive, Protected B data. This compliance ensures that your applications meet the necessary security standards, providing peace of mind for both developers and stakeholders
 
@@ -36,7 +36,7 @@ In this section, we'll provide a high level overview of the components and featu
 
 The Platform Product Registry service is a comprehensive solution designed to streamline the process of requesting and creating AWS Project Sets for B.C. government ministry teams. Each Project Set comprises four distinct AWS accounts: Development (dev), Testing (test), Production (prod), and Tools. This service plays a crucial role, not just in setting up the necessary AWS infrastructure, but also in managing various aspects of a product's lifecycle in the cloud.
 
-### Key Features of the Platform Product Registry Service
+### Key features of the Platform Product Registry service
 
 1. **AWS Project Set creation**
    - Helps create a set of four AWS accounts (Dev, Test, Prod, Tools) customized for different stages of the application development lifecycle
@@ -56,7 +56,7 @@ The Platform Product Registry service is a comprehensive solution designed to st
 
 The Product Registry service represents a significant step forward in managing cloud resources effectively, offering a centralized, automated, and controlled approach to handle various aspects of AWS account management, from initial setup to continuous budgeting and access control. This service is particularly helpful for teams needing to manage many cloud-based products, providing a streamlined and secure solution for AWS cloud management.
 
-### Project Set
+### Project set
 
 A project set consists of four distinct AWS accounts for development (dev), testing (test), production (prod), and tools (tools) environments. This isolates and protects each stage of the deployment lifecycle.
 
@@ -109,7 +109,7 @@ For more information, see [AWS Security & Compliance Guardrails](./security-guar
 
 For B.C. government ministry teams developing applications in the OCIO's landing zone, understanding the high-level overview of the networking components of the AWS Secure Environment Accelerator (ASEA) is essential. These components are designed to ensure secure, efficient, and compliant networking within AWS environments.
 
-#### High-Level Overview of Networking Components
+#### High-level overview of networking components
 
 - **Perimeter account**
 
@@ -142,7 +142,7 @@ For B.C. government ministry teams working in the OCIO's landing zone, it's cruc
 #### CloudWatch Logs
 
 - **What is CloudWatch Logs**: CloudWatch Logs, a part of AWS CloudWatch, focuses on log management. It enables collection, monitoring, and analysis of log data from AWS resources and applications. Ideal for DevOps, developers, and IT managers, it provides essential capabilities for real-time log monitoring and operational troubleshooting
-  
+
 - **Immutability of Log Groups**: In the ASEA architecture, CloudWatch Logs groups are rendered immutable due to Service Control Policies (SCPs). This immutability is crucial for maintaining the integrity and security of log data, ensuring logs are preserved in their original state for security audits and compliance purposes
 
 - **Retention Policy**: The retention period for CloudWatch Logs groups is automatically set to 30 days. This duration is optimal for regular monitoring and immediate operational analysis. For long-term retention and audit purposes, logs are sent to a centralized log archive using Amazon Kinesis, where they are retained for 2 years. This two-tiered approach to log retention ensures that operational needs are met while also maintaining compliance with data retention policies
@@ -160,13 +160,13 @@ For B.C. government ministry teams working in the OCIO's landing zone, it's cruc
 
 This logging architecture ensures that ministry teams can effectively monitor, audit, and analyze activities within their AWS environment, thereby maintaining a high level of security and compliance.
 
-### IAM Users (service accounts)
+### IAM users (service accounts)
 
 The IAM User Management and Key Rotation solution, an integral part of the B.C. government AWS Landing Zone, offers a secure and automated method for managing IAM users and their access keys. This solution is needed for scenarios where access to AWS services is required from outside the AWS environment, such as from on-premises systems.
 
 For detailed user documentation, see the [IAM User Management Service](../design-build-and-deploy-an-application/iam-user-service.md) page.
 
-#### Summary of Features
+#### Summary of features
 
 1. **Automated IAM User Creation and Management**:
    - IAM users are created by inserting a new item into the DynamoDB table `BCGOV_IAM_USER_TABLE`.

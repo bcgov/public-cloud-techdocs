@@ -24,7 +24,7 @@ To find the license plate for an Azure Project Set, follow these steps:
 3. Expand **BCGov-Managed-LZ** > **BCGov-Managed-LZ-Live** > **Landing Zones** and locate your Project Set's Management Group.
 4. The alphanumeric code in the **Name** column (for the Management Group, or Subscription) is the license plate for your Project Set.
 
-  - If your Management Group or Subscription name has been changed, the Management Group ID field will contain the original license plate.
+- If your Management Group or Subscription name has been changed, the Management Group ID field will contain the original license plate.
 
 ![Azure Project Set License Plate](../images/support/project-set-license-plate-example-azure.png "Azure Project Set License Plate")
 

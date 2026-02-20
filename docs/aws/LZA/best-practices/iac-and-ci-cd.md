@@ -176,7 +176,7 @@ Here's how to set it up:
 }
 ```
 
-2. **GitHub Workflow Configuration**: Configure your GitHub workflow to use OIDC authentication:
+1. **GitHub Workflow Configuration**: Configure your GitHub workflow to use OIDC authentication:
 
 ```yaml
 name: Deploy to AWS
@@ -215,7 +215,7 @@ For deploying across multiple accounts in your project set, consider these patte
 
 #### Cross-account IAM roles (API deployments only)
 
-Set up cross-account roles that allow your CI/CD pipeline to deploy via AWS APIs to other accounts. This approach works for resources that don't require direct VPC connectivity:
+Set up cross-account roles that allow your CI/CD pipeline to deploy via AWS APIs to other accounts. This approach works for resources that do not require direct VPC connectivity:
 
 ```terraform
 # In target accounts (dev, test, prod)
@@ -279,7 +279,7 @@ jobs:
 
 ### Using AWS CodeBuild as a GitHub Action runner
 
-AWS CodeBuild can be used as a GitHub Action runner, providing a secure and scalable way to run CI/CD workflows within your AWS environment. This is particularly useful when you need access to AWS services or resources that aren't available to standard GitHub-hosted runners.
+AWS CodeBuild can be used as a GitHub Action runner, providing a secure and scalable way to run CI/CD workflows within your AWS environment. This is particularly useful when you need access to AWS services or resources that are not available to standard GitHub-hosted runners.
 
 For complete setup instructions, see the [AWS CodeBuild GitHub Actions runner documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/action-runner.html).
 
@@ -477,7 +477,7 @@ Configure AWS CLI to work with your LZA accounts:
 aws configure sso
 ```
 
-3. **Or use temporary credentials**: Copy credentials from the SSO portal's "Command line or programmatic access" option
+1. **Or use temporary credentials**: Copy credentials from the SSO portal's "Command line or programmatic access" option
 
 ### Example Terraform deployment
 
@@ -560,19 +560,19 @@ variable "project_name" {
 terraform init
 ```
 
-2. **Create execution plan**:
+1. **Create execution plan**:
 
 ```bash
 terraform plan
 ```
 
-3. **Apply changes**:
+1. **Apply changes**:
 
 ```bash
 terraform apply
 ```
 
-4. **Confirm deployment**: Type `yes` when prompted
+1. **Confirm deployment**: Type `yes` when prompted
 
 ## AWS-specific CI/CD services
 

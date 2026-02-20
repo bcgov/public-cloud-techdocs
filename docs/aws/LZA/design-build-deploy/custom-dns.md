@@ -1,5 +1,7 @@
 # Custom URLs for applications
 
+Last updated: **{{ git_revision_date_localized }}**
+
 ## Purpose
 
 This document explains how teams can present a custom, friendly URL for an application that already runs behind an internal Application Load Balancer (ALB) in your workload account.
@@ -30,7 +32,7 @@ Use AWS AppSync when your application exposes a GraphQL API and you want a singl
  • DNS: Point your hostname to the AppSync custom-domain target (Route 53 ALIAS or external CNAME to the CloudFront domain AppSync provides)
  • Private integration: Use Lambda resolvers placed in private subnets to call your internal ALB.AppSync cannot VPC-link directly to an internal ALB
 
-## References (AWS Docs)
+## References (AWS docs)
 
 - CloudFront
   - [Add an alternate domain name](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CreatingCNAME.html)

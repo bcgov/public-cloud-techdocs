@@ -14,7 +14,7 @@ Per the [Azure Landing Zone Overview](../get-started-with-azure/bc-govs-azure-la
 Since most projects will deploy common Azure resources that have network security guardrails, such as preventing databases from being exposed to the public internet, you will need to **create a Subnet** within the VNet to host your resource's **Private Endpoints**.
 
 !!! quote "Dedicated subnet for private endpoints"
-    According to the Microsoft [Private Endpoint documentation](https://learn.microsoft.com/en-us/azure/private-link/private-link-faq#do-i-require-a-dedicated-subnet-for-private-endpoints--), "_You don't require a dedicated subnet for Private Endpoints. You can choose a Private Endpoint IP from any subnet from the virtual network where your service is deployed._"
+    Microsoft states that a dedicated subnet is not required for Private Endpoints. You can choose a Private Endpoint IP from any subnet in the virtual network where your service is deployed. See the [Private Endpoint documentation](https://learn.microsoft.com/en-us/azure/private-link/private-link-faq#do-i-require-a-dedicated-subnet-for-private-endpoints--) for details.
 
     However, it is a common practice to create a dedicated Subnet for Private Endpoints to ensure that they are isolated from other resources and to apply specific Network Security Group (NSG) rules.
 

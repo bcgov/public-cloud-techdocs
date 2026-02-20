@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 ## Introduction
 
-This document simplifies the centralized networking of the AWS Secure Environment Accelerator (ASEA) and provides best practices for networking on the platform. Our goal is to make ASEA's networking easy to understand for anyone working on the platform within the guardrails of the BC Gov ASEA. Networking plays a crucial role as the backbone of cloud technology, connecting everything, ensuring safety, and facilitating smooth operations. Understanding it is essential for maximizing the benefits of cloud tools.
+This document simplifies the centralized networking of the AWS Secure Environment Accelerator (ASEA) and provides best practices for networking on the platform. Our goal is to make ASEA's networking easy to understand for anyone working on the platform within the guardrails of the B.C. government ASEA. Networking plays a crucial role as the backbone of cloud technology, connecting everything, ensuring safety, and facilitating smooth operations. Understanding it is essential for maximizing the benefits of cloud tools.
 
 ## Network architecture
 
@@ -33,7 +33,7 @@ In the Perimeter account, we employ a [Gateway Load Balancer (GWLB)](https://aws
 
 Our firewall setup strictly permits only HTTP/HTTPS traffic, with all other forms of traffic being blocked. This includes SSH egress traffic, which might affect accessing git repositories and other services relying on SSH. For git repository access, we recommend using HTTPS instead of SSH.
 
-If your application necessitates non-HTTP/HTTPS traffic, please don't hesitate to reach out to the team by [creating a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+If your application necessitates non-HTTP/HTTPS traffic, please reach out to the team by [creating a Support Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Transit gateway
 
@@ -67,7 +67,7 @@ Workload VPCs are strategically structured for Development (Dev), Testing (Test)
   - **CIDR Blocks**
     - Each Workload VPC has a /16 CIDR block. Because all accounts in a specific OU share the same VPC that means that all teams in the ASEA share the same IP pools in the specific environments. For example if we have 20 [project sets](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#aws-accounts-in-your-project-set) in the ASEA that's 20 Dev accounts all existing in the same Dev VPC and sharing the same /16 CIDR block.
 
-  - **In the BC Gov ASEA:**
+  - **In the B.C. government ASEA:**
     - Dev VPC: /16
     - Test VPC: /16
     - Prod VPC: /16

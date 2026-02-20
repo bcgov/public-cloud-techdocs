@@ -165,7 +165,7 @@ resource "aws_instance" "example" {
   instance_type          = "t3.micro"
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [aws_security_group.example.id]
-  
+
   tags = {
     Name = "SessionManager-Example"
   }
@@ -180,7 +180,7 @@ If you need a custom IAM role, ensure it includes Session Manager permissions:
 # Custom IAM role with Session Manager permissions
 resource "aws_iam_role" "custom_role" {
   name = "CustomEC2Role"
-  
+
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -220,7 +220,7 @@ resource "aws_instance" "custom_example" {
   iam_instance_profile   = aws_iam_instance_profile.custom_profile.name
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [aws_security_group.example.id]
-  
+
   tags = {
     Name = "CustomRole-Example"
   }
@@ -253,7 +253,7 @@ resource "aws_security_group" "example" {
 
 ### Instance not appearing
 
-If your instance doesn't appear in Session Manager:
+If your instance does not appear in Session Manager:
 
 1. **Check SSM Agent** - Ensure SSM Agent is installed and running
 2. **Network connectivity** - Ensure outbound HTTPS access to Systems Manager endpoints

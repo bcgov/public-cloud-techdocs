@@ -14,7 +14,7 @@ The following sections describe the requirements for building your application o
 
 ## Limitations of the AWS Landing Zone
 
-Take the following into consideration when building your application on the AWS Landing zone:
+Take the following into consideration when building your application on the AWS Landing Zone:
 
 * There is no direct (private) connectivity to the B.C. government network. Any application requiring access to data on this network must use a public endpoint
 
@@ -30,7 +30,7 @@ Take the following into consideration when building your application on the AWS 
 
 ## Other requirements and best practices
 
-To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws) is required.
+To use GitHub Actions for deploying your application, [OpenID Connect (OIDC) authentication](deploy-an-app-to-the-aws-landing-zone.md#configuring-github-actions-oidc-authentication-to-aws) is required.
 
 To deploy your application:
 
@@ -42,7 +42,7 @@ To deploy your application:
 
 ## Local deployment
 
-To facilitate local deployments into AWS, from your machine. The process involves using Terraform as an Infrastructure as Code (IaC) tool, AWS CLI and Visual Studio Code (VSCode) as an Integrated Development Environment (IDE).
+To facilitate local deployments into AWS from your machine, you use Terraform as an Infrastructure as Code (IaC) tool. You also use the AWS CLI and Visual Studio Code (VSCode) as your Integrated Development Environment (IDE).
 
 * Install Terraform by following the [official Terraform guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli),
 * Understand and install  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
@@ -76,34 +76,34 @@ To apply this configuration, follow these steps:
 
 Ensure you have AWS credentials, obtainable by visiting the AWS login page and clicking on the `Click for Credentials` button for the desired authorization role as shown in the image below. ![aws-credential-cli](../images/requirements-for-building-your-application/aws-credential-cli.png)
 
-2. Copy the credential
+1. Copy the credential
 
 ![aws-credential-cli](../images/requirements-for-building-your-application/click-credential.png)
 
-3. Paste the copied credential
+1. Paste the copied credential
 
 ![aws-credential-cli](../images/requirements-for-building-your-application/terminal.png)
 
-4. Initialize your Terraform configuration:
+1. Initialize your Terraform configuration:
 
 ```
 terraform init
 ```
 
-5. Create an execution plan:
+1. Create an execution plan:
 
 ```
 terraform plan
 ```
 
-6. Apply the changes to create the S3 bucket:
+1. Apply the changes to create the S3 bucket:
 
 ```
 terraform apply
 
 ```
 
-7. Confirm by typing yes when prompted.
+1. Confirm by typing yes when prompted.
 
 This script creates an S3 bucket with the specified configuration. Adjust parameters as needed for your specific use case.
 
@@ -118,5 +118,5 @@ This combined approach of Terraform AWS CLI and VSCode streamlines the deploymen
 
 * [Provision a project set](../../../welcome/provision-a-project-set.md)
 * [Account access](../../../welcome/provision-a-project-set.md#accessing-your-project-set)
-* [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-action-oidc-authentication-to-aws)
+* [Configuring GitHub Action OIDC Authentication to AWS](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md#configuring-github-actions-oidc-authentication-to-aws)
 * [Deploy an application to the B.C. government AWS Landing Zone](../design-build-and-deploy-an-application/deploy-an-app-to-the-aws-landing-zone.md)

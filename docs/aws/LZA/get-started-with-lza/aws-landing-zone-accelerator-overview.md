@@ -2,7 +2,7 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The AWS Landing Zone Accelerator (LZA) is BC Government's current solution for secure, compliant AWS cloud environments. LZA provides a standardized, well-architected foundation for building and deploying applications in AWS.
+The AWS Landing Zone Accelerator (LZA) is B.C. government's current solution for secure, compliant AWS cloud environments. LZA provides a standardized, well-architected foundation for building and deploying applications in AWS.
 
 ## What is LZA?
 
@@ -68,7 +68,7 @@ For detailed information about user management and permissions, see our [user ma
 
 - Pre-configured security guardrails prevent common misconfigurations
 - Automated compliance monitoring and reporting
-- Integration with BC Government's identity management systems
+- Integration with B.C. government identity management systems
 - Comprehensive audit logging and monitoring
 
 ### Simplified management
@@ -98,4 +98,4 @@ For detailed information about user management and permissions, see our [user ma
 4. **Set up user access**: Configure [user management](../design-build-deploy/user-management.md) for your team
 5. **Explore best practices**: Review our [guidelines](../best-practices/be-mindful.md) for building on LZA
 
-The LZA platform is designed to accelerate your cloud adoption while maintaining the highest standards of security and compliance required for BC Government services.
+The LZA platform is designed to accelerate your cloud adoption while maintaining the highest standards of security and compliance required for B.C. government services.

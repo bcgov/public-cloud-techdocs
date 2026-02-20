@@ -51,7 +51,7 @@ These groups are assigned roles at the Management Group level, which automatical
 
 ## What you can and cannot do
 
-### As a Product Owner or Technical Lead with the Owner role, you can:
+### As a Product Owner or Technical Lead with the Owner role, you can
 
 !!! note
     To manage group memberships, the Product Owner must add users (including Technical Leads) as group owners. By default, only Product Owners can manage security group memberships. The Product Owner can delegate this ability to any user by making them a group owner.
@@ -75,7 +75,7 @@ This approach balances security for high-privilege access with flexibility for g
 
 As a Product Owner, you have two options for managing your security groups:
 
-### Option 1: Using Microsoft Account Management
+### Option 1: using Microsoft account management
 
 1. Go to [Microsoft Account Groups](https://myaccount.microsoft.com/groups)
 2. Sign in with your Microsoft account
@@ -85,7 +85,7 @@ As a Product Owner, you have two options for managing your security groups:
    - View group details
    - Manage group settings
 
-### Option 2: Using the Azure Portal
+### Option 2: using the Azure portal
 
 1. Log in to the [Azure portal](https://portal.azure.com)
 2. Navigate to Entra ID
@@ -115,7 +115,7 @@ As a Product Owner, you have two options for managing your security groups:
 [Service principals](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) are security objects within a Microsoft Entra ID application that define what an application can do in a given tenant. They're set up in the Azure portal during the application registration process and configured to access Azure resources.
 
 !!! info "Managed identities"
-    Managed identities are similar to service principals but are automatically managed by Azure. They provide an identity for applications to use when connecting to resources that support Azure AD authentication. Managed identities are created and managed by Azure, so you don't have to worry about credentials or secrets.
+    Managed identities are similar to service principals but are automatically managed by Azure. They provide an identity for applications to use when connecting to resources that support Azure AD authentication. Managed identities are created and managed by Azure, so you do not have to worry about credentials or secrets.
 
     For more information, see [What are managed identities for Azure resources?](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 

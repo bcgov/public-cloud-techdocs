@@ -4,15 +4,15 @@ Last updated: **{{ git_revision_date_localized }}**
 
 Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell.
 
-By default, Azure Cloud Shell sessions run in a container in a Microsoft network that's separate from your resources. Commands that run inside the container can't access resources in a private virtual network.
+By default, Azure Cloud Shell sessions run in a container in a Microsoft network that's separate from your resources. Commands that run inside the container cannot access resources in a private virtual network.
 
 To provide access to your private resources, you can [deploy Cloud Shell into an Azure virtual network](https://learn.microsoft.com/en-us/azure/cloud-shell/vnet/overview) that you control. This technique is called _virtual network isolation_.
 
 !!! example "Deploying Cloud Shell in a Virtual Network example"
     Although Microsoft provides a [QuickStart template](https://learn.microsoft.com/en-us/azure/cloud-shell/vnet/deployment) for deploying Cloud Shell in a virtual network, this template includes deploying resources that are not permitted in the Azure Landing Zones (namely Private DNS Zones).
 
-    To support our customers who would like to deploy Cloud Shell in a virtual network, we have created a Terraform module that deploys the same resources as Microsoft's QuickStart template (including the same configuration), but without deploying the Private DNS Zones. 
-    
+    To support our customers who would like to deploy Cloud Shell in a virtual network, we have created a Terraform module that deploys the same resources as Microsoft's QuickStart template (including the same configuration), but without deploying the Private DNS Zones.
+
     You can find this module in the [Azure Landing Zone Samples](https://github.com/bcgov/azure-lz-samples) repository, under `/tools/cloud_shell_vnet/`. Please ensure to review the [README](https://github.com/bcgov/azure-lz-samples/blob/main/tools/cloud_shell_vnet/README.md) file in the module for instructions on how to use it.
 
 ## Deleting Cloud Shell resources

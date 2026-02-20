@@ -34,15 +34,19 @@ Users can access these accounts using predefined AWS roles, each tailored to spe
 To access the dashboards, users must be assigned the **billing viewers** role. This role is crucial for accessing detailed billing and cost information across the project set.
 
 ## Row-level security implementation
+
 We've deployed a RLS (Row-Level Security) data set in Amazon QuickSight to ensure users see only authorized data. This mechanism is crucial for maintaining data confidential and complying with our security standards.
 
 ## Data refresh limits and scheduling
+
 It's worth noting that the Enterprise edition of our dashboards has a limitation on data refresh frequency. Specifically, data can be fully refreshed up to 32 times per day. To comply with this limitation and ensure timely data updates, we've scheduled a Lambda function to run every 30 minutes from 8 AM to 5 PM PST, Monday to Friday. This function checks for users with **billing viewers** access in Keycloak and updates the RLS data sheet stored in the S3 bucket.
 
 ## Timing and access considerations
+
 Because of this scheduling, there could be a maximum delay of 30 minutes for a user to access the project set data in the dashboard after being assigned the **billing viewers** role through the registry. It's important to keep this timing in mind when anticipating access to the dashboards.
 
 ## Accessing multiple project sets
+
 Users with responsibilities across multiple project sets can access and view billing data and dashboards for each set if they have the **billing viewers** role for those specific project sets.
 
 If you need to view billing information for multiple project sets, make sure you're granted the **billing viewers** role for each set you want to monitor.
@@ -55,7 +59,6 @@ Users who need access to the dashboards should request the **billing viewers** r
 2. Request the **billing viewers** role, providing justification for the need to access the dashboard
 3. The Product Owner or Technical Lead will grant the appropriate role using the user management functionality available at [B.C. government's Platform Product Registry](https://registry.developer.gov.bc.ca/public-cloud/products/all)
 4. For detailed steps on user role assignment, refer to the [user management documentation](../design-build-and-deploy-an-application/user-management.md)
-
 
 ## Dashboard functionality
 
