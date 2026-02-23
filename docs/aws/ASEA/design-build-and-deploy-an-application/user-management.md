@@ -1,12 +1,12 @@
-# B.C. government Product Registry - user management documentation
+# BC Gov's Product Registry - User management documentation
 
 Last updated: **{{ git_revision_date_localized }}**
 
-Welcome to the B.C. government Product Registry documentation. This guide provides detailed information about the new user interface changes and the enhanced user management feature available at the [B.C. government Product Registry](https://registry.developer.gov.bc.ca/). With the latest update, users can now manage AWS permissions directly from the website, enhancing the overall user experience and streamlining project management.
+Welcome to the BC Gov's Product Registry documentation. This guide provides detailed information about the new user interface changes and the enhanced user management feature available at [BC Gov's Product Registry](https://registry.developer.gov.bc.ca/). With the latest update, users can now manage AWS permissions directly from the website, enhancing the overall user experience and streamlining project management.
 
 ## New user interface
 
-The B.C. government Product Registry has undergone significant UI improvements to provide a more intuitive and user-friendly experience. You can now easily navigate through the website, access different sections, and manage your projects and users more efficiently.
+The BC Gov's Product Registry has undergone significant UI improvements to provide a more intuitive and user-friendly experience. You can now easily navigate through the website, access different sections, and manage your projects and users more efficiently.
 
 ## User management feature
 
@@ -52,7 +52,7 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
 #### Billing viewers
 
 - **Custom policy**: Provides access to AWS budgets and cost explorer.
-
+  
 ```json
 {
     "Statement": [
@@ -85,3 +85,4 @@ Assigning users to these roles grants them specific permissions to AWS accounts 
   - AdministratorAccess: Provides full access to AWS services and resources
   - ReadOnlyAccess: Provides read-only access to AWS services and resources
   - SecurityAudit: Provides permissions to view configuration data for security auditing
+

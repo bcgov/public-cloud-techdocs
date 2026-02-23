@@ -14,7 +14,7 @@ Per the [AWS Landing Zone Accelerator Overview](../get-started-with-lza/aws-land
 The VPC structure in LZA includes pre-configured subnets:
 
 - **Web-MainTgwAttach subnets** (2 × /27): VPC entry point and Transit Gateway connectivity
-- **App subnets** (2 × /26): For application servers and containers
+- **App subnets** (2 × /26): For application servers and containers  
 - **Data subnets** (2 × /28): For databases and data storage
 - **Management subnets** (2 × /28): For administrative and monitoring tools
 
@@ -23,7 +23,7 @@ The VPC structure in LZA includes pre-configured subnets:
 
 For detailed networking information including subnet use cases, public routing, and architecture details, see our [Networking documentation](networking.md).
 
-## Working with AWS services
+## Working with AWS Services
 
 AWS LZA operates in the **Canada Central (ca-central-1)** region and provides a secure foundation for deploying AWS services. All AWS services available in the Canada Central region are available for use within your Project Set, giving you access to the full range of AWS capabilities while maintaining data residency within Canada.
 
@@ -71,7 +71,7 @@ To make your applications accessible from the internet:
 ### Setting up your development environment
 
 1. **Access your accounts**: Use the [AWS SSO Portal](https://bcgov.awsapps.com/start/#/?tab=accounts) to access your development environment
-2. **Choose appropriate account**:
+2. **Choose appropriate account**: 
    - **Development account**: For initial development and testing
    - **Test account**: For integration testing and staging
    - **Tools account**: For CI/CD pipelines and shared resources
@@ -89,7 +89,7 @@ Popular IaC tools supported in LZA:
 
 For detailed guidance, see our [Infrastructure as Code best practices](../best-practices/iac-and-ci-cd.md).
 
-### CI/CD pipeline setup
+### CI/CD Pipeline setup
 
 Deploy your CI/CD pipelines in the **Tools account** for centralized management:
 

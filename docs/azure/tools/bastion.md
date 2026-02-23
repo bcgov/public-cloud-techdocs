@@ -27,7 +27,7 @@ Additionally, you will need to create the appropriate ingress and egress Network
     Microsoft provides multiple [deployment guides](https://learn.microsoft.com/en-us/azure/bastion/tutorial-create-host-portal) for Azure Bastion.
 
     To support our customers, and expedite the deployment of all the required resources, we have created a Terraform module that deploys the required Subnet, the Network Security Group (with all the required rules), and the Bastion host (with a "**Basic**" SKU).
-
+    
     You can find this module in the [Azure Landing Zone Samples](https://github.com/bcgov/azure-lz-samples) repository, under `/tools/bastion/`. Please ensure to review the [README](https://github.com/bcgov/azure-lz-samples/blob/main/tools/bastion/README.md) file in the module for instructions on how to use it.
 
 !!! tip "Cost savings options"
@@ -39,27 +39,27 @@ Additionally, you will need to create the appropriate ingress and egress Network
 
 ## Troubleshooting connectivity issues
 
-### Just-in-time (JIT) VM access interference
+### Just-In-Time (JIT) VM Access interference
 
 In the Azure portal, when you navigate to a Virtual Machine's **Connect** blade, you may see an option for **Just-In-Time (JIT) VM access**.
 
 !!! danger "Do not use JIT VM Access"
-    **Do not click "Configure JIT + Request access".**
+    **Do not click "Configure JIT + Request access".** 
 
     JIT VM access is designed for VMs with public IP addresses, which are blocked by guardrails in our environment. Clicking this button will create automated Network Security Group (NSG) rules that explicitly **Deny** RDP (3389) or SSH (22) traffic from all sources after a short period, which will interfere with your ability to connect via Azure Bastion.
 
 If you or a teammate accidentally enabled JIT and can no longer connect via Bastion:
 
-1. Navigate to the **Networking** settings of your Virtual Machine.
-2. Look for inbound rules named starting with `MicrosoftDefenderForCloud-JITRule`.
-3. **Delete** these JIT-related rules.
-4. Ensure you are using the **Connect -> Bastion** option from the sidebar, and NOT the "Native RDP" or "SSH" options that might prompt for JIT.
+1.  Navigate to the **Networking** settings of your Virtual Machine.
+2.  Look for inbound rules named starting with `MicrosoftDefenderForCloud-JITRule`.
+3.  **Delete** these JIT-related rules.
+4.  Ensure you are using the **Connect -> Bastion** option from the sidebar, and NOT the "Native RDP" or "SSH" options that might prompt for JIT.
 
 If you see a "Connection Error" stating the target machine is unreachable due to NSG rules, check for these JIT rules first.
 
 ![JIT Connection Error](../images/azure-jit-connection-error.png "JIT Connection Error")
 
 !!! tip "Jump Host for Portal Management"
-    Azure Bastion is not only for server administration. It is a key tool for accessing portal-based management features that are otherwise blocked by private endpoints.
+    Azure Bastion is not only for server administration. It is a key tool for accessing portal-based management features that are otherwise blocked by private endpoints. 
 
     If you are using **Azure SQL Query Editor** or **Azure Data Factory Studio**, these tools require your browser to be within the private network. By using Bastion to connect to a Windows or Linux VM (Jump Host), you can use the browser *inside* that VM to manage your private-only resources through the Azure portal.

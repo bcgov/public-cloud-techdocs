@@ -1,7 +1,5 @@
 # Making internal ALB publicly reachable using tags
 
-Last updated: **{{ git_revision_date_localized }}**
-
 This guide explains how to publish an internal Application Load Balancer (ALB) by adding a small set of AWS resource tags. It’s intended for workload teams who want to expose an application endpoint publicly.
 
 ## What you need to know
@@ -34,7 +32,7 @@ If `PublicHost` is not provided, empty, or removed, the ALB becomes a wildcard m
 
 ## Wildcard vs specific hostnames
 
-### Option A — wildcard (default)
+### Option A — Wildcard (default)
 
 If you set only:
 
@@ -54,7 +52,7 @@ That means it can serve:
 - `app1.abc123-dev.stratus.cloud.gov.bc.ca`
 - `anything.abc123-dev.stratus.cloud.gov.bc.ca`
 
-### Option B — specific hostname(s) using `PublicHost`
+### Option B — Specific hostname(s) using `PublicHost`
 
 If you set:
 
@@ -161,6 +159,7 @@ If one ALB is already the wildcard (`Public=True` + no `PublicHost`), then anoth
 - `PublicHost="*.app1"` (contains `*`)
 - `PublicHost="_app1"` (invalid characters)
 - `PublicHost="PayRoll!"` (invalid characters)
+
 
 ## Publishing lifecycle behaviors
 

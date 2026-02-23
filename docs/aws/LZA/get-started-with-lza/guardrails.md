@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 This document explains the security and compliance guardrails implemented in the AWS Landing Zone Accelerator (LZA). These guardrails ensure our cloud environment remains secure, compliant with standards like **CCCS Medium [Canada Federal PBMM]**, and cost-effective while maintaining consistency across all workloads.
 
 !!! info "Understanding Guardrails"
-    Guardrails are automated security and compliance controls that help prevent misconfigurations and ensure best practices. They do not require extra effort from you most of the time, but they may prevent actions that could compromise security or compliance.
+    Guardrails are automated security and compliance controls that help prevent misconfigurations and ensure best practices. They don't require extra effort from you most of the time, but they may prevent actions that could compromise security or compliance.
 
 ## Key areas covered
 
@@ -152,6 +152,7 @@ For detailed AI service guidance, see [AWS AI Services](../best-practices/aws-ai
 
 - **Platform-managed budgets** - Initial budgets configured by platform team
 - **Additional budgets allowed** - Can create supplementary budgets and alerts
+
 
 ## Compliance and best practices
 

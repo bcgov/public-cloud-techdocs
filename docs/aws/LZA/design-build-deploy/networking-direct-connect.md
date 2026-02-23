@@ -5,8 +5,8 @@ Last updated: **{{ git_revision_date_localized }}**
 The following sections show you how to set up hybrid connectivity in AWS using DirectConnect and connect your Project Set’s virtual private cloud to your on-premises network.
 
 !!! info "Early Adopters"
-    AWS DirectConnect is currently available only for early adopters.
-    Please contact the Public Cloud Team at <public.cloud@gov.bc.ca> for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    AWS DirectConnect is currently available only for early adopters.  
+    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
 

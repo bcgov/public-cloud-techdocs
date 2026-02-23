@@ -163,7 +163,7 @@ git push origin main
 
 - **Avoid hardcoding credentials** - Use IAM roles and temporary credentials
 - **Regular session cleanup** - Close unused sessions to prevent unauthorized access
-- **Sensitive data handling** - Avoid storing sensitive information in CloudShell
+- **Sensitive data handling** - Don't store sensitive information in CloudShell
 - **Audit activity** - Review CloudTrail logs for CloudShell actions
 
 ### Performance
@@ -196,20 +196,17 @@ git push origin main
 
 ### Common issues
 
-**CloudShell does not launch:**
-
+**CloudShell won't launch:**
 - Check your IAM permissions for CloudShell
 - Verify you're in a supported region
 - Clear browser cache and cookies
 
 **Commands failing:**
-
 - Verify your IAM permissions for the specific AWS service
 - Check if the service is available in your current region
 - Ensure you're using the correct AWS CLI syntax
 
 **Storage full:**
-
 ```bash
 # Check disk usage
 df -h $HOME
@@ -222,7 +219,6 @@ rm -rf $HOME/.cache/*
 ```
 
 **Session timeout:**
-
 - CloudShell sessions timeout after 20 minutes of inactivity
 - Save your work frequently
 - Use persistent storage for important files

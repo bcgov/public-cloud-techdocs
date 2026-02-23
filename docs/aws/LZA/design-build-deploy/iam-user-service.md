@@ -96,12 +96,12 @@ def get_current_iam_keys(username):
     Retrieve current IAM keys from Parameter Store
     """
     ssm = boto3.client('ssm', region_name='ca-central-1')
-
+    
     try:
         parameter_name = f"/iam_users/{username}_keys"
         response = ssm.get_parameter(Name=parameter_name, WithDecryption=True)
         keys = json.loads(response['Parameter']['Value'])
-
+        
         # Always use the 'current' keys
         return keys['current']
     except Exception as e:
@@ -113,14 +113,14 @@ def setup_aws_client_with_rotation(username, service='s3'):
     Setup AWS client with automatic key rotation
     """
     keys = get_current_iam_keys(username)
-
+    
     client = boto3.client(
         service,
         region_name='ca-central-1',
         aws_access_key_id=keys['AccessKeyID'],
         aws_secret_access_key=keys['SecretAccessKey']
     )
-
+    
     return client
 ```
 
@@ -195,13 +195,13 @@ While IAM users are available through this service, consider using IAM roles wit
 !!! tip "When to use IAM users vs roles"
 
     **Use IAM users for**:
-
+    
     - Legacy applications that cannot use roles
     - Third-party integrations requiring static credentials
     - Local development and testing scenarios
 
     **Use IAM roles for**:
-
+    
     - Applications running on AWS infrastructure
     - Cross-account access scenarios
     - Temporary access requirements
@@ -220,4 +220,4 @@ If you need assistance with the IAM User management service:
 - [AWS Landing Zone Accelerator overview](../get-started-with-lza/aws-landing-zone-accelerator-overview.md)
 - [User management in AWS LZA](user-management.md)
 - [Deploy to the AWS Landing Zone Accelerator](deploy-to-the-aws-landing-zone-accelerator.md)
-- [Requirements for building your application](requirements.md)
+- [Requirements for building your application](requirements.md) 

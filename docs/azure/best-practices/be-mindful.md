@@ -18,7 +18,7 @@ Since the endpoint is private-only, you can only access the resource from within
 
 !!! warning "Portal-based management tools"
     Many Azure portal-based management tools, such as the **SQL Query Editor** or **Azure Data Factory Studio**, communicate directly with the resource's endpoint from your browser.
-
+    
     If you configure a private endpoint for these services, you can only connect from within the private network. Access the Azure portal from a machine inside the private network, such as a Jump Host accessed via Bastion or AVD.
 
 In the future, once [ExpressRoute](../design-build-deploy/networking-express-route.md) is available, you will also be able to access these resources from the on-premises network or through a VPN.

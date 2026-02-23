@@ -1,4 +1,4 @@
-# Update / patch management in Azure
+# Update / Patch Management in Azure
 
 Last updated: **{{ git_revision_date_localized }}**
 

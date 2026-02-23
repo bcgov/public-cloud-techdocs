@@ -18,7 +18,7 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 - [Self-hosted runners](#github-self-hosted-runners-on-azure) on Azure are required to access data storage and database services from GitHub Actions. Public access to these services is not supported.
 
 <!-- TO DO: Add this section back in when we have tested and verified the GitHub-hosted runners in an Azure VNet.
-- [GitHub-hosted runners](#github-hosted-runners-in-an-azure-vnet) can be used in an Azure VNet, but they require additional configuration to ensure secure access to Azure resources.
+- [GitHub-hosted runners](#github-hosted-runners-in-an-azure-vnet) can be used in an Azure VNet, but they require additional configuration to ensure secure access to Azure resources. 
 -->
 
 ### Configuring GitHub Action OIDC authentication to Azure
@@ -32,14 +32,14 @@ Here's a quick summary on how to set it up:
 1. The GitHub Identity Provider has already been configured in the Azure subscriptions in your Project Set
 2. In your Azure subscription:
 
-- Create an Entra ID Application and a Service Principal
-- Add federated credentials for the Entra ID Application
-- Create GitHub secrets for storing Azure configuration
+  - Create an Entra ID Application and a Service Principal
+  - Add federated credentials for the Entra ID Application
+  - Create GitHub secrets for storing Azure configuration
 
-1. In your GitHub workflows:
+3. In your GitHub workflows:
 
-- Add permissions settings for the token
-- Use the [azure/login](https://github.com/Azure/login) action to exchange the OIDC token (JWT) for a cloud access token
+  - Add permissions settings for the token
+  - Use the [azure/login](https://github.com/Azure/login) action to exchange the OIDC token (JWT) for a cloud access token
 
 This allows GitHub Actions to authenticate to Azure and access resources.
 

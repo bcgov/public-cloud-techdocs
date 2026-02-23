@@ -8,7 +8,7 @@ AWS Landing Zone Accelerator (LZA) uses a **hub-and-spoke architecture** where e
 
 !!! info "Network Isolation"
     All VPCs in LZA are completely network-isolated from each other. Dev, Test, Prod, and Tools accounts cannot communicate privately - all cross-account communication must use AWS APIs or public endpoints.
-
+    
     If you have a specific use case requiring VPC-to-VPC communication, please contact the [Public Cloud Service Desk (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to discuss your requirements.
 
 ## Architecture
@@ -41,37 +41,32 @@ Each VPC is divided into **8 subnets across 2 Availability Zones (A and B)**:
     With only 256 IPs per VPC total, each subnet type exists in both AZ-A and AZ-B. Plan your IP usage carefully considering the per-AZ allocation.
 
 #### Web-MainTgwAttach Subnets
-
 - **CIDR**: `/27` - 54 usable IPs
 - **Resources**: Application Load Balancers (ALBs), API Gateways
 - **Security Group**: `Web` - HTTP/HTTPS from internet, management access
 - **Network ACL**: Default
 
 #### App Subnets
-
 - **CIDR**: `/26` - 118 usable IPs
 - **Resources**: EC2 instances, ECS/Fargate containers, Lambda functions
 - **Security Group**: `App` - Traffic from Web tier, management access, east-west communication
 - **Network ACL**: Default
 
 #### Data Subnets
-
 - **CIDR**: `/28` - 22 usable IPs
 - **Resources**: RDS instances, ElastiCache clusters, EFS mount targets
 - **Security Group**: `Data` - Database ports from App tier only, management access
 - **Network ACL**: Restricts access to App subnets only
 
 #### Management Subnets
-
 - **CIDR**: `/28` - 22 usable IPs
-- **Resources**: Bastion hosts, monitoring tools, administrative utilities
+- **Resources**: Bastion hosts, monitoring tools, administrative utilities  
 - **Security Group**: `Management` - SSH/RDP from management hosts and on-premises
 - **Network ACL**: Default
 
-## Traffic flow and security
+## Traffic Flow and Security
 
-### Multi-layer defense strategy
-
+### Multi-Layer Defense Strategy
 ```
 Internet/Intranet → Web Subnets → App Subnets → Data Subnets
                    ↓             ↓             ↓
@@ -79,34 +74,31 @@ Internet/Intranet → Web Subnets → App Subnets → Data Subnets
                    (Instance)    (Instance)    (Instance + Subnet)
 ```
 
-### Security controls
+### Security Controls
 
 **Layer 1: Network ACLs (Subnet-Level)**
-
 - Stateless filtering at subnet boundaries
 - Data subnets: Restrict access to App subnets only
 - Other tiers: Default ACLs (future expansion planned)
 
-**Layer 2: Security Groups (Instance-Level)**
-
+**Layer 2: Security Groups (Instance-Level)**  
 - Stateful filtering for individual resources
 - Principle of least privilege between tiers
 - Management access separated from application flow
 
-### Key traffic flows
-
+### Key Traffic Flows
 1. **Internet/Intranet → Web** - full access
-2. **Web → App** - Load balancer to application communication
+2. **Web → App** - Load balancer to application communication  
 3. **App → Data** - Database connections only (dual-layer protection)
 4. **Management → All Tiers** - Administrative access
 5. **East-West** - Communication within App and Data tiers
 
 !!! warning "Platform-Managed Controls"
     Security Groups and Network ACLs with Accelerator tags cannot be modified. Create custom controls as needed while maintaining the baseline security posture.
+    
+## Extended Network - IP Exhaustion Solution
 
-## Extended network - IP exhaustion solution
-
-### Secondary CIDR range
+### Secondary CIDR Range
 
 When IP addresses are exhausted, a **secondary non-routable CIDR range** (`10.10.0.0/16`) can be added upon request:
 
@@ -183,9 +175,9 @@ Internet → Public ALB (Perimeter) → Internal ALB (Your VPC) → Target Group
 - [AWS Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/)
 - [AWS API Gateway](https://docs.aws.amazon.com/apigateway/)
 
-## High-level network ingress/egress (workload/member VPC ↔ Internet)
+## High-level network ingress/egress (Workload/Member VPC ↔ Internet)
 
-### The below diagrams show our landing zone hub-and-spoke network design
+### The below diagrams show our Landing Zone hub-and-spoke network design
 
 - Workload (Project Set) accounts host application VPCs, but they do not egress directly to the Internet.
 - A central Transit Gateway (TGW) in the Network account provides connectivity between VPCs and to the perimeter.

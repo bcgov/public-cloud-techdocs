@@ -87,4 +87,4 @@ To maintain the security of the Azure Landing Zone, the following network resour
 - Creating Virtual Network peering with other VNets
   - This is required to ensure spoke-to-spoke traffic is managed centrally through the firewall
 - Deleting the `setbypolicy` Diagnostics Settings
-  - You can create your own diagnostics settings for your resources, but you cannot delete the default one
+  - You can create your own diagnostics settings for your resources, but you can't delete the default one
