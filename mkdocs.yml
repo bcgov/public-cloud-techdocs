@@ -31,6 +31,7 @@ nav:
               - On-premises connectivity: aws/LZA/design-build-deploy/networking-direct-connect.md
               - Custom DNS: aws/LZA/design-build-deploy/custom-dns.md
               - EKS with ALB: aws/LZA/design-build-deploy/working-with-eks-and-alb.md
+              - Handling IP exhaustion with EKS: aws/LZA/design-build-deploy/handling-ip-exhaustion-with-eks.md
               - Working with SES and SMTP: aws/LZA/design-build-deploy/working-with-ses-and-smtp.md
               - Sample code: aws/LZA/design-build-deploy/sample-code.md
           - Best practices:
