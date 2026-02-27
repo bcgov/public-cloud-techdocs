@@ -108,6 +108,7 @@ nav:
           - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
       - Upcoming features:
           - Domain join: azure/upcoming-features/domain-join.md
+          - Azure DNS resolution from on-premises: azure/upcoming-features/azure-dns.md
       - Enterprise support:
           - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
