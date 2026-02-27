@@ -27,5 +27,5 @@ For example, connect to the VPN and open SQL Server Management Studio.
 To reach an Azure SQL Database, add a `hosts` file entry.
 Map the database fully qualified domain name (FQDN) to its private IP address.
 
-[Azure DNS](../upcoming-features/azure-dns.md) for this scenario is in development.
-Use this workaround for on-premises to Azure connectivity today.
+Note that this method is per-machine and requires manual updates if the IP address changes.
+For details and caveats, see [Azure DNS resolution from on-premises](../upcoming-features/azure-dns.md).
