@@ -6,7 +6,7 @@ The following sections show you how to set up hybrid connectivity in Azure using
 
 !!! info "Early Adopters"
     Azure ExpressRoute is currently available only for early adopters.  
-    Please contact the Public Cloud Team at public.cloud@gov.bc.ca for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+    Please contact the Public Cloud Team at [public.cloud@gov.bc.ca](mailto:public.cloud@gov.bc.ca) for more information about eligibility and access or create a ticket via the [Service Desk portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Overview
 
@@ -17,3 +17,15 @@ In our setup, ExpressRoute also encrypts data in transit with IPsec. This ensure
 ## Azure to on-premises connectivity
 
 To connect an Azure virtual network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connect Service (MCCS)](../../shared-services/mccs/mccs.md) documentation.
+
+## On-premises to Azure connectivity
+
+If you connect from an on-premises resource to Azure, you may need a local `hosts` file entry.
+This also applies when you connect through the B.C. government's VPN.
+
+For example, connect to the VPN and open SQL Server Management Studio.
+To reach an Azure SQL Database, add a `hosts` file entry.
+Map the database fully qualified domain name (FQDN) to its private IP address.
+
+Note that this method is per-machine and requires manual updates if the IP address changes.
+For details and caveats, see [Azure DNS resolution from on-premises](../upcoming-features/azure-dns.md).
