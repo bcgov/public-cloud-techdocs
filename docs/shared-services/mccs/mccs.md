@@ -24,8 +24,10 @@ Use this general path to connect an AWS virtual private cloud (VPC) or Azure vir
 
 1. Traffic leaves  the cloud **VPC/VNet** and goes to the centralized **cloud firewall**, which acts as a security boundary and controls the flow of traffic
 2. After passing through the **cloud firewall**, the traffic goes to the **hybrid** connection (i.e. DirectConnect or ExpressRoute)
+  - Changes to this firewall are requested through the **cloud** firewall change request process
 3. DirectConnect or ExpressRoute **forwards the traffic** to the on-premises network
 4. Traffic reaches the on-premises **edge firewall** (called the "**3PG**"). Each on-premises **Zone** also has _its own_ firewall, which must also allow traffic from the cloud VPC/VNet
+  - Changes to this firewall are requested through the **on-premises** firewall change request process
 
 ## Request workflow
 
