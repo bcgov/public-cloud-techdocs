@@ -2,7 +2,9 @@
 
 ## Overview
 
-In the BCGov Landing Zone Accelerator (LZA), workload VPCs commonly use small primary “app” subnets (for example, `/26`). When running Amazon EKS with the AWS VPC CNI, **pods consume VPC IP addresses** from the same subnet space as worker nodes. In environments with small subnets, this can lead to **pod IP exhaustion** (pods fail to schedule due to lack of available IPs).
+In the B.C. government Landing Zone Accelerator (LZA), workload VPCs often use small primary “app” subnets (for example, `/26`). When you run Amazon EKS with the AWS VPC CNI, **pods use VPC IP addresses** from the same subnet space as worker nodes.
+
+If the subnet is small, you can quickly run out of IP addresses. When this happens, Kubernetes cannot schedule new pods because no IP addresses are available also called **pod IP exhaustion**.
 
 To address this, BCGov LZA supports an **Extended CIDR** approach for EKS pods:
 
@@ -13,46 +15,46 @@ To address this, BCGov LZA supports an **Extended CIDR** approach for EKS pods:
 > **Important:** The extended CIDR is **not routable over the internet**. Route tables are configured so that outbound traffic is **NATed** through a private NAT gateway in the primary (routable) range.  
 > This document focuses on the EKS configuration required to use the extended subnets for pods.
 
-## When You Need This
+## When You need This
 
-You may need extended pod subnets if you observe:
+You may need extended pod subnets if you notice any of the following:
 
-- Pods stuck in `Pending` state with scheduling failures related to IP availability (for example, messages indicating insufficient IP addresses).
-- EKS clusters deployed into small subnets (such as `/26`) where pod scaling quickly consumes available IPs.
-- Growth in workload replicas, new services, or sidecars causing pod counts to rise beyond the subnet’s practical IP capacity.
-- IP pressure caused by the AWS VPC CNI maintaining pre-allocated IP “warm pools” on worker nodes (to speed up pod launches).
+- Pods stay in `Pending` state and show scheduling errors related to IP availability, for example, "insufficient IP addresses".
+- Your EKS clusters run in small subnets (such as `/26`) and pod scaling quickly uses all available IPs
+- You increase replicas, add new services, introduce sidecars and pod counts exceed the subnet's practical IP capacity
+- The AWS VPC CNI keeps pre-allocated IP "warm pools" on worker nodes, which increases IP pressure even before the pods start
 
-## How It Works (EKS View)
+## How it works (EKS view)
 
-Amazon EKS with the **AWS VPC CNI** assigns pods **VPC-native IPs**. By default:
+Amazon EKS with the **AWS VPC CNI** assigns **VPC-native IPs addresses** to pods. By default:
 
-- Pods and nodes draw addresses from the **primary node/app subnets**.
-- As the cluster scales, pods consume a significant portion of the available addresses in these subnets, increasing the risk of exhaustion.
+- Pods and nodes use IP addresses from the **primary node/app subnets**
+- As the cluster scales, pods consume more addresses in those subnets, which increase the risk of IP exhaustion
 
-With **VPC CNI Custom Networking** enabled:
+When you enable **VPC CNI custom networking**:
 
-- Nodes remain in the primary subnets (as normal).
-- The CNI attaches additional ENIs (“pod ENIs”) to the node in the **extended subnets**.
-- Pods receive IPs from the extended subnets (e.g., `10.10.x.x`) rather than the primary subnet range.
+- Nodes stay in the primary subnets (as normal)
+- The CNI attaches additional ENIs (pod ENIs) to the node in the **extended subnets**
+- Pods receive IP addresses from the extended subnets for example `10.10.x.x` instead of the primary subnet range
 
-This is accomplished by:
+To configure this:
 
-1. Creating an `ENIConfig` per AZ that points to the correct extended subnet.
-2. Enabling custom networking in the `vpc-cni` add-on.
-3. (Recommended) Rolling/draining nodes so new pod allocations consistently use the extended range.
+1. Create an `ENIConfig` for each Availability Zone (AZ) and point it to the correct extended subnet
+2. Enable custom networking in the `vpc-cni` add-on
+3. (Recommended) Drain or roll your nodes so new pods consistently receive IPs from the extended range
 
 ## Prerequisites
 
-Before configuring EKS:
+Before you configure EKS, confirm the following:
 
-- The Extended CIDR (e.g., `10.10.0.0/16`) has been associated to the VPC.
-- Extended subnets exist in each AZ, named with the prefix `BCGOV-LZA-extended-*` (typically `/18`).
-  - Example names:
+- You have associated the extended CIDR for example `10.10.0.0/16` to the VPC
+- Extended subnets exist in each AZ, and use the prefix `BCGOV-LZA-extended-*` (typically `/18`).
+  - Example subnet names:
     - `BCGOV-LZA-extended-app-ca-central-1a`
     - `BCGOV-LZA-extended-app-ca-central-1b`
-- Routing/NAT configuration for the extended CIDR is already in place (handled by platform networking).
+- Platform networking has already configured routing and NAT for the extended CIDR
 
-If you do not have these resources, request an **Extended CIDR deployment** through your [platform support process](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
+If these resources do not exist, request an **Extended CIDR deployment** through your [platform support process](https://citz-do.atlassian.net/servicedesk/customer/portal/3).
 
 ## Terraform Example (EKS Custom Networking)
 
@@ -156,28 +158,33 @@ Optional checks:
     | egrep 'AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG|ENI_CONFIG_LABEL_DEF|AWS_VPC_K8S_CNI_EXTERNALSNAT'
   ```
 
-## Operational Notes
+## Operational notes
 
-### Mixed Pod IP Ranges During Transition
+### Mixed pod IP ranges during transition
 
 After enabling custom networking, you may briefly see pods with both:
 
-- primary range IPs (legacy allocations)
-- extended range IPs (new allocations)
+- Primary range IPs (legacy allocations)
+- Extended range IPs (new allocations)
 
 This is expected due to pre-allocated IP “warm pools” on existing nodes.
 
 **Recommendation:** Roll or drain worker nodes after enabling custom networking so that new pod allocations consistently use extended subnets.
 
-### Security Groups
+### Security groups
 
-The security group specified in `ENIConfig` applies to the pod ENIs. Ensure it allows required inbound/outbound traffic for your workload (for example, load balancer to pod ports, and egress to required dependencies). In many deployments, it is recommended to use a dedicated pod ENI security group and explicitly allow traffic from the load balancer security group to the pod ports.
+The security group you define in `ENIConfig` applies to the pod ENIs. Make sure this security group allows the required inbound and outbound traffic for your workload. For example:
+
+- Allow traffic from the load balancer to pod ports
+- Allow outbound traffic to required dependencies
+
+In most deployments, you should use a **dedicated security group for ENIs**. Explicitly allow traffic from the load balancer security group to the required pod ports.
 
 ## Summary
 
 This approach resolves pod IP exhaustion by:
 
-- keeping worker nodes in the primary (routable) subnets, and
-- allocating pod IPs from large, extended subnets using AWS VPC CNI Custom Networking.
+- Keeping worker nodes in the primary, routable subnets
+- Allocating pod IPs from large extended subnets using AWS VPC CNI custom networking
 
-If you are experiencing IP constraints in `/26` app subnets, request an Extended CIDR deployment and apply the configuration in this guide.
+If you run out of IP addresses in `/26` app subnets, request an Extended CIDR deployment and apply the configuration in this guide.

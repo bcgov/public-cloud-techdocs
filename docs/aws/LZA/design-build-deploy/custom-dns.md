@@ -9,7 +9,7 @@ This document explains how teams can present a custom, friendly URL for an appli
 - Certificate : Obtain or import a public TLS certificate in ACM (us-east-1) that covers your custom hostname (e.g., app.example.com)
 - Distribution: Create a CloudFront distribution in your workload account, add an Alternate domain name (CNAME) for the custom hostname, and select the us-east-1 certificate for viewer TLS
 - Origin: Choose an origin type appropriate for your application
-- Host header note (ALB origins): If your origin is an ALB and requests fail due to Host header handling, set the Default (*) behavior Origin request policy to AllViewerExceptHostHeader
+- Host header note (ALB origins): If your origin is an ALB and requests fail due to Host header handling, set the Default (*) behaviour Origin request policy to AllViewerExceptHostHeader
 - DNS: In your DNS, point the hostname to the CloudFront distribution (Route 53 ALIAS or external CNAME)
 
 ## How API Gateway works (overview)

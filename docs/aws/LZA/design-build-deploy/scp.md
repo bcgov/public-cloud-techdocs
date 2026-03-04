@@ -15,12 +15,13 @@ The LZA (CCCS-Medium variant) ships a curated set of SCPs that form our **baseli
 
 - **Source of truth:** [CCCS-Medium Service Control Policies](https://github.com/aws-samples/landing-zone-accelerator-on-aws-for-cccs-medium/tree/main/config/service-control-policies)
 
-## Operational note: rare cleanup/deletion exceptions
+## Operational note: rare cleanup or deletion issues
 
 AWS Organizations enforces a maximum policy document size for SCPs (currently **5,120 characters**).  [AWS SCP Limits](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html)  
-Because SCPs are *deny-only* guardrails and must stay within this limit, some protections are implemented in a space-efficient way. In rare cases, this can lead to situations where a resource can be created (or already exists) but cannot be deleted by workload teams due to an SCP restriction.
+Because SCPs are *deny-only* guardrails and must stay within this size limit, teams sometimes implement protections in a space-efficient way.
+In rare cases, this can create a situation where you can create a resource (or it already exists), but you cannot delete it because an SCP blocks the action.
 
-If you hit a case where an SCP prevents you from deleting a resource you own/manage, open a service request on the [public cloud support portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
+If an SCP prevents you from deleting a resource that you own or manage, open a service request through the [public cloud support portal](https://citz-do.atlassian.net/servicedesk/customer/portal/3)
 
 ## Our custom SCP: `bcgov-lza-scp` (what & why)
 
