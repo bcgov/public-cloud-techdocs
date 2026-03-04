@@ -23,9 +23,12 @@ To connect an Azure virtual network to an on-premises network, refer to the [Sha
 If you connect from an on-premises resource to Azure, you may need a local `hosts` file entry.
 This also applies when you connect through the B.C. government's VPN.
 
-For example, connect to the VPN and open SQL Server Management Studio.
-To reach an Azure SQL Database, add a `hosts` file entry.
-Map the database fully qualified domain name (FQDN) to its private IP address.
+For example:
 
-Note that this method is per-machine and requires manual updates if the IP address changes.
+1. Connect to the VPN and open SQL Server Management Studio
+2. Open SQL Server Management Studio
+3. Add a `hosts` file entry that maps the Azure SQL Database fully qualified domain name (FQDN) to its private IP address
+
+This method works per machine. If the private IP address changes, you must manually update the `hosts` file.
+
 For details and caveats, see [Azure DNS resolution from on-premises](../upcoming-features/azure-dns.md).

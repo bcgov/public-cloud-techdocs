@@ -24,7 +24,7 @@ For more information, please refer to the [Power Platform - Set up pay-as-you-go
 
 ## Microsoft Fabric
 
-[Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview) is a unified analytics platform. It combines services such as Data Factory, Synapse Analytics, and Power BI. The service runs outside Azure. You can still use it with Azure services for integration and analytics.
+[Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview) is a unified analytics platform. It combines services such as Data Factory, Synapse Analytics, and Power BI. The service runs outside Azure, but you can integrate it with Azure services for analytics and data workflows.
 
 If your on-premises data source has a **public endpoint**, you can connect Microsoft Fabric directly. You do not need to [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone.
 
