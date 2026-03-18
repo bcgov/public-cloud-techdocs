@@ -26,7 +26,7 @@ When requesting an app registration, you must specify an authentication method. 
 | 4 | **Client Secret** | Exception only. Requires documented justification and a migration plan. Maximum lifetime of 180 days. Must be stored in Key Vault. |
 
 !!! warning "Avoid long-lived credentials"
-    Client secrets and certificates must be stored exclusively in Azure Key Vault with automated rotation configured. Hard-coded credentials in source code or pipeline variables are prohibited. Every secret-based app registration must include a plan to migrate to a higher-priority authentication method.
+    Client secrets and certificates must be stored exclusively in Azure Key Vault with automated rotation configured. Hard-coded credentials in source code or pipeline variables are prohibited.
 
 ## Naming convention
 
