@@ -40,7 +40,7 @@ Your app registration display name must follow this pattern:
 |---|---|---|
 | `org` | Ministry or team abbreviation | `citz`, `hlth`, `fin`, `pssg` |
 | `project` | Project identifier | `abc123` |
-| `env` | Environment | `dev`, `test`, `uat`, `prod` |
+| `env` | Environment | `dev`, `test`, `tools`, `prod` |
 | `platform` | Hosting platform | `azure`, `aws`, `github`, `gcp` |
 | `system` | Application or system name | `payments`, `analytics`, `infra` |
 | `purpose` | Functional role | `api`, `deploy`, `etl`, `sso` |
