@@ -38,5 +38,10 @@ For more information and best practices, see:
 - [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-overlay)
 - [Azure CNI Pod Subnet](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-pod-subnet)
 
+!!! info "Recommended reading"
+    If you are planning on deploying Azure Kubernetes Service (AKS) in your Landing Zone, the following book is highly recommended based on the **real-world production experience** insights shared by the author, especially around decisions that are **impossible to fix without rebuilding the cluster**.
+    
+    - [The AKS Book: The Real-World Guide to Azure Kubernetes Service](https://www.amazon.ca/dp/B0GNNVSG67)
+
 > **Need help or unsure about your AKS networking setup?**
-> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or [Rocket.Chat](https://chat.developer.gov.bc.ca/). See [Support options](../../welcome/support.md) for more details.
+> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). See [Support options](../../welcome/support.md) for more details.
