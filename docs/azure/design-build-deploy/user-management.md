@@ -119,7 +119,7 @@ As a Product Owner, you have two options for managing your security groups:
 
     For more information, see [What are managed identities for Azure resources?](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 
-For guidance on creating and managing service principals, refer to the [Register a Microsoft Entra app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal) documentation.
+App registrations must be requested through My Service Centre. For details on when you need one and how to request it, see [Requesting a Microsoft Entra app registration](app-registration.md).
 
 !!! danger "Long lived credentials"
     To avoid security risks, we highly discourage the use of **long-lived credentials**. Instead, use short-lived credentials or managed identities whenever possible. This reduces the risk of credential leakage and ensures that your applications are more secure.
