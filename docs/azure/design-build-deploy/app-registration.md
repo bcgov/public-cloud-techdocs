@@ -70,6 +70,8 @@ All Entra app registrations in the PROD tenant must be requested through **My Se
 
 Submit a request through [My Service Centre](https://myservicecentre.gov.bc.ca) following the steps in the [Requesting Multi-Factor Authentication (MFA) for your organization's applications](https://ociomysc.service-now.com/sp?id=kb_article&sys_id=2061f63d2be2fe50a955f4f5ce91bf5f&spa=1) knowledge base article.
 
+![MySC Identity Management Request](../images/mysc-identityManagement-request.png "MySC Identity Management Request")
+
 ## What doesn't require this process
 
 The following continue to work without a separate app registration request:
