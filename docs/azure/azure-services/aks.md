@@ -43,5 +43,11 @@ For more information and best practices, see:
     
     - [The AKS Book: The Real-World Guide to Azure Kubernetes Service](https://www.amazon.ca/dp/B0GNNVSG67)
 
+    Example insights:
+
+    - **Use Azure CNI Overlay with Cilium**: This provides faster packet processing, more efficient network policy enforcement (L3/L4 and L7), improved service routing, better observability of cluster traffic, and support for larger clusters.
+    - **Plan your CIDR ranges carefully**: Network CIDRs cannot be changed after cluster creation. The pod CIDR, service CIDR, and DNS service IP you choose at creation are permanent. If these ranges overlap with external networks you need to reach (VNet address space, peered VNets, on-premises networks via VPN/ExpressRoute), the cluster’s routing rules treat those destination IPs as internal Kubernetes services. This is impossible to fix without rebuilding the cluster.
+    - **Use availability zones** (1, 2, 3) for the control plane in all clusters including dev and test environments.
+
 > **Need help or unsure about your AKS networking setup?**
 > Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). See [Support options](../../welcome/support.md) for more details.
