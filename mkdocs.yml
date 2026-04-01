@@ -94,6 +94,7 @@ nav:
           - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
           - Azure Kubernetes Service: azure/azure-services/aks.md
           - Azure SQL Database: azure/azure-services/sql-database.md
+          - Azure SQL Managed Instance: azure/azure-services/sql-managed-instance.md
           - Databricks: azure/azure-services/databricks.md
           - External Microsoft Services: azure/azure-services/external-services.md
       - Operational guidance:
