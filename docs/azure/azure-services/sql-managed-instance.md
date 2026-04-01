@@ -29,7 +29,7 @@ The SQL Managed Instance subnet also needs a User Defined Route (UDR). The deplo
 
 ### Private endpoints
 
-Most Azure PaaS services in Landing Zones [require private endpoints](../best-practices/be-mindful.md#private-endpoints-and-dns). Azure SQL Managed Instance is an exception and **does not** use private endpoints.
+Most Azure PaaS services in Landing Zones [require private endpoints](../best-practices/be-mindful.md#private-endpoints-and-dns). Azure SQL Managed Instance is an exception and **does not** require the use of private endpoints.
 
 ### Authentication
 
