@@ -4,6 +4,16 @@ Last updated: **{{ git_revision_date_localized }}**
 
 The following are some things to be aware of when working within the Azure Landing Zone.
 
+## Public Azure endpoints from on-premises
+
+When an on-premises resource connects to an Azure public endpoint, traffic enters through the public internet. Common examples include Application Gateway and API Management.
+
+Azure sends return traffic to on-premises through ExpressRoute. Azure Landing Zone routing treats on-premises ranges as private.
+
+This creates **asymmetric routing**. Inbound and outbound traffic follow different paths. The on-premises source can reject Azure responses from that different path.
+
+To fix this, use a User Defined Route (UDR). The UDR sends outbound traffic to the on-premises source through the public internet instead of ExpressRoute. Submit a [support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team to create the UDR.
+
 ## Private Endpoints and DNS
 
 As a security requirement, some Azure PaaS services like Databases and Key Vaults restrict access to private-only connectivity. During deployment, you must create a [Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview) for the service.
