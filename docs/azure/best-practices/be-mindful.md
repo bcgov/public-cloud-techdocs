@@ -21,13 +21,13 @@ Since the endpoint is private-only, you can only access the resource from within
     
     If you configure a private endpoint for these services, you can only connect from within the private network. Access the Azure portal from a machine inside the private network, such as a Jump Host accessed via Bastion or AVD.
 
-Through [ExpressRoute](../design-build-deploy/networking-express-route.md), you will also be able to access these resources from the on-premises network or through a VPN.
+Using [ExpressRoute](../design-build-deploy/networking-express-route.md), you can also access these resources from the on-premises network. Be aware that DNS resolution for private endpoints from on-premises or VPN-connected clients may require additional configuration (for example, custom DNS forwarding or hosts-file entries).
 
 ## Multiple private endpoints for the same resource
 
 Most Azure PaaS resources that support Private Endpoint allow multiple private endpoints for one resource. Support and limits still vary by service.
 
-In this Azure Landing Zone, a DINE policy creates DNS `A-records` for private endpoints. When you create multiple private endpoints for the same resource name, policy automation can overwrite the existing `A-record` with the latest private endpoint IP.
+In the Azure Landing Zones, the DNS `A-record` is created automatically for private endpoints. When you create multiple private endpoints for the same resource name, policy automation can overwrite the existing `A-record` with the latest private endpoint IP.
 
 If you later delete that private endpoint, policy automation can also remove the `A-record`. The remaining private endpoint still exists, but DNS might no longer resolve to its IP. This can cause connectivity issues.
 
