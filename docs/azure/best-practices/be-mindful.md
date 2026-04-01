@@ -12,7 +12,7 @@ Azure sends return traffic to on-premises through ExpressRoute. Azure Landing Zo
 
 This creates **asymmetric routing**. Inbound and outbound traffic follow different paths. The on-premises source can reject Azure responses from that different path.
 
-To fix this, use a User Defined Route (UDR). The UDR sends outbound traffic to the on-premises source through the public internet instead of ExpressRoute. Submit a [support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team to create the UDR.
+To fix this, use a User Defined Route (UDR). The UDR ensuring the return/response path uses the internet instead of ExpressRoute. Submit a [support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team to create the UDR.
 
 ## Private Endpoints and DNS
 
