@@ -86,4 +86,4 @@ If you have questions about app registrations or run into issues:
 
 - **Portal:** [My Service Centre](https://myservicecentre.gov.bc.ca)
 - **KB Article:** [Requesting Multi-Factor Authentication (MFA) for your organization's applications](https://ociomysc.service-now.com/sp?id=kb_article&sys_id=2061f63d2be2fe50a955f4f5ce91bf5f&spa=1)
-- **Public cloud support:** [please contact the Public cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support
+- **Public Cloud support:** [please contact the Public Cloud team](https://citz-do.atlassian.net/servicedesk/customer/portal/3) for support
