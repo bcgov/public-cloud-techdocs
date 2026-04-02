@@ -38,5 +38,16 @@ For more information and best practices, see:
 - [Azure CNI Overlay](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-overlay)
 - [Azure CNI Pod Subnet](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-pod-subnet)
 
+!!! info "Recommended reading"
+    If you are planning on deploying Azure Kubernetes Service (AKS) in your Landing Zone, the following book is highly recommended based on the **real-world production experience** insights shared by the author, especially around decisions that are **impossible to fix without rebuilding the cluster**.
+    
+    - [The AKS Book: The Real-World Guide to Azure Kubernetes Service](https://www.amazon.ca/dp/B0GNNVSG67)
+
+    Example insights:
+
+    - **Use Azure CNI Overlay with Cilium**: This provides faster packet processing, more efficient network policy enforcement (L3/L4 and L7), improved service routing, better observability of cluster traffic, and support for larger clusters.
+    - **Plan your CIDR ranges carefully**: Network CIDRs cannot be changed after cluster creation. The pod CIDR, service CIDR, and DNS service IP you choose at creation are permanent. If these ranges overlap with external networks you need to reach (VNet address space, peered VNets, on-premises networks via VPN/ExpressRoute), the cluster’s routing rules treat those destination IPs as internal Kubernetes services. This is impossible to fix without rebuilding the cluster.
+    - **Use availability zones** (1, 2, 3) for your AKS system and user node pools in all clusters, including dev and test environments, to improve resiliency.
+
 > **Need help or unsure about your AKS networking setup?**
-> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) or [Rocket.Chat](https://chat.developer.gov.bc.ca/). See [Support options](../../welcome/support.md) for more details.
+> Reach out to the Public Cloud team for advice via [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). See [Support options](../../welcome/support.md) for more details.
