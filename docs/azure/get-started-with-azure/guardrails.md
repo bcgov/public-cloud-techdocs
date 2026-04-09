@@ -113,7 +113,7 @@ For many services, data *must* be encrypted at rest using Customer-Managed Keys 
   * Expired keys must be deleted
 * **Secrets:**
   * Must have expiration date
-  * Cannot be active longer than specified days
+  * Cannot be active longer than specified days (default 90 days)
   * Must have content type set
   * Policies audit if close to expiration
 * **Certificates:**
