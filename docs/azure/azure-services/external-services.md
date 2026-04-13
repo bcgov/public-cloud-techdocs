@@ -24,16 +24,19 @@ For more information, please refer to the [Power Platform - Set up pay-as-you-go
 
 ## Microsoft Fabric
 
-[Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview) is a unified analytics platform. It combines services such as Data Factory, Synapse Analytics, and Power BI. The service runs outside Azure, but you can integrate it with Azure services for analytics and data workflows.
+[Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview) is a unified analytics platform. It includes services such as [Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/introduction), [Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is), and [Power BI](https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview). It runs outside Azure. You can still integrate it with Azure services for analytics and data workflows.
+
+!!! question "Do I really need Microsoft Fabric?"
+    Before you request a project set in the Azure Landing Zone, contact the [DataFoundations team](mailto:NRM.DataFoundations@gov.bc.ca). They can confirm whether Microsoft Fabric is the best fit for your project.
 
 If your on-premises data source has a **public endpoint**, you can connect Microsoft Fabric directly. You do not need to [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone.
 
 If your on-premises data source needs a **private connection**, [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone. This setup creates a secure connection between Microsoft Fabric and your on-premises data source.
 
 !!! info "Private Link Service Direct Connect (PLSDC)"
-    [Private Link Service Direct Connect (PLSDC)](https://learn.microsoft.com/en-us/azure/private-link/configure-private-link-service-direct-connect) is in public preview. Microsoft does not support it yet in Canadian Azure regions.
+    [Private Link Service Direct Connect (PLSDC)](https://learn.microsoft.com/en-us/azure/private-link/configure-private-link-service-direct-connect) is in public preview. Microsoft does not yet support it in Canadian Azure regions.
 
-    When Microsoft enables PLSDC in Canadian Azure regions, you can use a simpler private connection path for Microsoft Fabric. For more detail, read [Connecting Microsoft Fabric to on-premises databases with Private Link](https://blog.cloudtrooper.net/2026/02/25/connecting-microsoft-fabric-to-on-premises-databases-with-private-link/).
+    When Microsoft enables PLSDC in Canadian Azure regions, you can use a simpler private connection path for Microsoft Fabric. For more details, read [Connecting Microsoft Fabric to on-premises databases with Private Link](https://blog.cloudtrooper.net/2026/02/25/connecting-microsoft-fabric-to-on-premises-databases-with-private-link/).
 
 ## Azure Databricks and Unity Catalog
 
