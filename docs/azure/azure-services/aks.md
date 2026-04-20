@@ -42,10 +42,9 @@ spec:
 
 ## Security recommendations
 
-Use these AKS settings to improve cluster security. Some settings are required in Landing Zones. Others are optional and recommended for production workloads.
+Use these AKS settings to improve cluster security. The following settings are **required** in Landing Zones.
 
 - **Use Azure CNI Overlay**: Improve network isolation and reduce IP conflict risk.
-- **Use multiple availability zones**: Improve resiliency and support high availability during zone failures.
 - **Enable Entra ID authentication**: Use centralized identities to control cluster access.
 - **Disable local accounts**: Reduce unauthorized access risk and require Entra ID sign-in.
 - **Use Workload Identity and OIDC for pods**: Let workloads access Azure resources without stored secrets.
