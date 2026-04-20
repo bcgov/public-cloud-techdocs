@@ -280,6 +280,15 @@ Before submitting documentation, verify:
 - [ ] Contractions are positive, not negative
 - [ ] Gender-neutral pronouns used
 
+## Review shortcut and shortcode
+
+Use these commands when you want a standards-based documentation review.
+
+- Shortcut: "Review this documentation against the repository documentation standards."
+- Shortcode: `/doc-review`
+
+When either command is used, review modified documentation files and report findings by severity with file and line references.
+
 ## References
 
 - [BC Government Writing Guide - Grammar, Spelling and Tone](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/grammar-spelling-tone)
