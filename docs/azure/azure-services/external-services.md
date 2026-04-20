@@ -29,9 +29,9 @@ For more information, please refer to the [Power Platform - Set up pay-as-you-go
 !!! question "Do I really need Microsoft Fabric?"
     Before you request a project set in the Azure Landing Zone, contact the [DataFoundations team](mailto:NRM.DataFoundations@gov.bc.ca). They can confirm whether Microsoft Fabric is the best fit for your project.
 
-If your on-premises data source has a **public endpoint**, you can connect Microsoft Fabric directly. You do not need to [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone.
+If your on-premises data source uses a **public endpoint** or a **private endpoint**, [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone. You need this project set for your [Fabric capacity quota](https://learn.microsoft.com/en-us/fabric/enterprise/fabric-quotas?tabs=Azure).
 
-If your on-premises data source needs a **private connection**, [provision a project set](../../welcome/provision-a-project-set.md) in the Azure Landing Zone. This setup creates a secure connection between Microsoft Fabric and your on-premises data source.
+To connect Microsoft Fabric to your on-premises data source, deploy a [Virtual Network Data Gateway](https://learn.microsoft.com/en-us/data-integration/gateway/). You can deploy the gateway in your Azure Landing Zone or on-premises. The gateway provides secure data transfer between Microsoft Fabric and your on-premises data source.
 
 !!! info "Private Link Service Direct Connect (PLSDC)"
     [Private Link Service Direct Connect (PLSDC)](https://learn.microsoft.com/en-us/azure/private-link/configure-private-link-service-direct-connect) is in public preview. Microsoft does not yet support it in Canadian Azure regions.
