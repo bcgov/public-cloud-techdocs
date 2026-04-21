@@ -33,12 +33,18 @@ Most Azure PaaS services in Landing Zones [require private endpoints](../best-pr
 
 ### Authentication
 
-Use **Microsoft Entra ID authentication** for Azure SQL Managed Instance to improve security.
+Use **Microsoft Entra ID authentication** for Azure SQL Managed Instance to improve security. For more information, see [Microsoft Entra-only authentication with Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-azure-ad-only-authentication?view=azuresql-mi&tabs=azure-cli#azure-sql-managed-instance).
+
+![Azure SQL Managed Instance - Entra ID Authentication](../images/azure-sql-mi-entra-authentication.png "Azure SQL Managed Instance - Entra ID Authentication")
 
 ## Best practices
 
-* **Authentication method:** Use either the `Microsoft Entra-only` or `Both SQL and Microsoft Entra` option
-* **Data endpoint:** Set `Public endpoint (data)` to `Disabled`
+* **Authentication method:** Use the `Microsoft Entra-only authentication` option
+* **Data endpoint:** Set **Public endpoint (data)** to `Disabled`
+
+!!! info "Enforce best practices"
+    The Landing Zones have policies that enforce these best practices.
+    If you need an exception, [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
 
 ## Related pages
 
