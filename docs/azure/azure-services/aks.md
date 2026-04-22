@@ -18,8 +18,10 @@ When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not ov
 !!! info "AKS reserved CIDR ranges"
     The following CIDR ranges are reserved for Landing Zone AKS clusters.
 
-    - **Reserved pod CIDR ranges**: `10.10.0.0/18` and `10.10.128.0/18` are reserved for AKS pod CIDRs. Each block provides about 16,384 IP addresses.
-    - **Reserved service CIDR ranges**: `10.10.64.0/22` and `10.10.192.0/22` are reserved for AKS service CIDRs. Each block provides about 1,024 IP addresses.
+    - **Reserved AKS CIDR pair 1**: Use pod CIDR `10.10.0.0/18` with service CIDR `10.10.64.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
+    - **Reserved AKS CIDR pair 2**: Use pod CIDR `10.10.128.0/18` with service CIDR `10.10.192.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
+
+    **Important**: Each AKS cluster should use one complete reserved pod/service CIDR pair. Do not mix a pod CIDR from one pair with a service CIDR from the other pair.
 
 !!! warning "AKS pod CIDR control"
     The Azure portal AKS deployment experience does not currently support providing a custom pod CIDR range. To use the reserved CIDR ranges, you must deploy AKS using the command line or Infrastructure-as-Code (IaC).
@@ -77,19 +79,12 @@ Use these AKS settings to improve cluster security. The following settings are *
 - **Enable Cilium dataplane**: Improve policy enforcement and network visibility.
 
 !!! example "Example Azure CLI command"
-    The following command creates an AKS cluster with the required security and networking settings. Adjust parameters like cluster name, resource group, VNet subnet ID, and identity as needed.
+    The following command creates an AKS cluster with the required security and networking settings. Start with the AKS networking example earlier in this page, then add the following security-focused options. Adjust parameters like cluster name, resource group, VNet subnet ID, and identity as needed.
 
     ```shell
     az aks create \
     --name YOUR_AKS_CLUSTER_NAME \
     --resource-group YOUR_RESOURCE_GROUP_NAME \
-    --network-plugin azure \
-    --network-plugin-mode overlay \
-    --vnet-subnet-id YOUR_SUBNET_RESOURCE_ID \
-    --pod-cidr 10.10.0.0/18 \
-    --service-cidr 10.10.64.0/22 \
-    --dns-service-ip 10.10.64.10 \
-    --network-dataplane cilium \
     --assign-identity YOUR_USER_ASSIGNED_MANAGED_ID_RESOURCE_ID \
     --enable-aad \
     --aad-tenant-id TENANT_ID \
