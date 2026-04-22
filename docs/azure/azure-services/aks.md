@@ -16,13 +16,13 @@ When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not ov
     - **Plan for future expansion**: If you need extended networking later, plan AKS CIDR ranges now. Contact the Public Cloud team early for address planning support.
 
 !!! info "AKS reserved CIDR ranges"
-    The following CIDR ranges are reserved for AKS clusters.
+    The following CIDR ranges are reserved for Landing Zone AKS clusters.
 
     - **Reserved pod CIDR ranges**: `10.10.0.0/18` and `10.10.128.0/18` are reserved for AKS pod CIDRs. Each block provides about 16,384 IP addresses.
     - **Reserved service CIDR ranges**: `10.10.64.0/22` and `10.10.192.0/22` are reserved for AKS service CIDRs. Each block provides about 1,024 IP addresses.
 
 !!! warning "AKS pod CIDR control"
-    The Azure portal AKS deployment experience does not currently support providing a custom pod CIDR range. To use the reserved CIDR ranges, you must deploy AKS using command-line or Infrastructure-as-Code (IaC).
+    The Azure portal AKS deployment experience does not currently support providing a custom pod CIDR range. To use the reserved CIDR ranges, you must deploy AKS using the command line or Infrastructure-as-Code (IaC).
 
     The following is an example Azure CLI command to create an AKS cluster with the reserved CIDR ranges. Adjust parameters like cluster name, resource group, and VNet subnet ID as needed.
 
