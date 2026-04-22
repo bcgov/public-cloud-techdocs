@@ -10,12 +10,35 @@ AKS networking and security choices affect cluster reliability. Use this page to
 
 When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not overlap them with connected networks. Overlap can break connectivity between AKS workloads, Azure resources, and on-premises systems.
 
-!!! warning "Important notes about AKS networking"
+!!! tip "AKS networking tips"
     - **Public Cloud team creates VNets**: Use the existing VNets for AKS. Create subnets in those VNets for AKS resources.
     - **Plan address ranges early**: Choose subnet, pod, and service ranges that avoid conflicts and support growth.
+    - **Plan for future expansion**: If you need extended networking later, plan AKS CIDR ranges now. Contact the Public Cloud team early for address planning support.
+
+!!! info "AKS reserved CIDR ranges"
+    The following CIDR ranges are reserved for AKS clusters.
+
     - **Reserved pod CIDR ranges**: `10.10.0.0/18` and `10.10.128.0/18` are reserved for AKS pod CIDRs. Each block provides about 16,384 IP addresses.
     - **Reserved service CIDR ranges**: `10.10.64.0/22` and `10.10.192.0/22` are reserved for AKS service CIDRs. Each block provides about 1,024 IP addresses.
-    - **Plan for future expansion**: If you need extended networking later, plan AKS CIDR ranges now. Contact the Public Cloud team early for address planning support.
+
+!!! warning "AKS pod CIDR control"
+    The Azure portal AKS deployment experience does not currently support providing a custom pod CIDR range. To use the reserved CIDR ranges, you must deploy AKS using command-line or Infrastructure-as-Code (IaC).
+
+    The following is an example Azure CLI command to create an AKS cluster with the reserved CIDR ranges. Adjust parameters like cluster name, resource group, and VNet subnet ID as needed.
+
+    ```shell
+    az aks create \
+    --name YOUR_AKS_CLUSTER_NAME \
+    --resource-group YOUR_RESOURCE_GROUP_NAME \
+    --network-plugin azure \
+    --network-plugin-mode overlay \
+    --vnet-subnet-id YOUR_SUBNET_RESOURCE_ID \
+    --pod-cidr 10.10.0.0/18 \
+    --service-cidr 10.10.64.0/22 \
+    --dns-service-ip 10.10.64.10
+    ```
+
+    > **Important:** See the [Security recommendations](#security-recommendations) section for additional recommended settings to include in your AKS deployment.
 
 > **Need help or unsure about your AKS networking setup?**
 > Contact the Public Cloud team through [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). See [Support options](../../welcome/support.md) for more details.
@@ -52,6 +75,32 @@ Use these AKS settings to improve cluster security. The following settings are *
 - **Enable Image Cleaner**: Remove unused images and reduce attack surface.
 - **Enable Advanced Container Networking Services (ACNS)**: Apply stronger network controls, including policies and micro-segmentation.
 - **Enable Cilium dataplane**: Improve policy enforcement and network visibility.
+
+!!! example "Example Azure CLI command"
+    The following command creates an AKS cluster with the required security and networking settings. Adjust parameters like cluster name, resource group, VNet subnet ID, and identity as needed.
+
+    ```shell
+    az aks create \
+    --name YOUR_AKS_CLUSTER_NAME \
+    --resource-group YOUR_RESOURCE_GROUP_NAME \
+    --network-plugin azure \
+    --network-plugin-mode overlay \
+    --vnet-subnet-id YOUR_SUBNET_RESOURCE_ID \
+    --pod-cidr 10.10.0.0/18 \
+    --service-cidr 10.10.64.0/22 \
+    --dns-service-ip 10.10.64.10 \
+    --network-dataplane cilium \
+    --assign-identity YOUR_USER_ASSIGNED_MANAGED_ID_RESOURCE_ID \
+    --enable-aad \
+    --aad-tenant-id TENANT_ID \
+    --disable-local-accounts \
+    --enable-azure-rbac \
+    --enable-oidc-issuer \
+    --enable-workload-identity \
+    --enable-addons azure-keyvault-secrets-provider,azure-policy \
+    --enable-acns \
+    --enable-image-cleaner
+    ```
 
 ## Best practices and further reading
 
