@@ -289,6 +289,18 @@ Use these commands when you want a standards-based documentation review.
 
 When either command is used, review modified documentation files and report findings by severity with file and line references.
 
+## Repository workflow standards
+
+Apply these standards when working in this repository:
+
+- Use "Public Cloud team" as the formal team name in documentation.
+- Follow the two-stage PR flow: feature branch to `dev`, then `dev` to `main`.
+- When creating PRs with Copilot or automation, use a Copilot-generated PR summary/body when supported.
+- If Copilot-generated PR summary is not supported in the current toolchain, create a concise manual summary with:
+    - Scope of changes
+    - Key documentation updates
+    - Any process notes (for example, superseded PRs)
+
 ## References
 
 - [BC Government Writing Guide - Grammar, Spelling and Tone](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/grammar-spelling-tone)
