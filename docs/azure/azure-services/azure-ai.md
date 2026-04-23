@@ -18,7 +18,7 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 
 ## Region availability
 
-[Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions. However, not all [models](https://azure.microsoft.com/en-us/products/ai-model-catalog?msockid=2274ddfe4fb768de0595c8be4e1d6918#tabs-pill-bar-oc92d8_tab0) or services are available there. For example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models are not available in Canadian regions. Check the availability of the services and models **before** starting development.
+[Azure AI Foundry (formerly Azure AI Studio)](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio) is available in the Canada Azure regions. However, not all [models](https://azure.microsoft.com/en-us/products/ai-foundry/models/#tabs-pill-bar-oc92d8_tab0) or services are available there. For example, some [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability) models are not available in Canadian regions. Check the availability of the services and models **before** starting development.
 
 !!! tip "Canada East region"
     Currently, Azure AI models are only available in the **Canada East** region. Our current implementation of Landing Zones **does not** include any networking connectivity to the Canada East region.
@@ -26,7 +26,7 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 The most common Azure AI services used by ministry teams are:
 
 - Azure OpenAI
-- AI Search
+- AI Search Service
 - Document Intelligence
 
 If another ministry team has implemented a similar solution, use their experience and knowledge to avoid potential issues.
@@ -49,7 +49,7 @@ In several cases, the DNS `A-Record` for the Azure OpenAI service is not created
 If you encounter this issue, open a [support ticket](../../welcome/support.md) with the Public cloud support team.
 
 ## Azure AI Search Service and outbound connections
-If you use Azure AI Search Service and require an **outbound** connection to another Azure resource (such as Storage, SQL, Key Vault, or OpenAI), you need to configure a **shared private link**. This applies when using knowledge bases, indexers, or skillsets. Shared private links are different from private endpoints, which handle inbound connections.
+If you use Azure AI Search Service and require an **outbound** connection to another Azure resource (such as Storage, SQL, Key Vault, or OpenAI), you need to configure a **shared private link**. This applies when using indexers and their data sources, or skillsets for AI enrichment. Shared private links are different from private endpoints, which handle inbound connections.
 
 Follow the [Make outbound connections through a shared private link](https://learn.microsoft.com/en-us/azure/search/search-indexer-howto-access-private?tabs=portal-create) Microsoft documentation to configure the shared private link for your Azure AI Search Service.
 
