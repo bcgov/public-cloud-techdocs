@@ -2,6 +2,10 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
+This page explains public and private Application Gateway guidance in the Azure landing zone.
+
+---
+
 ## Public Application Gateway
 
 If you use an [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) with a **public** IP address, backend health may show **Unknown**. Internet and private traffic route through the Azure Firewall in the Virtual WAN hub.
@@ -10,7 +14,12 @@ If you use an [Application Gateway](https://learn.microsoft.com/en-us/azure/appl
 
 To resolve this issue, create a custom **User Defined Route (UDR)**. This route sends traffic to the backend pool through the Azure Firewall in the Virtual WAN hub.
 
-Landing Zone security and governance requirements prevent self-service UDR creation. Contact the Public Cloud team by submitting a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3). Include this Microsoft guidance in your request: [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons).
+Landing Zone security and governance requirements prevent self-service UDR creation.
+
+Submit a [Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+
+Include this Microsoft guidance in your request:
+- [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons)
 
 ## Private Application Gateway
 
@@ -27,3 +36,9 @@ To use a private Application Gateway, **register** the `EnableApplicationGateway
     When you create a private Application Gateway, provide a specific private IP address. The creation process checks whether the address is in the target subnet, but it **does not** check whether the address is already in use.
 
     ![Azure Application Gateway - Private IP Address](../images/private-app-gateway-ip-address.png "Azure Application Gateway - Private IP Address")
+
+## Related pages
+
+- [Application Gateway overview](https://learn.microsoft.com/en-us/azure/application-gateway/overview)
+- [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons)
+- [MCCS connectivity](../../shared-services/mccs/mccs.md)
