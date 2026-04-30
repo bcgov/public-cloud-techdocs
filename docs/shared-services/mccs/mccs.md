@@ -1,4 +1,4 @@
-# Multi-Cloud Connect Service (MCCS)
+# Multi-Cloud Connectivity Service (MCCS)
 
 Last updated: **{{ git_revision_date_localized }}**
 

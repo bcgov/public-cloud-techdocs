@@ -27,3 +27,5 @@ If Copilot-generated summary is not available in the current toolchain, use a ma
 ## Documentation naming convention
 
 In this repository, treat "Public Cloud team" as a formal name and keep this capitalization in documentation updates.
+
+When updating or reviewing documentation with MkDocs admonitions, validate that `!!!` blocks use aligned 4-space indentation and supported admonition types.

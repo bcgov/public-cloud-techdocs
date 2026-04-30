@@ -16,7 +16,7 @@ In our setup, ExpressRoute also encrypts data in transit with IPsec. This ensure
 
 ## Azure to on-premises connectivity
 
-To connect an Azure virtual network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connect Service (MCCS)](../../shared-services/mccs/mccs.md) documentation.
+To connect an Azure virtual network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connectivity Service (MCCS)](../../shared-services/mccs/mccs.md) documentation.
 
 ## On-premises to Azure connectivity
 

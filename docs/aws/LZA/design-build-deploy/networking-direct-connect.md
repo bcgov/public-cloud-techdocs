@@ -16,4 +16,4 @@ In our setup, DirectConnect also encrypts data in transit with IPsec. This ensur
 
 ## AWS to on-premises connectivity
 
-To connect an AWS virtual private cloud network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connect Service (MCCS)](../../../shared-services/mccs/mccs.md) documentation.
+To connect an AWS virtual private cloud network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connectivity Service (MCCS)](../../../shared-services/mccs/mccs.md) documentation.
