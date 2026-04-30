@@ -47,13 +47,13 @@ Your network design depends on where end users connect from.
 Most teams use one of these two AVD network architectures:
 
 1. **AVD with public endpoints**: AVD resources run in a VNet and use public endpoints for feed discovery and session access. Users can connect from anywhere without the B.C. government network.
-2. **AVD with private endpoints**: AVD resources run in a VNet and use [private link](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview) for host pool and session host connectivity. Users connect through the B.C. government network, either on-premises or through VPN.
+2. **AVD with private endpoints**: AVD resources run in a VNet and use [Private Link](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview) for host pool and session host connectivity. Users connect through the B.C. government network, either on-premises or through VPN.
 
-!!! warning "Public Endpoint Security Policies"
+!!! warning "Public endpoint security policies"
     If you plan to deploy AVD with public endpoints, submit a [support request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
     Security policies block public endpoint deployment for AVD host pools and workspaces by default.
 
-!!! example "Deploying AVD in a Landing Zone"
+!!! example "Deploying AVD in a landing zone"
     Microsoft provides a [QuickStart template](https://learn.microsoft.com/en-us/azure/virtual-desktop/quickstart?tabs=windows) for AVD deployment.
 
     The template deploys some resources that already exist in Azure Landing Zones, such as the virtual network. It also omits supporting resources that most production deployments need, such as Key Vault, Log Analytics, FSLogix storage accounts, and scaling plans.
@@ -73,3 +73,9 @@ For more information and best practices, see:
 - [Security recommendations for Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-recommendations)
 - [Understanding Azure Virtual Desktop network connectivity](https://learn.microsoft.com/en-us/azure/virtual-desktop/network-connectivity)
 - [Apply Zero Trust principles to an Azure Virtual Desktop deployment](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-avd?context=/azure/virtual-desktop/context/context)
+
+## Related pages
+
+- [Networking](../design-build-deploy/networking.md)
+- [Deploy to the Azure landing zone](../design-build-deploy/deploy-to-the-azure-landing-zone.md)
+- [User management](../design-build-deploy/user-management.md)
