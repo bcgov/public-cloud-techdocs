@@ -26,7 +26,7 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 The most common Azure AI services used by ministry teams are:
 
 - Azure OpenAI
-- AI Search Service
+- Azure AI Search Service
 - Document Intelligence
 
 If another ministry team has implemented a similar solution, use their experience and knowledge to avoid potential issues.
@@ -46,7 +46,7 @@ When working with Azure OpenAI, you may need to create a Private Endpoint to res
 
 In several cases, the DNS `A-Record` for the Azure OpenAI service is not created properly in the Private DNS Zone. This can prevent the service from resolving the endpoint.
 
-If you encounter this issue, open a [support ticket](../../welcome/support.md) with the Public cloud support team.
+If you encounter this issue, open a [support ticket](../../welcome/support.md) with the Public Cloud team.
 
 ## Azure AI Search Service and outbound connections
 If you use Azure AI Search Service and require an **outbound** connection to another Azure resource (such as Storage, SQL, Key Vault, or OpenAI), you need to configure a **shared private link**. This applies when using indexers and their data sources, or skillsets for AI enrichment. Shared private links are different from private endpoints, which handle inbound connections.
