@@ -95,6 +95,7 @@ nav:
           - Azure Kubernetes Service: azure/azure-services/aks.md
           - Azure SQL Database: azure/azure-services/sql-database.md
           - Azure SQL Managed Instance: azure/azure-services/sql-managed-instance.md
+          - Azure Virtual Desktop: azure/azure-services/avd.md
           - Databricks: azure/azure-services/databricks.md
           - External Microsoft Services: azure/azure-services/external-services.md
       - Operational guidance:

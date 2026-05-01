@@ -238,7 +238,24 @@ Use MkDocs Material admonitions for important information:
     Here's a helpful suggestion
 ```
 
-Available types: note, info, tip, warning, danger, example, quote
+Admonition content must be indented with exactly 4 spaces under each `!!!` line.
+Keep indentation aligned for all body lines in the same admonition block.
+
+Supported types:
+- note
+- abstract
+- info
+- tip
+- success
+- question
+- warning
+- failure
+- danger
+- bug
+- example
+- quote
+
+Reference: [MkDocs Material admonitions - supported types](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
 
 ## Content organization
 
@@ -279,6 +296,8 @@ Before submitting documentation, verify:
 - [ ] Paragraphs are 5 sentences or less
 - [ ] Contractions are positive, not negative
 - [ ] Gender-neutral pronouns used
+- [ ] Every `!!!` admonition block uses 4-space aligned indentation
+- [ ] Admonition types are valid for MkDocs Material
 
 ## Review shortcut and shortcode
 
@@ -288,6 +307,19 @@ Use these commands when you want a standards-based documentation review.
 - Shortcode: `/doc-review`
 
 When either command is used, review modified documentation files and report findings by severity with file and line references.
+When reviewing, explicitly check `!!!` admonition indentation and supported type usage.
+
+## Repository workflow standards
+
+Apply these standards when working in this repository:
+
+- Use "Public Cloud team" as the formal team name in documentation.
+- Follow the two-stage PR flow: feature branch to `dev`, then `dev` to `main`.
+- When creating PRs with Copilot or automation, use a Copilot-generated PR summary/body when supported.
+- If Copilot-generated PR summary is not supported in the current toolchain, create a concise manual summary with:
+    - Scope of changes
+    - Key documentation updates
+    - Any process notes (for example, superseded PRs)
 
 ## References
 
@@ -295,6 +327,7 @@ When either command is used, review modified documentation files and report find
 - [BC Government Writing Guide - Writing Web Content](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/writing-web-content)
 - [BC Government Writing Guide - Capitalization](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/capitalization)
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/WAI/WCAG20/quickref/)
+- [MkDocs Material admonitions - supported types](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
 
 ---
 
