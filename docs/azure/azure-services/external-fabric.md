@@ -2,9 +2,9 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-## Overview
+This page explains how Microsoft Fabric connects with Azure services and private networking in the Azure Landing Zone.
 
-There are several Microsoft services that are commonly used in conjunction with Azure services. These may include services like Azure DevOps, Dynamics 365, Power Platform, etc. This document provides some considerations when working with these services within the Azure Landing Zone.
+---
 
 ## Microsoft Fabric
 
@@ -35,3 +35,8 @@ There are 2 network connectivity options for Microsoft Fabric:
     [Private Link Service Direct Connect (PLSDC)](https://learn.microsoft.com/en-us/azure/private-link/configure-private-link-service-direct-connect) is in public preview. Microsoft does not yet support it in Canadian Azure regions.
 
     When Microsoft enables PLSDC in Canadian Azure regions, you can use a simpler private connection path for Microsoft Fabric. For more details, read [Connecting Microsoft Fabric to on-premises databases with Private Link](https://blog.cloudtrooper.net/2026/02/25/connecting-microsoft-fabric-to-on-premises-databases-with-private-link/).
+
+## Related pages
+
+- [External Microsoft services](./external-services.md)
+- [Provision a project set](../../welcome/provision-a-project-set.md)
