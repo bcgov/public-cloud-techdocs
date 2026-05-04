@@ -2,9 +2,9 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-## Overview
+This page explains how Azure Databricks and Unity Catalog work in our environment. It also describes the current Unity Catalog status for the B.C. government.
 
-There are several Microsoft services that are commonly used in conjunction with Azure services. These may include services like Azure DevOps, Dynamics 365, Power Platform, etc. This document provides some considerations when working with these services within the Azure Landing Zone.
+---
 
 ## Azure Databricks and Unity Catalog
 
@@ -26,11 +26,11 @@ Unity Catalog provides a centralized data governance layer for Databricks assets
 - It governs access to data even when storage lives in **Azure Data Lake Storage Gen2** or other Azure services.
 
 !!! info "Unity Catalog Status"
-        **Unity Catalog is currently not enabled or governed** within the B.C. government's Azure environment.
+    **Unity Catalog is currently not enabled or governed** within the B.C. government's Azure environment.
 
-        While Azure Databricks is available for use, there is currently no assigned owner or governance process for Unity Catalog.
+    While Azure Databricks is available for use, there is currently no assigned owner or governance process for Unity Catalog.
 
-        Do not configure or use Unity Catalog at this time.
+    Do not configure or use Unity Catalog at this time.
 
 ## Practical considerations
 
@@ -49,3 +49,8 @@ If Unity Catalog is introduced in the future, a central **data governance functi
 - Control cross-workspace access policies.
 - Maintain consistent audit and lineage tracking.
 - Coordinate identity integration with Microsoft Entra ID.
+
+## Related pages
+
+- [External Microsoft services](./external-services.md)
+- [Azure Databricks page](./databricks.md)
