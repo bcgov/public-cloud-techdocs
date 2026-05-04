@@ -13,7 +13,3 @@ Azure DevOps Services supports configuring billing to be associated with an Azur
 For more information, please refer to the [Azure DevOps - Manage Billing](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/set-up-billing-for-your-organization-vs?view=azure-devops) documentation.
 
 ![Azure DevOps - Set Up Billing](../images/azure-devops-billing.png "Azure DevOps - Set Up Billing")
-
-## Related pages
-
-- [External Microsoft services](./external-services.md)

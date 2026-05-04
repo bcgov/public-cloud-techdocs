@@ -49,8 +49,3 @@ If Unity Catalog is introduced in the future, a central **data governance functi
 - Control cross-workspace access policies.
 - Maintain consistent audit and lineage tracking.
 - Coordinate identity integration with Microsoft Entra ID.
-
-## Related pages
-
-- [External Microsoft services](./external-services.md)
-- [Azure Databricks page](./databricks.md)

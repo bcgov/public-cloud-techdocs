@@ -38,5 +38,4 @@ There are 2 network connectivity options for Microsoft Fabric:
 
 ## Related pages
 
-- [External Microsoft services](./external-services.md)
 - [Provision a project set](../../welcome/provision-a-project-set.md)
