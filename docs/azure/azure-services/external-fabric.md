@@ -21,8 +21,8 @@ To connect Microsoft Fabric to your on-premises data source, deploy a [Data Gate
 
 There are 2 network connectivity options for Microsoft Fabric:
 
-1. **Outbound networking**: Also known as "[Managed private endpoints](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview)", allows secure and private access to data sources **from** Fabric workloads.
-2. **Inbound networking**: Also known as "[Workspace-level private links](https://learn.microsoft.com/en-us/fabric/security/security-workspace-level-private-links-set-up?tabs=fabric-portal)", allows you to manage network access for specific workspaces individually
+1. **Outbound networking**, also known as "[Managed private endpoints](https://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview)", allows secure and private access to data sources **from** Fabric workloads.
+2. **Inbound networking**, also known as "[Workspace-level private links](https://learn.microsoft.com/en-us/fabric/security/security-workspace-level-private-links-set-up?tabs=fabric-portal)", allows you to manage network access for specific workspaces individually.
 
 !!! question "Why not Azure Private Link?"
     Microsoft Fabric is a SaaS multi-tenant service that runs outside the subscription network boundary. For private connectivity, it needs a publish-and-approve model, not a direct service endpoint model.
