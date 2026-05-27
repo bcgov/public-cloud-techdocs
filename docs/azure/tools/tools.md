@@ -33,10 +33,10 @@ You can also create a pipeline to automate the execution of AZQR on a schedule. 
 
 ### AzPolicyLens
 
-AzPolicyLens is an open-source command-line tool that helps you analyze Azure Policy assignments at scale. It builds clear reports that show policy scope, inheritance and compliance posture across subscriptions and management groups. Check out [AzPolicyLens](https://github.com/Azure/AzPolicyLens/).
+AzPolicyLens is an open-source command-line tool that helps you analyze Azure Policy assignments at scale. It builds clear reports that show policy scope, inheritance, and compliance posture across subscriptions and management groups. Check out [AzPolicyLens](https://github.com/Azure/AzPolicyLens/).
 
 !!! info "AzPolicyLens authentication"
-    AzPolicyLens uses credential-based authentication by default. Update the AzPolicyLens GitHub Action workflow or Azure DevOps pipeline to support OIDC authentication.
+    AzPolicyLens uses credential-based authentication by default. Update the AzPolicyLens GitHub Actions workflow or Azure DevOps pipeline to support OIDC authentication.
 
 ![AzPolicyLens wiki page showing policy analysis output](../images/azure-policy-lens-wiki.png "AzPolicyLens wiki page showing policy analysis output")
 
