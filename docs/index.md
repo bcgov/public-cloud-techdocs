@@ -35,12 +35,9 @@ Azure is a comprehensive set of cloud services that developers and IT profession
 - [Networking in Azure](azure/design-build-deploy/networking.md)
 - [Deploy to the Azure Landing Zone](azure/design-build-deploy/deploy-to-the-azure-landing-zone.md)
 
-### Rocket.Chat
+### Support
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the B.C. government's Public cloud. Read about [how to stay connected in Rocket.Chat](https://digital.gov.bc.ca/technology/cloud/public/get-support/#contact).
-
-If you already have access, you can
-[log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
+Support options with the Public Cloud Team include JSM tickets, and our Microsoft Teams channels. Please see the [Support document](welcome/support.md) for more information.
 
 ### Public cloud community updates
 

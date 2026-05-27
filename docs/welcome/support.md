@@ -33,10 +33,9 @@ To find the license plate for an Azure Project Set, follow these steps:
 There are multiple ways to get support for the Public cloud Platform, including:
 
 - [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3) (preferred method)
-- [Rocket.Chat](https://chat.developer.gov.bc.ca/)
-  - Channel: [public-cloud-support](https://chat.developer.gov.bc.ca/channel/public-cloud-general)
-  - Channel: [public-cloud-how-to](https://chat.developer.gov.bc.ca/channel/public-cloud-how-to)
-  - Channel: [public-cloud-alerts](https://chat.developer.gov.bc.ca/channel/public-cloud-alerts)
+- [Microsoft Teams - Developer Community Channels](https://teams.microsoft.com/l/team/19%3A6bffce0ac7aa47a1ba9f6d9a7e898db9%40thread.tacv2/conversations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
+  - Channel: [CloudAWS-howto](https://teams.microsoft.com/l/channel/19%3A2d3e0e06b31f493c8648a771c655fa2c%40thread.tacv2/CloudAWS-howto?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
+  - Channel: [CloudAzure-howto](https://teams.microsoft.com/l/channel/19%3A91ae163c886c43e8b3537ab64ee15544%40thread.tacv2/CloudAzure-howto?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 
 ## Cloud vendor support
 
