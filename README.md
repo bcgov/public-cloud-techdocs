@@ -40,7 +40,7 @@ docker run -it -p 3000:3000 -v ${PWD}:/github/workspace ghcr.io/bcgov/devhub-tec
 ```
 
 **WSL Terminal Command:**
-```wls
+```wsl
 docker run -it -p 3000:3000 $(pwd):/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
 ```
 

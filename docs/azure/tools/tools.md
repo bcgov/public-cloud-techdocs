@@ -31,6 +31,15 @@ You can also create a pipeline to automate the execution of AZQR on a schedule. 
 - [GitHub Actions workflow for AZQR](https://github.com/Azure/azqr/blob/main/examples/cicd/github-actions.yml)
 - [Azure DevOps pipeline for AZQR](https://github.com/Azure/azqr/blob/main/examples/cicd/azdo-pipeline.yml)
 
+### AzPolicyLens
+
+AzPolicyLens is an open-source command-line tool that helps you analyze Azure Policy assignments at scale. It builds clear reports that show policy scope, inheritance and compliance posture across subscriptions and management groups. Check out [AzPolicyLens](https://github.com/Azure/AzPolicyLens/).
+
+!!! info "AzPolicyLens authentication"
+    AzPolicyLens uses credential-based authentication by default. Update the AzPolicyLens GitHub Action workflow or Azure DevOps pipeline to support OIDC authentication.
+
+![AzPolicyLens wiki page showing policy analysis output](../images/azure-policy-lens-wiki.png "AzPolicyLens wiki page showing policy analysis output")
+
 ### Microsoft Assessments
 
 Self-guided questionnaires designed to help you identify areas to improve your architecture, workloads and implementation, with actionable recommendations. Check out the [Microsoft Assessments](https://learn.microsoft.com/en-us/assessments/browse/?page=1&pagesize=30).
