@@ -40,8 +40,8 @@ docker run -it -p 3000:3000 -v ${PWD}:/github/workspace ghcr.io/bcgov/devhub-tec
 ```
 
 **WSL Terminal Command:**
-```wls
-docker run -it -p 3000:3000 $(pwd):/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
+```bash
+docker run -it -p 3000:3000 -v $(pwd):/github/workspace ghcr.io/bcgov/devhub-techdocs-publish preview
 ```
 
 > NOTE: If you are executing the command from a WSL terminal, you will need to have the repository cloned into your WSL environment.
