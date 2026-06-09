@@ -14,9 +14,23 @@ Access to Azure Data Factory is restricted to **private endpoints only**. This m
 
 When setting up your Data Factory, you must configure private endpoints for the `dataFactory` and `portal` sub-resources.
 
+For more information, see the [Azure Private Link for Azure Data Factory documentation](https://learn.microsoft.com/en-us/azure/data-factory/data-factory-private-link).
+
 ### Managed virtual network
 
 It is recommended to use the **Azure Data Factory Managed Virtual Network** and **Managed Private Endpoints** for connecting to data sources that are also protected by private endpoints (like Azure SQL Database or Storage Accounts).
+
+![Azure Data Factory - Managed VNet Architecture](../images/azure-adf-managed-vnet-architecture-diagram.png "Azure Data Factory - Managed VNet Architecture")
+
+For more information, see the [Azure Data Factory managed virtual network documentation](https://learn.microsoft.com/en-us/azure/data-factory/managed-virtual-network-private-endpoint).
+
+### Linked services in Azure Data Factory
+
+Linked services define the connection information for Azure Data Factory to connect to external data stores and compute environments. When using private endpoints, ensure that your linked services are configured to connect to the private endpoint's DNS name.
+
+![Azure Data Factory - Linked Services](../images/azure-adf-management-hub-linked-services.png "Azure Data Factory - Linked Services")
+
+For more information on configuring linked services with private endpoints, see the [Linked services in Azure Data Factory and Azure Synapse Analytics documentation](https://learn.microsoft.com/en-us/azure/data-factory/concepts-linked-services?tabs=data-factory).
 
 ## Portal connectivity considerations
 
