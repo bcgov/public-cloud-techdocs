@@ -19,7 +19,7 @@ Every Azure Databricks Account exists at the **Azure tenant** level, **not** the
 
 Unity Catalog provides a centralized data governance layer for Databricks assets but is managed through the **Databricks control plane** via the [Databricks account console](https://accounts.azuredatabricks.net), not through the Azure Portal.
 
-| Feature                           | Owned / Managed by         | Managed in Azure Portal? | Managed in Databricks account console? |
+| Feature                           | Owned / Managed by         | Managed in Azure Portal? | Managed in Azure Databricks account console? |
 | --------------------------------- | ------------------------ | --------------- | -------------------- |
 | **Azure Databricks Workspace**    | Azure Resource Manager   | ✅ Yes          | ✅ Yes (shared)      |
 | **Unity Catalog**                 | Databricks Control Plane | ❌ No           | ✅ Yes               |
