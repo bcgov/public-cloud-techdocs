@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 This page explains how Microsoft Fabric connects with Azure services and private networking in the Azure Landing Zone.
 
-!!! question "What does "external" mean in this context?"
+!!! question "What does 'external' mean in this context?"
     The term "external" is used to indicate that these service's **control plane** and **management interface** are **outside** the Azure Portal. They are still Azure services, but they have their own management plane.
 
     Azure may be used to provide compute, storage, capacity, billing, etc. for these services.
