@@ -4,15 +4,22 @@ Last updated: **{{ git_revision_date_localized }}**
 
 This page explains how Azure Databricks and Unity Catalog work in our environment. It also describes the current Unity Catalog status for the B.C. government.
 
+!!! question "What does 'external' mean in this context?"
+    The term "external" is used to indicate that the service's **control plane** and **management interface** are **outside** the Azure Portal. They are still Azure services, but they have their own management plane.
+
+    Azure may be used to provide compute, storage, capacity, billing, etc. for these services.
+
 ---
 
 ## Azure Databricks and Unity Catalog
 
 While the [Azure Databricks Workspace](https://learn.microsoft.com/en-us/azure/databricks/introduction/) is an Azure resource managed through the Azure Resource Manager, some of its advanced features, like [Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/), operate outside the standard Azure management plane.
 
+Every Azure Databricks Account exists at the **Azure tenant** level, **not** the subscription level. This means a single Databricks account can span across multiple Azure subscriptions.
+
 Unity Catalog provides a centralized data governance layer for Databricks assets but is managed through the **Databricks control plane** via the [Databricks account console](https://accounts.azuredatabricks.net), not through the Azure Portal.
 
-| Feature                           | Owned/Managed by         | Lives in Azure? | Lives in Databricks? |
+| Feature                           | Owned / Managed by         | Managed in Azure Portal? | Managed in Azure Databricks account console? |
 | --------------------------------- | ------------------------ | --------------- | -------------------- |
 | **Azure Databricks Workspace**    | Azure Resource Manager   | ✅ Yes          | ✅ Yes (shared)      |
 | **Unity Catalog**                 | Databricks Control Plane | ❌ No           | ✅ Yes               |
@@ -49,3 +56,9 @@ If Unity Catalog is introduced in the future, a central **data governance functi
 - Control cross-workspace access policies.
 - Maintain consistent audit and lineage tracking.
 - Coordinate identity integration with Microsoft Entra ID.
+
+## Related pages
+
+- [Understanding Key Layers of the Azure Databricks Account](https://www.linkedin.com/pulse/understanding-key-layers-azure-databricks-account-julia-f%C3%B8rde-wjp9f)
+- [Databricks data residency](https://learn.microsoft.com/en-us/azure/databricks/resources/databricks-geos)
+- [High-level Databricks architecture](https://learn.microsoft.com/en-us/azure/databricks/getting-started/high-level-architecture)

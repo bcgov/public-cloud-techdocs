@@ -2,10 +2,6 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-!!! warning "Coming Soon"
-
-    The AWS LZA cost management solution powered by QuickSight is not yet available but is coming soon. This documentation is provided in advance of the feature release.
-
 Learn more about managing your AWS spending and resources with our AWS billing and cost management dashboard (link coming soon), featuring the Cloud Intelligence Dashboards and CUDOS (AWS Cost and Usage Dashboards Operations Solution).
 
 Powered by Amazon QuickSight, these tools meticulously analyze your AWS expenditure and resource utilization. They aim to equip you with the insights necessary to make well-informed, data-backed decisions, ultimately helping you streamline your cloud operations and optimize cost efficiency.
