@@ -5,7 +5,7 @@ Last updated: **{{ git_revision_date_localized }}**
 This page explains how Azure Databricks and Unity Catalog work in our environment. It also describes the current Unity Catalog status for the B.C. government.
 
 !!! question "What does 'external' mean in this context?"
-    The term "external" is used to indicate that the service **control plane** and **management interface** are **outside** the Azure Portal. They are still Azure services, but they have their own management plane.
+    The term "external" is used to indicate that the service's **control plane** and **management interface** are **outside** the Azure Portal. They are still Azure services, but they have their own management plane.
 
     Azure may be used to provide compute, storage, capacity, billing, etc. for these services.
 
