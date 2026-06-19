@@ -67,23 +67,25 @@ The GitHub managed runners are deployed in a dedicated virtual network in a cent
 !!! question "How to request access to this feature?"
     If you are interested in using this feature, please submit a **firewall request** to the Public Cloud team through [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). Please include the GitHub **repositories** that you want to be able to use the centralized runners from.
 
-Once the appropriate firewall rules have been configured, and your repository has been enabled, you will be able to use the GitHub managed runners in your CI/CD pipelines by including the following configuration in your GitHub workflow YAML file:
+Once the appropriate firewall rules have been configured, and your repository has been enabled to use the Runner Group, you will be able to use the GitHub managed runners in your CI/CD pipelines by including the following configuration in your workflow YAML file:
 
 ```yaml
 jobs:
   job-name:
     name: Job Name
     runs-on:
-      group: live-connectivity-runners # GitHub Managed Runners injected into an Azure VNet
+      group: bcgov-azure-lz-live-github-managed-runners # GitHub Managed Runners injected into an Azure VNet
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 ```
 
-!!! danger "Post-enablement"
-    After the firewall rules have been configured, you will be responsible for allowing (and blocking) access to your resources from the GitHub managed runners. You can do this through the use of [Network Security Groups (NSGs)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview).
+!!! warning "Post centralized runner onboarding"
+    After the firewall rules have been configured, you will be responsible for allowing (and blocking) access to your resources from the GitHub managed runners. You can do this through the use of [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) security rules.
 
-    One suggestion is to create a pre-step in your GitHub workflow to retrieve the private IP address of the GitHub managed runner, and then dynamically/on-demand update the NSG rules to allow access to your resources. After your workflow has completed, you can then remove the NSG rules to block access again.
+    One suggestion is to create a pre-step in your GitHub workflow to retrieve the private IP address of the GitHub managed runner, and then dynamically/on-demand update the NSG rules to allow access to your resources.
+    
+    After your deployment has completed, you can include a post-step to then remove the NSG rules to block access again.
 
 ## Azure pipelines
 
