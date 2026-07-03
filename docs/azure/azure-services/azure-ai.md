@@ -9,7 +9,9 @@ Many of the ministry teams are using Azure AI services to build intelligent appl
 !!! question "I want to use AI, now what?"
     Provisioning Azure AI services is managed through the AI Services Hub in the Landing Zones.
     
-    To request access to the AI Services Hub please use the [AI Services Hub landing page](). In your submission, briefly explain what you are building with AI. The [AI Services Hub landing page]() can also be used for general inquiries, feature/enhancement requests, reporting issues/bugs, or requesting architectural guidance.
+    To request access to the AI Services Hub please use the [AI Services Hub landing page](https://bcgov.github.io/ai-hub-tracking/). In your submission, briefly explain what you are building with AI.
+    
+    The [AI Services Hub landing page](https://bcgov.github.io/ai-hub-tracking/) can also be used for general inquiries, feature/enhancement requests, reporting issues/bugs, or requesting architectural guidance.
 
 !!! tip "Azure OpenAI best practices"
     Be sure to review the following Microsoft blog post, which highlights key best practices for deploying and managing Azure OpenAI workloads. The blog post covers architectural considerations, security measures, governance strategies, networking configurations, and more.
