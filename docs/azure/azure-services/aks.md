@@ -21,7 +21,14 @@ When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not ov
     - **Reserved AKS CIDR pair 1**: Use pod CIDR `10.10.0.0/18` with service CIDR `10.10.64.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
     - **Reserved AKS CIDR pair 2**: Use pod CIDR `10.10.128.0/18` with service CIDR `10.10.192.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
 
-    **Important**: Each AKS cluster should use one complete reserved pod/service CIDR pair. Do not mix a pod CIDR from one pair with a service CIDR from the other pair.
+    **Important**: When you specify a custom pod CIDR, use one complete reserved pod/service CIDR pair. Do not mix a pod CIDR from one pair with a service CIDR from the other pair.
+
+    !!! note "Default pod CIDR range"
+        If you do not specify a pod CIDR range when deploying AKS (Azure portal or IaC/CLI), Azure will assign the default pod CIDR range of `10.244.0.0/16`.
+        
+        This default pod CIDR range is acceptable for Landing Zone AKS clusters, but it is not part of a reserved pod/service CIDR pair.
+        
+        If you use the default pod CIDR range, you must still specify a service CIDR range from one of the reserved pairs.
 
 !!! warning "AKS pod CIDR control"
     The Azure portal AKS deployment experience does not currently support providing a custom pod CIDR range. To use the reserved CIDR ranges, you must deploy AKS using the command line or Infrastructure-as-Code (IaC).
@@ -40,7 +47,7 @@ When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not ov
     --dns-service-ip 10.10.64.10
     ```
 
-    > **Important:** See the [Security recommendations](#security-recommendations) section for additional recommended settings to include in your AKS deployment.
+    > **Important:** See the [Security requirements](#security-requirements) section for additional required settings to include in your AKS deployment.
 
 > **Need help or unsure about your AKS networking setup?**
 > Contact the Public Cloud team through [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). See [Support options](../../welcome/support.md) for more details.
@@ -65,7 +72,7 @@ spec:
           - 10.53.244.4 # Azure Firewall DNS proxy
 ```
 
-## Security recommendations
+## Security requirements
 
 Use these AKS settings to improve cluster security. The following settings are **required** in Landing Zones.
 
@@ -79,7 +86,7 @@ Use these AKS settings to improve cluster security. The following settings are *
 - **Enable Cilium dataplane**: Improve policy enforcement and network visibility.
 
 !!! example "Example Azure CLI command"
-    The following command creates an AKS cluster with the required security and networking settings. Start with the AKS networking example earlier in this page, then add the following security-focused options. Adjust parameters like cluster name, resource group, VNet subnet ID, and identity as needed.
+    The following command creates an AKS cluster with the required security and networking settings. Start with the AKS networking example earlier in this page, then add the following security-focused configurations. Adjust parameters like cluster name, resource group, VNet subnet ID, and identity as needed.
 
     ```shell
     az aks create \
@@ -108,9 +115,7 @@ For more information and best practices, see:
 - [Azure CNI Pod Subnet](https://learn.microsoft.com/en-us/azure/aks/concepts-network-azure-cni-pod-subnet)
 
 !!! info "Recommended reading"
-    If you plan to deploy AKS in a Landing Zone, this book can help. It shares production lessons and calls out decisions that require a cluster rebuild.
-
-    - [The AKS Book: The Real-World Guide to Azure Kubernetes Service](https://www.amazon.ca/dp/B0GNNVSG67)
+    If you plan to deploy AKS in a Landing Zone (especially for production use), [The AKS Book: The Real-World Guide to Azure Kubernetes Service](https://www.amazon.ca/dp/B0GNNVSG67) is a great resource. It shares production lessons and calls out important decisions that could later require a cluster rebuild!
 
     Example insights:
 
