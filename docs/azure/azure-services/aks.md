@@ -21,12 +21,12 @@ When you deploy AKS clusters, keep service and pod CIDR ranges unique. Do not ov
     - **Reserved AKS CIDR pair 1**: Use pod CIDR `10.10.0.0/18` with service CIDR `10.10.64.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
     - **Reserved AKS CIDR pair 2**: Use pod CIDR `10.10.128.0/18` with service CIDR `10.10.192.0/22`. The pod block provides about 16,384 IP addresses, and the service block provides about 1,024 IP addresses.
 
-    **Important**: Each AKS cluster should use one complete reserved pod/service CIDR pair. Do not mix a pod CIDR from one pair with a service CIDR from the other pair.
+    **Important**: When you specify a custom pod CIDR, use one complete reserved pod/service CIDR pair. Do not mix a pod CIDR from one pair with a service CIDR from the other pair.
 
     !!! note "Default pod CIDR range"
-        Whether you're using the Azure portal or IaC/CLI to deploy AKS if you do not specify a pod CIDR range, Azure will assign the default pod CIDR range of `10.244.0.0/16`.
+        If you do not specify a pod CIDR range when deploying AKS (Azure portal or IaC/CLI), Azure will assign the default pod CIDR range of `10.244.0.0/16`.
         
-        This is also an acceptable pod CIDR range for Landing Zone AKS clusters, even though it is not paired with a service CIDR range.
+        This default pod CIDR range is acceptable for Landing Zone AKS clusters, but it is not part of a reserved pod/service CIDR pair.
         
         If you use the default pod CIDR range, you must still specify a service CIDR range from one of the reserved pairs.
 
