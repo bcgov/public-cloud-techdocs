@@ -4,7 +4,7 @@ Last updated: **{{ git_revision_date_localized }}**
 
 Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network to create fast, secure, and widely scalable web applications. It provides dynamic site acceleration (DSA), SSL offloading, global load balancing with instant failover, and application layer security.
 
-## Deployment failure due to policy violation
+## Deployment failures due to policy violation
 
 The Landing Zones have several policies that enforce the use of security best practices for Azure Front Door. When creating a Front Door, although the portal UI may report that validation passes, the deployment may fail due to policy violations.
 
