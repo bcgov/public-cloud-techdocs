@@ -93,6 +93,7 @@ nav:
             - Azure Container Instances: azure/azure-services/azure-container-instances.md
             - Azure Data Factory: azure/azure-services/data-factory.md
             - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
+            - Azure Front Door: azure/azure-services/front-door.md
             - Azure Kubernetes Service: azure/azure-services/aks.md
             - Azure SQL Database: azure/azure-services/sql-database.md
             - Azure SQL Managed Instance: azure/azure-services/sql-managed-instance.md
