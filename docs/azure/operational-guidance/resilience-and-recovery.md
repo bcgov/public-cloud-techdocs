@@ -2,7 +2,8 @@
 
 Last updated: **{{ git_revision_date_localized }}**
 
-The Public Cloud team provides the landing zone, baseline controls, and platform guardrails. Your ministry team owns the resilience and recovery plan for each deployed solution.
+The Public Cloud team provides the landing zone, baseline controls, and platform guardrails.
+Your ministry team owns the resilience and recovery plan for each deployed solution.
 
 ---
 
@@ -38,7 +39,8 @@ Your team owns the code and process used to deploy and recover the solution.
 
 ## Use Azure Advisor to improve resilience and availability
 
-Azure Advisor reviews your subscription and provides tailored recommendations. Use the Reliability section to find actions that improve uptime and resiliency.
+Azure Advisor reviews your subscription and provides tailored recommendations.
+Use the Reliability section to find actions that improve uptime and resilience.
 
 ![Azure Advisor - Overview](../images/azure-advisor-overview.png "Azure Advisor - Overview")
 
@@ -51,7 +53,11 @@ Examples include:
 
 Open [Azure Advisor](https://portal.azure.com/#view/Microsoft_Azure_Expert/AdvisorMenuBlade/~/Overview) in the Azure portal and review the **Reliability** recommendations for your scope.
 
-For product details, see [What is Azure Advisor?](https://learn.microsoft.com/en-us/azure/advisor/advisor-overview), [Reliability recommendations in Azure Advisor](https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-reliability-recommendations), and [Azure Advisor resiliency reviews](https://learn.microsoft.com/en-us/azure/advisor/advisor-resiliency-reviews).
+For product details, see these Microsoft Learn pages:
+
+- [What is Azure Advisor?](https://learn.microsoft.com/en-us/azure/advisor/advisor-overview)
+- [Reliability recommendations in Azure Advisor](https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-reliability-recommendations)
+- [Azure Advisor resiliency reviews](https://learn.microsoft.com/en-us/azure/advisor/advisor-resiliency-reviews)
 
 ## Related pages
 
