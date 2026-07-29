@@ -106,6 +106,7 @@ nav:
         - Operational guidance:
             - Cost Management: azure/operational-guidance/cost-management.md
             - Policy compliance: azure/operational-guidance/policy-compliance.md
+            - Resilience and recovery: azure/operational-guidance/resilience-and-recovery.md
             - Security: azure/operational-guidance/security.md
             - Update and patch management: azure/operational-guidance/update-patch-management.md
         - Tools:
