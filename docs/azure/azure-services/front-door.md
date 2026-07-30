@@ -8,14 +8,14 @@ Azure Front Door is a global entry point that uses the Microsoft edge network to
 
 The following security settings are **required** in Landing Zones.
 
-- Azure Front Door profiles should use **Premium tier** that supports managed WAF rules and private link
-- Azure Front Door Standard and Premium should be running **minimum TLS version of 1.2**
-- Web Application Firewall (WAF) on Azure Front Door should have **request body inspection** enabled
-- Web Application Firewall (WAF) should be enabled for Azure Front Door **entry-points**
-- **Bot Protection** should be enabled for Azure Front Door WAF
-- Web Application Firewall (WAF) **rate limit rule** for Azure Front Door should be enabled
-- Secure **private connectivity** between Azure Front Door Premium and Azure Storage Blob, or Azure App Service
-- Web Application Firewall (WAF) should use the specified **mode** (ie. **Prevention**) for Azure Front Door Service
+- Azure Front Door profiles must use the **Premium tier** that supports managed WAF rules and private link
+- Azure Front Door profiles must use a **minimum TLS version of 1.2**
+- Web Application Firewall (WAF) on Azure Front Door must have **request body inspection** enabled
+- Web Application Firewall (WAF) must be enabled for Azure Front Door **entry-points**
+- **Bot Protection** must be enabled for Azure Front Door WAF
+- Web Application Firewall (WAF) **rate limit rule** for Azure Front Door must be enabled
+- Secure **private connectivity** between Azure Front Door Premium and Azure Storage Blob, or Azure App Service must be configured
+- Web Application Firewall (WAF) must use the specified **mode** (ie. **Prevention**) for Azure Front Door Service
 
 ## Deployment failures due to policy violation
 

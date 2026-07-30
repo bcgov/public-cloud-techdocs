@@ -41,10 +41,10 @@ To use a private Application Gateway, **register** the `EnableApplicationGateway
 
 The following security settings are **required** in Landing Zones.
 
-- Application Gateway for Containers has at least one **security policy** configured
-- Web Application Firewall (WAF) should be **enabled** for Application Gateway
-- Web Application Firewall on Azure Application Gateway should have **request body inspection** enabled
-- **Bot protection** is enabled in all Azure Application Gateway Web Application Firewall (WAF) policies
+- Application Gateway must have at least one **WAF policy** configured
+- Web Application Firewall (WAF) must be **enabled** for Application Gateway
+- Web Application Firewall (WAF) on Azure Application Gateway must have **request body inspection** enabled
+- **Bot protection** must be enabled in all Azure Application Gateway Web Application Firewall (WAF) policies
 
 ## Related pages
 
