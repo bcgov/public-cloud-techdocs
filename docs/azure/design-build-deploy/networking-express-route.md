@@ -16,19 +16,21 @@ In our setup, ExpressRoute also encrypts data in transit with IPsec. This ensure
 
 ## Azure to on-premises connectivity
 
-To connect an Azure virtual network to an on-premises network, refer to the [Shared Services - Multi-Cloud Connectivity Service (MCCS)](../../shared-services/mccs/mccs.md) documentation.
+To establish connectivity between an Azure virtual network and an on-premises network, refer to the [Shared Services - Multi-Cloud Connectivity Service (MCCS)](../../shared-services/mccs/mccs.md) documentation.
 
-## On-premises to Azure connectivity
+## Domain Name System (DNS) resolution
 
-If you connect from an on-premises resource to Azure, you may need a local `hosts` file entry.
-This also applies when you connect through the B.C. government's VPN.
+DNS resolves host names to IP addresses. This lets resources in Azure and on-premises networks communicate.
 
-For example:
+### Azure resolution of on-premises DNS names
 
-1. Connect to the VPN and open SQL Server Management Studio
-2. Open SQL Server Management Studio
-3. Add a `hosts` file entry that maps the Azure SQL Database fully qualified domain name (FQDN) to its private IP address
+Azure workloads can resolve on-premises DNS names, specifically for resources in the `.bcgov`, `.dmz`, and `.gov.bc.ca` domains. If you have an on-premises resource that you need to connect to from Azure outside of these domains, [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
 
-This method works per machine. If the private IP address changes, you must manually update the `hosts` file.
+### On-premises resolution of Azure DNS names
 
-For details and caveats, see [Azure DNS resolution from on-premises](../upcoming-features/azure-dns.md).
+If an on-premises resource needs to connect to an Azure resource, DNS resolution for resources using Private Link endpoints is now supported through ExpressRoute.
+
+!!! info "DNS resolution from on-premises zones"
+    Resolution of Azure resources from on-premises is supported in the `Internal` and `DMZ` zones only. If you are in any other zone, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+
+On-premises systems will need to be configured to use the **Private Link FQDN** of the Azure resource. For example, if you have an Azure SQL Database with a Private Link endpoint, the FQDN will be in the format: `<resource-name>.privatelink.database.windows.net`. The public FQDN of the resource (i.e. `<resource-name>.database.windows.net`) will not resolve to the private IP address from on-premises systems.
