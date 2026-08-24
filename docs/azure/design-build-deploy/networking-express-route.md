@@ -31,6 +31,6 @@ Azure workloads can resolve on-premises DNS names, specifically for resources in
 If an on-premises resource needs to connect to an Azure resource, DNS resolution for resources using Private Link endpoints is now supported through ExpressRoute.
 
 !!! info "DNS resolution from on-premises zones"
-    Resolution of Azure resources from on-premises is supported from the `Internal` and `DMZ` zones only. If you are in any other zone, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
+    Resolution of Azure resources from on-premises is supported in the `Internal` and `DMZ` zones only. If you are in any other zone, please [submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team.
 
 On-premises systems will need to be configured to use the **Private Link FQDN** of the Azure resource. For example, if you have an Azure SQL Database with a Private Link endpoint, the FQDN will be in the format: `<resource-name>.privatelink.database.windows.net`. The public FQDN of the resource (i.e. `<resource-name>.database.windows.net`) will not resolve to the private IP address from on-premises systems.
