@@ -202,7 +202,7 @@ This control applies to long-term service-specific credentials created with `iam
 
 !!! tip "Use short-term Bedrock keys"
 
-    AWS recommends short-term Bedrock API keys instead of long-term keys. Short-term keys last for 12 hours. Applications running in OpenShift can automate key retrieval and rotation once or twice each day.
+    AWS recommends short-term Bedrock API keys instead of long-term keys. Short-term keys last for 12 hours. Applications running in OpenShift should automate key retrieval and rotation at least twice each day.
 
 Applications that use CloudWatch Logs service-specific credentials for external log delivery can continue to create credentials. They must rotate those credentials at least every two days. A complete deny on `iam:CreateServiceSpecificCredential` would break these integrations.
 
