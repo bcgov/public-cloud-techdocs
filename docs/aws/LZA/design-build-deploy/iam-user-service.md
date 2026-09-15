@@ -134,6 +134,114 @@ The lambda function automatically sets permission boundaries to the users create
 
     Permission boundaries are automatically applied to prevent users from escalating their privileges beyond what's intended, even if they have permissions to modify IAM policies.
 
+## Service-specific API credentials
+
+AWS supports service-specific credentials for some AWS services through the IAM API action `iam:CreateServiceSpecificCredential`. These credentials are different from standard AWS access keys. They work only with the service that creates them.
+
+Supported services include Amazon Bedrock, Bedrock Mantle, CloudWatch Logs, and CloudWatch Metrics. CloudWatch Logs credentials support some external applications that send logs to CloudWatch Logs HTTP ingestion endpoints with bearer-token authentication.
+
+### Two-day maximum
+
+The LZA restricts IAM service-specific credentials to a maximum lifetime of two days. This limit applies to every AWS service that uses `iam:CreateServiceSpecificCredential`.
+
+| Credential request | Result |
+| --- | --- |
+| One day | Permitted |
+| Two days | Permitted |
+| More than two days | Denied |
+| No expiry specified | Denied |
+
+The control does not affect IAM roles, AWS Security Token Service (STS) temporary credentials, normal AWS access patterns, or unrelated API actions.
+
+### Permissions boundary control
+
+The IAM User Service applies a permissions boundary to each IAM user it creates. The boundary includes this explicit deny statement:
+
+```json
+{
+    "Sid": "DenyServiceSpecificCredentialsOverTwoDays",
+    "Effect": "Deny",
+    "Action": "iam:CreateServiceSpecificCredential",
+    "Resource": "*",
+    "Condition": {
+        "NumericGreaterThanIfExists": {
+            "iam:ServiceSpecificCredentialAgeDays": "2"
+        }
+    }
+}
+```
+
+The `iam:ServiceSpecificCredentialAgeDays` condition key checks the requested lifetime. `NumericGreaterThanIfExists` denies requests over two days. It also denies requests that omit the lifetime.
+
+The boundary limits actions performed by the IAM user. It does not control another principal that creates a credential for that user. For example, an administrator or SSO role could otherwise create a 30-day credential for the user.
+
+### Service Control Policy control
+
+The custom LZA SCP, [`bcgov-lza-scp`](scp.md), provides the account and organization guardrail. It includes an explicit deny for the same action and condition:
+
+```json
+{
+    "Effect": "Deny",
+    "Action": "iam:CreateServiceSpecificCredential",
+    "Resource": "*",
+    "Condition": {
+        "NumericGreaterThanIfExists": {
+            "iam:ServiceSpecificCredentialAgeDays": "2"
+        }
+    }
+}
+```
+
+The SCP applies to principals subject to the policy. It blocks requests from the AWS console, AWS CLI, AWS SDKs, Terraform, and automation. It also blocks requests from IAM users, IAM roles, and SSO roles. An explicit SCP deny overrides an identity policy allow.
+
+The SCP does not include an exception for `BCGOV-LZA-*` or `AWSAccelerator-*` principals. The condition applies to all service-specific credential services. It does not use `iam:ServiceSpecificCredentialServiceName`. Future services receive the same protection without another policy update.
+
+### Bedrock credentials
+
+This control applies to long-term service-specific credentials created with `iam:CreateServiceSpecificCredential`. It does not block all Bedrock authentication or all Bedrock API keys.
+
+!!! tip "Use short-term Bedrock keys"
+
+    AWS recommends short-term Bedrock API keys instead of long-term keys. Short-term keys last for 12 hours. Applications running in OpenShift should automate key retrieval and rotation at least twice each day.
+
+Applications that use CloudWatch Logs service-specific credentials for external log delivery can continue to create credentials. They must rotate those credentials at least every two days. A complete deny on `iam:CreateServiceSpecificCredential` would break these integrations.
+
+### Validate the control
+
+To test the permissions boundary, authenticate as the IAM user whose boundary you are testing. Verify the identity first:
+
+```bash
+aws sts get-caller-identity
+```
+
+The returned ARN should look like `arn:aws:iam::<ACCOUNT_ID>:user/<IAM_USER_NAME>`.
+
+Test a credential above the maximum:
+
+```bash
+aws iam create-service-specific-credential \
+    --user-name <IAM_USER_NAME> \
+    --service-name bedrock.amazonaws.com \
+    --credential-age-days 30
+```
+
+Expected result: `AccessDenied`.
+
+Test the maximum permitted lifetime:
+
+```bash
+aws iam create-service-specific-credential \
+    --user-name <IAM_USER_NAME> \
+    --service-name bedrock.amazonaws.com \
+    --credential-age-days 2
+```
+
+Expected result: success, when the identity policy allows `iam:CreateServiceSpecificCredential`.
+
+Repeat the test with another supported service to confirm that the control is service-agnostic.
+
+To test the SCP, use an administrative or SSO role that normally has permission to create the credential. A 30-day request should receive an explicit SCP deny. A two-day request should not receive a deny from this SCP. This test demonstrates why the SCP protects against principals that do not use the target user's permissions boundary.
+
 ### Deleting an IAM user
 
 Remove the corresponding entry from the DynamoDB table. The Lambda function will trigger and delete the user and their access keys from IAM and the SSM Parameter Store.
