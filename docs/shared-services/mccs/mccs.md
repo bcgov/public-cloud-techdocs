@@ -102,11 +102,11 @@ Set the **Source** to the **Network IP Range Object** previously added in the **
     If an on-premises system needs to **initiate traffic** to a cloud resource, another rule in the Traffic Table is required for that.
 
 !!! danger "Hybrid connectivity failover"
-    The hybrid connectivity between AWS/Azure and the on-premises datacenters are configured with redundancy and automatic failover. This means, when a service disruption is experienced, traffic will automatically be rerouted through the backup path to maintain connectivity.
+    The hybrid connectivity between AWS/Azure and the on-premises datacenters is configured with redundancy and automatic failover. This means, when a service disruption is experienced, traffic will automatically be rerouted through the backup path to maintain connectivity.
 
-    However, this means your submitted on-premises firewall rules **must** account for both the primary and backup on-premises firewalls (ie. 3PG, and Zone) to ensure uninterrupted communication between your cloud resources and the on-premises resources.
+    However, this means your submitted on-premises firewall rules **must** account for both the primary and backup paths (**KAM** and **CAL**), including the **3PG** and **zone-specific** firewalls on each path, to ensure uninterrupted communication between your cloud resources and the on-premises resources.
     
-    To avoid any surprises during a failover event, include **KAM** and **CAL** in the **Firewall** column of the Traffic Table rule entry.
+    To avoid any surprises during a failover event, include **KAM** and **CAL** in the **Firewall** column of **each** Traffic Table rule entry.
 
 ## Custom approval process
 
