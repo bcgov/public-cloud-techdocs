@@ -194,7 +194,7 @@ The custom LZA SCP, [`bcgov-lza-scp`](scp.md), provides the account and organiza
 
 The SCP applies to principals subject to the policy. It blocks requests from the AWS console, AWS CLI, AWS SDKs, Terraform, and automation. It also blocks requests from IAM users, IAM roles, and SSO roles. An explicit SCP deny overrides an identity policy allow.
 
-The SCP does not include an exception for `BCGOV-LZA-*` or `AWSAccelerator-*` principals. The condition is intentionally service-agnostic and does not use `iam:ServiceSpecificCredentialServiceName`. It is intended for AWS services that support `iam:ServiceSpecificCredentialAgeDays`, which includes the current Bedrock and CloudWatch Logs credential flows. Some other service-specific credential operations may not expose this condition key, and a generic `NumericGreaterThanIfExists` check can deny those requests when the age value is absent.
+The SCP does not include an exception for `BCGOV-LZA-*` or `AWSAccelerator-*` principals. The condition is intentionally service-agnostic and does not use `iam:ServiceSpecificCredentialServiceName`. It is intended for AWS services that support `iam:ServiceSpecificCredentialAgeDays`, which includes the current Bedrock and CloudWatch Logs credential flows. Other service-specific credential operations are outside the scope of this SCP unless they expose the same condition key.
 
 ### Bedrock credentials
 
@@ -240,7 +240,7 @@ Expected result: success, when the identity policy allows `iam:CreateServiceSpec
 
 Repeat the test with another supported service to confirm that the control is service-agnostic.
 
-To test the SCP, use an administrative or SSO role in a workload account that is subject to `bcgov-lza-scp`. The role must be inside the OU where the custom SCP is attached. An administrative or SSO role in the Organizations management account is not subject to member-account SCPs and would make the 30-day test appear to pass incorrectly. A 30-day request should receive an explicit SCP deny. A two-day request should not receive a deny from this SCP. This test demonstrates why the SCP protects against principals that do not use the target user's permissions boundary.
+To test the SCP, sign in to a workload account that is subject to `bcgov-lza-scp`. Use an administrative or SSO role in the OU where the custom SCP is attached. A 30-day request should receive an explicit SCP deny. A two-day request should not receive a deny from this SCP. This test demonstrates why the SCP protects against principals that do not use the target user's permissions boundary.
 
 ### Deleting an IAM user
 
