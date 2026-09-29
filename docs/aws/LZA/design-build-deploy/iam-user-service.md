@@ -175,7 +175,7 @@ The `iam:ServiceSpecificCredentialAgeDays` condition key checks the requested li
 
 The boundary limits actions performed by the IAM user. It does not control another principal that creates a credential for that user. For example, an administrator or SSO role could otherwise create a 30-day credential for the user.
 
-### Service Control Policy control
+### Service Control Policy (SCP ) enforcement
 
 The custom LZA SCP, [`bcgov-lza-scp`](scp.md), provides the account and organization guardrail. It includes an explicit deny for the same action and condition:
 
