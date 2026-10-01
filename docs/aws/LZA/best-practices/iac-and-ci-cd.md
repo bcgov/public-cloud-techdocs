@@ -176,6 +176,21 @@ Here's how to set it up:
 }
 ```
 
+!!! note "Enterprise accounts may use immutable IDs in the `sub` claim"
+    If your GitHub Enterprise has "use immutable IDs in subject claims" enabled (bcgov's does), the `sub` claim is `repo:ORG@ORG_ID/REPO@REPO_ID:ref:...` instead of `repo:ORG/REPO:ref:...`. Using the plain `repo:YOUR_ORG/YOUR_REPO:*` condition will fail with `Not authorized to perform sts:AssumeRoleWithWebIdentity`.
+
+    Get your IDs:
+    ```bash
+    gh api repos/OWNER/REPO --jq '{repo_id: .id, org_id: .owner.id}'
+    ```
+
+    Then use them in the trust policy:
+    ```json
+    "StringLike": {
+      "token.actions.githubusercontent.com:sub": "repo:bcgov@916280/YOUR_REPO@YOUR_REPO_ID:*"
+    }
+    ```
+
 2. **GitHub Workflow Configuration**: Configure your GitHub workflow to use OIDC authentication:
 
 ```yaml
