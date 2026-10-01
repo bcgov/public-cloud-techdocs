@@ -177,7 +177,7 @@ Here's how to set it up:
 ```
 
 !!! note "New repositories use an immutable `sub` claim format by default"
-    Repositories created after July 15, 2026 use `repo:ORG@ORG_ID/REPO@REPO_ID:ref:...` instead of `repo:ORG/REPO:ref:...` (not available on GitHub Enterprise Server) — see [GitHub's OIDC token docs](https://docs.github.com/en/actions/concepts/security/openid-connect#understanding-the-oidc-token) for the current details. Using the plain `repo:YOUR_ORG/YOUR_REPO:*` condition on such a repo will fail with `Not authorized to perform sts:AssumeRoleWithWebIdentity`.
+    Repositories created after July 15, 2026 use `repo:ORG@ORG_ID/REPO@REPO_ID:ref:...` instead of `repo:ORG/REPO:ref:...` (not available on GitHub Enterprise Server) — see [GitHub's OIDC token docs](https://docs.github.com/en/actions/reference/security/oidc#configuring-the-subject-in-your-cloud-provider) for the current details. Using the plain `repo:YOUR_ORG/YOUR_REPO:*` condition on such a repo will fail with `Not authorized to perform sts:AssumeRoleWithWebIdentity`.
 
     Get your IDs:
     ```bash
