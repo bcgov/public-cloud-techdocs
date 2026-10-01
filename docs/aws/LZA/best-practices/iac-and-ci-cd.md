@@ -182,6 +182,7 @@ Here's how to set it up:
     Get your IDs:
     ```bash
     gh api repos/OWNER/REPO --jq '{repo_id: .id, org_id: .owner.id}'
+    # e.g. gh api repos/bcgov/dasharpe-terraform-hello-world --jq '{repo_id: .id, org_id: .owner.id}'
     ```
 
     Then use them in the trust policy:
