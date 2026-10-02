@@ -25,7 +25,7 @@ If you are using GitHub Actions for your CI/CD pipeline, consider the following 
 
 To allow GitHub Actions to securely access Azure subscriptions, use OpenID Connect (OIDC) authentication.
 
-For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure).
+For detailed instructions, see the [GitHub Actions OIDC Authentication Guide](https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-azure).
 
 Here's a quick summary on how to set it up:
 
@@ -42,6 +42,46 @@ Here's a quick summary on how to set it up:
   - Use the [azure/login](https://github.com/Azure/login) action to exchange the OIDC token (JWT) for a cloud access token
 
 This allows GitHub Actions to authenticate to Azure and access resources.
+
+!!! note "New repositories use an immutable `sub` claim format by default"
+
+    Repositories created after July 15, 2026 include the owner and repository IDs in their default OIDC subject (`sub`).
+    For branch workflows, the format changes from `repo:ORG/REPO:ref:...` to `repo:ORG@ORG_ID/REPO@REPO_ID:ref:...`.
+    GitHub Enterprise Server does not support this format.
+    See [GitHub's immutable subject claims documentation](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims).
+
+    Older repositories keep the previous format unless they opt in.
+    GitHub also switches repositories to the immutable format after a rename or transfer after July 15, 2026.
+    When a repository switches formats, update its existing Azure federated identity credentials to match the new subject.
+    Otherwise, Microsoft Entra ID rejects the token exchange and `azure/login` fails.
+
+    Get both GitHub IDs with the GitHub CLI. Replace `OWNER/REPO` with your organization and repository names:
+
+    ```bash
+    gh api repos/OWNER/REPO --jq '{repo_id: .id, org_id: .owner.id}'
+    # Example: gh api repos/bcgov/azure-lz-samples --jq '{repo_id: .id, org_id: .owner.id}'
+    ```
+
+    Set the Entra ID application's federated identity credential `subject` to match the repository's token.
+    For a workflow on the `main` branch that does not use a GitHub environment, use these credential settings:
+
+    ```json
+    {
+      "name": "github-main",
+      "issuer": "https://token.actions.githubusercontent.com",
+      "subject": "repo:YOUR_ORG@YOUR_ORG_ID/YOUR_REPO@YOUR_REPO_ID:ref:refs/heads/main",
+      "audiences": ["api://AzureADTokenExchange"]
+    }
+    ```
+
+    Replace the placeholders with your GitHub names and numeric IDs.
+    These are GitHub IDs, not Azure tenant, client, or subscription IDs.
+    If the job uses a GitHub environment, use `repo:YOUR_ORG@YOUR_ORG_ID/YOUR_REPO@YOUR_REPO_ID:environment:YOUR_ENVIRONMENT` as the subject instead.
+    For repositories still using the previous format, omit the `@ID` portions.
+
+    Azure requires an exact match for the credential's `subject` field. It does not support `*` wildcards in that field.
+    Configure a separate credential for each branch, tag, or environment you need to trust.
+    See [Microsoft's federated identity credential guide](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation-create-trust).
 
 ### GitHub self-hosted runners on Azure
 
