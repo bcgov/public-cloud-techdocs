@@ -22,13 +22,13 @@ Azure keeps a deleted App Service for 30 days. You can restore it during that ti
 Open **Manage Deleted Apps** in the subscription that owned the app. The list includes only apps deleted in the last 30 days. An app on that list is still available to restore. Restore it before the 30 days end.
 
 !!! bug "Portal restore error"
-    The portal can show this error after you select a deleted app:
+    The portal can show this error when you start the restore:
 
     `The provided subscription identifier 'resourceGroups' is malformed or invalid`
 
     This error is a known Azure portal bug. Your subscription is valid. Microsoft is investigating the same error. Read [I cannot restore my deleted App Service](https://learn.microsoft.com/en-us/answers/questions/5857538/i-cannot-restore-my-deleted-app-service) for the April 2026 report.
 
-After you select the deleted app, the portal calls Azure Resource Manager with an empty subscription ID. Azure Resource Manager reads the next path segment, `resourceGroups`, as the subscription ID. It returns `InvalidSubscriptionId`.
+When you start the restore, the portal calls Azure Resource Manager with an empty subscription ID. Azure Resource Manager reads the next path segment, `resourceGroups`, as the subscription ID. It returns `InvalidSubscriptionId`.
 
 The portal can only replace an existing app of the same kind in the same region. The page fails before you can choose a replacement app. Restore with Azure CLI or Azure PowerShell. Both tools can create the app again when the App Service plan still exists.
 
@@ -36,7 +36,7 @@ Follow the [steps to restore a deleted App Service](https://learn.microsoft.com/
 
 ### Restore with Azure CLI
 
-1. Confirm the deleted app. Run this command in the subscription that owned the app. Record the deletion time from the result.
+1. Confirm the deleted app. Run this command in the subscription that owned the app. Copy the `id` from the result. Pass that value as `--deleted-id`.
 
     ```bash
     az webapp deleted list --query "[?name=='<app-name>']" -o json
@@ -86,9 +86,9 @@ These limits still apply after a successful restore:
 - Recreate deployment slots after the restore.
 - For kind `app,linux,container`, the restore returns the site configuration. That includes the container image and app settings.
 
-### Update Terraform before the next apply
+### Update your deployment code before the next run
 
-Update your Terraform configuration before the next apply. If you skip this step, the same run deletes the restored app. Import the restored app into state when Terraform should own it.
+Update the code that deploys this app before the next run. This applies to Terraform and any other deployment tool. If you skip this step, the same run deletes the restored app. Add the restored app to that code when the tool should own it.
 
 See [Infrastructure-as-Code (IaC) best practices](../best-practices/iac.md).
 
