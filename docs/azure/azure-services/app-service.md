@@ -39,7 +39,7 @@ Follow the [steps to restore a deleted App Service](https://learn.microsoft.com/
 1. Confirm the deleted app. Run this command in the subscription that owned the app. Copy the `id` from the result. Pass that value as `--deleted-id`.
 
     ```bash
-    az webapp deleted list --query "[?name=='<app-name>']" -o json
+    az webapp deleted list --query "[?deletedSiteName=='<app-name>']" -o json
     ```
 
     See the [az webapp deleted command reference](https://learn.microsoft.com/en-us/cli/azure/webapp/deleted).
@@ -81,14 +81,18 @@ See [Restore-AzDeletedWebApp](https://learn.microsoft.com/en-us/powershell/modul
 
 These limits still apply after a successful restore:
 
-- Only a paid plan supports this restore. A Linux container app already meets this rule.
+- Confirm the deleted app used a Basic plan or higher. Free and Shared plans are not eligible. A paid plan on the restore target does not change that.
 - Add custom domains, certificates, and bindings again after the restore.
 - Recreate deployment slots after the restore.
 - For kind `app,linux,container`, the restore returns the site configuration. That includes the container image and app settings.
 
 ### Update your deployment code before the next run
 
-Update the code that deploys this app before the next run. This applies to Terraform and any other deployment tool. If you skip this step, the same run deletes the restored app. Add the restored app to that code when the tool should own it.
+Review the deployment plan before the next run. This applies to Terraform and any other deployment tool.
+
+A delete in the plan means the restored app is still in state and missing from the configuration. Put the app back in the configuration when the tool should own it. Remove it from state when the tool should not own it.
+
+A create in the plan means Azure already has the app and the tool does not. Import the restored app into state before you apply. An app missing from both the configuration and the state stays in Azure.
 
 See [Infrastructure-as-Code (IaC) best practices](../best-practices/iac.md).
 
