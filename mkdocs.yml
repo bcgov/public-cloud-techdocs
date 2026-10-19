@@ -80,6 +80,7 @@ nav:
             - Next steps: azure/design-build-deploy/next-steps.md
             - Networking: azure/design-build-deploy/networking.md
             - On-premises connectivity: azure/design-build-deploy/networking-express-route.md
+            - On-premises DNS for Azure: azure/design-build-deploy/on-premises-dns.md
             - Sample code: azure/design-build-deploy/sample-code.md
         - Best practices:
             - Be mindful: azure/best-practices/be-mindful.md
