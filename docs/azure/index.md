@@ -18,6 +18,7 @@ Best practices on the platform:
 - [Requirements for building your application](design-build-deploy/requirements.md)
 - [Deploy to the Azure Landing Zone](design-build-deploy/deploy-to-the-azure-landing-zone.md)
 - [Networking](design-build-deploy/networking.md)
+- [Resolve Azure private endpoints from on-premises](design-build-deploy/on-premises-dns.md)
 - [Be Mindful in Azure](best-practices/be-mindful.md)
 
 ### Reusable code and examples

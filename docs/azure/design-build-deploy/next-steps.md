@@ -55,6 +55,7 @@ Once you have deployed Azure Bastion and a Virtual Machine, you can connect to t
 ## Reference TechDocs pages
 
 - [Networking within the Azure Landing Zone](networking.md)
+- [Resolve Azure private endpoints from on-premises](on-premises-dns.md)
 - [Private Endpoints and DNS](../best-practices/be-mindful.md)
 - [Azure Bastion](../tools/bastion.md)
 
