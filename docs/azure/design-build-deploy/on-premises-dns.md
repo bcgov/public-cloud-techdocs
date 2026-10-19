@@ -79,16 +79,27 @@ This is not a Windows-only need. Any on-premises system that starts a connection
 
 Use the OS tools that send one domain to a specific nameserver. Examples include `systemd-resolved` on Linux and resolver files on macOS. Use the address from the [inbound DNS addresses](https://digital.gov.bc.ca/technology/cloud/public/internal-resources/internal-government-and-external-public-connections/#inbound-dns).
 
-Linux example with `systemd-resolved`:
+Linux example with `systemd-resolved`. Use a dedicated link. Keep corporate DNS on the default route.
 
 ```ini
-# /etc/systemd/resolved.conf.d/azure-sql.conf
-[Resolve]
-DNS=<inbound-resolver>
-Domains=~database.windows.net
+# /etc/systemd/network/azure-dns.netdev
+[NetDev]
+Name=azure-dns
+Kind=dummy
 ```
 
-The `~` prefix sends only that domain to the listed nameserver. Other names stay on the system DNS servers.
+```ini
+# /etc/systemd/network/azure-dns.network
+[Match]
+Name=azure-dns
+
+[Network]
+DNS=<inbound-resolver>
+Domains=~database.windows.net
+DNSDefaultRoute=no
+```
+
+The `~` prefix sends that domain to the inbound resolver. `DNSDefaultRoute=no` keeps other names off that link. A global `DNS=` entry also receives names that match no routing domain. Leave the inbound resolver out of that list.
 
 ## Send only the namespaces you need
 
