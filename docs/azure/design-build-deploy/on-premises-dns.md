@@ -100,7 +100,7 @@ The inbound resolver is the right target for those zones. It is the wrong target
 
 Queries to the inbound resolver travel over ExpressRoute. Microsoft requires [ExpressRoute or a VPN](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview) for DNS between on-premises and Azure. A firewall on that path must also allow DNS.
 
-If ExpressRoute, that firewall, or the inbound endpoint is unavailable, every name you sent there fails. Names left on your normal DNS servers keep working.
+If ExpressRoute, that firewall, or the inbound endpoint is unavailable, every name you send there fails. Names left on your normal DNS servers keep working.
 
 Public Microsoft DNS does not depend on that private path. Sign-in, Microsoft 365, Windows Update, and the Azure portal are designed to resolve on the internet. A wide rule makes the inbound resolver a single point of failure for those services.
 
@@ -171,13 +171,15 @@ Also look up a Microsoft name you did not forward, such as `login.microsoftonlin
 
 ## What we are working on
 
-The Public Cloud team is working with Endpoint Engineering and Standards. The goal is a targeted policy for selected Windows devices. The planned policy applies NRPT rules through Intune or Group Policy.
+The Public Cloud team is working with Endpoint Engineering and Standards. The goal is a targeted policy for selected devices.
+
+The first policy applies NRPT rules to selected Windows devices through Intune or Group Policy. Linux systems are in scope for a later policy. Until that policy exists, configure Linux locally, as shown above.
 
 Those rules use the same narrow service namespaces. They send only those zones to the inbound resolver. The reasons in [Send only the namespaces you need](#send-only-the-namespaces-you-need) still apply.
 
 This work is not ready to request yet. There is no intake form for the policy today. Workarounds on this page remain the current path.
 
-The endpoint team covers workstations on Windows. On-premises servers and other platforms still need a local namespace rule.
+The endpoint team currently covers Windows workstations. On-premises servers still need a local namespace rule.
 
 !!! note "Want to be included later"
     [Submit a Service Request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud team. Include the Azure service namespaces and the systems that need them.
