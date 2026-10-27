@@ -31,7 +31,7 @@ Since the endpoint is private-only, you can only access the resource from within
     
     If you configure a private endpoint for these services, you can only connect from within the private network. Access the Azure portal from a machine inside the private network, such as a Jump Host accessed via Bastion or AVD.
 
-Using [ExpressRoute](../design-build-deploy/networking-express-route.md), you can also access these resources from the on-premises network. DNS resolution for private endpoints from on-premises or VPN-connected clients might need extra setup. For example, you might need custom DNS forwarding or hosts-file entries.
+Using [ExpressRoute](../design-build-deploy/networking-express-route.md), you can also access these resources from the on-premises network. DNS resolution for private endpoints from on-premises or VPN-connected clients needs extra setup. See [Resolve Azure private endpoints from on-premises](../design-build-deploy/on-premises-dns.md).
 
 ## Multiple private endpoints for the same resource
 

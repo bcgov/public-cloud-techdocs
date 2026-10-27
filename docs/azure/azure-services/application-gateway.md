@@ -37,6 +37,15 @@ To use a private Application Gateway, **register** the `EnableApplicationGateway
 
     ![Azure Application Gateway - Private IP Address](../images/private-app-gateway-ip-address.png "Azure Application Gateway - Private IP Address")
 
+## Security requirements
+
+The following security settings are **required** in Landing Zones:
+
+- Azure Application Gateway must have at least one **Web Application Firewall (WAF) policy** configured
+- WAF must be **enabled** for Application Gateway
+- WAF on Application Gateway must have **request body inspection** enabled
+- **Bot protection** must be enabled in all Application Gateway WAF policies
+
 ## Related pages
 
 - [Application Gateway overview](https://learn.microsoft.com/en-us/azure/application-gateway/overview)

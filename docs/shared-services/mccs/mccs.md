@@ -47,7 +47,8 @@ To establish connectivity from AWS/Azure to on-premises networks, follow the ste
   - Refer to the [example request form](#example-request-form) section below for additional guidance on how to fill out the request form
 
 !!! question "Two requests for three firewalls?"
-    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources: 
+    There are at least **3 firewalls** along the connectivity path between AWS/Azure and on-premises resources:
+
     - the **cloud firewall**,
     - the **3PG firewall**, and
     - the **zone-specific firewalls**
@@ -99,6 +100,13 @@ Set the **Source** to the **Network IP Range Object** previously added in the **
     The above rule examples include a rule for the **cloud network to on-premises** connectivity, and another rule (using the same name) for the reverse flow (**on-premises to cloud**) connectivity.
 
     If an on-premises system needs to **initiate traffic** to a cloud resource, another rule in the Traffic Table is required for that.
+
+!!! danger "Hybrid connectivity failover"
+    The hybrid connectivity between AWS/Azure and the on-premises datacenters is configured with redundancy and automatic failover. This means, when a service disruption is experienced, traffic will automatically be rerouted through the backup path to maintain connectivity.
+
+    However, this means your submitted on-premises firewall rules **must** account for both the primary and backup paths (**KAM** and **CAL**), including the **3PG** and **zone-specific** firewalls on each path, to ensure uninterrupted communication between your cloud resources and the on-premises resources.
+    
+    To avoid any surprises during a failover event, include **KAM** and **CAL** in the **Firewall** column of **each** Traffic Table rule entry.
 
 ## Custom approval process
 

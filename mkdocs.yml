@@ -26,6 +26,7 @@ nav:
                 - IAM User management service: aws/LZA/design-build-deploy/iam-user-service.md
                 - ALB Service: aws/LZA/design-build-deploy/alb-service.md
                 - Service Control Policies: aws/LZA/design-build-deploy/scp.md
+                - Back up resources: aws/LZA/design-build-deploy/backups.md
                 - Next steps: aws/LZA/design-build-deploy/next-steps.md
                 - Networking: aws/LZA/design-build-deploy/networking.md
                 - On-premises connectivity: aws/LZA/design-build-deploy/networking-direct-connect.md
@@ -79,6 +80,7 @@ nav:
             - Next steps: azure/design-build-deploy/next-steps.md
             - Networking: azure/design-build-deploy/networking.md
             - On-premises connectivity: azure/design-build-deploy/networking-express-route.md
+            - On-premises DNS for Azure: azure/design-build-deploy/on-premises-dns.md
             - Sample code: azure/design-build-deploy/sample-code.md
         - Best practices:
             - Be mindful: azure/best-practices/be-mindful.md
@@ -92,6 +94,7 @@ nav:
             - Azure Container Instances: azure/azure-services/azure-container-instances.md
             - Azure Data Factory: azure/azure-services/data-factory.md
             - Azure Database for PostgreSQL: azure/azure-services/database-for-postgresql.md
+            - Azure Front Door: azure/azure-services/front-door.md
             - Azure Kubernetes Service: azure/azure-services/aks.md
             - Azure SQL Database: azure/azure-services/sql-database.md
             - Azure SQL Managed Instance: azure/azure-services/sql-managed-instance.md
@@ -104,6 +107,7 @@ nav:
         - Operational guidance:
             - Cost Management: azure/operational-guidance/cost-management.md
             - Policy compliance: azure/operational-guidance/policy-compliance.md
+            - Resilience and recovery: azure/operational-guidance/resilience-and-recovery.md
             - Security: azure/operational-guidance/security.md
             - Update and patch management: azure/operational-guidance/update-patch-management.md
         - Tools:
@@ -114,7 +118,6 @@ nav:
             - Azure Cost Management: azure/understanding-your-bill/azure-billing-and-cost-management.md
         - Upcoming features:
             - Domain join: azure/upcoming-features/domain-join.md
-            - Azure DNS resolution from on-premises: azure/upcoming-features/azure-dns.md
         - Enterprise support:
             - Azure Enterprise Support: azure/support/enterprise-support.md
 plugins:
