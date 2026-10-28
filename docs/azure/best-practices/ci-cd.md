@@ -127,6 +127,22 @@ jobs:
       uses: actions/checkout@v4
 ```
 
+!!! info "Runner Specifications"
+    Currently, the centralized runners only support the following specifications:
+
+    - Platform: Linux x64
+    - Image: Ubuntu Latest (24.04) (GitHub-owned)
+    - Size: 
+      - 2-cores
+      - 8 GB RAM 
+      - 75 GB SSD
+
+    For a list of available languages, runtimes, tools, packages, etc. that are available by default with this image, refer to the official GitHub Actions runner images documentation:
+
+    - [Ubuntu Latest (24.04)](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md)
+
+    If you require a different runner specifications, please [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud platform team.
+
 !!! warning "Post centralized runner onboarding"
     After the firewall rules have been configured, you will be responsible for allowing (and blocking) access to your resources from the GitHub managed runners. You can do this through the use of [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) security rules.
 
