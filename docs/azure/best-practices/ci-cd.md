@@ -105,7 +105,10 @@ We have created a centralized implementation of this feature, and have made it a
 The GitHub managed runners are deployed in a dedicated virtual network in a centralized Azure subscription. By default, network connectivity to the Landing Zones is **blocked** through the firewall.
 
 !!! question "How to request access to this feature?"
-    If you are interested in using this feature, please submit a **firewall request** to the Public Cloud team through [Jira Service Management (JSM)](https://citz-do.atlassian.net/servicedesk/customer/portal/3). Please include the GitHub **repositories** that you want to be able to use the centralized runners from.
+    If you are interested in using this feature, 2 requests are required:
+
+    1. A [firewall request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/11/create/462) to allow network connectivity from the centralized runners to your resources.
+    2. A request to [enable centralized runners access](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/11/create/765) for your repository.
 
 !!! warning "BCGov vs BCGov-C Repos"
     Initially, we are only supporting `BCGov-C` repositories for the centralized GitHub managed runners. `BCGov` repositories will not have access to this feature at this time.
