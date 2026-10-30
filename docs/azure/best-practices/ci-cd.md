@@ -94,18 +94,69 @@ You can find the sample Terraform code for deploying self-hosted GitHub runners 
 !!! info "Pre-requisites"
     Please take special note of the pre-requisites listed in the README file in the `/tools/cicd_self_hosted_agents/` directory. It describes the necessary subnets that the self-hosted runners need to be deployed in.
 
-<!-- TO DO: Add this section back in when we have tested and verified the GitHub-hosted runners in an Azure VNet.
-### GitHub hosted runners in an Azure VNet
+### GitHub managed runners in an Azure VNet
 
-There currently is no Azure Verified Module (AVM) for GitHub-hosted runners in an Azure VNet, so we wrote our own!
+GitHub supports Azure private networking for GitHub-hosted runners. This allows GitHub-hosted runners to be deployed in an Azure VNet, and securely access Azure resources that are not publicly accessible (ie. resources that are deployed with Private Endpoints, or resources that are deployed in a private subnet).
 
-For more information on this feature, refer to the [About Azure private networking for GitHub-hosted runners in your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/configuring-private-networking-for-hosted-compute-products/about-azure-private-networking-for-github-hosted-runners-in-your-enterprise) documentation.
+We have created a centralized implementation of this feature, and have made it available to all projects in the B.C. government Azure environment.
 
-You can find the sample Terraform code for deploying GitHub-hosted runners in the [Azure Landing Zone Samples (azure-lz-samples)](https://github.com/bcgov/azure-lz-samples) repo, under the `/tools/cicd_github_hosted_runners_azure_private_network/` directory.
+#### How does this feature work?
 
-!!! info "Pre-requisites"
-    Please take special note of the pre-requisites listed in the README file. It describes the necessary Resource Provider, and values that the module needs to be deployed.
--->
+The GitHub managed runners are deployed in a dedicated virtual network in a centralized Azure subscription. By default, network connectivity to the Landing Zones is **blocked** through the firewall.
+
+!!! question "How to request access to this feature?"
+    If you are interested in using this feature, 2 requests are required:
+
+    1. A [firewall request](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/11/create/462) to allow network connectivity from the centralized runners to your resources.
+    2. A request to [enable centralized runners access](https://citz-do.atlassian.net/servicedesk/customer/portal/3/group/11/create/765) for your repository.
+
+!!! warning "BCGov vs BCGov-C Repos"
+    Initially, we are only supporting `BCGov-C` repositories for the centralized GitHub managed runners. `BCGov` repositories will not have access to this feature at this time.
+
+Once the appropriate firewall rules have been configured, and your repository has been enabled to use the Runner Group, it will appear under Settings > Actions > Runners > Shared with this repository.
+
+![GitHub Managed Runners - Available to Repository](../images/github-managed-runners-available-to-repo.png "GitHub Managed Runners - Available to Repository")
+
+You will then be able to use the GitHub managed runners in your CI/CD pipelines by including the following `runs-on:` configuration in your workflow YAML file:
+
+```yaml
+jobs:
+  job-name:
+    name: Job Name
+    runs-on:
+      group: bcgov-azure-lz-live-github-managed-runners # GitHub Managed Runners injected into an Azure VNet
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+```
+
+!!! info "Runner Specifications"
+    Currently, the centralized runners only support the following specifications:
+
+    - Platform: Linux x64
+    - Image: Ubuntu Latest (24.04) (GitHub-owned)
+    - Size: 
+      - 2-cores
+      - 8 GB RAM 
+      - 75 GB SSD
+
+    For a list of available languages, runtimes, tools, packages, etc. that are available by default with this image, refer to the official GitHub Actions runner images documentation:
+
+    - [Ubuntu Latest (24.04)](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md)
+
+    If you require a different runner specifications, please [submit a request](https://citz-do.atlassian.net/servicedesk/customer/portal/3) to the Public Cloud platform team.
+
+!!! warning "Post centralized runner onboarding"
+    After the firewall rules have been configured, you will be responsible for allowing (and blocking) access to your resources from the GitHub managed runners. You can do this through the use of [Network Security Group (NSG)](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) security rules.
+
+    One suggestion is to create a pre-step in your GitHub workflow to retrieve the private IP address of the GitHub managed runner, and then dynamically/on-demand update the NSG rules to allow access to your resources.
+    
+    After your deployment has completed, you can include a post-step to then remove the NSG rules to block access again.
+
+!!! tip "Example GitHub Workflow"
+    We have created an example workflow to demonstrate how to retrieve the private IP address of the GitHub managed runner and dynamically update a Network Security Group (NSG) to allow access to your resources.
+
+    This uses a custom in-house created GitHub Action, called **nsg-jit-rule**. For more information refer to our [azure-lz-actions](https://github.com/bcgov/azure-lz-actions) repository.
 
 ## Azure pipelines
 
