@@ -151,7 +151,9 @@ jobs:
 
     One suggestion is to create a pre-step in your GitHub workflow to retrieve the private IP address of the GitHub managed runner, and then dynamically/on-demand update the NSG rules to allow access to your resources.
     
-    After your deployment has completed, you can include a post-step to then remove the NSG rules to block access again.
+    Before using this pattern, configure a persistent inbound NSG Deny rule for the centralized runner subnet(s) to the protected resources and ports. Give the temporary per-runner Allow rule a higher priority (lower number) than this Deny rule, and give the Deny rule a higher priority (lower number) than any broader matching Allow rules, including the default `AllowVNetInBound` rule.
+
+    After deployment, remove the temporary Allow rule in a cleanup step that also runs when deployment fails. New connections will then match the persistent Deny rule; removing an NSG rule does not terminate established connections.
 
 !!! tip "Example GitHub Workflow"
     We have created an example workflow to demonstrate how to retrieve the private IP address of the GitHub managed runner and dynamically update a Network Security Group (NSG) to allow access to your resources.
