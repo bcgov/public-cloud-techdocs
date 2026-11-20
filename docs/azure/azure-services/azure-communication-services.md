@@ -45,7 +45,7 @@ Read [Amazon SES: Prefer API and IAM roles](../../aws/LZA/design-build-deploy/wo
 
 ### Microsoft email services
 
-Consider Microsoft 365 High Volume Email for automated messages to internal recipients. It requires Microsoft 365 licensing and configuration.
+Consider Microsoft 365 High Volume Email for automated messages to internal recipients. HVE accounts do not require Microsoft 365 licenses; each account must be configured with a billing policy linked to an Azure subscription for pay-as-you-go billing.
 
 Read [Manage High Volume Email for Microsoft 365](https://learn.microsoft.com/en-us/exchange/mail-flow-best-practices/high-volume-mails-m365).
 
