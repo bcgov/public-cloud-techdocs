@@ -44,10 +44,24 @@ The following security settings are **required** in Landing Zones:
 - Azure Application Gateway must have at least one **Web Application Firewall (WAF) policy** configured
 - WAF must be **enabled** for Application Gateway
 - WAF on Application Gateway must have **request body inspection** enabled
+- WAF policies must use the **Microsoft Default Rule Set (DRS) version 2.2**
 - **Bot protection** must be enabled in all Application Gateway WAF policies
+
+The `Application Gateway WAF policy should use Microsoft Default Rule Set` Azure Policy enforces DRS 2.2. The managed rule set type is `Microsoft_DefaultRuleSet`, and the rule set version is `2.2`.
+
+!!! warning "Update existing WAF policies"
+    New and existing WAF policies must use DRS 2.2. A deployment fails when the policy uses another managed rule set or version.
+
+DRS 2.2 includes Microsoft threat intelligence protections and updates based on the OWASP Core Rule Set. Review your rule overrides, exclusions, and Paranoia Level settings when you change rule set versions. DRS 2.2 uses Paranoia Level 1 rules by default.
+
+Use the [Application Gateway managed rule set upgrade guide](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/upgrade-ruleset-version) to upgrade an existing WAF policy. Review your exclusions and custom rule actions after the upgrade. DRS 2.2 changes some rule group names and disables Paranoia Level 2 rules by default.
+
+Review the [rules included in the Default Rule Set 2.2](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs22%2Cowasp32#default-rule-set-22).
 
 ## Related pages
 
 - [Application Gateway overview](https://learn.microsoft.com/en-us/azure/application-gateway/overview)
+- [Rules included in Default Rule Set 2.2](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=drs22%2Cowasp32#default-rule-set-22)
+- [Upgrade an Application Gateway WAF rule set](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/upgrade-ruleset-version)
 - [Troubleshoot backend health issues in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting#other-reasons)
 - [MCCS connectivity](../../shared-services/mccs/mccs.md)
