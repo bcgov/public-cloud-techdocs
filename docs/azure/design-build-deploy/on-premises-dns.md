@@ -101,6 +101,222 @@ DNSDefaultRoute=no
 
 The `~` prefix sends that domain to the inbound resolver. `DNSDefaultRoute=no` keeps other names off that link. A global `DNS=` entry also receives names that match no routing domain. Leave the inbound resolver out of that list.
 
+### Configure DNS in an OpenShift cluster
+
+An OpenShift workload can use one of these DNS options:
+
+- Add a pod-level `hostAliases` entry for a single private endpoint.
+- Forward one DNS zone to the Azure inbound resolver for all pods in the cluster.
+- Run a namespace-local DNS service for selected workloads.
+
+Use the public service name in each option. TLS uses that name to check the certificate.
+
+#### Add a host alias to one pod
+
+The `hostAliases` property adds an entry to the pod's `/etc/hosts` file. Use it for a short test. It also works when one pod needs one name.
+
+Add `hostAliases` to the pod spec or pod template:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: key-vault-client
+spec:
+  selector:
+    matchLabels:
+      app: key-vault-client
+  template:
+    metadata:
+      labels:
+        app: key-vault-client
+    spec:
+      hostAliases:
+        - ip: 10.x.x.x
+          hostnames:
+            - example.vault.azure.net
+      containers:
+        - name: key-vault-client
+          image: <container-image>
+```
+
+Replace the IP, host name, and image with your values. A host alias becomes stale if the private endpoint's IP changes.
+
+!!! warning "Use host aliases only for narrow cases"
+    A host alias applies only to one pod spec. Use DNS zone forwarding when many workloads need the same service zone.
+
+#### Forward one zone from the cluster
+
+Configure the OpenShift DNS operator to forward a public service zone. Send that zone to the Azure inbound resolver. The rule applies to every pod that uses cluster DNS.
+
+```yaml
+apiVersion: operator.openshift.io/v1
+kind: DNS
+metadata:
+  name: default
+spec:
+  servers:
+    - name: azure-dns
+      zones:
+        - vault.azure.net
+      forwardPlugin:
+        policy: Sequential
+        upstreams:
+          - <inbound-resolver>
+```
+
+Edit the existing cluster DNS resource with `oc edit dns.operator.openshift.io/default`. Append the `azure-dns` entry shown above to `spec.servers`, preserving all existing server entries and other settings.
+
+Replace `<inbound-resolver>` with an address from the [inbound DNS addresses](https://digital.gov.bc.ca/technology/cloud/public/internal-resources/internal-government-and-external-public-connections/#inbound-dns). Add only the service zones your workloads use.
+
+!!! note "Zone forwarding is cluster-wide"
+    The OpenShift DNS operator does not support zone forwarding for one namespace. This rule applies to every pod that uses cluster DNS.
+
+OpenShift uses the cluster resolver for this rule. A pod's `dnsConfig.nameservers` setting applies to all queries. Use the DNS operator configuration to forward one zone.
+
+The OpenShift cluster must reach the inbound resolver over the private network. Allow UDP and TCP port 53. Confirm [ExpressRoute](networking-express-route.md) and the [MCCS firewall requests](../../shared-services/mccs/mccs.md).
+
+#### Forward one zone from a namespace
+
+Run a namespace-local CoreDNS service when only some workloads need a zone override. This example sends `vault.azure.net` to the Azure inbound resolver. It sends every other query to the OpenShift cluster DNS service.
+
+Get the cluster DNS service IP:
+
+```bash
+oc -n openshift-dns get service dns-default \
+  -o jsonpath='{.spec.clusterIP}{"\n"}'
+```
+
+Use this CoreDNS configuration:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: namespace-dns
+  namespace: <namespace>
+data:
+  Corefile: |
+    vault.azure.net:53 {
+        errors
+        cache 30
+        forward . <inbound-resolver>
+    }
+
+    .:53 {
+        errors
+        cache 30
+        forward . <openshift-cluster-dns-ip>
+    }
+```
+
+Replace `<inbound-resolver>` and `<openshift-cluster-dns-ip>` with your values. Run CoreDNS with this configuration in the namespace. Expose it through a ClusterIP service on UDP and TCP port 53.
+
+Deploy CoreDNS and expose it inside the namespace:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: namespace-dns
+  namespace: <namespace>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: namespace-dns
+  template:
+    metadata:
+      labels:
+        app: namespace-dns
+    spec:
+      containers:
+        - name: coredns
+          image: registry.k8s.io/coredns/coredns:v1.11.1
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+              add:
+                - NET_BIND_SERVICE
+          args:
+            - -conf
+            - /etc/coredns/Corefile
+          ports:
+            - containerPort: 53
+              protocol: UDP
+            - containerPort: 53
+              protocol: TCP
+          volumeMounts:
+            - name: config
+              mountPath: /etc/coredns
+              readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: namespace-dns
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: namespace-dns
+  namespace: <namespace>
+spec:
+  selector:
+    app: namespace-dns
+  ports:
+    - name: dns-udp
+      port: 53
+      protocol: UDP
+      targetPort: 53
+    - name: dns-tcp
+      port: 53
+      protocol: TCP
+      targetPort: 53
+```
+
+Replace `<namespace>` and the CoreDNS image with approved values. Apply the ConfigMap, deployment, and service in the same namespace.
+
+Configure the selected workload to use that service IP:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: key-vault-client
+  namespace: <namespace>
+spec:
+  selector:
+    matchLabels:
+      app: key-vault-client
+  template:
+    metadata:
+      labels:
+        app: key-vault-client
+    spec:
+      dnsPolicy: None
+      dnsConfig:
+        nameservers:
+          - <namespace-core-dns-service-ip>
+        searches:
+          - <namespace>.svc.cluster.local
+          - svc.cluster.local
+          - cluster.local
+        options:
+          - name: ndots
+            value: "5"
+      containers:
+        - name: key-vault-client
+          image: <container-image>
+```
+
+Replace the namespace, CoreDNS service IP, and image with your values. The `nameservers` field requires an IP address. It does not accept a service name.
+
+Update each affected pod template. OpenShift does not apply `dnsPolicy: None` to every pod in a namespace.
+
+This approach gives you namespace-level control. It also adds a DNS service to operate. Use cluster-wide forwarding when all namespaces can share the zone rule.
+
 ## Send only the namespaces you need
 
 Keep your normal DNS servers for day-to-day name resolution. Send the inbound resolver only the public service zones for private endpoints you use.
