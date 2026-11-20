@@ -13,3 +13,5 @@ IgnoreURLs:
   - "https://www.terraform.io/"
   - "https://techcommunity.microsoft.com/"  
   - "https://hungryboysl.wordpress.com"
+  - "https://www.linkedin.com/pulse/understanding-key-layers-azure-databricks-account-julia-f%C3%B8rde-wjp9f" # External Databricks article
+  - "https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md" # External GitHub documentation for Ubuntu 24.04 runner images
