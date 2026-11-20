@@ -156,7 +156,7 @@ metadata:
   name: default
 spec:
   servers:
-    - name: azure-private-link
+    - name: azure-dns
       zones:
         - vault.azure.net
       forwardPlugin:
