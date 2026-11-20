@@ -10,19 +10,24 @@ Azure Front Door is a global entry point that uses the Microsoft edge network to
 
 The following security settings are **required** in Landing Zones:
 
-- Azure Front Door profiles must use a **Standard** or **Premium** tier that supports Web Application Firewall (WAF) rules
+- Azure Front Door profiles may use the **Standard** or **Premium** tier
 - Azure Front Door profiles must use a **minimum TLS version of 1.2**
 - WAF on Azure Front Door must have **request body inspection** enabled
 - WAF must be enabled for Azure Front Door **entry-points**
-- **Bot Protection** must be enabled for Azure Front Door WAF
-- WAF policies must use the **Microsoft Default Rule Set (DRS) version 2.2**
+- **Bot Protection** must be enabled for Azure Front Door Premium WAF
+- Azure Front Door Premium WAF policies must use the **Microsoft Default Rule Set (DRS) version 2.2**
 - Secure **private connectivity** between Azure Front Door (when using the **Premium** tier) and Azure Storage Blob or Azure App Service must be configured
 - WAF must use the specified **mode** (i.e. **Prevention**) for Azure Front Door Service
 
 The `Azure Front Door WAF policy should use Microsoft Default Rule Set` Azure Policy enforces DRS 2.2. The managed rule set type is `Microsoft_DefaultRuleSet`, and the rule set version is `2.2`.
 
+!!! note "Front Door Standard"
+    Front Door Standard remains permitted. It supports custom WAF rules only.
+
+    Front Door Standard cannot use DRS 2.2, Bot Protection, or other managed rule sets. The managed rule set requirements apply to Front Door Premium.
+
 !!! warning "Update existing WAF policies"
-    New and existing Front Door WAF policies must use DRS 2.2. A deployment fails when the policy uses another managed rule set or version.
+    New and existing Front Door Premium WAF policies must use DRS 2.2. A deployment fails when a Premium policy uses another managed rule set or version.
 
 DRS 2.2 includes Microsoft threat intelligence protections and updates based on the OWASP Core Rule Set. Review your rule overrides, exclusions, and Paranoia Level settings when you change rule set versions. DRS 2.2 uses Paranoia Level 1 rules by default.
 
