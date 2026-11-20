@@ -237,6 +237,13 @@ spec:
       containers:
         - name: coredns
           image: registry.k8s.io/coredns/coredns:v1.11.1
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+              add:
+                - NET_BIND_SERVICE
           args:
             - -conf
             - /etc/coredns/Corefile
