@@ -27,7 +27,7 @@ Microsoft removes the following ACS capabilities on September 30, 2028:
 - ACS Job Router
 - ACS UI Library SDKs
 
-Other ACS calling services and SDKs have breaking changes instead of retirement. These services require a supported Teams-aligned solution and SDK update after September 30, 2028.
+Other ACS calling services and SDKs have breaking changes instead of retirement. To continue using these services after September 30, 2028, migrate to a supported Teams-aligned solution and update to the new major-version SDKs by that date.
 
 Review the full [retirement and breaking changes guide](https://learn.microsoft.com/en-us/azure/communication-services/acs-retirement-and-breaking-changes-guide). Microsoft lists each affected service and its supported migration path.
 
