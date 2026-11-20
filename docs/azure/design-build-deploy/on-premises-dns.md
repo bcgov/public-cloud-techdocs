@@ -165,11 +165,7 @@ spec:
           - <inbound-resolver>
 ```
 
-Apply this configuration to the cluster:
-
-```bash
-oc apply -f azure-private-link-dns.yaml
-```
+Edit the existing cluster DNS resource with `oc edit dns.operator.openshift.io/default`. Append the `azure-dns` entry shown above to `spec.servers`, preserving all existing server entries and other settings.
 
 Replace `<inbound-resolver>` with an address from the [inbound DNS addresses](https://digital.gov.bc.ca/technology/cloud/public/internal-resources/internal-government-and-external-public-connections/#inbound-dns). Add only the service zones your workloads use.
 
