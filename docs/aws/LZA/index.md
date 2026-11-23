@@ -26,6 +26,7 @@ Best practices for building applications on the LZA platform:
 
 - [Requirements](design-build-deploy/requirements.md)
 - [Networking](design-build-deploy/networking.md)
+- [Web application firewall (WAF)](design-build-deploy/web-application-firewall.md)
 - [User management](design-build-deploy/user-management.md)
 - [Deploy to the AWS Landing Zone Accelerator](design-build-deploy/deploy-to-the-aws-landing-zone-accelerator.md)
 - [IAM User management service](design-build-deploy/iam-user-service.md)
